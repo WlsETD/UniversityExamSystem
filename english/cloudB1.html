@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英文中級題目</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="systemcode/system.css">
+    <link rel="stylesheet" href="https://wlsetd.github.io/minigames/syscss">
+    <style>
+        .start {
+            background-color: #81a9ff;
+        }
+
+        .ff {
+            animation: ii 1s ease-out forwards;
+        }
+    </style>
+</head>
+<div class="start">
+    <i class="fa-solid fa-earth-americas ff"></i>
+</div>
+
+<body>
+    <div class="container">
+        <header>
+            <button class="theme-toggle" id="theme-toggle" aria-label="切換主題">🌙</button>
+            <a href="https://wlsetd.github.io/minigames/menu" class="home-btn"><i class="fa-solid fa-house"></i></a>
+            <h1>英文中級題目</h1>
+            <p>無限循環練習，鞏固英文知識</p>
+        </header>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+
+        <div class="question-container">
+            <div class="question-number" id="question-number"></div>
+            <div class="question-text" id="question-text"></div>
+
+            <div class="options" id="options-container"></div>
+
+            <div class="feedback" id="feedback"></div>
+        </div>
+
+        <div class="controls">
+            <button id="submit-btn">提交答案</button>
+            <button id="next-btn">下一題</button>
+            <button id="download-errors-btn">下載錯題本</button>
+        </div>
+
+        <div class="stats">
+            <div>已練習: <span class="score" id="total-answered">0</span> 題</div>
+            <div>正確率: <span class="score" id="accuracy">0%</span></div>
+        </div>
+    </div>
+    <script>
+        const questions = [
+            { type: "multiple-choice", question: "advice 的中文意思是？", options: ["建議", "問題", "答案", "工作"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "airport 的中文意思是？", options: ["機場", "車站", "港口", "停車場"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "airport check-in 的中文意思是？", options: ["機場報到", "登機口", "出境大廳", "候機室"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "all around the world 的中文意思是？", options: ["全世界各地", "在國內", "在城市裡", "在山上"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "always buy food 的中文意思是？", options: ["總是買食物", "從不吃飯", "買衣服", "買飲料"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "always find 的中文意思是？", options: ["總是找到", "常常遺失", "從不發現", "隨機選擇"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "always go to the same place 的中文意思是？", options: ["總是去同一個地方", "每次換地方", "從不外出", "喜歡旅行"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "amazing countryside 的中文意思是？", options: ["令人驚嘆的鄉村", "危險的城市", "漂亮的海灘", "擁擠的市場"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "another group 的中文意思是？", options: ["另一組", "同一組", "小組長", "團體活動"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "answer the questions 的中文意思是？", options: ["回答問題", "提出問題", "抄寫問題", "創造問題"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "are you from 的中文意思是？", options: ["你來自", "你住在", "你是", "你知道"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "arrive 的中文意思是？", options: ["到達", "離開", "準備", "開始"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "art galleries 的中文意思是？", options: ["美術館", "學校", "公園", "音樂廳"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "ask a partner 的中文意思是？", options: ["問夥伴", "寫答案", "告訴老師", "看筆記"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "ask and answer questions 的中文意思是？", options: ["問並回答問題", "畫圖表", "朗讀句子", "寫故事"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "ask for and give advice 的中文意思是？", options: ["請求與給予建議", "問問題", "提供食物", "說故事"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "ask for and give travel information 的中文意思是？", options: ["詢問與提供旅遊資訊", "預訂飯店", "購買機票", "寫明信片"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "at the airport 的中文意思是？", options: ["在機場", "在車站", "在公園", "在餐廳"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "at the beach 的中文意思是？", options: ["在海灘", "在山上", "在城市", "在公園"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "author 的中文意思是？", options: ["作者", "畫家", "導演", "演員"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "baggage 的中文意思是？", options: ["行李", "包包", "禮物", "票"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "beach bar 的中文意思是？", options: ["海灘酒吧", "海灘椅", "餐廳", "泳池"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "beautiful old city 的中文意思是？", options: ["美麗的古城", "現代都市", "新村莊", "舊街道"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "beautiful time of year 的中文意思是？", options: ["一年中美好的時節", "最熱的時候", "寒冷的日子", "假期"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "beaches nearby 的中文意思是？", options: ["附近的海灘", "遠處的湖泊", "山區", "森林"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "boarding pass 的中文意思是？", options: ["登機證", "車票", "身分證", "入場券"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "boarding time 的中文意思是？", options: ["登機時間", "出發時間", "抵達時間", "報到時間"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "buy clothes there 的中文意思是？", options: ["在那裡買衣服", "在那裡吃飯", "在那裡學習", "在那裡玩"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "by cash 的中文意思是？", options: ["用現金", "用信用卡", "用支票", "用轉帳"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "carry on 的中文意思是？", options: ["繼續", "停止", "開始", "放棄"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "carry cash 的中文意思是？", options: ["攜帶現金", "帶護照", "帶手機", "帶水"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "cell phone 的中文意思是？", options: ["手機", "電話亭", "電腦", "耳機"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "check in 的中文意思是？", options: ["報到", "離開", "訂票", "登機"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "check-in time 的中文意思是？", options: ["報到時間", "出發時間", "休息時間", "用餐時間"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "choose one 的中文意思是？", options: ["選一個", "全選", "刪除", "交換"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "circle 的中文意思是？", options: ["圈選", "劃掉", "擦掉", "寫上"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "cities and towns 的中文意思是？", options: ["城市與城鎮", "鄉村與森林", "島嶼與海灘", "山區與河流"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "communication 的中文意思是？", options: ["溝通", "閱讀", "寫作", "聽力"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "complete the sentences 的中文意思是？", options: ["完成句子", "抄寫文章", "翻譯單字", "讀出聲"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "conversation 的中文意思是？", options: ["對話", "閱讀", "寫信", "問答"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "country of residence 的中文意思是？", options: ["居住國", "出生地", "護照國", "旅行地"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "crops 的中文意思是？", options: ["農作物", "水果", "花朵", "魚"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "culture 的中文意思是？", options: ["文化", "語言", "歷史", "建築"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "daily 的中文意思是？", options: ["每日的", "每週的", "每月的", "偶爾的"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "dangerous 的中文意思是？", options: ["危險的", "安全的", "便宜的", "安靜的"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "date of birth 的中文意思是？", options: ["出生日期", "結婚日期", "旅行日期", "報到日期"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "decision 的中文意思是？", options: ["決定", "建議", "問題", "答案"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "delicious food 的中文意思是？", options: ["美味的食物", "難吃的食物", "貴的食物", "便宜的食物"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "describe a place 的中文意思是？", options: ["描述一個地方", "畫地圖", "指方向", "拍照片"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "destination 的中文意思是？", options: ["目的地", "出發地", "經過地", "家鄉"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "discuss 的中文意思是？", options: ["討論", "拒絕", "詢問", "回答"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "don’t forget your 的中文意思是？", options: ["不要忘記你的", "記得帶走", "請交出", "請清理"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "don’t plan everything 的中文意思是？", options: ["不要計畫所有事情", "記得計畫", "列出清單", "確定時間"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "double 的中文意思是？", options: ["雙人房", "單人房", "加床", "套房"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "dream vacation 的中文意思是？", options: ["夢想假期", "工作日", "學期", "寒假"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "during the day 的中文意思是？", options: ["白天", "晚上", "早晨", "午夜"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "eat local food 的中文意思是？", options: ["吃當地食物", "喝飲料", "吃速食", "不吃飯"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "England 的中文意思是？", options: ["英格蘭", "法國", "德國", "美國"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "every year 的中文意思是？", options: ["每年", "每天", "每週", "每月"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "exchange money 的中文意思是？", options: ["兌換貨幣", "買票", "提款", "轉帳"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "excuse me 的中文意思是？", options: ["打擾一下", "你好", "再見", "謝謝"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "exercise 的中文意思是？", options: ["運動", "休息", "學習", "吃飯"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "explore 的中文意思是？", options: ["探索", "尋找", "購買", "放棄"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "famous place 的中文意思是？", options: ["著名的地方", "危險的地方", "安靜的地方", "冷的地方"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "festival 的中文意思是？", options: ["節日", "假期", "工作", "旅行"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "fill in the blanks 的中文意思是？", options: ["填空", "選擇", "朗讀", "圈選"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "find out 的中文意思是？", options: ["找出", "寫下", "記得", "問問題"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "first name 的中文意思是？", options: ["名字", "姓氏", "中間名", "暱稱"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "first time 的中文意思是？", options: ["第一次", "第二次", "上次", "下次"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "flight details 的中文意思是？", options: ["航班資訊", "行李資訊", "報到資訊", "座位資訊"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "flight leaves 的中文意思是？", options: ["航班起飛", "航班延誤", "航班取消", "航班到達"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "fly into Tokyo 的中文意思是？", options: ["飛往東京", "離開東京", "從東京出發", "轉機到東京"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "for example 的中文意思是？", options: ["例如", "因為", "所以", "但是"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "forest 的中文意思是？", options: ["森林", "沙漠", "山", "河流"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "friends visiting your country 的中文意思是？", options: ["朋友造訪你的國家", "出國旅行", "家庭聚會", "同學會"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "fun 的中文意思是？", options: ["有趣", "無聊", "困難", "危險"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "goal 的中文意思是？", options: ["目標", "結果", "問題", "方法"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "going places 的中文意思是？", options: ["去各地", "旅行回來", "待在家", "迷路"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "grasslands 的中文意思是？", options: ["草原", "沙漠", "森林", "山脈"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "group of local men 的中文意思是？", options: ["一群當地男人", "遊客團", "司機們", "警察們"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "guidebook 的中文意思是？", options: ["旅遊指南", "筆記本", "教科書", "報紙"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "hotel check-in 的中文意思是？", options: ["飯店報到", "飯店退房", "預約房間", "打掃房間"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "hours later 的中文意思是？", options: ["幾小時之後", "幾分鐘之後", "隔天", "同時"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "interesting country 的中文意思是？", options: ["有趣的國家", "危險的國家", "大的城市", "小的村莊"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "interesting places 的中文意思是？", options: ["有趣的地方", "危險的地方", "安靜的地方", "無聊的地方"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "it’s relaxing 的中文意思是？", options: ["令人放鬆", "令人緊張", "令人害怕", "令人難過"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "Japanese gardens 的中文意思是？", options: ["日本庭園", "英國花園", "美國公園", "中國花園"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "join 的中文意思是？", options: ["加入", "拒絕", "離開", "取消"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "key 的中文意思是？", options: ["鑰匙", "門", "窗", "鎖"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "keys 的中文意思是？", options: ["鑰匙們", "門", "鎖", "車"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "language expansion 的中文意思是？", options: ["語言延伸練習", "文化課程", "歷史研究", "翻譯練習"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "last name 的中文意思是？", options: ["姓氏", "名字", "暱稱", "代號"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "leave the city center 的中文意思是？", options: ["離開市中心", "進入市區", "靠近火車站", "搬進城市"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "let’s take a taxi 的中文意思是？", options: ["我們搭計程車吧", "我們走路吧", "我們開車吧", "我們等公車吧"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "listen to the conversation 的中文意思是？", options: ["聽對話", "看電影", "讀文章", "說故事"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "listen to the tourist 的中文意思是？", options: ["聽遊客說話", "跟遊客拍照", "帶遊客參觀", "送遊客禮物"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "live music 的中文意思是？", options: ["現場音樂", "錄音帶音樂", "背景音樂", "輕音樂"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "local people 的中文意思是？", options: ["當地人", "外國人", "遊客", "居民"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "lots of people 的中文意思是？", options: ["許多人", "少數人", "外國人", "居民"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "make notes 的中文意思是？", options: ["做筆記", "寫作文", "畫圖", "拍照"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "meal 的中文意思是？", options: ["餐點", "飲料", "甜點", "水果"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "meet local people 的中文意思是？", options: ["認識當地人", "拜訪朋友", "打招呼", "學外語"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "money 的中文意思是？", options: ["金錢", "禮物", "票", "卡片"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "most of the land 的中文意思是？", options: ["大部分的土地", "整個城市", "山區", "海岸線"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "mountain 的中文意思是？", options: ["山", "湖", "海", "河"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "museum 的中文意思是？", options: ["博物館", "圖書館", "學校", "公園"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "my vacation 的中文意思是？", options: ["我的假期", "我的家", "我的學校", "我的工作"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "nationality 的中文意思是？", options: ["國籍", "城市", "國家", "民族"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "noisy 的中文意思是？", options: ["吵鬧的", "安靜的", "寒冷的", "黑暗的"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "number of nights 的中文意思是？", options: ["住宿天數", "房間號碼", "座位號碼", "航班號碼"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "pack sunblock 的中文意思是？", options: ["攜帶防曬乳", "收拾衣服", "準備食物", "整理書包"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "pairs 的中文意思是？", options: ["成對", "單獨", "群體", "全部"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "passport 的中文意思是？", options: ["護照", "身分證", "車票", "入場券"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "pay by cash or by card 的中文意思是？", options: ["用現金或信用卡付款", "用支票付款", "用禮券付款", "用點數付款"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "people also visit 的中文意思是？", options: ["人們也會參觀", "人們會離開", "人們不想去", "人們迷路"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "people play 的中文意思是？", options: ["人們玩", "人們學", "人們吃", "人們走"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "photo 的中文意思是？", options: ["照片", "影片", "畫", "報紙"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "places to stay 的中文意思是？", options: ["住宿地點", "旅遊景點", "購物地點", "用餐地點"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "places to visit 的中文意思是？", options: ["值得造訪的地方", "危險地點", "學校", "公司"], correctAnswer: 0 },
+            { type: "multiple-choice", question: "plan a vacation 的中文意思是？", options: ["規劃假期", "取消旅行", "延後出發", "打包行李"], correctAnswer: 0 },
+
+
+
+
+        ];
+
+    </script>
+    <script src="systemcode/system.js"></script>
+    <script src="https://wlsetd.github.io/minigames/sys.js"></script>
+</body>
+
+</html>

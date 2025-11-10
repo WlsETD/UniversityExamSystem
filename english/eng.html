@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英文填充題</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="systemcode/system.css">
+    <link rel="stylesheet" href="https://wlsetd.github.io/minigames/syscss">
+    <style>
+       .start {      
+            background-color: #080127;
+        }
+
+        .ff {
+            animation: ii 1s ease-out forwards;
+        }      
+    </style>
+</head>
+<div class="start">
+    <i class="fa-solid fa-earth-americas ff"></i>
+</div>
+<body>
+    <div class="container">
+        <header>
+            <button class="theme-toggle" id="theme-toggle" aria-label="切換主題">🌙</button>
+            <a href="https://wlsetd.github.io/minigames/menu" class="home-btn"><i class="fa-solid fa-house"></i></a>
+            <h1>英文</h1>
+            <p>無限循環練習，鞏固英文知識</p>
+        </header>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+
+        <div class="question-container">
+            <div class="question-number" id="question-number"></div>
+            <div class="question-text" id="question-text"></div>
+
+            <div class="options" id="options-container"></div>
+
+            <div class="feedback" id="feedback"></div>
+        </div>
+
+        <div class="controls">
+            <button id="submit-btn">提交答案</button>
+            <button id="next-btn">下一題</button>
+            <button id="download-errors-btn">下載錯題本</button>
+        </div>
+
+        <div class="stats">
+            <div>已練習: <span class="score" id="total-answered">0</span> 題</div>
+            <div>正確率: <span class="score" id="accuracy">0%</span></div>
+        </div>
+    </div>
+    <script>
+        const questions = [
+            {
+                type: "fill-in",
+                question: "champion 的中文意思是 ___",
+                correctAnswer: "冠軍",
+                acceptableAnswers: ["冠軍"]
+            },
+            {
+                type: "fill-in",
+                question: "qualify 的中文意思是 ___",
+                correctAnswer: "取得資格",
+                acceptableAnswers: ["取得資格", "獲得資格", "符合資格"]
+            },
+            {
+                type: "fill-in",
+                question: "combination 的中文意思是 ___",
+                correctAnswer: "混合，結合",
+                acceptableAnswers: ["混合，結合", "混合", "結合", "組合"]
+            },
+            {
+                type: "fill-in",
+                question: "physical 的中文意思是 ___",
+                correctAnswer: "身體的，物理的",
+                acceptableAnswers: ["身體的，物理的", "身體的", "物理的"]
+            },
+            {
+                type: "fill-in",
+                question: "psychological 的中文意思是 ___",
+                correctAnswer: "心理的",
+                acceptableAnswers: ["心理的", "心理學的"]
+            },
+            {
+                type: "fill-in",
+                question: "factor 的中文意思是 ___",
+                correctAnswer: "因素",
+                acceptableAnswers: ["因素", "要素"]
+            },
+            {
+                type: "fill-in",
+                question: "elite 的中文意思是 ___",
+                correctAnswer: "精英的",
+                acceptableAnswers: ["精英的", "精英", "菁英的", "菁英"]
+            },
+            {
+                type: "fill-in",
+                question: "genetic 的中文意思是 ___",
+                correctAnswer: "遺傳的",
+                acceptableAnswers: ["遺傳的", "基因的"]
+            },
+            {
+                type: "fill-in",
+                question: "differentiate 的中文意思是 ___",
+                correctAnswer: "使...不同",
+                acceptableAnswers: ["使...不同", "區分", "區別", "使不同"]
+            },
+            {
+                type: "fill-in",
+                question: "average 的中文意思是 ___",
+                correctAnswer: "平均的，一般的",
+                acceptableAnswers: ["平均的，一般的", "平均的", "一般的", "普通的"]
+            },
+            {
+                type: "fill-in",
+                question: "skeletal 的中文意思是 ___",
+                correctAnswer: "骨骼的",
+                acceptableAnswers: ["骨骼的"]
+            },
+            {
+                type: "fill-in",
+                question: "muscle 的中文意思是 ___",
+                correctAnswer: "肌肉",
+                acceptableAnswers: ["肌肉"]
+            },
+            {
+                type: "fill-in",
+                question: "require 的中文意思是 ___",
+                correctAnswer: "要求，需要",
+                acceptableAnswers: ["要求，需要", "要求", "需要"]
+            },
+            {
+                type: "fill-in",
+                question: "generate 的中文意思是 ___",
+                correctAnswer: "產生，生成",
+                acceptableAnswers: ["產生，生成", "產生", "生成"]
+            },
+            {
+                type: "fill-in",
+                question: "endure 的中文意思是 ___",
+                correctAnswer: "忍受，持久",
+                acceptableAnswers: ["忍受，持久", "忍受", "持久", "耐受"]
+            },
+            {
+                type: "fill-in",
+                question: "pain 的中文意思是 ___",
+                correctAnswer: "疼痛",
+                acceptableAnswers: ["疼痛", "痛苦"]
+            },
+            {
+                type: "fill-in",
+                question: "disability 的中文意思是 ___",
+                correctAnswer: "殘疾，障礙",
+                acceptableAnswers: ["殘疾，障礙", "殘疾", "障礙"]
+            },
+            {
+                type: "fill-in",
+                question: "substance 的中文意思是 ___",
+                correctAnswer: "物質",
+                acceptableAnswers: ["物質"]
+            },
+            {
+                type: "fill-in",
+                question: "lactic 的中文意思是 ___",
+                correctAnswer: "乳酸的",
+                acceptableAnswers: ["乳酸的"]
+            },
+            {
+                type: "fill-in",
+                question: "adjust 的中文意思是 ___",
+                correctAnswer: "改變，調整",
+                acceptableAnswers: ["改變，調整", "調整", "改變"]
+            },
+            {
+                type: "fill-in",
+                question: "enhance 的中文意思是 ___",
+                correctAnswer: "改善，提高",
+                acceptableAnswers: ["改善，提高", "改善", "提高", "增強"]
+            },
+            {
+                type: "fill-in",
+                question: "automatic 的中文意思是 ___",
+                correctAnswer: "自動的",
+                acceptableAnswers: ["自動的"]
+            },
+            {
+                type: "fill-in",
+                question: "succeed 的中文意思是 ___",
+                correctAnswer: "成功",
+                acceptableAnswers: ["成功", "獲勝"]
+            },
+            {
+                type: "fill-in",
+                question: "determination 的中文意思是 ___",
+                correctAnswer: "決心",
+                acceptableAnswers: ["決心"]
+            },
+            {
+                type: "fill-in",
+                question: "strive 的中文意思是 ___",
+                correctAnswer: "努力",
+                acceptableAnswers: ["努力", "奮鬥"]
+            },
+            {
+                type: "fill-in",
+                question: "mental 的中文意思是 ___",
+                correctAnswer: "精神的，心理的",
+                acceptableAnswers: ["精神的，心理的", "精神的", "心理的"]
+            },
+            {
+                type: "fill-in",
+                question: "height 的中文意思是 ___",
+                correctAnswer: "高度",
+                acceptableAnswers: ["高度", "身高"]
+            },
+            {
+                type: "fill-in",
+                question: "suffer 的中文意思是 ___",
+                correctAnswer: "經歷，遭受",
+                acceptableAnswers: ["經歷，遭受", "經歷", "遭受", "受苦"]
+            },
+            {
+                type: "fill-in",
+                question: "hemoglobin 的中文意思是 ___",
+                correctAnswer: "血紅蛋白",
+                acceptableAnswers: ["血紅蛋白", "血紅素"]
+            },
+            {
+                type: "fill-in",
+                question: "culture 的中文意思是 ___",
+                correctAnswer: "文化",
+                acceptableAnswers: ["文化"]
+            },
+            {
+                type: "fill-in",
+                question: "background 的中文意思是 ___",
+                correctAnswer: "背景",
+                acceptableAnswers: ["背景"]
+            },
+            {
+                type: "fill-in",
+                question: "marathon 的中文意思是 ___",
+                correctAnswer: "馬拉松",
+                acceptableAnswers: ["馬拉松"]
+            },
+            {
+                type: "fill-in",
+                question: "control 的中文意思是 ___",
+                correctAnswer: "控制",
+                acceptableAnswers: ["控制"]
+            },
+            {
+                type: "fill-in",
+                question: "fatigue 的中文意思是 ___",
+                correctAnswer: "疲勞",
+                acceptableAnswers: ["疲勞", "疲倦"]
+            },
+            {
+                type: "fill-in",
+                question: "maintain 的中文意思是 ___",
+                correctAnswer: "保持，維持",
+                acceptableAnswers: ["保持，維持", "保持", "維持"]
+            },
+            {
+                type: "fill-in",
+                question: "technique 的中文意思是 ___",
+                correctAnswer: "技術，技巧",
+                acceptableAnswers: ["技術，技巧", "技術", "技巧"]
+            },
+            {
+                type: "fill-in",
+                question: "pressure 的中文意思是 ___",
+                correctAnswer: "壓力",
+                acceptableAnswers: ["壓力"]
+            },
+            {
+                type: "fill-in",
+                question: "exaggerate 的中文意思是 ___",
+                correctAnswer: "誇大",
+                acceptableAnswers: ["誇大", "誇張"]
+            },
+            {
+                type: "fill-in",
+                question: "compliment 的中文意思是 ___",
+                correctAnswer: "稱讚，恭維",
+                acceptableAnswers: ["稱讚，恭維", "稱讚", "恭維", "讚美"]
+            },
+            {
+                type: "fill-in",
+                question: "throughout 的中文意思是 ___",
+                correctAnswer: "在...期間，從頭到尾",
+                acceptableAnswers: ["在...期間，從頭到尾", "從頭到尾", "整個期間", "貫穿"]
+            },
+            {
+                type: "fill-in",
+                question: "originate 的中文意思是 ___",
+                correctAnswer: "起源於",
+                acceptableAnswers: ["起源於", "起源", "源於", "發源"]
+            },
+            {
+                type: "fill-in",
+                question: "established 的中文意思是 ___",
+                correctAnswer: "設立，建立",
+                acceptableAnswers: ["設立，建立", "設立", "建立", "成立"]
+            },
+            {
+                type: "fill-in",
+                question: "modern 的中文意思是 ___",
+                correctAnswer: "現代的",
+                acceptableAnswers: ["現代的"]
+            },
+            {
+                type: "fill-in",
+                question: "camaraderie 的中文意思是 ___",
+                correctAnswer: "友情，同志情誼",
+                acceptableAnswers: ["友情，同志情誼", "友情", "同志情誼", "同袍情誼"]
+            },
+            {
+                type: "fill-in",
+                question: "victory 的中文意思是 ___",
+                correctAnswer: "勝利",
+                acceptableAnswers: ["勝利"]
+            },
+            {
+                type: "fill-in",
+                question: "defeat 的中文意思是 ___",
+                correctAnswer: "失敗",
+                correctAnswer2: "擊敗",
+                acceptableAnswers: ["失敗", "擊敗", "打敗"]
+            },
+            {
+                type: "fill-in",
+                question: "international 的中文意思是 ___",
+                correctAnswer: "國際的",
+                acceptableAnswers: ["國際的"]
+            },
+            {
+                type: "fill-in",
+                question: "promise 的中文意思是 ___",
+                correctAnswer: "承諾，前景",
+                acceptableAnswers: ["承諾，前景", "承諾", "前景"]
+            },
+            {
+                type: "fill-in",
+                question: "universal 的中文意思是 ___",
+                correctAnswer: "普遍的，全球的",
+                acceptableAnswers: ["普遍的，全球的", "普遍的", "全球的", "全面的"]
+            },
+            {
+                type: "fill-in",
+                question: "appeal 的中文意思是 ___",
+                correctAnswer: "吸引力",
+                acceptableAnswers: ["吸引力"]
+            },
+            {
+                type: "fill-in",
+                question: "unique 的中文意思是 ___",
+                correctAnswer: "獨特的，唯一的",
+                acceptableAnswers: ["獨特的，唯一的", "獨特的", "唯一的"]
+            },
+            {
+                type: "fill-in",
+                question: "simplicity 的中文意思是 ___",
+                correctAnswer: "簡單性",
+                acceptableAnswers: ["簡單性", "簡單", "簡潔"]
+            },
+            {
+                type: "fill-in",
+                question: "simplicity 的中文意思是 ___",
+                correctAnswer: "簡單性",
+                acceptableAnswers: ["簡單性", "簡單", "簡潔"]
+            },
+            {
+                type: "fill-in",
+                question: "stadium 的中文意思是 ___",
+                correctAnswer: "體育場，體育館",
+                acceptableAnswers: ["體育場，體育館", "體育場", "體育館", "運動場"]
+            },
+            {
+                type: "fill-in",
+                question: "recruit 的中文意思是 ___",
+                correctAnswer: "招募",
+                acceptableAnswers: ["招募", "徵募"]
+            },
+            {
+                type: "fill-in",
+                question: "passion 的中文意思是 ___",
+                correctAnswer: "熱情",
+                acceptableAnswers: ["熱情", "熱忱"]
+            },
+            {
+                type: "fill-in",
+                question: "responsible 的中文意思是 ___",
+                correctAnswer: "負責任的",
+                acceptableAnswers: ["負責任的", "負責的"]
+            },
+            {
+                type: "fill-in",
+                question: "discrimination 的中文意思是 ___",
+                correctAnswer: "歧視",
+                acceptableAnswers: ["歧視"]
+            },
+            {
+                type: "fill-in",
+                question: "immigrant 的中文意思是 ___",
+                correctAnswer: "移民，僑民",
+                acceptableAnswers: ["移民，僑民", "移民", "僑民"]
+            },
+            {
+                type: "fill-in",
+                question: "unity 的中文意思是 ___",
+                correctAnswer: "統一，團結",
+                acceptableAnswers: ["統一，團結", "統一", "團結"]
+            },
+            {
+                type: "fill-in",
+                question: "colonist 的中文意思是 ___",
+                correctAnswer: "殖民者",
+                acceptableAnswers: ["殖民者"]
+            },
+            {
+                type: "fill-in",
+                question: "creative 的中文意思是 ___",
+                correctAnswer: "有創意的",
+                acceptableAnswers: ["有創意的", "創意的", "創造性的"]
+            },
+            {
+                type: "fill-in",
+                question: "competition 的中文意思是 ___",
+                correctAnswer: "競爭",
+                acceptableAnswers: ["競爭", "比賽"]
+            },
+            {
+                type: "fill-in",
+                question: "competitors 的中文意思是 ___",
+                correctAnswer: "競爭者",
+                acceptableAnswers: ["競爭者", "參賽者"]
+            },
+            {
+                type: "fill-in",
+                question: "uniform 的中文意思是 ___",
+                correctAnswer: "制服，相同的",
+                acceptableAnswers: ["制服，相同的", "制服", "相同的", "統一的"]
+            },
+            {
+                type: "fill-in",
+                question: "unite 的中文意思是 ___",
+                correctAnswer: "結合，團結",
+                acceptableAnswers: ["結合，團結", "結合", "團結", "聯合"]
+            },
+            {
+                type: "fill-in",
+                question: "anthropology 的中文意思是 ___",
+                correctAnswer: "人類學",
+                acceptableAnswers: ["人類學"]
+            },
+            {
+                type: "fill-in",
+                question: "biology 的中文意思是 ___",
+                correctAnswer: "生物學",
+                acceptableAnswers: ["生物學"]
+            },
+            {
+                type: "fill-in",
+                question: "geology 的中文意思是 ___",
+                correctAnswer: "地質學",
+                acceptableAnswers: ["地質學"]
+            },
+            {
+                type: "fill-in",
+                question: "psychology 的中文意思是 ___",
+                correctAnswer: "心理學",
+                acceptableAnswers: ["心理學"]
+            },
+            {
+                type: "fill-in",
+                question: "swimmer 的中文意思是 ___",
+                correctAnswer: "游泳者",
+                acceptableAnswers: ["游泳者", "泳者"]
+            },
+            {
+                type: "fill-in",
+                question: "completed 的中文意思是 ___",
+                correctAnswer: "完成",
+                acceptableAnswers: ["完成", "完成了"]
+            },
+            {
+                type: "fill-in",
+                question: "expedition 的中文意思是 ___",
+                correctAnswer: "探險，遠征",
+                acceptableAnswers: ["探險，遠征", "探險", "遠征"]
+            },
+            {
+                type: "fill-in",
+                question: "equipment 的中文意思是 ___",
+                correctAnswer: "裝備，設備",
+                acceptableAnswers: ["裝備，設備", "裝備", "設備"]
+            },
+            {
+                type: "fill-in",
+                question: "slowed 的中文意思是 ___",
+                correctAnswer: "減慢",
+                acceptableAnswers: ["減慢", "放慢", "減速"]
+            },
+            {
+                type: "fill-in",
+                question: "previous 的中文意思是 ___",
+                correctAnswer: "以前的",
+                acceptableAnswers: ["以前的", "先前的", "之前的"]
+            },
+            {
+                type: "fill-in",
+                question: "stung 的中文意思是 ___",
+                correctAnswer: "刺，蜇",
+                acceptableAnswers: ["刺，蜇", "刺", "蜇", "螫"]
+            },
+            {
+                type: "fill-in",
+                question: "jellyfish 的中文意思是 ___",
+                correctAnswer: "水母",
+                acceptableAnswers: ["水母"]
+            },
+            {
+                type: "fill-in",
+                question: "difference 的中文意思是 ___",
+                correctAnswer: "區別",
+                acceptableAnswers: ["區別", "差異", "不同"]
+            },
+            {
+                type: "fill-in",
+                question: "source 的中文意思是 ___",
+                correctAnswer: "來源",
+                acceptableAnswers: ["來源", "源頭"]
+            },
+            {
+                type: "fill-in",
+                question: "stomach 的中文意思是 ___",
+                correctAnswer: "胃",
+                acceptableAnswers: ["胃"]
+            },
+            {
+                type: "fill-in",
+                question: "cheer 的中文意思是 ___",
+                correctAnswer: "歡呼",
+                acceptableAnswers: ["歡呼", "喝采"]
+            },
+            {
+                type: "fill-in",
+                question: "runner 的中文意思是 ___",
+                correctAnswer: "跑者",
+                acceptableAnswers: ["跑者", "跑步者"]
+            },
+            {
+                type: "fill-in",
+                question: "capacity 的中文意思是 ___",
+                correctAnswer: "能力，容量",
+                acceptableAnswers: ["能力，容量", "能力", "容量"]
+            },
+            {
+                type: "fill-in",
+                question: "tiny 的中文意思是 ___",
+                correctAnswer: "微小的",
+                acceptableAnswers: ["微小的", "極小的", "小小的"]
+            },
+            {
+                type: "fill-in",
+                question: "explosive 的中文意思是 ___",
+                correctAnswer: "爆炸性的，爆發的",
+                acceptableAnswers: ["爆炸性的，爆發的", "爆炸性的", "爆發的"]
+            },
+            {
+                type: "fill-in",
+                question: "movement 的中文意思是 ___",
+                correctAnswer: "移動",
+                acceptableAnswers: ["移動", "運動", "動作"]
+            },
+            {
+                type: "fill-in",
+                question: "altitude 的中文意思是 ___",
+                correctAnswer: "海拔，高度",
+                acceptableAnswers: ["海拔，高度", "海拔", "高度"]
+            },
+            {
+                type: "fill-in",
+                question: "blood 的中文意思是 ___",
+                correctAnswer: "血液",
+                acceptableAnswers: ["血液", "血"]
+            },
+            {
+                type: "fill-in",
+                question: "complex 的中文意思是 ___",
+                correctAnswer: "複雜的",
+                acceptableAnswers: ["複雜的"]
+            },
+            {
+                type: "fill-in",
+                question: "essential 的中文意思是 ___",
+                correctAnswer: "必要的",
+                acceptableAnswers: ["必要的", "重要的", "必需的"]
+            },
+            {
+                type: "fill-in",
+                question: "hydration 的中文意思是 ___",
+                correctAnswer: "水合作用",
+                acceptableAnswers: ["水合作用", "水分補充", "補水"]
+            },
+            {
+                type: "fill-in",
+                question: "nutrition 的中文意思是 ___",
+                correctAnswer: "營養",
+                acceptableAnswers: ["營養"]
+            },
+            {
+                type: "fill-in",
+                question: "overcome 的中文意思是 ___",
+                correctAnswer: "克服",
+                acceptableAnswers: ["克服"]
+            },
+            {
+                type: "fill-in",
+                question: "physiologist 的中文意思是 ___",
+                correctAnswer: "生理學家",
+                acceptableAnswers: ["生理學家"]
+            },
+            {
+                type: "fill-in",
+                question: "strain 的中文意思是 ___",
+                correctAnswer: "緊張，壓力",
+                acceptableAnswers: ["緊張，壓力", "緊張", "壓力", "拉傷"]
+            },
+            {
+                type: "fill-in",
+                question: "theory 的中文意思是 ___",
+                correctAnswer: "理論",
+                acceptableAnswers: ["理論"]
+            },
+            {
+                type: "fill-in",
+                question: "ancient 的中文意思是 ___",
+                correctAnswer: "古代的",
+                acceptableAnswers: ["古代的", "古老的"]
+            },
+            {
+                type: "fill-in",
+                question: "originated 的中文意思是 ___",
+                correctAnswer: "起源",
+                acceptableAnswers: ["起源", "發源", "源自"]
+            },
+            {
+                type: "fill-in",
+                question: "federation 的中文意思是 ___",
+                correctAnswer: "聯邦，聯盟",
+                acceptableAnswers: ["聯邦，聯盟", "聯邦", "聯盟"]
+            },
+            {
+                type: "fill-in",
+                question: "striker 的中文意思是 ___",
+                correctAnswer: "前鋒",
+                acceptableAnswers: ["前鋒", "射手"]
+            },
+            {
+                type: "fill-in",
+                question: "defeated 的中文意思是 ___",
+                correctAnswer: "擊敗",
+                acceptableAnswers: ["擊敗", "打敗", "戰勝"]
+            },
+            {
+                type: "fill-in",
+                question: "worldwide 的中文意思是 ___",
+                correctAnswer: "全世界的",
+                acceptableAnswers: ["全世界的", "全球的", "世界性的"]
+            },
+            {
+                type: "fill-in",
+                question: "discipline 的中文意思是 ___",
+                correctAnswer: "紀律",
+                acceptableAnswers: ["紀律", "自律"]
+            },
+            {
+                type: "fill-in",
+                question: "symbol 的中文意思是 ___",
+                correctAnswer: "符號，象徵",
+                acceptableAnswers: ["符號，象徵", "符號", "象徵"]
+            },
+            {
+                type: "fill-in",
+                question: "tribal 的中文意思是 ___",
+                correctAnswer: "部落的",
+                acceptableAnswers: ["部落的"]
+            },
+            {
+                type: "fill-in",
+                question: "involvement 的中文意思是 ___",
+                correctAnswer: "參與，涉入",
+                acceptableAnswers: ["參與，涉入", "參與", "涉入", "介入"]
+            }, {
+                type: "fill-in",
+                question: "solve 的中文意思是 ___",
+                correctAnswer: "解決",
+                acceptableAnswers: ["解決"]
+            },
+            {
+                type: "fill-in",
+                question: "religious 的中文意思是 ___",
+                correctAnswer: "宗教的",
+                acceptableAnswers: ["宗教的"]
+            },
+            {
+                type: "fill-in",
+                question: "symbol 的中文意思是 ___",
+                correctAnswer: "象徵",
+                acceptableAnswers: ["象徵", "象征"]
+            },
+            {
+                type: "fill-in",
+                question: "promote 的中文意思是 ___",
+                correctAnswer: "促進",
+                acceptableAnswers: ["促進", "促进"]
+            },
+            {
+                type: "fill-in",
+                question: "peace 的中文意思是 ___",
+                correctAnswer: "和平",
+                acceptableAnswers: ["和平"]
+            },
+            {
+                type: "fill-in",
+                question: "frequent 的中文意思是 ___",
+                correctAnswer: "頻繁的",
+                correctAnswer: "頻繁的",
+                acceptableAnswers: ["頻繁的", "频繁的"]
+            },
+            {
+                type: "fill-in",
+                question: "doubt 的中文意思是 ___",
+                correctAnswer: "懷疑",
+                acceptableAnswers: ["懷疑", "怀疑"]
+            },
+            {
+                type: "fill-in",
+                question: "trouble 的中文意思是 ___",
+                correctAnswer: "麻煩",
+                acceptableAnswers: ["麻煩", "麻烦"]
+            },
+            {
+                type: "fill-in",
+                question: "explore 的中文意思是 ___",
+                correctAnswer: "探索",
+                acceptableAnswers: ["探索"]
+            },
+            {
+                type: "fill-in",
+                question: "connect 的中文意思是 ___",
+                correctAnswer: "連結",
+                acceptableAnswers: ["連結", "连结", "連接", "连接"]
+            },
+            {
+                type: "fill-in",
+                question: "referee 的中文意思是 ___",
+                correctAnswer: "裁判",
+                acceptableAnswers: ["裁判"]
+            },
+            {
+                type: "fill-in",
+                question: "penalty 的中文意思是 ___",
+                correctAnswer: "懲罰",
+                acceptableAnswers: ["懲罰", "惩罚"]
+            },
+            {
+                type: "fill-in",
+                question: "subjective 的中文意思是 ___",
+                correctAnswer: "主觀的",
+                acceptableAnswers: ["主觀的", "主观的"]
+            },
+            {
+                type: "fill-in",
+                question: "varies 的中文意思是 ___",
+                correctAnswer: "改變",
+                acceptableAnswers: ["改變", "改变", "不同", "變化", "变化"]
+            },
+            {
+                type: "fill-in",
+                question: "biologist 的中文意思是 ___",
+                correctAnswer: "生物學家",
+                acceptableAnswers: ["生物學家", "生物学家"]
+            },
+            {
+                type: "fill-in",
+                question: "anthropologist 的中文意思是 ___",
+                correctAnswer: "人類學家",
+                acceptableAnswers: ["人類學家", "人类学家"]
+            },
+            {
+                type: "fill-in",
+                question: "characteristic 的中文意思是 ___",
+                correctAnswer: "特徵",
+                acceptableAnswers: ["特徵", "特征"]
+            },
+            {
+                type: "fill-in",
+                question: "define 的中文意思是 ___",
+                correctAnswer: "定義",
+                acceptableAnswers: ["定義", "定义"]
+            },
+            {
+                type: "fill-in",
+                question: "physical 的中文意思是 ___",
+                correctAnswer: "身體的",
+                acceptableAnswers: ["身體的", "身体的", "物理的"]
+            },
+            {
+                type: "fill-in",
+                question: "appearance 的中文意思是 ___",
+                correctAnswer: "外表",
+                acceptableAnswers: ["外表", "外觀", "外观"]
+            },
+            {
+                type: "fill-in",
+                question: "ideal 的中文意思是 ___",
+                correctAnswer: "完美的",
+                acceptableAnswers: ["完美的", "理想的"]
+            },
+            {
+                type: "fill-in",
+                question: "culture 的中文意思是 ___",
+                correctAnswer: "文化",
+                acceptableAnswers: ["文化"]
+            },
+            {
+                type: "fill-in",
+                question: "attractiveness 的中文意思是 ___",
+                correctAnswer: "吸引力",
+                acceptableAnswers: ["吸引力"]
+            },
+            {
+                type: "fill-in",
+                question: "preference 的中文意思是 ___",
+                correctAnswer: "偏好",
+                acceptableAnswers: ["偏好", "喜好"]
+            },
+            {
+                type: "fill-in",
+                question: "society 的中文意思是 ___",
+                correctAnswer: "社會",
+                acceptableAnswers: ["社會", "社会"]
+            },
+            {
+                type: "fill-in",
+                question: "influence 的中文意思是 ___",
+                correctAnswer: "影響",
+                acceptableAnswers: ["影響", "影响"]
+            },
+            {
+                type: "fill-in",
+                question: "region 的中文意思是 ___",
+                correctAnswer: "地區",
+                acceptableAnswers: ["地區", "地区", "區域", "区域"]
+            },
+            {
+                type: "fill-in",
+                question: "measure 的中文意思是 ___",
+                correctAnswer: "測量",
+                acceptableAnswers: ["測量", "测量"]
+            },
+            {
+                type: "fill-in",
+                question: "standard 的中文意思是 ___",
+                correctAnswer: "標準",
+                acceptableAnswers: ["標準", "标准"]
+            },
+            {
+                type: "fill-in",
+                question: "confident 的中文意思是 ___",
+                correctAnswer: "自信的",
+                acceptableAnswers: ["自信的"]
+            },
+            {
+                type: "fill-in",
+                question: "feature 的中文意思是 ___",
+                correctAnswer: "特徵",
+                acceptableAnswers: ["特徵", "特征", "特色"]
+            },
+            {
+                type: "fill-in",
+                question: "concept 的中文意思是 ___",
+                correctAnswer: "概念",
+                acceptableAnswers: ["概念"]
+            },
+            {
+                type: "fill-in",
+                question: "associate 的中文意思是 ___",
+                correctAnswer: "聯想",
+                acceptableAnswers: ["聯想", "联想", "聯繫", "联系"]
+            },
+            {
+                type: "fill-in",
+                question: "generation 的中文意思是 ___",
+                correctAnswer: "世代",
+                acceptableAnswers: ["世代", "一代"]
+            },
+            {
+                type: "fill-in",
+                question: "experiment 的中文意思是 ___",
+                correctAnswer: "實驗",
+                acceptableAnswers: ["實驗", "实验"]
+            },
+            {
+                type: "fill-in",
+                question: "respond 的中文意思是 ___",
+                correctAnswer: "回應",
+                acceptableAnswers: ["回應", "回应", "回答"]
+            },
+            {
+                type: "fill-in",
+                question: "environment 的中文意思是 ___",
+                correctAnswer: "環境",
+                acceptableAnswers: ["環境", "环境"]
+            },
+            {
+                type: "fill-in",
+                question: "population 的中文意思是 ___",
+                correctAnswer: "人口",
+                acceptableAnswers: ["人口"]
+            },
+            {
+                type: "fill-in",
+                question: "tradition 的中文意思是 ___",
+                correctAnswer: "傳統",
+                acceptableAnswers: ["傳統", "传统"]
+            },
+            {
+                type: "fill-in",
+                question: "media 的中文意思是 ___",
+                correctAnswer: "媒體",
+                acceptableAnswers: ["媒體", "媒体"]
+            },
+            {
+                type: "fill-in",
+                question: "global 的中文意思是 ___",
+                correctAnswer: "全球的",
+                acceptableAnswers: ["全球的", "全球"]
+            },
+            {
+                type: "fill-in",
+                question: "universal 的中文意思是 ___",
+                correctAnswer: "普遍的",
+                acceptableAnswers: ["普遍的", "普遍", "通用的"]
+            },
+            {
+                type: "fill-in",
+                question: "unique 的中文意思是 ___",
+                correctAnswer: "獨特的",
+                acceptableAnswers: ["獨特的", "独特的", "唯一的"]
+            },
+            {
+                type: "fill-in",
+                question: "internal 的中文意思是 ___",
+                correctAnswer: "內在的",
+                acceptableAnswers: ["內在的", "内在的", "內部的", "内部的"]
+            },
+            {
+                type: "fill-in",
+                question: "external 的中文意思是 ___",
+                correctAnswer: "外部的",
+                acceptableAnswers: ["外部的", "外在的"]
+            },
+            {
+                type: "fill-in",
+                question: "evidence 的中文意思是 ___",
+                correctAnswer: "證據",
+                acceptableAnswers: ["證據", "证据"]
+            },
+            {
+                type: "fill-in",
+                question: "research 的中文意思是 ___",
+                correctAnswer: "研究",
+                acceptableAnswers: ["研究"]
+            },
+            {
+                type: "fill-in",
+                question: "scientific 的中文意思是 ___",
+                correctAnswer: "科學的",
+                acceptableAnswers: ["科學的", "科学的"]
+            },
+            {
+                type: "fill-in",
+                question: "emotion 的中文意思是 ___",
+                correctAnswer: "情感",
+                acceptableAnswers: ["情感", "情緒", "情绪"]
+            },
+            {
+                type: "fill-in",
+                question: "create 的中文意思是 ___",
+                correctAnswer: "創造",
+                acceptableAnswers: ["創造", "创造"]
+            },
+            {
+                type: "fill-in",
+                question: "represent 的中文意思是 ___",
+                correctAnswer: "代表",
+                acceptableAnswers: ["代表"]
+            },
+            {
+                type: "fill-in",
+                question: "appreciate 的中文意思是 ___",
+                correctAnswer: "欣賞",
+                acceptableAnswers: ["欣賞", "欣赏", "感激"]
+            },
+            {
+                type: "fill-in",
+                question: "emphasize 的中文意思是 ___",
+                correctAnswer: "強調",
+                acceptableAnswers: ["強調", "强调"]
+            },
+            {
+                type: "fill-in",
+                question: "idealize 的中文意思是 ___",
+                correctAnswer: "理想化",
+                acceptableAnswers: ["理想化"]
+            },
+            {
+                type: "fill-in",
+                question: "respondent 的中文意思是 ___",
+                correctAnswer: "回答者",
+                acceptableAnswers: ["回答者", "受訪者", "受访者"]
+            },
+            {
+                type: "fill-in",
+                question: "attractive 的中文意思是 ___",
+                correctAnswer: "有吸引力的",
+                acceptableAnswers: ["有吸引力的", "吸引人的", "迷人的"]
+            },
+            {
+                type: "fill-in",
+                question: "fashion 的中文意思是 ___",
+                correctAnswer: "時尚",
+                acceptableAnswers: ["時尚", "时尚"]
+            },
+            {
+                type: "fill-in",
+                question: "advertising 的中文意思是 ___",
+                correctAnswer: "廣告",
+                acceptableAnswers: ["廣告", "广告"]
+            },
+            {
+                type: "fill-in",
+                question: "select 的中文意思是 ___",
+                correctAnswer: "選擇",
+                acceptableAnswers: ["選擇", "选择"]
+            },
+            {
+                type: "fill-in",
+                question: "desire 的中文意思是 ___",
+                correctAnswer: "渴望",
+                acceptableAnswers: ["渴望", "欲望"]
+            },
+            {
+                type: "fill-in",
+                question: "model 的中文意思是 ___",
+                correctAnswer: "模特兒",
+                acceptableAnswers: ["模特兒", "模特儿", "模型"]
+            },
+            {
+                type: "fill-in",
+                question: "publication 的中文意思是 ___",
+                correctAnswer: "刊物",
+                acceptableAnswers: ["刊物", "出版物"]
+            },
+            {
+                type: "fill-in",
+                question: "artist 的中文意思是 ___",
+                correctAnswer: "藝術家",
+                acceptableAnswers: ["藝術家", "艺术家"]
+            },
+            {
+                type: "fill-in",
+                question: "illustrate 的中文意思是 ___",
+                correctAnswer: "說明",
+                acceptableAnswers: ["說明", "说明", "插圖", "插图"]
+            },
+            {
+                type: "fill-in",
+                question: "value 的中文意思是 ___",
+                correctAnswer: "價值",
+                acceptableAnswers: ["價值", "价值"]
+            },
+            {
+                type: "fill-in",
+                question: "individual 的中文意思是 ___",
+                correctAnswer: "個人的",
+                acceptableAnswers: ["個人的", "个人的", "個別的", "个别的"]
+            },
+            {
+                type: "fill-in",
+                question: "surrounding 的中文意思是 ___",
+                correctAnswer: "周圍的",
+                acceptableAnswers: ["周圍的", "周围的", "周邊的", "周边的"]
+            },
+            {
+                type: "fill-in",
+                question: "achievement 的中文意思是 ___",
+                correctAnswer: "成就",
+                acceptableAnswers: ["成就", "成績", "成绩"]
+            }, {
+                type: "fill-in",
+                question: "exceedingly 的中文意思是 ___",
+                correctAnswer: "極度地",
+                acceptableAnswers: ["極度地", "极度地", "非常地", "非常"]
+            },
+            {
+                type: "fill-in",
+                question: "appearances 的中文意思是 ___",
+                correctAnswer: "外表",
+                acceptableAnswers: ["外表", "外觀", "外观", "外貌"]
+            },
+            {
+                type: "fill-in",
+                question: "shore 的中文意思是 ___",
+                correctAnswer: "海岸",
+                acceptableAnswers: ["海岸", "岸邊", "岸边", "岸"]
+            },
+            {
+                type: "fill-in",
+                question: "proper 的中文意思是 ___",
+                correctAnswer: "適當的",
+                acceptableAnswers: ["適當的", "适当的", "恰當的", "恰当的", "正確的", "正确的"]
+            },
+            {
+                type: "fill-in",
+                question: "peninsula 的中文意思是 ___",
+                correctAnswer: "半島",
+                acceptableAnswers: ["半島", "半岛"]
+            },
+            {
+                type: "fill-in",
+                question: "cliffs 的中文意思是 ___",
+                correctAnswer: "懸崖",
+                acceptableAnswers: ["懸崖", "悬崖", "峭壁"]
+            },
+            {
+                type: "fill-in",
+                question: "kayaking 的中文意思是 ___",
+                correctAnswer: "划皮艇",
+                acceptableAnswers: ["划皮艇", "獨木舟", "独木舟", "划獨木舟", "划独木舟"]
+            },
+            {
+                type: "fill-in",
+                question: "photograph 的中文意思是 ___",
+                correctAnswer: "攝影",
+                acceptableAnswers: ["攝影", "摄影", "拍照", "照片"]
+            },
+            {
+                type: "fill-in",
+                question: "feathers 的中文意思是 ___",
+                correctAnswer: "羽毛",
+                acceptableAnswers: ["羽毛"]
+            },
+            {
+                type: "fill-in",
+                question: "fulmar 的中文意思是 ___",
+                correctAnswer: "管鼻鸌",
+                acceptableAnswers: ["管鼻鸌", "管鼻鹱", "暴風鸌", "暴风鹱"]
+            },
+            {
+                type: "fill-in",
+                question: "gull 的中文意思是 ___",
+                correctAnswer: "海鷗",
+                acceptableAnswers: ["海鷗", "海鸥"]
+            },
+            {
+                type: "fill-in",
+                question: "puffin 的中文意思是 ___",
+                correctAnswer: "海鸚",
+                acceptableAnswers: ["海鸚", "海鹦", "海雀"]
+            },
+            {
+                type: "fill-in",
+                question: "certainty 的中文意思是 ___",
+                correctAnswer: "確定性",
+                acceptableAnswers: ["確定性", "确定性", "確定", "确定", "肯定"]
+            },
+            {
+                type: "fill-in",
+                question: "come apart 的中文意思是 ___",
+                correctAnswer: "分開",
+                acceptableAnswers: ["分開", "分开", "分離", "分离", "破裂"]
+            },
+            {
+                type: "fill-in",
+                question: "close quarters 的中文意思是 ___",
+                correctAnswer: "近距離",
+                acceptableAnswers: ["近距離", "近距离", "近處", "近处"]
+            },
+            {
+                type: "fill-in",
+                question: "examination 的中文意思是 ___",
+                correctAnswer: "檢查",
+                acceptableAnswers: ["檢查", "检查", "審查", "审查", "觀察", "观察"]
+            },
+            {
+                type: "fill-in",
+                question: "creepy-crawlies 的中文意思是 ___",
+                correctAnswer: "小蟲子",
+                acceptableAnswers: ["小蟲子", "小虫子", "爬蟲", "爬虫", "昆蟲", "昆虫"]
+            },
+            {
+                type: "fill-in",
+                question: "lens 的中文意思是 ___",
+                correctAnswer: "鏡頭",
+                acceptableAnswers: ["鏡頭", "镜头", "透鏡", "透镜"]
+            },
+            {
+                type: "fill-in",
+                question: "twisting 的中文意思是 ___",
+                correctAnswer: "扭轉",
+                acceptableAnswers: ["扭轉", "扭转", "旋轉", "旋转", "扭曲"]
+            },
+            {
+                type: "fill-in",
+                question: "exploring 的中文意思是 ___",
+                correctAnswer: "探索",
+                acceptableAnswers: ["探索", "探險", "探险", "探查"]
+            },
+            {
+                type: "fill-in",
+                question: "reflected 的中文意思是 ___",
+                correctAnswer: "反射",
+                acceptableAnswers: ["反射", "反映", "倒映"]
+            },
+            {
+                type: "fill-in",
+                question: "Icelandic 的中文意思是 ___",
+                correctAnswer: "冰島的",
+                acceptableAnswers: ["冰島的", "冰岛的", "冰島", "冰岛"]
+            },
+            {
+                type: "fill-in",
+                question: "harmonized 的中文意思是 ___",
+                correctAnswer: "和諧",
+                acceptableAnswers: ["和諧", "和谐", "協調", "协调", "融合"]
+            },
+            {
+                type: "fill-in",
+                question: "intricate 的中文意思是 ___",
+                correctAnswer: "複雜的",
+                acceptableAnswers: ["複雜的", "复杂的", "精細的", "精细的", "精密的"]
+            },
+            {
+                type: "fill-in",
+                question: "delicate 的中文意思是 ___",
+                correctAnswer: "精緻的",
+                acceptableAnswers: ["精緻的", "精致的", "脆弱的", "細緻的", "细致的"]
+            },
+            {
+                type: "fill-in",
+                question: "vanes 的中文意思是 ___",
+                correctAnswer: "羽片",
+                acceptableAnswers: ["羽片", "葉片", "叶片"]
+            },
+            {
+                type: "fill-in",
+                question: "viewfinder 的中文意思是 ___",
+                correctAnswer: "取景器",
+                acceptableAnswers: ["取景器", "觀景窗", "观景窗"]
+            },
+            {
+                type: "fill-in",
+                question: "marveling 的中文意思是 ___",
+                correctAnswer: "驚嘆",
+                acceptableAnswers: ["驚嘆", "惊叹", "驚奇", "惊奇", "讚嘆", "赞叹"]
+            },
+            {
+                type: "fill-in",
+                question: "structure 的中文意思是 ___",
+                correctAnswer: "結構",
+                acceptableAnswers: ["結構", "结构", "構造", "构造"]
+            },
+            {
+                type: "fill-in",
+                question: "barbs 的中文意思是 ___",
+                correctAnswer: "羽枝",
+                acceptableAnswers: ["羽枝", "倒刺", "鉤刺", "钩刺"]
+            },
+            {
+                type: "fill-in",
+                question: "hamuli 的中文意思是 ___",
+                correctAnswer: "羽小鉤",
+                acceptableAnswers: ["羽小鉤", "羽小钩", "小鉤", "小钩"]
+            },
+            {
+                type: "fill-in",
+                question: "macro level 的中文意思是 ___",
+                correctAnswer: "宏觀層面",
+                acceptableAnswers: ["宏觀層面", "宏观层面", "宏觀", "宏观", "微距層面", "微距层面"]
+            },
+            {
+                type: "fill-in",
+                question: "inquire 的中文意思是 ___",
+                correctAnswer: "詢問",
+                acceptableAnswers: ["詢問", "询问", "探詢", "探询", "探究"]
+            },
+            {
+                type: "fill-in",
+                question: "drift off 的中文意思是 ___",
+                correctAnswer: "飄走",
+                acceptableAnswers: ["飄走", "飘走", "漂離", "漂离", "走神"]
+            },
+            {
+                type: "fill-in",
+                question: "oblivious 的中文意思是 ___",
+                correctAnswer: "不注意的",
+                acceptableAnswers: ["不注意的", "未察覺的", "未察觉的", "忘記的", "忘记的", "茫然的"]
+            },
+            {
+                type: "fill-in",
+                question: "gleaming 的中文意思是 ___",
+                correctAnswer: "閃耀的",
+                acceptableAnswers: ["閃耀的", "闪耀的", "發光的", "发光的", "閃亮的", "闪亮的"]
+            },
+            {
+                type: "fill-in",
+                question: "graceful 的中文意思是 ___",
+                correctAnswer: "優雅的",
+                acceptableAnswers: ["優雅的", "优雅的", "優美的", "优美的"]
+            },
+            {
+                type: "fill-in",
+                question: "tilt-and-shift lens 的中文意思是 ___",
+                correctAnswer: "移軸鏡頭",
+                acceptableAnswers: ["移軸鏡頭", "移轴镜头", "傾斜移位鏡頭", "倾斜移位镜头"]
+            },
+            {
+                type: "fill-in",
+                question: "slash 的中文意思是 ___",
+                correctAnswer: "斜線",
+                acceptableAnswers: ["斜線", "斜线", "削減", "削减", "砍"]
+            },
+            {
+                type: "fill-in",
+                question: "sharp 的中文意思是 ___",
+                correctAnswer: "銳利的",
+                acceptableAnswers: ["銳利的", "锐利的", "清晰的", "尖銳的", "尖锐的"]
+            },
+            {
+                type: "fill-in",
+                question: "drifting off 的中文意思是 ___",
+                correctAnswer: "飄走",
+                acceptableAnswers: ["飄走", "飘走", "漂離", "漂离", "走神", "恍神"]
+            },
+            {
+                type: "fill-in",
+                question: "suggested 的中文意思是 ___",
+                correctAnswer: "暗示",
+                acceptableAnswers: ["暗示", "建議", "建议", "提議", "提议"]
+            },
+            {
+                type: "fill-in",
+                question: "pristine 的中文意思是 ___",
+                correctAnswer: "原始的",
+                acceptableAnswers: ["原始的", "純淨的", "纯净的", "未受污染的"]
+            },
+            {
+                type: "fill-in",
+                question: "splendor 的中文意思是 ___",
+                correctAnswer: "壯麗",
+                acceptableAnswers: ["壯麗", "壮丽", "輝煌", "辉煌", "光輝", "光辉"]
+            },
+            {
+                type: "fill-in",
+                question: "vowed 的中文意思是 ___",
+                correctAnswer: "發誓",
+                acceptableAnswers: ["發誓", "发誓", "立誓", "承諾", "承诺"]
+            },
+            {
+                type: "fill-in",
+                question: "voyage 的中文意思是 ___",
+                correctAnswer: "航行",
+                acceptableAnswers: ["航行", "旅程", "航程"]
+            },
+            {
+                type: "fill-in",
+                question: "novel 的中文意思是 ___",
+                correctAnswer: "新穎的",
+                acceptableAnswers: ["新穎的", "新颖的", "新奇的", "小說", "小说"]
+            },
+            {
+                type: "fill-in",
+                question: "images 的中文意思是 ___",
+                correctAnswer: "圖像",
+                acceptableAnswers: ["圖像", "图像", "影像", "圖片", "图片"]
+            },
+            {
+                type: "fill-in",
+                question: "descriptive 的中文意思是 ___",
+                correctAnswer: "描述性的",
+                acceptableAnswers: ["描述性的", "敘述性的", "叙述性的", "描述的"]
+            },
+            {
+                type: "fill-in",
+                question: "suggestive 的中文意思是 ___",
+                correctAnswer: "暗示的",
+                acceptableAnswers: ["暗示的", "暗示性的", "引人聯想的", "引人联想的"]
+            },
+            {
+                type: "fill-in",
+                question: "imagination 的中文意思是 ___",
+                correctAnswer: "想像力",
+                acceptableAnswers: ["想像力", "想象力", "想像", "想象"]
+            },
+            {
+                type: "fill-in",
+                question: "attribute 的中文意思是 ___",
+                correctAnswer: "歸因於",
+                acceptableAnswers: ["歸因於", "归因于", "屬性", "属性", "特質", "特质"]
+            },
+            {
+                type: "fill-in",
+                question: "generate 的中文意思是 ___",
+                correctAnswer: "產生",
+                acceptableAnswers: ["產生", "产生", "生成", "製造", "制造"]
+            },
+            {
+                type: "fill-in",
+                question: "differentiate 的中文意思是 ___",
+                correctAnswer: "區分",
+                acceptableAnswers: ["區分", "区分", "區別", "区别", "辨別", "辨别"]
+            },
+            {
+                type: "fill-in",
+                question: "psychological 的中文意思是 ___",
+                correctAnswer: "心理的",
+                acceptableAnswers: ["心理的", "心理學的", "心理学的"]
+            },
+            {
+                type: "fill-in",
+                question: "adjust 的中文意思是 ___",
+                correctAnswer: "調整",
+                acceptableAnswers: ["調整", "调整", "適應", "适应"]
+            },
+            {
+                type: "fill-in",
+                question: "acknowledge 的中文意思是 ___",
+                correctAnswer: "承認",
+                acceptableAnswers: ["承認", "承认", "認可", "认可", "答謝", "答谢"]
+            },
+            {
+                type: "fill-in",
+                question: "enhance 的中文意思是 ___",
+                correctAnswer: "增強",
+                acceptableAnswers: ["增強", "增强", "提升", "提高"]
+            },
+            {
+                type: "fill-in",
+                question: "genetic 的中文意思是 ___",
+                correctAnswer: "基因的",
+                acceptableAnswers: ["基因的", "遺傳的", "遗传的"]
+            },
+            {
+                type: "fill-in",
+                question: "champion 的中文意思是 ___",
+                correctAnswer: "冠軍",
+                acceptableAnswers: ["冠軍", "冠军", "擁護者", "拥护者", "支持"]
+            },
+            {
+                type: "fill-in",
+                question: "automatic 的中文意思是 ___",
+                correctAnswer: "自動的",
+                acceptableAnswers: ["自動的", "自动的"]
+            },
+            {
+                type: "fill-in",
+                question: "enrich 的中文意思是 ___",
+                correctAnswer: "豐富",
+                acceptableAnswers: ["豐富", "丰富", "使富裕", "充實", "充实"]
+            },
+            {
+                type: "fill-in",
+                question: "motion 的中文意思是 ___",
+                correctAnswer: "動作",
+                acceptableAnswers: ["動作", "动作", "運動", "运动", "移動", "移动"]
+            },
+            {
+                type: "fill-in",
+                question: "proclaim 的中文意思是 ___",
+                correctAnswer: "宣告",
+                acceptableAnswers: ["宣告", "宣布", "聲明", "声明"]
+            },
+            {
+                type: "fill-in",
+                question: "participate 的中文意思是 ___",
+                correctAnswer: "參與",
+                acceptableAnswers: ["參與", "参与", "參加", "参加"]
+            },
+            {
+                type: "fill-in",
+                question: "uniform 的中文意思是 ___",
+                correctAnswer: "統一的",
+                acceptableAnswers: ["統一的", "统一的", "制服", "一致的"]
+            },
+            {
+                type: "fill-in",
+                question: "unique 的中文意思是 ___",
+                correctAnswer: "獨特的",
+                acceptableAnswers: ["獨特的", "独特的", "唯一的"]
+            },
+            {
+                type: "fill-in",
+                question: "defeat 的中文意思是 ___",
+                correctAnswer: "擊敗",
+                acceptableAnswers: ["擊敗", "击败", "戰勝", "战胜", "失敗", "失败"]
+            },
+            {
+                type: "fill-in",
+                question: "detour 的中文意思是 ___",
+                correctAnswer: "繞道",
+                acceptableAnswers: ["繞道", "绕道", "迂迴", "迂回"]
+            },
+            {
+                type: "fill-in",
+                question: "unified 的中文意思是 ___",
+                correctAnswer: "統一的",
+                acceptableAnswers: ["統一的", "统一的", "一致的", "團結的", "团结的"]
+            },
+            {
+                type: "fill-in",
+                question: "mate 的中文意思是 ___",
+                correctAnswer: "伴侶",
+                acceptableAnswers: ["伴侶", "伴侣", "配偶", "夥伴", "伙伴", "交配"]
+            },
+            {
+                type: "fill-in",
+                question: "mature 的中文意思是 ___",
+                correctAnswer: "成熟的",
+                acceptableAnswers: ["成熟的", "成熟"]
+            },
+            {
+                type: "fill-in",
+                question: "altered 的中文意思是 ___",
+                correctAnswer: "改變的",
+                acceptableAnswers: ["改變的", "改变的", "更改的", "修改的"]
+            },
+            {
+                type: "fill-in",
+                question: "notion 的中文意思是 ___",
+                correctAnswer: "概念",
+                acceptableAnswers: ["概念", "想法", "觀念", "观念"]
+            },
+            {
+                type: "fill-in",
+                question: "devote 的中文意思是 ___",
+                correctAnswer: "奉獻",
+                acceptableAnswers: ["奉獻", "奉献", "致力於", "致力于", "投入"]
+            },
+            {
+                type: "fill-in",
+                question: "subjective 的中文意思是 ___",
+                correctAnswer: "主觀的",
+                acceptableAnswers: ["主觀的", "主观的"]
+            },
+            {
+                type: "fill-in",
+                question: "proactive 的中文意思是 ___",
+                correctAnswer: "主動的",
+                acceptableAnswers: ["主動的", "主动的", "積極主動的", "积极主动的"]
+            },
+            {
+                type: "fill-in",
+                question: "protective 的中文意思是 ___",
+                correctAnswer: "保護的",
+                acceptableAnswers: ["保護的", "保护的", "防護的", "防护的"]
+            },
+            {
+                type: "fill-in",
+                question: "criticize 的中文意思是 ___",
+                correctAnswer: "批評",
+                acceptableAnswers: ["批評", "批评", "批判"]
+            },
+            {
+                type: "fill-in",
+                question: "crucial 的中文意思是 ___",
+                correctAnswer: "關鍵的",
+                acceptableAnswers: ["關鍵的", "关键的", "重要的", "決定性的", "决定性的"]
+            },
+            {
+                type: "fill-in",
+                question: "permanent 的中文意思是 ___",
+                correctAnswer: "永久的",
+                acceptableAnswers: ["永久的", "永恆的", "永恒的", "長期的", "长期的"]
+            },
+            {
+                type: "fill-in",
+                question: "premature 的中文意思是 ___",
+                correctAnswer: "過早的",
+                acceptableAnswers: ["過早的", "过早的", "早產的", "早产的", "不成熟的"]
+            },
+            {
+                type: "fill-in",
+                question: "sector 的中文意思是 ___",
+                correctAnswer: "部門",
+                acceptableAnswers: ["部門", "部门", "領域", "领域", "扇形", "區域", "区域"]
+            },
+            {
+                type: "fill-in",
+                question: "fade 的中文意思是 ___",
+                correctAnswer: "褪色",
+                acceptableAnswers: ["褪色", "消退", "衰退", "逐漸消失", "逐渐消失"]
+            },
+            {
+                type: "fill-in",
+                question: "criminal 的中文意思是 ___",
+                correctAnswer: "罪犯",
+                acceptableAnswers: ["罪犯", "犯罪的", "刑事的"]
+            },
+            {
+                type: "fill-in",
+                question: "leisure 的中文意思是 ___",
+                correctAnswer: "休閒",
+                acceptableAnswers: ["休閒", "休闲", "空閒", "空闲", "閒暇", "闲暇"]
+            },
+            {
+                type: "fill-in",
+                question: "external 的中文意思是 ___",
+                correctAnswer: "外部的",
+                acceptableAnswers: ["外部的", "外在的", "外界的"]
+            },
+            {
+                type: "fill-in",
+                question: "status 的中文意思是 ___",
+                correctAnswer: "地位",
+                acceptableAnswers: ["地位", "身分", "身份", "狀態", "状态"]
+            }
+        ];
+    
+    </script>
+    <script src="systemcode/system.js"></script>
+    <script src="https://wlsetd.github.io/minigames/sys.js"></script>
+</body>
+
+</html>
