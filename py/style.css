@@ -468,3 +468,16 @@ i.fa-code {
     transform: translateY(-3px);
     box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
+.problem-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.diff-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 4px;
+}

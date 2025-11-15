@@ -289,6 +289,27 @@ function updateProgress(filename) {
   if (bar) bar.style.width = percent + "%";
   if (text) text.innerText = `完成度：${done}/${total}（${percent}%）`;
 }
+function renderProblemItem(filename, p) {
+
+    // 難度顏色
+    let color = "#999"; // default
+    if (p.difficulty === "Easy") color = "#27ae60";     // green
+    if (p.difficulty === "Medium") color = "#f1c40f";   // yellow
+    if (p.difficulty === "Hard") color = "#e74c3c";     // red
+
+    const div = document.createElement("div");
+    div.className = "problem-item";
+    div.onclick = () => openProblem(filename, p.id);
+
+    div.innerHTML = `
+        <div class="problem-row">
+            <span class="diff-dot" style="background:${color};"></span>
+            <strong>${p.id}</strong> — ${p.title}
+        </div>
+    `;
+
+    return div;
+}
 
 // ========================================================
 // 8. 初始化
