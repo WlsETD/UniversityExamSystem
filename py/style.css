@@ -38,7 +38,7 @@ body {
    🧭 Codeforces 風格導覽列
 ================================ */
 .nav-bar {
-    background: #2e3b4e;
+    background: #3c4f6b;
     /* Codeforces 深藍灰 */
     padding: 14px 0;
     color: #fff;
@@ -544,9 +544,6 @@ i.fa-code {
     display: inline-block;
     margin-right: 4px;
 }
-.fa-java{
-    color: red;
-}
 .fa-python{
-    color: rgb(255, 208, 0);
+    color: #FFF;
 }
