@@ -544,4 +544,9 @@ i.fa-code {
     display: inline-block;
     margin-right: 4px;
 }
-
+.fa-java{
+    color: red;
+}
+.fa-python{
+    color: rgb(255, 208, 0);
+}
