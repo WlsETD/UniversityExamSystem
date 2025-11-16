@@ -38,11 +38,13 @@ body {
    🧭 Codeforces 風格導覽列
 ================================ */
 .nav-bar {
-    background: #2e3b4e;  /* Codeforces 深藍灰 */
+    background: #2e3b4e;
+    /* Codeforces 深藍灰 */
     padding: 14px 0;
     color: #fff;
     width: 100%;
-    border-bottom: 4px solid #3c4f6b; /* 🔥 Codeforces 細藍分隔線 */
+    border-bottom: 4px solid #3c4f6b;
+    /* 🔥 Codeforces 細藍分隔線 */
     position: sticky;
     top: 0;
     z-index: 50;
@@ -68,17 +70,19 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-   
+
 }
 
 /* Codeforces Title 色彩 (白 + 稍亮文字) */
 .logo span {
     color: #f9f9f9;
 }
-.logo a{
-     color: white;
-     text-decoration: none;
+
+.logo a {
+    color: white;
+    text-decoration: none;
 }
+
 /* 右邊返回 */
 .back-link {
     color: #9cc8ff;
@@ -289,6 +293,7 @@ i.fa-code {
         text-shadow: 0 0 10px white;
     }
 }
+
 /* ===============================
    📘 problem.html 專用
 ================================ */
@@ -301,8 +306,15 @@ i.fa-code {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(8px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .title-large {
@@ -332,6 +344,7 @@ i.fa-code {
     background: #eee;
     border-radius: 5px;
 }
+
 .progress-bar-fill {
     width: 0%;
     height: 100%;
@@ -361,10 +374,25 @@ i.fa-code {
 }
 
 /* 顏色設定 */
-.diff-btn.all    { background: #fff;           border: 2px solid #333; }
-.diff-btn.easy   { background: #1e5128;        color: #fff; }
-.diff-btn.medium { background: #b8860b;        color: #fff; }
-.diff-btn.hard   { background: #641e1e;        color: #fff; }
+.diff-btn.all {
+    background: #fff;
+    border: 2px solid #333;
+}
+
+.diff-btn.easy {
+    background: #1e5128;
+    color: #fff;
+}
+
+.diff-btn.medium {
+    background: #b8860b;
+    color: #fff;
+}
+
+.diff-btn.hard {
+    background: #641e1e;
+    color: #fff;
+}
 
 /* hover 效果 */
 .diff-btn:hover {
@@ -391,7 +419,7 @@ i.fa-code {
 
 .problem-item:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
 }
 
 /* ====== Footer ====== */
@@ -403,10 +431,25 @@ i.fa-code {
     color: #777;
     font-size: 14px;
 }
-.bg-default  { background-color: #ffffff; }
-.bg-easy     { background-color: #1e5128; color: #f2fff2; }
-.bg-medium   { background-color: #b8860b; color: #fff7e0; }
-.bg-hard     { background-color: #641e1e; color: #ffe5e5; }
+
+.bg-default {
+    background-color: #ffffff;
+}
+
+.bg-easy {
+    background-color: #1e5128;
+    color: #f2fff2;
+}
+
+.bg-medium {
+    background-color: #b8860b;
+    color: #fff7e0;
+}
+
+.bg-hard {
+    background-color: #641e1e;
+    color: #ffe5e5;
+}
 
 /* 讓內文在深色背景也能看清楚 */
 .bg-easy .problem-item,
@@ -415,9 +458,13 @@ i.fa-code {
     background: rgba(255, 255, 255, 0.08);
     border-color: rgba(255, 255, 255, 0.2);
 }
-.bg-easy h2, .bg-medium h2, .bg-hard h2 {
+
+.bg-easy h2,
+.bg-medium h2,
+.bg-hard h2 {
     color: #fff;
 }
+
 /* 清除進度按鈕 */
 .clear-btn {
     background: #444;
@@ -430,6 +477,7 @@ i.fa-code {
     font-size: 15px;
     transition: 0.3s;
 }
+
 .clear-btn:hover {
     background: #222;
 }
@@ -440,7 +488,8 @@ i.fa-code {
 /* 外層卡片 */
 .problem-item {
     display: flex;
-    align-items: stretch;   /* ⭐ 讓子元素一起撐高 */
+    align-items: stretch;
+    /* ⭐ 讓子元素一起撐高 */
     gap: 12px;
     padding: 14px 16px;
     border-radius: 10px;
@@ -455,19 +504,33 @@ i.fa-code {
     width: 8px;
     border-radius: 6px;
     flex-shrink: 0;
-    height: auto;           /* ⭐ 自動匹配父層高度 */
+    height: auto;
+    /* ⭐ 自動匹配父層高度 */
 }
 
 /* 難度顏色 */
-.diff-easy   { background: #2ecc71; }   /* 綠 */
-.diff-medium { background: #f1c40f; }   /* 黃 */
-.diff-hard   { background: #e74c3c; }   /* 紅 */
+.diff-easy {
+    background: #2ecc71;
+}
+
+/* 綠 */
+.diff-medium {
+    background: #f1c40f;
+}
+
+/* 黃 */
+.diff-hard {
+    background: #e74c3c;
+}
+
+/* 紅 */
 
 /* Hover 效果 */
 .problem-item:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
 }
+
 .problem-row {
     display: flex;
     align-items: center;
@@ -481,5 +544,4 @@ i.fa-code {
     display: inline-block;
     margin-right: 4px;
 }
-
 
