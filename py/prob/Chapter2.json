@@ -1,385 +1,451 @@
 {
-    "category": "Python 條件判斷練習（Chapter 2）",
-    "problems": [
-        {
-            "id": "201",
-            "title": "比較兩個整數大小",
-            "difficulty": "Easy",
-            "description": "輸入兩個整數 a, b，輸出 a 是否大於 b（True 或 False）。",
-            "testCases": [
-                {
-                    "input": "5\n3",
-                    "expected": "True"
-                },
-                {
-                    "input": "2\n9",
-                    "expected": "False"
-                }
-            ],
-            "answerCode": {
-                "python": "a = int(input())\nb = int(input())\nprint(a > b)"
-            }
-        },
-        {
-            "id": "202",
-            "title": "判斷是否為正數",
-            "difficulty": "Easy",
-            "description": "輸入一個整數，若大於 0 輸出 Positive，否則輸出 Not Positive。",
-            "testCases": [
-                {
-                    "input": "5",
-                    "expected": "Positive"
-                },
-                {
-                    "input": "-1",
-                    "expected": "Not Positive"
-                }
-            ],
-            "answerCode": {
-                "python": "n = int(input())\nprint('Positive' if n > 0 else 'Not Positive')"
-            }
-        },
-        {
-            "id": "203",
-            "title": "判斷偶數或奇數",
-            "difficulty": "Easy",
-            "description": "輸入整數 n，若是偶數輸出 Even，否則 Odd。",
-            "testCases": [
-                {
-                    "input": "8",
-                    "expected": "Even"
-                },
-                {
-                    "input": "7",
-                    "expected": "Odd"
-                }
-            ],
-            "answerCode": {
-                "python": "n = int(input())\nprint('Even' if n % 2 == 0 else 'Odd')"
-            }
-        },
-        {
-            "id": "204",
-            "title": "成年判斷",
-            "difficulty": "Easy",
-            "description": "輸入年齡，若年齡 >=18 輸出 Adult，否則輸出 Minor。",
-            "testCases": [
-                {
-                    "input": "20",
-                    "expected": "Adult"
-                },
-                {
-                    "input": "15",
-                    "expected": "Minor"
-                }
-            ],
-            "answerCode": {
-                "python": "age = int(input())\nprint('Adult' if age >= 18 else 'Minor')"
-            }
-        },
-        {
-            "id": "205",
-            "title": "成績及格判斷",
-            "difficulty": "Easy",
-            "description": "輸入姓名與成績，若成績 >= 60 輸出 <name> Pass，否則 Fail。",
-            "testCases": [
-                {
-                    "input": "Tom\n80",
-                    "expected": "Tom Pass"
-                },
-                {
-                    "input": "Amy\n58",
-                    "expected": "Amy Fail"
-                }
-            ],
-            "answerCode": {
-                "python": "name = input()\nscore = int(input())\nprint(name, 'Pass' if score >= 60 else 'Fail')"
-            }
-        },
-        {
-            "id": "206",
-            "title": "是否等於 100",
-            "difficulty": "Easy",
-            "description": "輸入數字 n，若 n==100 輸出 Equal，否則 Not Equal。",
-            "testCases": [
-                {
-                    "input": "100",
-                    "expected": "Equal"
-                },
-                {
-                    "input": "75",
-                    "expected": "Not Equal"
-                }
-            ],
-            "answerCode": {
-                "python": "n = int(input())\nprint('Equal' if n == 100 else 'Not Equal')"
-            }
-        },
-        {
-            "id": "207",
-            "title": "判斷是否為零",
-            "difficulty": "Easy",
-            "description": "輸入整數 n，若等於 0 輸出 Zero，否則 Non-zero。",
-            "testCases": [
-                {
-                    "input": "0",
-                    "expected": "Zero"
-                },
-                {
-                    "input": "12",
-                    "expected": "Non-zero"
-                }
-            ],
-            "answerCode": {
-                "python": "n = int(input())\nprint('Zero' if n == 0 else 'Non-zero')"
-            }
-        },
-        {
-            "id": "208",
-            "title": "三數最大值",
-            "difficulty": "Medium",
-            "description": "輸入三個整數，輸出最大值。",
-            "testCases": [
-                {
-                    "input": "3\n7\n5",
-                    "expected": "7"
-                },
-                {
-                    "input": "10\n2\n6",
-                    "expected": "10"
-                }
-            ],
-            "answerCode": {
-                "python": "a = int(input())\nb = int(input())\nc = int(input())\nprint(max(a,b,c))"
-            }
-        },
-        {
-            "id": "209",
-            "title": "成績等第判斷",
-            "difficulty": "Medium",
-            "description": "輸入 0–100，輸出等第 A~F。",
-            "testCases": [
-                {
-                    "input": "95",
-                    "expected": "A"
-                },
-                {
-                    "input": "73",
-                    "expected": "C"
-                }
-            ],
-            "answerCode": {
-                "python": "s=int(input())\nif s>=90: print('A')\nelif s>=80: print('B')\nelif s>=70: print('C')\nelif s>=60: print('D')\nelse: print('F')"
-            }
-        },
-        {
-            "id": "210",
-            "title": "是否在 10 到 20 之間",
-            "difficulty": "Medium",
-            "description": "輸入 n，若 10<=n<=20 輸出 In Range，否則 Out Range。",
-            "testCases": [
-                {
-                    "input": "15",
-                    "expected": "In Range"
-                },
-                {
-                    "input": "5",
-                    "expected": "Out Range"
-                }
-            ],
-            "answerCode": {
-                "python": "n=int(input())\nprint('In Range' if 10<=n<=20 else 'Out Range')"
-            }
-        },
-        {
-            "id": "211",
-            "title": "閏年判斷",
-            "difficulty": "Medium",
-            "description": "輸入年份，判斷是否為閏年（True/False）。",
-            "testCases": [
-                {
-                    "input": "2000",
-                    "expected": "True"
-                },
-                {
-                    "input": "1900",
-                    "expected": "False"
-                }
-            ],
-            "answerCode": {
-                "python": "y=int(input())\nprint(True if (y%400==0 or (y%4==0 and y%100!=0)) else False)"
-            }
-        },
-        {
-            "id": "212",
-            "title": "BMI 計算與判斷",
-            "difficulty": "Medium",
-            "description": "輸入身高(cm)與體重，計算 BMI 並判斷體位。",
-            "testCases": [
-                {
-                    "input": "170\n60",
-                    "expected": "Normal"
-                },
-                {
-                    "input": "170\n45",
-                    "expected": "Underweight"
-                }
-            ],
-            "answerCode": {
-                "python": "h=float(input())\nw=float(input())\nbmi=w/((h/100)**2)\nif bmi<18.5: print('Underweight')\nelif bmi<24: print('Normal')\nelse: print('Overweight')"
-            }
-        },
-        {
-            "id": "213",
-            "title": "判斷正負零",
-            "difficulty": "Medium",
-            "description": "輸入整數，輸出 Positive / Zero / Negative。",
-            "testCases": [
-                {
-                    "input": "10",
-                    "expected": "Positive"
-                },
-                {
-                    "input": "0",
-                    "expected": "Zero"
-                }
-            ],
-            "answerCode": {
-                "python": "n=int(input())\nif n>0: print('Positive')\nelif n==0: print('Zero')\nelse: print('Negative')"
-            }
-        },
-        {
-            "id": "214",
-            "title": "綜合判斷 and/or",
-            "difficulty": "Medium",
-            "description": "輸入整數 n，若 n 為偶數或 5 的倍數輸出 OK，否則輸出 Not OK。",
-            "testCases": [
-                {
-                    "input": "20",
-                    "expected": "OK"
-                },
-                {
-                    "input": "7",
-                    "expected": "Not OK"
-                }
-            ],
-            "answerCode": {
-                "python": "n=int(input())\nprint('OK' if (n%2==0 or n%5==0) else 'Not OK')"
-            }
-        },
-        {
-            "id": "215",
-            "title": "四科平均與及格判定",
-            "difficulty": "Hard",
-            "description": "輸入 4 個成績，計算平均（小數兩位），若 >=60 輸出 Pass 否則 Fail。",
-            "testCases": [
-                {
-                    "input": "60\n70\n80\n90",
-                    "expected": "Pass"
-                },
-                {
-                    "input": "40\n50\n60\n50",
-                    "expected": "Fail"
-                }
-            ],
-            "answerCode": {
-                "python": "a=int(input());b=int(input());c=int(input());d=int(input())\navg=(a+b+c+d)/4\nprint('Pass' if avg>=60 else 'Fail')"
-            }
-        },
-        {
-            "id": "216",
-            "title": "三角形邊長判斷",
-            "difficulty": "Hard",
-            "description": "輸入三邊長，若符合三角形不等式則 Valid，否則 Invalid。",
-            "testCases": [
-                {
-                    "input": "3\n4\n5",
-                    "expected": "Valid"
-                },
-                {
-                    "input": "1\n2\n3",
-                    "expected": "Invalid"
-                }
-            ],
-            "answerCode": {
-                "python": "a=int(input());b=int(input());c=int(input())\nprint('Valid' if (a+b>c and a+c>b and b+c>a) else 'Invalid')"
-            }
-        },
-        {
-            "id": "217",
-            "title": "計程車費用計算",
-            "difficulty": "Hard",
-            "description": "輸入公里數 km，起跳 75 元（含 1.5km），之後每 km 5 元（不足 1km 進位）。",
-            "testCases": [
-                {
-                    "input": "1",
-                    "expected": "75"
-                },
-                {
-                    "input": "3",
-                    "expected": "85"
-                }
-            ],
-            "answerCode": {
-                "python": "import math\nkm=float(input())\nif km<=1.5: fee=75\nelse: fee=75+math.ceil(km-1.5)*5\nprint(fee)"
-            }
-        },
-        {
-            "id": "218",
-            "title": "電費計算",
-            "difficulty": "Hard",
-            "description": "輸入度數 kWh，依區間計算電費，小數 2 位。",
-            "testCases": [
-                {
-                    "input": "100",
-                    "expected": "210.00"
-                },
-                {
-                    "input": "200",
-                    "expected": "432.40"
-                }
-            ],
-            "answerCode": {
-                "python": "k=int(input())\nfee=0\nif k<=120: fee=k*2.10\nelif k<=330: fee=120*2.10+(k-120)*3.02\nelse: fee=120*2.10+210*3.02+(k-330)*4.39\nprint(f'{fee:.2f}')"
-            }
-        },
-        {
-            "id": "219",
-            "title": "四科總分與評語",
-            "difficulty": "Hard",
-            "description": "輸入國英數自四科，總分 >=350→Excellent, >=300→Good, >=250→Average, else→Poor。",
-            "testCases": [
-                {
-                    "input": "90\n90\n90\n90",
-                    "expected": "Excellent"
-                },
-                {
-                    "input": "60\n70\n60\n70",
-                    "expected": "Average"
-                }
-            ],
-            "answerCode": {
-                "python": "a=int(input());b=int(input());c=int(input());d=int(input())\nt=a+b+c+d\nif t>=350: print('Excellent')\nelif t>=300: print('Good')\nelif t>=250: print('Average')\nelse: print('Poor')"
-            }
-        },
-        {
-            "id": "220",
-            "title": "身分證性別判斷",
-            "difficulty": "Hard",
-            "description": "輸入台灣身分證字串，第二碼 1→Male，2→Female，其餘→Unknown。",
-            "testCases": [
-                {
-                    "input": "A123456789",
-                    "expected": "Male"
-                },
-                {
-                    "input": "B223456789",
-                    "expected": "Female"
-                }
-            ],
-            "answerCode": {
-                "python": "s=input()\nprint('Male' if s[1]=='1' else ('Female' if s[1]=='2' else 'Unknown'))"
-            }
-        }
-    ]
+  "category": "Python 條件判斷練習（Chapter 2）",
+  "problems": [
+
+    {
+      "id": "P201",
+      "title": "比較兩個整數大小",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a, b，輸出 a 是否大於 b（True 或 False）。",
+      "testCases": [
+        { "input": "5\n3", "expected": "True" },
+        { "input": "2\n9", "expected": "False" }
+      ],
+      "answerCode": { "python": "a=int(input());b=int(input());print(a>b)" }
+    },
+
+    {
+      "id": "P202",
+      "title": "判斷是否為正數",
+      "difficulty": "Easy",
+      "description": "輸入一個整數，若大於0輸出 Positive，否則 Not Positive。",
+      "testCases": [
+        { "input": "5", "expected": "Positive" },
+        { "input": "-1", "expected": "Not Positive" }
+      ],
+      "answerCode": { "python": "n=int(input());print('Positive' if n>0 else 'Not Positive')" }
+    },
+
+    {
+      "id": "P203",
+      "title": "判斷偶數或奇數",
+      "difficulty": "Easy",
+      "description": "輸入整數 n，若是偶數輸出 Even，否則 Odd。",
+      "testCases": [
+        { "input": "8", "expected": "Even" },
+        { "input": "7", "expected": "Odd" }
+      ],
+      "answerCode": { "python": "n=int(input());print('Even' if n%2==0 else 'Odd')" }
+    },
+
+    {
+      "id": "P204",
+      "title": "成年判斷",
+      "difficulty": "Easy",
+      "description": "輸入年齡，若>=18輸出 Adult，否則 Minor。",
+      "testCases": [
+        { "input": "20", "expected": "Adult" },
+        { "input": "15", "expected": "Minor" }
+      ],
+      "answerCode": { "python": "age=int(input());print('Adult' if age>=18 else 'Minor')" }
+    },
+
+    {
+      "id": "P205",
+      "title": "成績及格判斷",
+      "difficulty": "Easy",
+      "description": "輸入姓名與成績，成績>=60輸出 <name> Pass，否則 Fail。",
+      "testCases": [
+        { "input": "Tom\n80", "expected": "Tom Pass" },
+        { "input": "Amy\n58", "expected": "Amy Fail" }
+      ],
+      "answerCode": { "python": "name=input();score=int(input());print(name, 'Pass' if score>=60 else 'Fail')" }
+    },
+
+    {
+      "id": "P206",
+      "title": "是否等於100",
+      "difficulty": "Easy",
+      "description": "輸入數字 n，若 n==100 輸出 Equal，否則 Not Equal。",
+      "testCases": [
+        { "input": "100", "expected": "Equal" },
+        { "input": "75", "expected": "Not Equal" }
+      ],
+      "answerCode": { "python": "n=int(input());print('Equal' if n==100 else 'Not Equal')" }
+    },
+
+    {
+      "id": "P207",
+      "title": "判斷是否為零",
+      "difficulty": "Easy",
+      "description": "輸入整數 n，若等於0輸出 Zero，否則 Non-zero。",
+      "testCases": [
+        { "input": "0", "expected": "Zero" },
+        { "input": "12", "expected": "Non-zero" }
+      ],
+      "answerCode": { "python": "n=int(input());print('Zero' if n==0 else 'Non-zero')" }
+    },
+
+    {
+      "id": "P208",
+      "title": "偶數判斷（格式版）",
+      "difficulty": "Easy",
+      "description": "輸入一個正整數，判斷是否為偶數，並輸出格式字串。",
+      "testCases": [
+        { "input": "56", "expected": "56:is-an-even-number." },
+        { "input": "21", "expected": "21:is-not-an-even-number." }
+      ],
+      "answerCode": { "python": "n=int(input());print(f'{n}:is-an-even-number.' if n%2==0 else f'{n}:is-not-an-even-number.')" }
+    },
+
+    {
+      "id": "P209",
+      "title": "3 或 5 的倍數",
+      "difficulty": "Easy",
+      "description": "判斷輸入數是否為 3、5 或兩者之倍數。",
+      "testCases": [
+        { "input": "55", "expected": "55:is-a-multiple-of-5." },
+        { "input": "36", "expected": "36:is-a-multiple-of-3-and-5." },
+        { "input": "92", "expected": "92:is-not-a-multiple-of-3-or-5." }
+      ],
+      "answerCode": {
+        "python": "a=int(input());\nif a%3==0 and a%5==0: print(f'{a}:is-a-multiple-of-3-and-5.')\nelif a%5==0: print(f'{a}:is-a-multiple-of-5.')\nelif a%3==0: print(f'{a}:is-a-multiple-of-3.')\nelse: print(f'{a}:is-not-a-multiple-of-3-or-5.')"
+      }
+    },
+
+    {
+      "id": "P210",
+      "title": "閏年判斷（格式版）",
+      "difficulty": "Easy",
+      "description": "輸入年份，輸出是否為閏年（格式字串）。",
+      "testCases": [
+        { "input": "1992", "expected": "1992:is-a-leap-year." },
+        { "input": "2010", "expected": "2010:is-not-a-leap-year." }
+      ],
+      "answerCode": {
+        "python": "y=int(input());print(f'{y}:is-a-leap-year.' if (y%400==0 or (y%4==0 and y%100!=0)) else f'{y}:is-not-a-leap-year.')"
+      }
+    },
+
+    {
+      "id": "P211",
+      "title": "四則運算",
+      "difficulty": "Easy",
+      "description": "輸入a,b,運算子，輸出四則運算結果。",
+      "testCases": [
+        { "input": "30\n20\n*", "expected": "600" },
+        { "input": "15\n5\n/", "expected": "3.0" }
+      ],
+      "answerCode": {
+        "python": "a=eval(input());b=eval(input());op=input();\nif op=='+': ans=a+b\nelif op=='-': ans=a-b\nelif op=='*': ans=a*b\nelif op=='/': ans=a/b\nelif op=='%': ans=a%b\nprint(ans)"
+      }
+    },
+
+    {
+      "id": "P212",
+      "title": "字元分類",
+      "difficulty": "Easy",
+      "description": "輸入一個字元，判斷其為字母、數字或符號。",
+      "testCases": [
+        { "input": "P", "expected": "P:is-an-alphabet." },
+        { "input": "8", "expected": "8:is-a-number." },
+        { "input": "@", "expected": "@:is-a-symbol." }
+      ],
+      "answerCode": {
+        "python": "c=input();\nif c.isalpha(): print(f'{c}:is-an-alphabet.')\nelif c.isdigit(): print(f'{c}:is-a-number.')\nelse: print(f'{c}:is-a-symbol.')"
+      }
+    },
+
+    {
+      "id": "P213",
+      "title": "等第判斷",
+      "difficulty": "Easy",
+      "description": "輸入成績0-100，輸出A-F。",
+      "testCases": [
+        { "input": "79", "expected": "B" },
+        { "input": "59", "expected": "F" }
+      ],
+      "answerCode": {
+        "python": "s=int(input());\nif s>=80:g='A'\nelif s>=70:g='B'\nelif s>=60:g='C'\nelif s>=50:g='D'\nelif s>=40:g='E'\nelse:g='F'\nprint(g)"
+      }
+    },
+
+    {
+      "id": "P214",
+      "title": "折扣計算",
+      "difficulty": "Easy",
+      "description": "依金額套用折扣。",
+      "testCases": [
+        { "input": "12000", "expected": "11400.0" },
+        { "input": "8000", "expected": "7600.0" }
+      ],
+      "answerCode": {
+        "python": "c=eval(input());\nif c>=30000:p=c*0.7\nelif c>=18000:p=c*0.8\nelif c>=8000:p=c*0.95\nelse:p=c\nprint(p)"
+      }
+    },
+
+    {
+      "id": "P215",
+      "title": "十六進位轉換",
+      "difficulty": "Easy",
+      "description": "輸入0~15輸出十六進位。",
+      "testCases": [
+        { "input": "8", "expected": "8" },
+        { "input": "13", "expected": "D" }
+      ],
+      "answerCode": {
+        "python": "n=int(input());\nif n<10:print(n)\nelse:print(chr(ord('A')+n-10))"
+      }
+    },
+
+    {
+      "id": "P216",
+      "title": "亂數奇偶判斷",
+      "difficulty": "Easy",
+      "description": "輸入亂數結果並判斷奇偶。",
+      "testCases": [
+        { "input": "6", "expected": "6 is even number." },
+        { "input": "35", "expected": "35 is odd number." }
+      ]
+    },
+
+    {
+      "id": "P217",
+      "title": "三位數回文判斷",
+      "difficulty": "Easy",
+      "description": "三位數是否為回文。",
+      "testCases": [
+        { "input": "131", "expected": "131 is a palindrome number." },
+        { "input": "122", "expected": "122 is not a palindrome number." }
+      ]
+    },
+
+    {
+      "id": "P218",
+      "title": "三數最大值",
+      "difficulty": "Medium",
+      "description": "輸入三個整數，輸出最大值。",
+      "testCases": [
+        { "input": "3\n7\n5", "expected": "7" },
+        { "input": "10\n2\n6", "expected": "10" }
+      ],
+      "answerCode": { "python": "a=int(input());b=int(input());c=int(input());print(max(a,b,c))" }
+    },
+
+    {
+      "id": "P219",
+      "title": "成績等第判斷",
+      "difficulty": "Medium",
+      "description": "依分數輸出 A~F。",
+      "testCases": [
+        { "input": "95", "expected": "A" },
+        { "input": "73", "expected": "C" }
+      ],
+      "answerCode": {
+        "python": "s=int(input());\nif s>=90:print('A')\nelif s>=80:print('B')\nelif s>=70:print('C')\nelif s>=60:print('D')\nelse:print('F')"
+      }
+    },
+
+    {
+      "id": "P220",
+      "title": "是否在10到20內",
+      "difficulty": "Medium",
+      "description": "10<=n<=20 則 In Range。",
+      "testCases": [
+        { "input": "15", "expected": "In Range" },
+        { "input": "5", "expected": "Out Range" }
+      ],
+      "answerCode": {
+        "python": "n=int(input());print('In Range' if 10<=n<=20 else 'Out Range')"
+      }
+    },
+
+    {
+      "id": "P221",
+      "title": "BMI 計算",
+      "difficulty": "Medium",
+      "description": "輸入身高體重，判斷 BMI。",
+      "testCases": [
+        { "input": "170\n60", "expected": "Normal" },
+        { "input": "170\n45", "expected": "Underweight" }
+      ],
+      "answerCode": {
+        "python": "h=float(input())/100;w=float(input());b=w/h/h;\nprint('Underweight' if b<18.5 else('Normal' if b<24 else 'Overweight'))"
+      }
+    },
+
+    {
+      "id": "P222",
+      "title": "判斷正負零",
+      "difficulty": "Medium",
+      "description": "輸入整數輸出 Positive/Zero/Negative。",
+      "testCases": [
+        { "input": "10", "expected": "Positive" },
+        { "input": "0", "expected": "Zero" }
+      ],
+      "answerCode": {
+        "python": "n=int(input());\nprint('Positive' if n>0 else ('Zero' if n==0 else 'Negative'))"
+      }
+    },
+
+    {
+      "id": "P223",
+      "title": "綜合判斷 and/or",
+      "difficulty": "Medium",
+      "description": "偶數或5倍數 → OK。",
+      "testCases": [
+        { "input": "20", "expected": "OK" },
+        { "input": "7", "expected": "Not OK" }
+      ],
+      "answerCode": {
+        "python": "n=int(input());print('OK' if (n%2==0 or n%5==0) else 'Not OK')"
+      }
+    },
+
+    {
+      "id": "P224",
+      "title": "圓內外判斷",
+      "difficulty": "Medium",
+      "description": "判斷(x,y)是否在半徑15圓內。",
+      "testCases": [
+        { "input": "20\n0", "expected": "Outside" },
+        { "input": "10\n5", "expected": "Inside" }
+      ],
+      "answerCode": {
+        "python": "x=int(input());y=int(input());d=(x-5)**2+(y-6)**2;print('Inside' if d<=225 else 'Outside')"
+      }
+    },
+
+    {
+      "id": "P225",
+      "title": "三角形判斷",
+      "difficulty": "Medium",
+      "description": "三邊是否可構成三角形。",
+      "testCases": [
+        { "input": "5\n6\n7", "expected": "Triangle" },
+        { "input": "1\n1\n3", "expected": "Invalid" }
+      ],
+      "answerCode": {
+        "python": "a=int(input());b=int(input());c=int(input());print('Triangle' if a+b>c and a+c>b and b+c>a else 'Invalid')"
+      }
+    },
+
+    {
+      "id": "P226",
+      "title": "矩形點座標判斷",
+      "difficulty": "Medium",
+      "description": "(|x| <=4 且 |y| <=3) 則 inside。",
+      "testCases": [
+        { "input": "4 4", "expected": "(4, 4) is outside of the rectangle" },
+        { "input": "4 3", "expected": "(4, 3) is inside of the rectangle" }
+      ]
+    },
+
+    {
+      "id": "P227",
+      "title": "三數排序",
+      "difficulty": "Medium",
+      "description": "三數由小到大排序（不能用 sort）。",
+      "testCases": [
+        { "input": "8 6 1", "expected": "The sorted numbers are 1 6 8" },
+        { "input": "5 3 9", "expected": "The sorted numbers are 3 5 9" }
+      ]
+    },
+
+    {
+      "id": "P228",
+      "title": "四科平均",
+      "difficulty": "Hard",
+      "description": "四科平均>=60 Pass。",
+      "testCases": [
+        { "input": "60\n70\n80\n90", "expected": "Pass" },
+        { "input": "40\n50\n60\n50", "expected": "Fail" }
+      ],
+      "answerCode": {
+        "python": "a=int(input());b=int(input());c=int(input());d=int(input());avg=(a+b+c+d)/4;print('Pass' if avg>=60 else 'Fail')"
+      }
+    },
+
+    {
+      "id": "P229",
+      "title": "三角形不等式",
+      "difficulty": "Hard",
+      "description": "符合三角形不等式才 Valid。",
+      "testCases": [
+        { "input": "3\n4\n5", "expected": "Valid" },
+        { "input": "1\n2\n3", "expected": "Invalid" }
+      ],
+      "answerCode": {
+        "python": "a=int(input());b=int(input());c=int(input());print('Valid' if a+b>c and a+c>b and b+c>a else 'Invalid')"
+      }
+    },
+
+    {
+      "id": "P230",
+      "title": "計程車費用",
+      "difficulty": "Hard",
+      "description": "75元含1.5km，其後每km 5元（進位）。",
+      "testCases": [
+        { "input": "1", "expected": "75" },
+        { "input": "3", "expected": "85" }
+      ],
+      "answerCode": {
+        "python": "import math\nkm=float(input());fee=75 if km<=1.5 else 75+math.ceil(km-1.5)*5;print(fee)"
+      }
+    },
+
+    {
+      "id": "P231",
+      "title": "電費計算",
+      "difficulty": "Hard",
+      "description": "依區間計算電費小數2位。",
+      "testCases": [
+        { "input": "100", "expected": "210.00" },
+        { "input": "200", "expected": "432.40" }
+      ],
+      "answerCode": {
+        "python": "k=int(input());fee=0\nif k<=120:fee=k*2.10\nelif k<=330:fee=120*2.10+(k-120)*3.02\nelse:fee=120*2.10+210*3.02+(k-330)*4.39\nprint(f'{fee:.2f}')"
+      }
+    },
+
+    {
+      "id": "P232",
+      "title": "四科總分與評語",
+      "difficulty": "Hard",
+      "description": "總分>=350 Excellent, >=300 Good, >=250 Average, else Poor。",
+      "testCases": [
+        { "input": "90\n90\n90\n90", "expected": "Excellent" },
+        { "input": "60\n70\n60\n70", "expected": "Average" }
+      ],
+      "answerCode": {
+        "python": "a=int(input());b=int(input());c=int(input());d=int(input());t=a+b+c+d;\nprint('Excellent' if t>=350 else ('Good' if t>=300 else ('Average' if t>=250 else 'Poor')))"
+      }
+    },
+
+    {
+      "id": "P233",
+      "title": "身分證性別判斷",
+      "difficulty": "Hard",
+      "description": "第二碼1→Male,2→Female，其餘Unknown。",
+      "testCases": [
+        { "input": "A123456789", "expected": "Male" },
+        { "input": "B223456789", "expected": "Female" }
+      ],
+      "answerCode": {
+        "python": "s=input();print('Male' if s[1]=='1' else ('Female' if s[1]=='2' else 'Unknown'))"
+      }
+    },
+
+    {
+      "id": "P234",
+      "title": "二元一次方程式（克拉瑪公式）",
+      "difficulty": "Hard",
+      "description": "若 ae - bd = 0 → 無解；否則輸出 x,y。",
+      "testCases": [
+        { "input": "1 2 4\n2 4 5", "expected": "無解" },
+        { "input": "9 4 -6\n3 -5 -21", "expected": "x is -2.00 , y = -3.00" }
+      ]
+    }
+
+  ]
 }

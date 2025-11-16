@@ -481,30 +481,5 @@ i.fa-code {
     display: inline-block;
     margin-right: 4px;
 }
-.result-pass {
-    padding: 18px;
-    border-radius: 10px;
-    background: #0f5132;      /* 深綠 */
-    color: #d1fae5;           /* 淺綠文字 */
-    border: 1px solid #145a41;
-    transition: 0.3s ease;
-}
-
-.result-fail {
-    padding: 18px;
-    border-radius: 10px;
-    background: #552020;      /* 深紅 */
-    color: #ffe4e4;           /* 淺粉紅文字 */
-    border: 1px solid #7d2a2a;
-    transition: 0.3s ease;
-}
-.result-pass, .result-fail {
-    animation: fadeInScale 0.35s ease-out;
-}
-
-@keyframes fadeInScale {
-    from { opacity: 0; transform: scale(0.97); }
-    to { opacity: 1; transform: scale(1); }
-}
 
 
