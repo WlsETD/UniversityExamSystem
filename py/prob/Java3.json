@@ -1,0 +1,534 @@
+{
+    "problems": [
+        {
+            "id": "J301",
+            "title": "while 加總 1 到 n",
+            "difficulty": "Easy",
+            "description": "輸入整數 n，使用 while 計算 1 到 n 的總和。",
+            "testCases": [
+                {
+                    "input": "5",
+                    "expected": "15"
+                },
+                {
+                    "input": "10",
+                    "expected": "55"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        int i = 1, total = 0;\n        while(i <= n){ total += i; i++; }\n        System.out.println(total);\n    }\n}"
+            }
+        },
+        {
+            "id": "J302",
+            "title": "while 計算偶數總和",
+            "difficulty": "Easy",
+            "description": "輸入 n，輸出 1 到 n 之間所有偶數的總和。",
+            "testCases": [
+                {
+                    "input": "10",
+                    "expected": "30"
+                },
+                {
+                    "input": "6",
+                    "expected": "12"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        int i = 1, total = 0;\n        while(i <= n){ if(i%2==0) total+=i; i++; }\n        System.out.println(total);\n    }\n}"
+            }
+        },
+        {
+            "id": "J303",
+            "title": "for 加總 1 到 n",
+            "difficulty": "Easy",
+            "description": "使用 for…in range 計算 1 到 n 之和。",
+            "testCases": [
+                {
+                    "input": "3",
+                    "expected": "6"
+                },
+                {
+                    "input": "7",
+                    "expected": "28"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        int sum = 0;\n        for(int i=1;i<=n;i++) sum+=i;\n        System.out.println(sum);\n    }\n}"
+            }
+        },
+        {
+            "id": "J304",
+            "title": "for 計算奇數總和",
+            "difficulty": "Easy",
+            "description": "輸入 n，輸出 1 到 n 間的奇數總和。",
+            "testCases": [
+                {
+                    "input": "10",
+                    "expected": "25"
+                },
+                {
+                    "input": "9",
+                    "expected": "25"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        int total = 0;\n        for(int i=1;i<=n;i++) if(i%2==1) total+=i;\n        System.out.println(total);\n    }\n}"
+            }
+        },
+        {
+            "id": "J305",
+            "title": "倒數印出 1 到 n",
+            "difficulty": "Easy",
+            "description": "輸入 n，倒數印出 n 到 1，每行一個。",
+            "testCases": [
+                {
+                    "input": "5",
+                    "expected": "5\n4\n3\n2\n1"
+                },
+                {
+                    "input": "3",
+                    "expected": "3\n2\n1"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        for(int i=n;i>=1;i--) System.out.println(i);\n    }\n}"
+            }
+        },
+        {
+            "id": "J306",
+            "title": "階乘 while",
+            "difficulty": "Easy",
+            "description": "輸入 n，用 while 計算 n!。",
+            "testCases": [
+                {
+                    "input": "5",
+                    "expected": "120"
+                },
+                {
+                    "input": "3",
+                    "expected": "6"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        int f = 1, i = 1;\n        while(i<=n){ f*=i; i++; }\n        System.out.println(f);\n    }\n}"
+            }
+        },
+        {
+            "id": "J307",
+            "title": "階乘 for",
+            "difficulty": "Easy",
+            "description": "輸入 n，使用 for 計算 n!。",
+            "testCases": [
+                {
+                    "input": "4",
+                    "expected": "24"
+                },
+                {
+                    "input": "6",
+                    "expected": "720"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        int f = 1;\n        for(int i=1;i<=n;i++) f*=i;\n        System.out.println(f);\n    }\n}"
+            }
+        },
+        {
+            "id": "J308",
+            "title": "while 計算 n 的位數和",
+            "difficulty": "Medium",
+            "description": "輸入整數 n，輸出其每位數相加的結果。",
+            "testCases": [
+                {
+                    "input": "1234",
+                    "expected": "10"
+                },
+                {
+                    "input": "999",
+                    "expected": "27"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        int s = 0;\n        while(n != 0){ s += n % 10; n /= 10; }\n        System.out.println(s);\n    }\n}"
+            }
+        },
+        {
+            "id": "J309",
+            "title": "數字反轉",
+            "difficulty": "Medium",
+            "description": "輸入整數 n，輸出其反轉（例如 123 → 321）。",
+            "testCases": [
+                {
+                    "input": "123",
+                    "expected": "321"
+                },
+                {
+                    "input": "907",
+                    "expected": "709"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        int rev = 0;\n        while(n > 0){ rev = rev*10 + n%10; n/=10; }\n        System.out.println(rev);\n    }\n}"
+            }
+        },
+        {
+            "id": "J310",
+            "title": "for 計算區間和 a 到 b",
+            "difficulty": "Medium",
+            "description": "輸入 a, b（a ≤ b），輸出 a + ... + b。",
+            "testCases": [
+                {
+                    "input": "3\n7",
+                    "expected": "25"
+                },
+                {
+                    "input": "1\n100",
+                    "expected": "5050"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n        int sum = 0;\n        for(int i=a;i<=b;i++) sum+=i;\n        System.out.println(sum);\n    }\n}"
+            }
+        },
+        {
+            "id": "J311",
+            "title": "找出 1~n 的所有因數",
+            "difficulty": "Medium",
+            "description": "輸入 n，輸出 n 的所有因數，每行一個。",
+            "testCases": [
+                {
+                    "input": "6",
+                    "expected": "1\n2\n3\n6"
+                },
+                {
+                    "input": "10",
+                    "expected": "1\n2\n5\n10"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        for(int i=1;i<=n;i++){\n            if(n % i == 0)\n                System.out.println(i);\n        }\n    }\n}"
+            }
+        },
+        {
+            "id": "J312",
+            "title": "判斷質數（while）",
+            "difficulty": "Medium",
+            "description": "輸入 n，若為質數輸出 True，否則 False。",
+            "testCases": [
+                {
+                    "input": "7",
+                    "expected": "True"
+                },
+                {
+                    "input": "9",
+                    "expected": "False"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        if(n < 2){ System.out.println(false); return; }\n        boolean ok = true;\n        int i = 2;\n        while(i * i <= n){\n            if(n % i == 0){ ok = false; break; }\n            i++;\n        }\n        System.out.println(ok);\n    }\n}"
+            }
+        },
+        {
+            "id": "J313",
+            "title": "平方表（巢狀迴圈）",
+            "difficulty": "Medium",
+            "description": "輸入 n，輸出 1² 到 n²（用空白分隔）。",
+            "testCases": [
+                {
+                    "input": "5",
+                    "expected": "1 4 9 16 25"
+                },
+                {
+                    "input": "3",
+                    "expected": "1 4 9"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        StringBuilder sb = new StringBuilder();\n        for(int i=1;i<=n;i++){\n            sb.append(i*i);\n            if(i<n) sb.append(\" \");\n        }\n        System.out.println(sb.toString());\n    }\n}"
+            }
+        },
+        {
+            "id": "J314",
+            "title": "九九乘法表（垂直）",
+            "difficulty": "Medium",
+            "description": "印出 1~9 的九九乘法表，每段間空行。",
+            "testCases": [
+                {
+                    "input": "",
+                    "expected": "1*1=1"
+                }
+            ],
+            "answerCode": {
+                "java": "public class Main{\n    public static void main(String[] args){\n        for(int x=1;x<=9;x++){\n            for(int y=1;y<=9;y++){\n                System.out.println(x+\"*\"+y+\"=\"+(x*y));\n            }\n            System.out.println();\n        }\n    }\n}"
+            }
+        },
+        {
+            "id": "J315",
+            "title": "九九乘法表（橫向）",
+            "difficulty": "Hard",
+            "description": "印出對齊的九九乘法表（同一列不換行）。",
+            "testCases": [
+                {
+                    "input": "",
+                    "expected": "1*1=1"
+                }
+            ],
+            "answerCode": {
+                "java": "public class Main{\n    public static void main(String[] args){\n        for(int x=1;x<=9;x++){\n            for(int y=1;y<=9;y++){\n                System.out.print(x+\"*\"+y+\"=\"+(x*y)+\" \");\n            }\n            System.out.println();\n        }\n    }\n}"
+            }
+        },
+        {
+            "id": "J316",
+            "title": "for 印出星星三角形",
+            "difficulty": "Easy",
+            "description": "輸入 n，輸出 n 層星星三角形。",
+            "testCases": [
+                {
+                    "input": "3",
+                    "expected": "*\n**\n***"
+                },
+                {
+                    "input": "5",
+                    "expected": "*\n**\n***\n****\n*****"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        for(int i=1;i<=n;i++) System.out.println(\"*\".repeat(i));\n    }\n}"
+            }
+        },
+        {
+            "id": "J317",
+            "title": "for 印出等腰三角形",
+            "difficulty": "Hard",
+            "description": "輸入 n，印出等腰三角形。",
+            "testCases": [
+                {
+                    "input": "3",
+                    "expected": "  *\n ***\n*****"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        for(int i=1;i<=n;i++){\n            System.out.println(\" \".repeat(n-i) + \"*\".repeat(2*i-1));\n        }\n    }\n}"
+            }
+        },
+        {
+            "id": "J318",
+            "title": "計算數列：1 + 2 + 4 + 8 + ...",
+            "difficulty": "Medium",
+            "description": "輸入 k，輸出數列 1 + 2 + 4...(2^(k-1)) 的總和。",
+            "testCases": [
+                {
+                    "input": "3",
+                    "expected": "7"
+                },
+                {
+                    "input": "5",
+                    "expected": "31"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        int k = sc.nextInt();\n        int total = 0;\n        int v = 1;\n        for(int i=0;i<k;i++){\n            total += v;\n            v *= 2;\n        }\n        System.out.println(total);\n    }\n}"
+            }
+        },
+        {
+            "id": "J319",
+            "title": "for 找最小值",
+            "difficulty": "Easy",
+            "description": "輸入一串整數，輸出最小值。",
+            "testCases": [
+                {
+                    "input": "3 7 2 8",
+                    "expected": "2"
+                },
+                {
+                    "input": "10 5 9",
+                    "expected": "5"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        ArrayList<Integer> list = new ArrayList<>();\n        while(sc.hasNextInt()) list.add(sc.nextInt());\n        int min = list.get(0);\n        for(int v: list) if(v < min) min = v;\n        System.out.println(min);\n    }\n}"
+            }
+        },
+        {
+            "id": "J320",
+            "title": "for 計算平方和",
+            "difficulty": "Medium",
+            "description": "輸入 n，輸出 1²+2²+⋯+n²。",
+            "testCases": [
+                {
+                    "input": "3",
+                    "expected": "14"
+                },
+                {
+                    "input": "5",
+                    "expected": "55"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        int total = 0;\n        for(int i=1;i<=n;i++) total += i*i;\n        System.out.println(total);\n    }\n}"
+            }
+        },
+        {
+            "id": "J321",
+            "title": "while 印出所有 5 的倍數",
+            "difficulty": "Easy",
+            "description": "輸入 n，印出 1 到 n 間所有 5 的倍數。",
+            "testCases": [
+                {
+                    "input": "20",
+                    "expected": "5\n10\n15\n20"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        int i = 1;\n        while(i <= n){\n            if(i % 5 == 0) System.out.println(i);\n            i++;\n        }\n    }\n}"
+            }
+        },
+        {
+            "id": "J322",
+            "title": "for 計算等差級數",
+            "difficulty": "Medium",
+            "description": "輸入首項 a、公差 d、項數 n，輸出總和。",
+            "testCases": [
+                {
+                    "input": "1\n2\n4",
+                    "expected": "16"
+                },
+                {
+                    "input": "3\n3\n3",
+                    "expected": "27"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        int a = sc.nextInt();\n        int d = sc.nextInt();\n        int n = sc.nextInt();\n        int total = 0;\n        for(int i=0;i<n;i++) total += a + d*i;\n        System.out.println(total);\n    }\n}"
+            }
+        },
+        {
+            "id": "J323",
+            "title": "判斷是否完全平方數",
+            "difficulty": "Medium",
+            "description": "輸入 n，若 n = k*k 則輸出 True。",
+            "testCases": [
+                {
+                    "input": "16",
+                    "expected": "True"
+                },
+                {
+                    "input": "20",
+                    "expected": "False"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        boolean ok = false;\n        for(int i=1;i*i<=n;i++){\n            if(i*i == n){ ok = true; break; }\n        }\n        System.out.println(ok);\n    }\n}"
+            }
+        },
+        {
+            "id": "J324",
+            "title": "計算最大公因數（暴力法）",
+            "difficulty": "Hard",
+            "description": "輸入 a b，用迴圈找 GCD。",
+            "testCases": [
+                {
+                    "input": "12\n18",
+                    "expected": "6"
+                },
+                {
+                    "input": "7\n13",
+                    "expected": "1"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n        int g = 1;\n        for(int i=1;i<=Math.min(a,b);i++){\n            if(a % i == 0 && b % i == 0) g = i;\n        }\n        System.out.println(g);\n    }\n}"
+            }
+        },
+        {
+            "id": "J325",
+            "title": "階梯式星星",
+            "difficulty": "Easy",
+            "description": "輸入 n，輸出 n 行，每行遞增星星數。",
+            "testCases": [
+                {
+                    "input": "4",
+                    "expected": "*\n**\n***\n****"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        for(int i=1;i<=n;i++) System.out.println(\"*\".repeat(i));\n    }\n}"
+            }
+        },
+        {
+            "id": "J326",
+            "title": "倒三角星星",
+            "difficulty": "Hard",
+            "description": "輸入 n，輸出倒三角形星星。",
+            "testCases": [
+                {
+                    "input": "3",
+                    "expected": "***\n**\n*"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        for(int i=n;i>=1;i--) System.out.println(\"*\".repeat(i));\n    }\n}"
+            }
+        },
+        {
+            "id": "J327",
+            "title": "找最長字串",
+            "difficulty": "Hard",
+            "description": "輸入 n，再輸入 n 個字串，輸出最長者。",
+            "testCases": [
+                {
+                    "input": "3\nhi\nhello\nok",
+                    "expected": "hello"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        sc.nextLine();\n        String best = \"\";\n        for(int i=0;i<n;i++){\n            String s = sc.nextLine();\n            if(s.length() > best.length()) best = s;\n        }\n        System.out.println(best);\n    }\n}"
+            }
+        },
+        {
+            "id": "J328",
+            "title": "連乘積",
+            "difficulty": "Medium",
+            "description": "輸入 n，輸出 1*2*3*…*n 的結果。",
+            "testCases": [
+                {
+                    "input": "5",
+                    "expected": "120"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        int p = 1;\n        for(int i=1;i<=n;i++) p *= i;\n        System.out.println(p);\n    }\n}"
+            }
+        },
+        {
+            "id": "J329",
+            "title": "計算奇數平方和",
+            "difficulty": "Hard",
+            "description": "輸入 n，計算所有奇數 i 的 i² 和。",
+            "testCases": [
+                {
+                    "input": "5",
+                    "expected": "35"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        int total = 0;\n        for(int i=1;i<=n;i+=2) total += i*i;\n        System.out.println(total);\n    }\n}"
+            }
+        },
+        {
+            "id": "J330",
+            "title": "巢狀迴圈製作加法表",
+            "difficulty": "Hard",
+            "description": "輸入 n，印出 n×n 的加法表。",
+            "testCases": [
+                {
+                    "input": "3",
+                    "expected": "1+1=2 1+2=3 1+3=4\n2+1=3 2+2=4 2+3=5\n3+1=4 3+2=5 3+3=6"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*;\npublic class Main{\n    public static void main(String[] args){\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        for(int i=1;i<=n;i++){\n            StringBuilder sb = new StringBuilder();\n            for(int j=1;j<=n;j++){\n                sb.append(i).append(\"+\").append(j).append(\"=\").append(i+j);\n                if(j < n) sb.append(\" \");\n            }\n            System.out.println(sb.toString());\n        }\n    }\n}"
+            }
+        }
+    ]
+}

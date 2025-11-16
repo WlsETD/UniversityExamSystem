@@ -2,7 +2,7 @@
     "category": "Java 基礎語法練習（I/O 版）",
     "problems": [
         {
-            "id": "001",
+            "id": "J101",
             "title": "格式化輸出 - format()",
             "difficulty": "Easy",
             "description": "輸入姓名與年齡，輸出：名字：<name>, 年齡：<age>。",
@@ -21,7 +21,7 @@
             }
         },
         {
-            "id": "002",
+            "id": "J102",
             "title": "小數格式化",
             "difficulty": "Easy",
             "description": "輸入浮點數，格式化為小數點後兩位。",
@@ -40,7 +40,7 @@
             }
         },
         {
-            "id": "003",
+            "id": "J103",
             "title": "% 格式化輸出",
             "difficulty": "Easy",
             "description": "輸入姓名與年齡，使用格式化輸出。",
@@ -55,7 +55,7 @@
             }
         },
         {
-            "id": "004",
+            "id": "J104",
             "title": "加法運算",
             "difficulty": "Easy",
             "description": "輸入兩個整數，輸出和。",
@@ -74,7 +74,7 @@
             }
         },
         {
-            "id": "005",
+            "id": "J105",
             "title": "整除運算 //",
             "difficulty": "Easy",
             "description": "輸入 a, b，輸出 a/b 的整數部分。",
@@ -93,7 +93,7 @@
             }
         },
         {
-            "id": "006",
+            "id": "J106",
             "title": "取餘數 %",
             "difficulty": "Easy",
             "description": "輸入兩個整數，輸出 a % b。",
@@ -112,7 +112,7 @@
             }
         },
         {
-            "id": "007",
+            "id": "J107",
             "title": "次方運算 **",
             "difficulty": "Easy",
             "description": "輸入整數 n，輸出 n 的平方。",
@@ -131,7 +131,7 @@
             }
         },
         {
-            "id": "008",
+            "id": "J108",
             "title": "字串長度 len()",
             "difficulty": "Easy",
             "description": "輸入字串，輸出其長度。",
@@ -150,7 +150,7 @@
             }
         },
         {
-            "id": "009",
+            "id": "J109",
             "title": "字串轉整數 int()",
             "difficulty": "Easy",
             "description": "輸入可轉換為整數的字串，輸出其整數值。",
@@ -169,7 +169,7 @@
             }
         },
         {
-            "id": "010",
+            "id": "J110",
             "title": "絶對值 abs()",
             "difficulty": "Easy",
             "description": "輸入整數，輸出絕對值。",
@@ -188,7 +188,7 @@
             }
         },
         {
-            "id": "011",
+            "id": "J111",
             "title": "四捨五入 round()",
             "difficulty": "Easy",
             "description": "輸入浮點數，四捨五入至小數第一位。",
@@ -207,7 +207,7 @@
             }
         },
         {
-            "id": "012",
+            "id": "J112",
             "title": "指定運算子 +=",
             "difficulty": "Easy",
             "description": "輸入 n 與 x，使 n += x 後輸出結果。",
@@ -226,7 +226,7 @@
             }
         },
         {
-            "id": "013",
+            "id": "J113",
             "title": "平方根 Math.sqrt()",
             "difficulty": "Medium",
             "description": "輸入整數 n，輸出平方根。",
@@ -245,7 +245,7 @@
             }
         },
         {
-            "id": "014",
+            "id": "J114",
             "title": "三次方 Math.pow()",
             "difficulty": "Medium",
             "description": "輸入 n，輸出 n 的三次方。",
@@ -264,7 +264,7 @@
             }
         },
         {
-            "id": "015",
+            "id": "J115",
             "title": "無條件進位 Math.ceil()",
             "difficulty": "Medium",
             "description": "輸入 x，輸出進位結果。",
@@ -283,7 +283,7 @@
             }
         },
         {
-            "id": "016",
+            "id": "J116",
             "title": "無條件捨去 Math.floor()",
             "difficulty": "Medium",
             "description": "輸入浮點數 x，輸出無條件捨去後的值。",
@@ -302,7 +302,7 @@
             }
         },
         {
-            "id": "017",
+            "id": "J117",
             "title": "圓面積計算",
             "difficulty": "Medium",
             "description": "輸入半徑 r，使用 Math.PI 計算圓面積，小數後兩位。",
@@ -321,7 +321,7 @@
             }
         },
         {
-            "id": "018",
+            "id": "J118",
             "title": "輸入型別判斷 type()",
             "difficulty": "Medium",
             "description": "若可轉成 int → 輸出 int；可轉 float → 輸出 float；否則輸出 str。",
@@ -344,7 +344,7 @@
             }
         },
         {
-            "id": "019",
+            "id": "J119",
             "title": "多數加總 sum()",
             "difficulty": "Medium",
             "description": "輸入一串整數，以空白分隔，輸出總和。",
@@ -363,7 +363,7 @@
             }
         },
         {
-            "id": "020",
+            "id": "J120",
             "title": "提示訊息模擬",
             "difficulty": "Medium",
             "description": "輸入字串 msg，輸出：請輸入：<msg>",
@@ -382,7 +382,7 @@
             }
         },
         {
-            "id": "021",
+            "id": "J121",
             "title": "判斷字串是否為數字",
             "difficulty": "Medium",
             "description": "輸入字串 s，若 s 全由數字組成則輸出 True，否則輸出 False。",
@@ -401,7 +401,7 @@
             }
         },
         {
-            "id": "022",
+            "id": "J122",
             "title": "兩數較大值",
             "difficulty": "Medium",
             "description": "輸入兩個整數，輸出較大的那一個。",
@@ -420,7 +420,7 @@
             }
         },
         {
-            "id": "023",
+            "id": "J123",
             "title": "三數最大值",
             "difficulty": "Hard",
             "description": "輸入三個整數，輸出其中最大值。",
@@ -439,7 +439,7 @@
             }
         },
         {
-            "id": "024",
+            "id": "J124",
             "title": "BMI 計算",
             "difficulty": "Hard",
             "description": "輸入體重(kg)與身高(m)，輸出 BMI（小數點後兩位）。公式: BMI = weight / (height²)",
@@ -458,7 +458,7 @@
             }
         },
         {
-            "id": "025",
+            "id": "J125",
             "title": "1 到 n 的總和",
             "difficulty": "Hard",
             "description": "輸入 n，輸出 1+2+...+n 的總和。",
@@ -477,7 +477,7 @@
             }
         },
         {
-            "id": "026",
+            "id": "J126",
             "title": "格式化輸出（姓名＋分數）",
             "difficulty": "Hard",
             "description": "輸入姓名與浮點數，輸出：姓名：<name>，分數：<四捨五入到一位小數>。",
@@ -496,7 +496,7 @@
             }
         },
         {
-            "id": "027",
+            "id": "J127",
             "title": "手動四捨五入（不可使用 round）",
             "difficulty": "Hard",
             "description": "輸入浮點數 x，不使用 round()，自行實作四捨五入為整數。",
@@ -515,7 +515,7 @@
             }
         },
         {
-            "id": "028",
+            "id": "J128",
             "title": "字串自動識別資料型態",
             "difficulty": "Hard",
             "description": "輸入字串 s：若為整數格式→輸出整數；若為浮點→輸出浮點；否則原字串輸出。",
@@ -538,7 +538,7 @@
             }
         },
         {
-            "id": "029",
+            "id": "J129",
             "title": "最小公倍數 LCM",
             "difficulty": "Hard",
             "description": "輸入兩數 a, b，輸出最小公倍數（使用 GCD）。",
@@ -557,7 +557,7 @@
             }
         },
         {
-            "id": "030",
+            "id": "J130",
             "title": "平均數格式化輸出",
             "difficulty": "Hard",
             "description": "輸入一串數字，計算平均值並以小數兩位輸出：平均：xx.xx",
