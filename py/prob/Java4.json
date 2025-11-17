@@ -1,0 +1,455 @@
+{
+    "category": "🍵Java 條件判斷",
+    "problems": [
+        {
+            "id": "J401",
+            "title": "判斷正負數",
+            "difficulty": "Easy",
+            "description": "輸入一整數，若大於0輸出 Positive，否則輸出 Not Positive。",
+            "testCases": [
+                {
+                    "input": "5",
+                    "expected": "Positive"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]args){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(); System.out.print(n>0?\"Positive\":\"Not Positive\"); }}"
+            }
+        },
+        {
+            "id": "J402",
+            "title": "判斷是否為偶數",
+            "difficulty": "Easy",
+            "description": "輸入一整數，若為偶數輸出 Even，否則 Odd。",
+            "testCases": [
+                {
+                    "input": "8",
+                    "expected": "Even"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]args){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(); System.out.print(n%2==0?\"Even\":\"Odd\"); }}"
+            }
+        },
+        {
+            "id": "J403",
+            "title": "比較大小",
+            "difficulty": "Easy",
+            "description": "輸入兩整數 a b，輸出較大者。",
+            "testCases": [
+                {
+                    "input": "3 9",
+                    "expected": "9"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]args){ Scanner sc=new Scanner(System.in); int a=sc.nextInt(),b=sc.nextInt(); System.out.print(a>b?a:b); }}"
+            }
+        },
+        {
+            "id": "J404",
+            "title": "判斷是否及格",
+            "difficulty": "Easy",
+            "description": "輸入成績，若>=60輸出 Pass，否則 Fail。",
+            "testCases": [
+                {
+                    "input": "75",
+                    "expected": "Pass"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]args){ Scanner sc=new Scanner(System.in); int s=sc.nextInt(); System.out.print(s>=60?\"Pass\":\"Fail\"); }}"
+            }
+        },
+        {
+            "id": "J405",
+            "title": "判斷是否為母音",
+            "difficulty": "Easy",
+            "description": "輸入一字元，若為 a e i o u 輸出 Vowel，否則 Consonant。",
+            "testCases": [
+                {
+                    "input": "a",
+                    "expected": "Vowel"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]args){ Scanner sc=new Scanner(System.in); char c=sc.next().charAt(0); if(\"aeiouAEIOU\".indexOf(c)>=0) System.out.print(\"Vowel\"); else System.out.print(\"Consonant\"); }}"
+            }
+        },
+        {
+            "id": "J406",
+            "title": "判斷是否為零",
+            "difficulty": "Easy",
+            "description": "輸入一整數，若等於0輸出 Zero，否則 Non-zero。",
+            "testCases": [
+                {
+                    "input": "0",
+                    "expected": "Zero"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]args){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(); System.out.print(n==0?\"Zero\":\"Non-zero\"); }}"
+            }
+        },
+        {
+            "id": "J407",
+            "title": "三數最大值",
+            "difficulty": "Easy",
+            "description": "輸入三整數，輸出最大值。",
+            "testCases": [
+                {
+                    "input": "3 9 7",
+                    "expected": "9"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]args){ Scanner sc=new Scanner(System.in); int a=sc.nextInt(),b=sc.nextInt(),c=sc.nextInt(); int m=a; if(b>m)m=b; if(c>m)m=c; System.out.print(m); }}"
+            }
+        },
+        {
+            "id": "J408",
+            "title": "溫度判斷",
+            "difficulty": "Easy",
+            "description": "輸入溫度，>=30 輸出 Hot，否 Cold。",
+            "testCases": [
+                {
+                    "input": "33",
+                    "expected": "Hot"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]args){ Scanner sc=new Scanner(System.in); int t=sc.nextInt(); System.out.print(t>=30?\"Hot\":\"Cold\"); }}"
+            }
+        },
+        {
+            "id": "J409",
+            "title": "switch：月份判斷",
+            "difficulty": "Easy",
+            "description": "輸入月份 1-12，若為 1 輸出 Jan，否則 Others。",
+            "testCases": [
+                {
+                    "input": "1",
+                    "expected": "Jan"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]args){ Scanner sc=new Scanner(System.in); int m=sc.nextInt(); switch(m){ case 1:System.out.print(\"Jan\");break; default:System.out.print(\"Others\"); } }}"
+            }
+        },
+        {
+            "id": "J410",
+            "title": "switch：顏色判斷",
+            "difficulty": "Easy",
+            "description": "輸入 red 或 blue，輸出對應詞。其餘輸出 Unknown。",
+            "testCases": [
+                {
+                    "input": "red",
+                    "expected": "Red Color"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]args){ Scanner sc=new Scanner(System.in); String s=sc.next(); switch(s){ case\"red\":System.out.print(\"Red Color\");break; case\"blue\":System.out.print(\"Blue Color\");break; default:System.out.print(\"Unknown\"); } }}"
+            }
+        },
+        {
+            "id": "J411",
+            "title": "三數最小值",
+            "difficulty": "Medium",
+            "description": "輸入三整數，輸出其中最小值。",
+            "testCases": [
+                {
+                    "input": "8 3 5",
+                    "expected": "3"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int x=sc.nextInt(),y=sc.nextInt(),z=sc.nextInt(); int m=x; if(y<m)m=y; if(z<m)m=z; System.out.print(m); }}"
+            }
+        },
+        {
+            "id": "J412",
+            "title": "成績等級判斷",
+            "difficulty": "Medium",
+            "description": "輸入分數，>=90 A，>=80 B，其餘 C。",
+            "testCases": [
+                {
+                    "input": "85",
+                    "expected": "B"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int s=sc.nextInt(); if(s>=90)System.out.print(\"A\"); else if(s>=80)System.out.print(\"B\"); else System.out.print(\"C\"); }}"
+            }
+        },
+        {
+            "id": "J413",
+            "title": "區間判斷",
+            "difficulty": "Medium",
+            "description": "輸入整數 n，若 1<=n<=10 輸出 OK，否則 NG。",
+            "testCases": [
+                {
+                    "input": "5",
+                    "expected": "OK"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(); if(n>=1 && n<=10)System.out.print(\"OK\"); else System.out.print(\"NG\"); }}"
+            }
+        },
+        {
+            "id": "J414",
+            "title": "判斷月份天數",
+            "difficulty": "Medium",
+            "description": "輸入月份，若為 1,3,5,7,8,10,12 輸出 31，否則 30。",
+            "testCases": [
+                {
+                    "input": "7",
+                    "expected": "31"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int m=sc.nextInt(); switch(m){ case 1:case3:case5:case7:case8:case10:case12:System.out.print(31);break; default:System.out.print(30); }} }"
+            }
+        },
+        {
+            "id": "J415",
+            "title": "文字選單指令",
+            "difficulty": "Medium",
+            "description": "輸入 add/del/exit 輸出對應指令，否則 Unknown。",
+            "testCases": [
+                {
+                    "input": "add",
+                    "expected": "Add Item"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); String s=sc.next(); switch(s){ case\"add\":System.out.print(\"Add Item\");break; case\"del\":System.out.print(\"Delete Item\");break; case\"exit\":System.out.print(\"Exit Program\");break; default:System.out.print(\"Unknown\"); } }}"
+            }
+        },
+        {
+            "id": "J416",
+            "title": "奇偶輸出變化",
+            "difficulty": "Medium",
+            "description": "輸入 n，若偶數輸出 n/2，否則輸出 n*3。",
+            "testCases": [
+                {
+                    "input": "8",
+                    "expected": "4"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(); if(n%2==0)System.out.print(n/2); else System.out.print(n*3); }}"
+            }
+        },
+        {
+            "id": "J417",
+            "title": "字母大小寫",
+            "difficulty": "Medium",
+            "description": "輸入字元，若為大寫輸出 Upper，小寫輸出 Lower，其餘 Other。",
+            "testCases": [
+                {
+                    "input": "A",
+                    "expected": "Upper"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); char c=sc.next().charAt(0); if(c>='A'&&c<='Z')System.out.print(\"Upper\"); else if(c>='a'&&c<='z')System.out.print(\"Lower\"); else System.out.print(\"Other\"); }}"
+            }
+        },
+        {
+            "id": "J418",
+            "title": "電費計算",
+            "difficulty": "Medium",
+            "description": "輸入度數，<=100 每度 2 元，否則每度 3 元。",
+            "testCases": [
+                {
+                    "input": "120",
+                    "expected": "360"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(); if(n<=100)System.out.print(n*2); else System.out.print(n*3); }}"
+            }
+        },
+        {
+            "id": "J419",
+            "title": "三元運算子：比較",
+            "difficulty": "Medium",
+            "description": "輸入兩數，若 a==b 輸出 Equal，否則 Not Equal。",
+            "testCases": [
+                {
+                    "input": "7 7",
+                    "expected": "Equal"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int x=sc.nextInt(),y=sc.nextInt(); System.out.print(x==y?\"Equal\":\"Not Equal\"); }}"
+            }
+        },
+        {
+            "id": "J420",
+            "title": "switch：季節判斷",
+            "difficulty": "Medium",
+            "description": "輸入月份 1~12，輸出春夏秋冬。",
+            "testCases": [
+                {
+                    "input": "4",
+                    "expected": "Spring"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int m=sc.nextInt(); switch(m){ case3:case4:case5:System.out.print(\"Spring\");break; case6:case7:case8:System.out.print(\"Summer\");break; case9:case10:case11:System.out.print(\"Autumn\");break; default:System.out.print(\"Winter\"); } }}"
+            }
+        },
+        {
+            "id": "J421",
+            "title": "分段函數",
+            "difficulty": "Hard",
+            "description": "輸入 x，若 x>10 輸出 x*2；若 x==10 輸出 0；否則輸出 -x。",
+            "testCases": [
+                {
+                    "input": "12",
+                    "expected": "24"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int x=sc.nextInt(); if(x>10)System.out.print(x*2); else if(x==10)System.out.print(0); else System.out.print(-x); }}"
+            }
+        },
+        {
+            "id": "J422",
+            "title": "複合條件判斷",
+            "difficulty": "Hard",
+            "description": "輸入 n，若為偶數且介於10~20，輸出 Yes，否則 No。",
+            "testCases": [
+                {
+                    "input": "14",
+                    "expected": "Yes"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(); if(n%2==0 && n>=10 && n<=20)System.out.print(\"Yes\"); else System.out.print(\"No\"); }}"
+            }
+        },
+        {
+            "id": "J423",
+            "title": "巢狀 if：三數最大值",
+            "difficulty": "Hard",
+            "description": "輸入三整數 x y z，利用巢狀 if 輸出最大值。",
+            "testCases": [
+                {
+                    "input": "5 9 1",
+                    "expected": "9"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int x=sc.nextInt(),y=sc.nextInt(),z=sc.nextInt(); int m=x; if(y>m)m=y; if(z>m)m=z; System.out.print(m); }}"
+            }
+        },
+        {
+            "id": "J424",
+            "title": "switch 計算機",
+            "difficulty": "Hard",
+            "description": "輸入 a b op，其中 op 為 + - * /，輸出運算結果。",
+            "testCases": [
+                {
+                    "input": "8 2 +",
+                    "expected": "10"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int x=sc.nextInt(),y=sc.nextInt(); String op=sc.next(); switch(op){ case\"+\":System.out.print(x+y);break; case\"-\":System.out.print(x-y);break; case\"*\":System.out.print(x*y);break; case\"/\":System.out.print(x/y);break; default:System.out.print(\"ERR\"); } }}"
+            }
+        },
+        {
+            "id": "J425",
+            "title": "switch：成績等級敘述",
+            "difficulty": "Hard",
+            "description": "輸入等級 A B C D F，輸出對應敘述。",
+            "testCases": [
+                {
+                    "input": "A",
+                    "expected": "Excellent"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); String s=sc.next(); switch(s){ case\"A\":System.out.print(\"Excellent\");break; case\"B\":System.out.print(\"Good\");break; case\"C\":System.out.print(\"Average\");break; case\"D\":System.out.print(\"Poor\");break; default:System.out.print(\"Fail\"); } }}"
+            }
+        },
+        {
+            "id": "J426",
+            "title": "三元巢狀：中位數",
+            "difficulty": "Hard",
+            "description": "輸入 a b c，輸出三數中位數。",
+            "testCases": [
+                {
+                    "input": "3 8 5",
+                    "expected": "5"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int x=sc.nextInt(),y=sc.nextInt(),z=sc.nextInt(); int mid=(x>y?(x<z?x:(y>z?y:z)):(y<z?y:(x>z?x:z))); System.out.print(mid); }}"
+            }
+        },
+        {
+            "id": "J427",
+            "title": "多條件薪資計算",
+            "difficulty": "Hard",
+            "description": "輸入時數 h，<=40 每小時120，否則超時部分150。",
+            "testCases": [
+                {
+                    "input": "50",
+                    "expected": "6000"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int h=sc.nextInt(); if(h<=40)System.out.print(h*120); else System.out.print(40*120 + (h-40)*150); }}"
+            }
+        },
+        {
+            "id": "J428",
+            "title": "密碼檢查",
+            "difficulty": "Hard",
+            "description": "輸入字串，若長度>=8 且包含數字輸出 OK，否則 NG。",
+            "testCases": [
+                {
+                    "input": "abc12345",
+                    "expected": "OK"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); String s=sc.next(); boolean hasDigit=false; for(char c:s.toCharArray()){ if(Character.isDigit(c)) hasDigit=true; } if(s.length()>=8 && hasDigit)System.out.print(\"OK\"); else System.out.print(\"NG\"); }}"
+            }
+        },
+        {
+            "id": "J429",
+            "title": "switch：星期判斷",
+            "difficulty": "Hard",
+            "description": "輸入 1~7，輸出 Monday~Sunday。",
+            "testCases": [
+                {
+                    "input": "3",
+                    "expected": "Wednesday"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int d=sc.nextInt(); switch(d){ case1:System.out.print(\"Monday\");break; case2:System.out.print(\"Tuesday\");break; case3:System.out.print(\"Wednesday\");break; case4:System.out.print(\"Thursday\");break; case5:System.out.print(\"Friday\");break; case6:System.out.print(\"Saturday\");break; case7:System.out.print(\"Sunday\");break; default:System.out.print(\"Error\"); } }}"
+            }
+        },
+        {
+            "id": "J430",
+            "title": "四數最大值",
+            "difficulty": "Hard",
+            "description": "輸入四整數，輸出最大值。",
+            "testCases": [
+                {
+                    "input": "12 5 99 37",
+                    "expected": "99"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int a1=sc.nextInt(),a2=sc.nextInt(),a3=sc.nextInt(),a4=sc.nextInt(); int m=a1; if(a2>m)m=a2; if(a3>m)m=a3; if(a4>m)m=a4; System.out.print(m); }}"
+            }
+        }
+    ]
+}
