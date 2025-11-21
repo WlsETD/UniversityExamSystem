@@ -365,17 +365,17 @@
       "answerCode":{
         "java":"import java.util.*; public class Main{public static void main(String[]a){Scanner sc=new Scanner(System.in);int n=sc.nextInt();int k=(int)Math.sqrt(n);System.out.print(k*k==n?\"YES\":\"NO\");}}"}
     },
-    {
+   {
   "id": "J531",
-  "title": "費氏數列（Fibonacci Sequence）",
+  "title": "費氏數列（Fibonacci Sequence, 逗號格式）",
   "difficulty": "Medium",
-  "description": "輸入整數 n，輸出費氏數列的前 n 項。費氏數列定義為 f1=1, f2=1, 且 f(n)=f(n-1)+f(n-2)。輸出時以空格分隔。",
+  "description": "輸入整數 n，輸出費氏數列前 n 項，以逗號分隔。費氏數列定義：f1=1, f2=1, f(n)=f(n-1)+f(n-2)。輸出格式如：1,1,2,3,5,8。",
   "testCases": [
-    { "input": "5", "expected": "1 1 2 3 5" },
-    { "input": "7", "expected": "1 1 2 3 5 8 13" }
+    { "input": "5", "expected": "1,1,2,3,5" },
+    { "input": "7", "expected": "1,1,2,3,5,8,13" }
   ],
   "answerCode": {
-    "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(); int f1=1,f2=1; if(n>=1) System.out.print(1); if(n>=2) System.out.print(\" 1\"); for(int i=3;i<=n;i++){ int f3=f1+f2; System.out.print(\" \"+f3); f1=f2; f2=f3; } } }"
+    "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(); int f1=1,f2=1; if(n>=1) System.out.print(1); if(n>=2) System.out.print(\",1\"); for(int i=3;i<=n;i++){ int f3=f1+f2; System.out.print(\",\"+f3); f1=f2; f2=f3; } } }"
   }
 }
 
