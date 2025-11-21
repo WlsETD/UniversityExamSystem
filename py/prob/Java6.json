@@ -1,0 +1,755 @@
+{
+    "category": "🍵Java 陣列基礎語法（Arrays）",
+    "problems": [
+        {
+            "id": "J601",
+            "title": "陣列元素輸出",
+            "difficulty": "Easy",
+            "description": "輸入 5 個整數，依序輸出它們。",
+            "testCases": [
+                {
+                    "input": "1 2 3 4 5",
+                    "expected": "1 2 3 4 5"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int[] x=new int[5]; for(int i=0;i<5;i++)x[i]=sc.nextInt(); for(int i=0;i<5;i++)System.out.print(x[i]+(i<4?\" \":\"\")); } }"
+            }
+        },
+        {
+            "id": "J602",
+            "title": "陣列總和",
+            "difficulty": "Easy",
+            "description": "輸入 5 個整數，輸出總和。",
+            "testCases": [
+                {
+                    "input": "1 2 3 4 5",
+                    "expected": "15"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int[] x=new int[5]; int s=0; for(int i=0;i<5;i++){ x[i]=sc.nextInt(); s+=x[i]; } System.out.print(s); } }"
+            }
+        },
+        {
+            "id": "J603",
+            "title": "陣列平均值",
+            "difficulty": "Easy",
+            "description": "輸入 5 個整數，輸出平均值（整數除法）。",
+            "testCases": [
+                {
+                    "input": "5 5 5 5 5",
+                    "expected": "5"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int[] x=new int[5]; int s=0; for(int i=0;i<5;i++){ x[i]=sc.nextInt(); s+=x[i]; } System.out.print(s/5); } }"
+            }
+        },
+        {
+            "id": "J604",
+            "title": "找最小值",
+            "difficulty": "Easy",
+            "description": "輸入 5 個整數，輸出最小值。",
+            "testCases": [
+                {
+                    "input": "3 9 1 4 7",
+                    "expected": "1"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int[] x=new int[5]; for(int i=0;i<5;i++)x[i]=sc.nextInt(); int m=x[0]; for(int i=1;i<5;i++) if(x[i]<m) m=x[i]; System.out.print(m); } }"
+            }
+        },
+        {
+            "id": "J605",
+            "title": "找最大值",
+            "difficulty": "Easy",
+            "description": "輸入 5 個整數，輸出最大值。",
+            "testCases": [
+                {
+                    "input": "3 9 1 4 7",
+                    "expected": "9"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int[] x=new int[5]; for(int i=0;i<5;i++)x[i]=sc.nextInt(); int m=x[0]; for(int i=1;i<5;i++) if(x[i]>m) m=x[i]; System.out.print(m); } }"
+            }
+        },
+        {
+            "id": "J606",
+            "title": "倒序輸出陣列",
+            "difficulty": "Easy",
+            "description": "輸入 5 個整數，倒序輸出。",
+            "testCases": [
+                {
+                    "input": "1 2 3 4 5",
+                    "expected": "5 4 3 2 1"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]x){ Scanner sc=new Scanner(System.in); int[] a=new int[5]; for(int i=0;i<5;i++)a[i]=sc.nextInt(); for(int i=4;i>=0;i--)System.out.print(a[i]+(i>0?\" \":\"\")); } }"
+            }
+        },
+        {
+            "id": "J607",
+            "title": "計算偶數個數",
+            "difficulty": "Easy",
+            "description": "輸入 5 個整數，輸出其中偶數的數量。",
+            "testCases": [
+                {
+                    "input": "1 2 3 4 6",
+                    "expected": "3"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]x){ Scanner sc=new Scanner(System.in); int c=0; for(int i=0;i<5;i++) if(sc.nextInt()%2==0) c++; System.out.print(c); } }"
+            }
+        },
+        {
+            "id": "J608",
+            "title": "比對指定值",
+            "difficulty": "Easy",
+            "description": "輸入 5 個整數與 1 個目標值，輸出目標值是否在陣列中（YES/NO）。",
+            "testCases": [
+                {
+                    "input": "1 3 5 7 9 5",
+                    "expected": "YES"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]x){ Scanner sc=new Scanner(System.in); int[] a=new int[5]; for(int i=0;i<5;i++)a[i]=sc.nextInt(); int t=sc.nextInt(); boolean f=false; for(int v:a) if(v==t) f=true; System.out.print(f?\"YES\":\"NO\"); } }"
+            }
+        },
+        {
+            "id": "J609",
+            "title": "特定索引輸出",
+            "difficulty": "Easy",
+            "description": "輸入 5 個整數與一個索引 k，輸出第 k 個元素。",
+            "testCases": [
+                {
+                    "input": "10 20 30 40 50 2",
+                    "expected": "30"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]x){ Scanner sc=new Scanner(System.in); int[] a=new int[5]; for(int i=0;i<5;i++)a[i]=sc.nextInt(); int k=sc.nextInt(); System.out.print(a[k]); } }"
+            }
+        },
+        {
+            "id": "J610",
+            "title": "陣列與加總（for-each）",
+            "difficulty": "Easy",
+            "description": "輸入 5 個整數，使用 for-each 計算總和。",
+            "testCases": [
+                {
+                    "input": "1 2 3 4 5",
+                    "expected": "15"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]x){ Scanner sc=new Scanner(System.in); int[] a=new int[5]; for(int i=0;i<5;i++)a[i]=sc.nextInt(); int s=0; for(int v:a)s+=v; System.out.print(s); } }"
+            }
+        },
+        {
+            "id": "J611",
+            "title": "累加前 k 個元素",
+            "difficulty": "Easy",
+            "description": "輸入 5 個整數與 k，輸出前 k 個元素的總和。",
+            "testCases": [
+                {
+                    "input": "1 2 3 4 5 3",
+                    "expected": "6"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]x){ Scanner sc=new Scanner(System.in); int[] a=new int[5]; for(int i=0;i<5;i++) a[i]=sc.nextInt(); int k=sc.nextInt(),s=0; for(int i=0;i<k;i++) s+=a[i]; System.out.print(s); } }"
+            }
+        },
+        {
+            "id": "J612",
+            "title": "計算負數個數",
+            "difficulty": "Easy",
+            "description": "輸入 5 個整數，輸出其中負數的個數。",
+            "testCases": [
+                {
+                    "input": "-1 2 -3 4 -5",
+                    "expected": "3"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int c=0; for(int i=0;i<5;i++) if(sc.nextInt()<0) c++; System.out.print(c); } }"
+            }
+        },
+        {
+            "id": "J613",
+            "title": "特定值出現次數",
+            "difficulty": "Easy",
+            "description": "輸入 5 個整數與目標值 t，輸出 t 出現的次數。",
+            "testCases": [
+                {
+                    "input": "1 2 2 3 2 2",
+                    "expected": "3"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int[] x=new int[5]; for(int i=0;i<5;i++)x[i]=sc.nextInt(); int t=sc.nextInt(),c=0; for(int v:x) if(v==t)c++; System.out.print(c); } }"
+            }
+        },
+        {
+            "id": "J614",
+            "title": "找出第一個大於 k 的元素",
+            "difficulty": "Easy",
+            "description": "輸入 5 個整數與 k，輸出第一個大於 k 的元素；若無則輸出 -1。",
+            "testCases": [
+                {
+                    "input": "1 3 5 7 9 6",
+                    "expected": "7"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int[] x=new int[5]; for(int i=0;i<5;i++)x[i]=sc.nextInt(); int k=sc.nextInt(); for(int v:x){ if(v>k){ System.out.print(v); return; } } System.out.print(-1); } }"
+            }
+        },
+        {
+            "id": "J615",
+            "title": "平方後輸出陣列",
+            "difficulty": "Easy",
+            "description": "輸入 5 個整數，輸出每個數字平方後的結果。",
+            "testCases": [
+                {
+                    "input": "1 2 3 4 5",
+                    "expected": "1 4 9 16 25"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]x){ Scanner sc=new Scanner(System.in); int[] a=new int[5]; for(int i=0;i<5;i++)a[i]=sc.nextInt(); for(int i=0;i<5;i++)System.out.print((a[i]*a[i])+(i<4?\" \":\"\")); } }"
+            }
+        },
+        {
+            "id": "J616",
+            "title": "偶數元素加總",
+            "difficulty": "Easy",
+            "description": "輸入 5 個整數，將其中偶數加總後輸出。",
+            "testCases": [
+                {
+                    "input": "2 5 8 3 4",
+                    "expected": "14"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]x){ Scanner sc=new Scanner(System.in); int s=0; for(int i=0;i<5;i++){ int v=sc.nextInt(); if(v%2==0)s+=v; } System.out.print(s); } }"
+            }
+        },
+        {
+            "id": "J617",
+            "title": "檢查陣列是否遞增",
+            "difficulty": "Easy",
+            "description": "輸入 5 個整數，若陣列為遞增（每個元素大於前一個）輸出 YES，否則 NO。",
+            "testCases": [
+                {
+                    "input": "1 2 3 4 5",
+                    "expected": "YES"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]x){ Scanner sc=new Scanner(System.in); int[] a=new int[5]; for(int i=0;i<5;i++)a[i]=sc.nextInt(); for(int i=1;i<5;i++){ if(a[i]<=a[i-1]){ System.out.print(\"NO\"); return;} } System.out.print(\"YES\"); } }"
+            }
+        },
+        {
+            "id": "J618",
+            "title": "交換第 1 與第 5 個元素",
+            "difficulty": "Easy",
+            "description": "輸入 5 個整數，交換第 1 與第 5 個元素後輸出。",
+            "testCases": [
+                {
+                    "input": "10 20 30 40 50",
+                    "expected": "50 20 30 40 10"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]x){ Scanner sc=new Scanner(System.in); int[] a=new int[5]; for(int i=0;i<5;i++)a[i]=sc.nextInt(); int t=a[0]; a[0]=a[4]; a[4]=t; for(int i=0;i<5;i++)System.out.print(a[i]+(i<4?\" \":\"\")); } }"
+            }
+        },
+        {
+            "id": "J619",
+            "title": "將陣列中小於 0 的元素變為 0",
+            "difficulty": "Easy",
+            "description": "輸入 5 個整數，將其中小於 0 的元素改為 0 後輸出。",
+            "testCases": [
+                {
+                    "input": "5 -3 2 -1 7",
+                    "expected": "5 0 2 0 7"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]x){ Scanner sc=new Scanner(System.in); int[] a=new int[5]; for(int i=0;i<5;i++){ int v=sc.nextInt(); if(v<0)v=0; a[i]=v; } for(int i=0;i<5;i++)System.out.print(a[i]+(i<4?\" \":\"\")); } }"
+            }
+        },
+        {
+            "id": "J620",
+            "title": "元素加 k 後輸出",
+            "difficulty": "Easy",
+            "description": "輸入 5 個整數與 k，將每個元素加上 k 後輸出。",
+            "testCases": [
+                {
+                    "input": "1 2 3 4 5 10",
+                    "expected": "11 12 13 14 15"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]x){ Scanner sc=new Scanner(System.in); int[] a=new int[5]; for(int i=0;i<5;i++)a[i]=sc.nextInt(); int k=sc.nextInt(); for(int i=0;i<5;i++)System.out.print((a[i]+k)+(i<4?\" \":\"\")); } }"
+            }
+        },
+        {
+            "id": "J621",
+            "title": "最大最小值差",
+            "difficulty": "Medium",
+            "description": "輸入 6 個整數，輸出最大值與最小值的差。",
+            "testCases": [
+                {
+                    "input": "3 8 1 9 4 2",
+                    "expected": "8"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]x){ Scanner sc=new Scanner(System.in); int[] a=new int[6]; for(int i=0;i<6;i++)a[i]=sc.nextInt(); int mn=a[0],mx=a[0]; for(int v:a){ if(v<mn)mn=v; if(v>mx)mx=v; } System.out.print(mx-mn); } }"
+            }
+        },
+        {
+            "id": "J622",
+            "title": "找第二大元素",
+            "difficulty": "Medium",
+            "description": "輸入 6 個整數，輸出第二大的數字。",
+            "testCases": [
+                {
+                    "input": "1 2 9 4 8 7",
+                    "expected": "8"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]x){ Scanner sc=new Scanner(System.in); int[] a=new int[6]; for(int i=0;i<6;i++)a[i]=sc.nextInt(); Arrays.sort(a); System.out.print(a[4]); } }"
+            }
+        },
+        {
+            "id": "J623",
+            "title": "陣列旋轉（向右一格）",
+            "difficulty": "Medium",
+            "description": "輸入 5 個整數，將陣列向右旋轉一格後輸出。（最後一個移到最前面）",
+            "testCases": [
+                {
+                    "input": "1 2 3 4 5",
+                    "expected": "5 1 2 3 4"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]x){ Scanner sc=new Scanner(System.in); int[] a=new int[5]; for(int i=0;i<5;i++)a[i]=sc.nextInt(); int t=a[4]; for(int i=4;i>=1;i--)a[i]=a[i-1]; a[0]=t; for(int i=0;i<5;i++)System.out.print(a[i]+(i<4?\" \":\"\")); } }"
+            }
+        },
+        {
+            "id": "J624",
+            "title": "統計區間內的元素個數",
+            "difficulty": "Medium",
+            "description": "輸入 5 個整數與區間 [L, R]，輸出落在區間內的元素數量。",
+            "testCases": [
+                {
+                    "input": "1 5 8 3 6 3 6",
+                    "expected": "3"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]x){ Scanner sc=new Scanner(System.in); int[] a=new int[5]; for(int i=0;i<5;i++)a[i]=sc.nextInt(); int L=sc.nextInt(),R=sc.nextInt(); int c=0; for(int v:a) if(v>=L && v<=R) c++; System.out.print(c); } }"
+            }
+        },
+        {
+            "id": "J625",
+            "title": "陣列是否對稱（回文）",
+            "difficulty": "Medium",
+            "description": "輸入 5 個整數，若陣列由左到右和右到左相同（回文）輸出 YES，否則 NO。",
+            "testCases": [
+                {
+                    "input": "1 2 3 2 1",
+                    "expected": "YES"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]x){ Scanner sc=new Scanner(System.in); int[] a=new int[5]; for(int i=0;i<5;i++)a[i]=sc.nextInt(); for(int i=0;i<5/2;i++){ if(a[i]!=a[4-i]){ System.out.print(\"NO\"); return; } } System.out.print(\"YES\"); } }"
+            }
+        },
+        {
+            "id": "J626",
+            "title": "多筆輸入直到遇到 -1",
+            "difficulty": "Medium",
+            "description": "輸入多個整數直到遇到 -1，將所有輸入值存到陣列中（最多 100 個），並輸出總和。",
+            "testCases": [
+                {
+                    "input": "3 5 2 -1",
+                    "expected": "10"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]x){ Scanner sc=new Scanner(System.in); int[] a=new int[100]; int n=0,sum=0,t; while((t=sc.nextInt())!=-1){ a[n++]=t; sum+=t; } System.out.print(sum); } }"
+            }
+        },
+        {
+            "id": "J627",
+            "title": "陣列排序後輸出",
+            "difficulty": "Medium",
+            "description": "輸入 6 個整數，排序後輸出（由小到大）。",
+            "testCases": [
+                {
+                    "input": "9 2 7 1 6 3",
+                    "expected": "1 2 3 6 7 9"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]x){ Scanner sc=new Scanner(System.in); int[] a=new int[6]; for(int i=0;i<6;i++)a[i]=sc.nextInt(); Arrays.sort(a); for(int i=0;i<6;i++)System.out.print(a[i]+(i<5?\" \":\"\")); } }"
+            }
+        },
+        {
+            "id": "J628",
+            "title": "複製部分陣列",
+            "difficulty": "Medium",
+            "description": "輸入 6 個整數，輸出從 index 2 開始的 3 個元素（使用 Arrays.copyOfRange）。",
+            "testCases": [
+                {
+                    "input": "10 20 30 40 50 60",
+                    "expected": "30 40 50"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]x){ Scanner sc=new Scanner(System.in); int[] a=new int[6]; for(int i=0;i<6;i++)a[i]=sc.nextInt(); int[] b=Arrays.copyOfRange(a,2,5); for(int i=0;i<b.length;i++)System.out.print(b[i]+(i<b.length-1?\" \":\"\")); } }"
+            }
+        },
+        {
+            "id": "J629",
+            "title": "將陣列中所有數字乘以 2",
+            "difficulty": "Medium",
+            "description": "輸入 6 個整數，將每個數字乘以 2 後輸出。",
+            "testCases": [
+                {
+                    "input": "1 3 5 7 9 11",
+                    "expected": "2 6 10 14 18 22"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]x){ Scanner sc=new Scanner(System.in); int[] a=new int[6]; for(int i=0;i<6;i++)a[i]=sc.nextInt(); for(int i=0;i<6;i++) System.out.print((a[i]*2)+(i<5?\" \":\"\")); } }"
+            }
+        },
+        {
+            "id": "J630",
+            "title": "找比平均值大的數字",
+            "difficulty": "Medium",
+            "description": "輸入 6 個整數，輸出所有大於平均值的數字。",
+            "testCases": [
+                {
+                    "input": "1 2 3 4 5 6",
+                    "expected": "4 5 6"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]x){ Scanner sc=new Scanner(System.in); int[] a=new int[6]; int s=0; for(int i=0;i<6;i++){ a[i]=sc.nextInt(); s+=a[i]; } double avg=s/6.0; boolean first=true; for(int v:a){ if(v>avg){ if(!first)System.out.print(\" \"); System.out.print(v); first=false; } } } }"
+            }
+        },
+        {
+            "id": "J631",
+            "title": "陣列左旋轉一格",
+            "difficulty": "Medium",
+            "description": "輸入 6 個整數，將陣列向左旋轉一格後輸出。（第一個移到最後）",
+            "testCases": [
+                {
+                    "input": "1 2 3 4 5 6",
+                    "expected": "2 3 4 5 6 1"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int[] x=new int[6]; for(int i=0;i<6;i++)x[i]=sc.nextInt(); int t=x[0]; for(int i=0;i<5;i++)x[i]=x[i+1]; x[5]=t; for(int i=0;i<6;i++)System.out.print(x[i]+(i<5?\" \":\"\")); } }"
+            }
+        },
+        {
+            "id": "J632",
+            "title": "只輸出不重複的元素",
+            "difficulty": "Medium",
+            "description": "輸入 7 個整數，只輸出不重複的元素（第一次出現時輸出）。",
+            "testCases": [
+                {
+                    "input": "1 2 3 2 4 1 5",
+                    "expected": "1 2 3 4 5"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int[] x=new int[7]; for(int i=0;i<7;i++)x[i]=sc.nextInt(); boolean[] used=new boolean[10001]; boolean first=true; for(int v:x){ if(!used[v]){ if(!first)System.out.print(\" \"); System.out.print(v); used[v]=true; first=false; } } } }"
+            }
+        },
+        {
+            "id": "J633",
+            "title": "找出陣列中出現次數最多的數",
+            "difficulty": "Medium",
+            "description": "輸入 8 個整數，輸出出現次數最多的數字。如有多個，輸出最小的。",
+            "testCases": [
+                {
+                    "input": "1 2 2 3 3 3 2 1",
+                    "expected": "2"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int[] arr=new int[8]; for(int i=0;i<8;i++)arr[i]=sc.nextInt(); int[] cnt=new int[10001]; for(int v:arr)cnt[v]++; int best=-1,bestc=-1; for(int i=0;i<cnt.length;i++){ if(cnt[i]>bestc){ bestc=cnt[i]; best=i; } } System.out.print(best); } }"
+            }
+        },
+        {
+            "id": "J634",
+            "title": "反轉字串陣列",
+            "difficulty": "Medium",
+            "description": "輸入 4 個字串，將陣列反轉後輸出。",
+            "testCases": [
+                {
+                    "input": "a b c d",
+                    "expected": "d c b a"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]args){ Scanner sc=new Scanner(System.in); String[] s=new String[4]; for(int i=0;i<4;i++)s[i]=sc.next(); for(int i=3;i>=0;i--)System.out.print(s[i]+(i>0?\" \":\"\")); } }"
+            }
+        },
+        {
+            "id": "J635",
+            "title": "多維陣列：矩陣總和",
+            "difficulty": "Medium",
+            "description": "輸入 2x3 的矩陣，輸出所有元素的總和。",
+            "testCases": [
+                {
+                    "input": "1 2 3 4 5 6",
+                    "expected": "21"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]args){ Scanner sc=new Scanner(System.in); int[][] m=new int[2][3]; int s=0; for(int i=0;i<2;i++) for(int j=0;j<3;j++){ m[i][j]=sc.nextInt(); s+=m[i][j]; } System.out.print(s); } }"
+            }
+        },
+        {
+            "id": "J636",
+            "title": "合併兩個陣列",
+            "difficulty": "Medium",
+            "description": "輸入兩組各 3 個整數，將兩陣列合併成長度 6 的陣列後輸出。",
+            "testCases": [
+                {
+                    "input": "1 2 3 4 5 6",
+                    "expected": "1 2 3 4 5 6"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]args){ Scanner sc=new Scanner(System.in); int[] a=new int[3],b=new int[3],c=new int[6]; for(int i=0;i<3;i++)a[i]=sc.nextInt(); for(int i=0;i<3;i++)b[i]=sc.nextInt(); for(int i=0;i<3;i++)c[i]=a[i]; for(int i=0;i<3;i++)c[i+3]=b[i]; for(int i=0;i<6;i++)System.out.print(c[i]+(i<5?\" \":\"\")); } }"
+            }
+        },
+        {
+            "id": "J637",
+            "title": "陣列元素全部加總（for-each）",
+            "difficulty": "Medium",
+            "description": "輸入 n 與 n 個整數，使用 for-each 計算總和。",
+            "testCases": [
+                {
+                    "input": "5 1 2 3 4 5",
+                    "expected": "15"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]args){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(); int[] a=new int[n]; for(int i=0;i<n;i++)a[i]=sc.nextInt(); int s=0; for(int v:a)s+=v; System.out.print(s); } }"
+            }
+        },
+        {
+            "id": "J638",
+            "title": "找出所有偶數元素",
+            "difficulty": "Medium",
+            "description": "輸入 6 個整數，輸出所有偶數元素。",
+            "testCases": [
+                {
+                    "input": "1 2 3 4 5 6",
+                    "expected": "2 4 6"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]args){ Scanner sc=new Scanner(System.in); int[] a=new int[6]; for(int i=0;i<6;i++)a[i]=sc.nextInt(); boolean f=true; for(int v:a){ if(v%2==0){ if(!f)System.out.print(\" \"); System.out.print(v); f=false; } } } }"
+            }
+        },
+        {
+            "id": "J639",
+            "title": "反轉多維陣列每一列",
+            "difficulty": "Medium",
+            "description": "輸入 2x3 矩陣，將每一列反轉後輸出。",
+            "testCases": [
+                {
+                    "input": "1 2 3 4 5 6",
+                    "expected": "3 2 1\n6 5 4"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]args){ Scanner sc=new Scanner(System.in); int[][] m=new int[2][3]; for(int i=0;i<2;i++) for(int j=0;j<3;j++) m[i][j]=sc.nextInt(); for(int i=0;i<2;i++){ for(int j=2;j>=0;j--) System.out.print(m[i][j]+(j>0?\" \":\"\")); System.out.println(); } } }"
+            }
+        },
+        {
+            "id": "J640",
+            "title": "找出所有比前一個大的數",
+            "difficulty": "Medium",
+            "description": "輸入 7 個整數，輸出所有比前一個大的元素。",
+            "testCases": [
+                {
+                    "input": "1 3 2 5 4 6 8",
+                    "expected": "3 5 6 8"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]args){ Scanner sc=new Scanner(System.in); int[] a=new int[7]; for(int i=0;i<7;i++)a[i]=sc.nextInt(); boolean f=true; for(int i=1;i<7;i++){ if(a[i]>a[i-1]){ if(!f)System.out.print(\" \"); System.out.print(a[i]); f=false; } } } }"
+            }
+        },
+        {
+            "id": "J641",
+            "title": "找出陣列中的眾數（出現次數最多）",
+            "difficulty": "Hard",
+            "description": "輸入 n 與 n 個整數，輸出眾數（出現最多次的數）。若有多個，輸出最小的。",
+            "testCases": [
+                {
+                    "input": "7 1 2 2 3 3 3 2",
+                    "expected": "2"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]args){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(); int[] a=new int[n]; for(int i=0;i<n;i++)a[i]=sc.nextInt(); int[] freq=new int[10001]; for(int v:a)freq[v]++; int best=-1,cnt=-1; for(int i=0;i<freq.length;i++) if(freq[i]>cnt){ cnt=freq[i]; best=i; } System.out.print(best); } }"
+            }
+        },
+        {
+            "id": "J642",
+            "title": "找出最長連續遞增子序列長度",
+            "difficulty": "Hard",
+            "description": "輸入 n 與 n 個整數，輸出最長連續遞增子序列的長度。",
+            "testCases": [
+                {
+                    "input": "7 1 2 2 3 4 1 2",
+                    "expected": "3"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(); int[] x=new int[n]; for(int i=0;i<n;i++)x[i]=sc.nextInt(); int best=1,cur=1; for(int i=1;i<n;i++){ if(x[i]>x[i-1])cur++; else cur=1; if(cur>best)best=cur; } System.out.print(best); } }"
+            }
+        },
+        {
+            "id": "J643",
+            "title": "矩陣轉置",
+            "difficulty": "Hard",
+            "description": "輸入一個 3x3 矩陣，輸出其轉置矩陣。",
+            "testCases": [
+                {
+                    "input": "1 2 3 4 5 6 7 8 9",
+                    "expected": "1 4 7\n2 5 8\n3 6 9"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]args){ Scanner sc=new Scanner(System.in); int[][] m=new int[3][3]; for(int i=0;i<3;i++) for(int j=0;j<3;j++) m[i][j]=sc.nextInt(); for(int j=0;j<3;j++){ for(int i=0;i<3;i++) System.out.print(m[i][j] + (i<2?\" \":\"\")); System.out.println(); } } }"
+            }
+        },
+        {
+            "id": "J644",
+            "title": "矩陣相加",
+            "difficulty": "Hard",
+            "description": "輸入兩個 2x2 的矩陣，輸出它們的和。",
+            "testCases": [
+                {
+                    "input": "1 2 3 4 5 6 7 8",
+                    "expected": "6 8\n10 12"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]args){ Scanner sc=new Scanner(System.in); int[][] a=new int[2][2]; int[][] b=new int[2][2]; for(int i=0;i<2;i++) for(int j=0;j<2;j++) a[i][j]=sc.nextInt(); for(int i=0;i<2;i++) for(int j=0;j<2;j++) b[i][j]=sc.nextInt(); for(int i=0;i<2;i++){ for(int j=0;j<2;j++) System.out.print((a[i][j]+b[i][j]) + (j<1?\" \":\"\")); System.out.println(); } } }"
+            }
+        },
+        {
+            "id": "J645",
+            "title": "合併兩陣列並排序",
+            "difficulty": "Hard",
+            "description": "輸入兩組各 4 個整數，合併成 8 個後排序輸出。",
+            "testCases": [
+                {
+                    "input": "4 1 3 2 8 6 7 5",
+                    "expected": "1 2 3 4 5 6 7 8"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]args){ Scanner sc=new Scanner(System.in); int[] a=new int[4],b=new int[4],c=new int[8]; for(int i=0;i<4;i++)a[i]=sc.nextInt(); for(int i=0;i<4;i++)b[i]=sc.nextInt(); for(int i=0;i<4;i++){ c[i]=a[i]; c[i+4]=b[i]; } Arrays.sort(c); for(int i=0;i<8;i++)System.out.print(c[i] + (i<7?\" \":\"\")); } }"
+            }
+        },
+        {
+            "id": "J646",
+            "title": "找出未出現的最小正整數",
+            "difficulty": "Hard",
+            "description": "輸入 n 與 n 個正整數，找出未出現過的最小正整數。",
+            "testCases": [
+                {
+                    "input": "5 1 2 3 5 6",
+                    "expected": "4"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]args){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(); boolean[] seen=new boolean[10002]; for(int i=0;i<n;i++){ int v=sc.nextInt(); if(v>0 && v<=10001) seen[v]=true; } for(int i=1;i<=10001;i++){ if(!seen[i]){ System.out.print(i); break; } } } }"
+            }
+        },
+        {
+            "id": "J647",
+            "title": "二分搜尋（binary search）",
+            "difficulty": "Hard",
+            "description": "輸入 n、n 個整數與目標值 t，將陣列排序後，使用 Arrays.binarySearch 搜尋 t 的 index。找不到輸出 -1。",
+            "testCases": [
+                {
+                    "input": "5 4 2 6 1 3 6",
+                    "expected": "4"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]args){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(); int[] a=new int[n]; for(int i=0;i<n;i++)a[i]=sc.nextInt(); int t=sc.nextInt(); Arrays.sort(a); int idx=Arrays.binarySearch(a,t); System.out.print(idx>=0?idx:-1); } }"
+            }
+        },
+        {
+            "id": "J648",
+            "title": "矩陣對角線和",
+            "difficulty": "Hard",
+            "description": "輸入 3x3 矩陣，輸出兩條對角線的和（左上到右下 + 右上到左下）。",
+            "testCases": [
+                {
+                    "input": "1 2 3 4 5 6 7 8 9",
+                    "expected": "30"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]args){ Scanner sc=new Scanner(System.in); int[][] a=new int[3][3]; for(int i=0;i<3;i++) for(int j=0;j<3;j++) a[i][j]=sc.nextInt(); int s=a[0][0]+a[1][1]+a[2][2] + a[0][2]+a[1][1]+a[2][0]; System.out.print(s); } }"
+            }
+        },
+        {
+            "id": "J649",
+            "title": "陣列所有不重複元素（排序後輸出）",
+            "difficulty": "Hard",
+            "description": "輸入 n 與 n 個整數，移除重複後排序輸出。",
+            "testCases": [
+                {
+                    "input": "8 3 1 2 3 2 4 1 5",
+                    "expected": "1 2 3 4 5"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(); int[] x=new int[n]; for(int i=0;i<n;i++)x[i]=sc.nextInt(); Arrays.sort(x); boolean first=true; for(int i=0;i<n;i++){ if(i==0 || x[i]!=x[i-1]){ if(!first)System.out.print(\" \"); System.out.print(x[i]); first=false; } } } }"
+            }
+        },
+        {
+            "id": "J650",
+            "title": "找子陣列最大和（最大連續子序列）",
+            "difficulty": "Hard",
+            "description": "輸入 n 與 n 個整數，求最大連續子序列和（Kadane's Algorithm）。",
+            "testCases": [
+                {
+                    "input": "8 -2 1 -3 4 -1 2 1 -5",
+                    "expected": "6"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(); int[] x=new int[n]; for(int i=0;i<n;i++)x[i]=sc.nextInt(); int max=x[0],cur=x[0]; for(int i=1;i<n;i++){ cur=Math.max(x[i],cur+x[i]); max=Math.max(max,cur); } System.out.print(max); } }"
+            }
+        }
+    ]
+}
