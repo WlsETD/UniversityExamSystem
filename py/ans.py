@@ -1,5 +1,11 @@
 n = int(input())
-total = 0
-for i in range(1, n + 1, 2):
-    total += i * i
-print(total)
+arr = list(map(int, input().split()))
+
+current_sum = arr[0]
+max_sum = arr[0]
+
+for i in range(1, n):
+    current_sum = max(arr[i], current_sum + arr[i])
+    max_sum = max(max_sum, current_sum)
+
+print(max_sum)

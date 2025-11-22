@@ -1,88 +1,94 @@
-// ========================================================
-// 0. 自動掃描所有 JSON 題庫（GitHub Pages 版本）
-// ========================================================
+/* ========================================================
+   Online Judge — Final Stable Version (2025)
+   支援三頁架構：
+   1. index.html    → 題庫分類
+   2. problem.html  → 題目列表
+   3. question.html → 單題練習頁
+======================================================== */
+
+/* ========================================================
+   0. 全域設定
+======================================================== */
 
 const JSON_BASE =
   "https://raw.githubusercontent.com/WlsETD/UniversityExamSystem/main/py/prob/";
 
-async function loadAllJSONFiles() {
+let PROBLEM_SETS = [];
+let CURRENT_PROBLEMS = [];
+let CURRENT_DIFFICULTY = "all";
+
+let pyodide = null;
+
+/* ========================================================
+   1. 共用工具
+======================================================== */
+
+async function loadJSON(filename) {
+  try {
+    const res = await fetch(JSON_BASE + filename);
+    if (!res.ok) throw new Error("JSON 無法載入");
+    return await res.json();
+  } catch (err) {
+    console.warn("❌ JSON 載入失敗: ", filename);
+    return null;
+  }
+}
+
+async function loadJSONList() {
   try {
     const res = await fetch(
       "https://api.github.com/repos/WlsETD/UniversityExamSystem/contents/py/prob"
     );
     const files = await res.json();
-
     return files
       .filter((f) => f.name.endsWith(".json"))
       .map((f) => f.name);
   } catch (err) {
-    console.error("⚠️ 無法讀取 GitHub JSON 清單");
+    console.warn("⚠ 無法取得 JSON 清單");
     return [];
   }
 }
 
-// ========================================================
-// 1. 載入單一 JSON 題庫
-// ========================================================
-async function loadJSON(filename) {
-  const url = JSON_BASE + filename;
-  try {
-    const res = await fetch(url);
-    if (!res.ok) throw new Error("JSON 無法讀取");
-    return await res.json();
-  } catch (err) {
-    console.error("❌ JSON 載入失敗：", url);
-    return null;
-  }
-}
-
-// ========================================================
-// 2. 題庫分類列表
-// ========================================================
-let PROBLEM_SETS = [];
+/* ========================================================
+   2. 分類首頁 index.html
+======================================================== */
 
 async function loadCategories() {
   const container = document.getElementById("category-list");
   if (!container) return;
 
-  PROBLEM_SETS = await loadAllJSONFiles();
+  PROBLEM_SETS = await loadJSONList();
   container.innerHTML = "";
 
   for (const filename of PROBLEM_SETS) {
     const data = await loadJSON(filename);
     if (!data) continue;
 
-    container.appendChild(
-      renderCategoryBox(filename, data.category, data.problems.length)
-    );
-  }
-}
+    const div = document.createElement("div");
+    div.className = "category-card";
+    div.onclick = () => openCategory(filename);
 
-function renderCategoryBox(filename, title, count) {
-  const div = document.createElement("div");
-  div.className = "category-card";
-  div.onclick = () => openCategory(filename);
-  div.innerHTML = `
-        <h3>${title}</h3>
-        <p class="filename">${filename}</p>
-        <p class="count">共 ${count} 題</p>
+    div.innerHTML = `
+      <h3>${data.category}</h3>
+      <p class="filename">${filename}</p>
+      <p class="count">共 ${data.problems.length} 題</p>
     `;
-  return div;
+
+    container.appendChild(div);
+  }
 }
 
 function openCategory(filename) {
   location.href = `problem.html?file=${filename}`;
 }
 
-// ========================================================
-// 3. 題目列表 + 難度過濾 + 進度條
-// ========================================================
-let CURRENT_PROBLEMS = [];
-let CURRENT_DIFFICULTY = "all"; // ✅ 正確名稱（修正）
+/* ========================================================
+   3. 題目列表 problem.html
+======================================================== */
 
 async function loadProblemList() {
-  const list = document.getElementById("problem-list");
-  if (!list) return;
+  const listArea = document.getElementById("problem-list");
+  if (!listArea) return;
 
   const url = new URL(location.href);
   const filename = url.searchParams.get("file");
@@ -90,83 +96,67 @@ async function loadProblemList() {
   const data = await loadJSON(filename);
   if (!data) return;
 
+  CURRENT_PROBLEMS = data.problems;
+
   document.getElementById("category-title").innerText = data.category;
   document.getElementById("problem-count").innerText =
     `共 ${data.problems.length} 題`;
 
-  CURRENT_PROBLEMS = data.problems;
-
-  // ⭐ 確保第一次載入就會顯示題目
   renderProblemList(filename);
   updateProgress(filename);
 }
 
 function renderProblemList(filename) {
-  const list = document.getElementById("problem-list");
-  list.innerHTML = "";
+  const listArea = document.getElementById("problem-list");
+  listArea.innerHTML = "";
 
-  let filtered =
-    CURRENT_DIFFICULTY === "all"
-      ? CURRENT_PROBLEMS
-      : CURRENT_PROBLEMS.filter((p) => p.difficulty === CURRENT_DIFFICULTY);
+  const filtered =
+    CURRENT_PROBLEMS.filter(
+      (p) => CURRENT_DIFFICULTY === "all" || p.difficulty === CURRENT_DIFFICULTY
+    );
 
-  filtered.forEach((p) => list.appendChild(renderProblemItem(filename, p)));
-}
+  filtered.forEach((p) => {
+    const key = "prog_" + filename;
+    const prog = JSON.parse(localStorage.getItem(key) || "[]");
+    const done = prog.includes(p.id);
 
-function filterDifficulty(level) {
-  CURRENT_DIFFICULTY = level; // ⭐ 正確變數名稱
+    const color =
+      p.difficulty === "Easy"
+        ? "#27ae60"
+        : p.difficulty === "Medium"
+        ? "#f1c40f"
+        : "#e74c3c";
 
-  const body = document.body;
-  body.classList.remove("bg-default", "bg-easy", "bg-medium", "bg-hard");
+    const div = document.createElement("div");
+    div.className = "problem-item";
+    div.onclick = () => openProblem(filename, p.id);
 
-  if (level === "Easy") body.classList.add("bg-easy");
-  else if (level === "Medium") body.classList.add("bg-medium");
-  else if (level === "Hard") body.classList.add("bg-hard");
-  else body.classList.add("bg-default");
+    div.style.opacity = done ? "0.55" : "1";
 
-  const url = new URL(location.href);
-  renderProblemList(url.searchParams.get("file"));
-}
-
-// ⭐ 顯示題目列表（含 ✓ 已完成）
-function renderProblemItem(filename, p) {
-  const key = "prog_" + filename;
-  const prog = JSON.parse(localStorage.getItem(key) || "[]");
-
-  const isDone = prog.includes(p.id);
-
-  let color = "#999";
-  if (p.difficulty === "Easy") color = "#27ae60";
-  if (p.difficulty === "Medium") color = "#f1c40f";
-  if (p.difficulty === "Hard") color = "#e74c3c";
-
-  const div = document.createElement("div");
-  div.className = "problem-item";
-  div.onclick = () => openProblem(filename, p.id);
-
-  div.style.opacity = isDone ? "0.55" : "1";
-
-  div.innerHTML = `
-    <div class="problem-row">
+    div.innerHTML = `
+      <div class="problem-row">
         <span class="diff-dot" style="background:${color};"></span>
         <strong>${p.id}</strong> — ${p.title}
-        ${isDone ? `<span style="color:#2ecc71; margin-left:8px;">✓</span>` : ""}
-    </div>
-  `;
-  return div;
+        ${done ? `<span style="color:#2ecc71;">✓</span>` : ""}
+      </div>
+    `;
+
+    listArea.appendChild(div);
+  });
 }
 
 function openProblem(filename, pid) {
   location.href = `question.html?file=${filename}&id=${pid}`;
 }
 
-// ========================================================
-// 4. Pyodide 引擎
-// ========================================================
-let pyodide = null;
+/* ========================================================
+   4. Python 執行器
+======================================================== */
 
 async function loadPyodideEngine() {
-  if (!pyodide) pyodide = await loadPyodide();
+  if (!pyodide) {
+    pyodide = await loadPyodide();
+  }
 }
 
 function createInputFunction(inputs) {
@@ -176,8 +166,8 @@ function createInputFunction(inputs) {
 
 async function runPythonWithInput(code, inputString) {
   await loadPyodideEngine();
-  const inputs = inputString.split("\n");
 
+  const inputs = inputString.split("\n");
   pyodide.globals.set("input", createInputFunction(inputs));
 
   let output = "";
@@ -188,102 +178,115 @@ async function runPythonWithInput(code, inputString) {
   try {
     await pyodide.runPythonAsync(code);
   } catch (err) {
-    return "⚠️ 錯誤：" + err;
+    return "⚠ Python 錯誤：" + err;
   }
+
   return output.trim();
 }
 
-// ========================================================
-// 5. 題目內容 & 自動測試
-// ========================================================
+/* ========================================================
+   5. 載入單題 question.html
+======================================================== */
+
 async function loadQuestion() {
+  if (!document.getElementById("sample-box")) return;
+
   const url = new URL(location.href);
   const filename = url.searchParams.get("file");
   const pid = url.searchParams.get("id");
 
   const data = await loadJSON(filename);
-  if (!data) return;
-
   const prob = data.problems.find((p) => p.id === pid);
-  if (!prob) return;
 
   document.getElementById("q-title").innerText = `${pid} — ${prob.title}`;
   document.getElementById("q-desc").innerText = prob.description;
 
-  const box = document.getElementById("sample-box");
-  box.innerHTML = "";
-
+  const sampleBox = document.getElementById("sample-box");
+  sampleBox.innerHTML = "";
   prob.testCases.forEach((tc) => {
-    const d = document.createElement("div");
-    d.className = "sample-item";
-    d.innerText = `輸入：${tc.input} → 預期：${tc.expected}`;
-    box.appendChild(d);
+    const box = document.createElement("div");
+    box.className = "sample-item";
+    box.innerText = `輸入：${tc.input} → 預期：${tc.expected}`;
+    sampleBox.appendChild(box);
   });
 
-  const upload = document.createElement("input");
-  upload.type = "file";
-  upload.accept = ".py,.txt";
-  upload.id = "uploadAnswer";
-  upload.style = "margin-top:15px;";
-  upload.onchange = () => checkUploadedAnswerPyodide(prob, filename);
-  box.appendChild(upload);
+  // 安全的 upload input（HTML 內已存在）
+  document.getElementById("uploadAnswer").onchange = () =>
+    validateUploaded(prob, filename);
+
+  await loadPyodideEngine();
 }
 
-// ========================================================
-// 6. 自動測試 + 儲存通過紀錄
-// ========================================================
-async function checkUploadedAnswerPyodide(prob, filename) {
+/* ========================================================
+   6. 載入的檔案格式檢查
+======================================================== */
+
+async function validateUploaded(prob, filename) {
   const file = document.getElementById("uploadAnswer").files[0];
   if (!file) return;
 
-  const reader = new FileReader();
+  const ext = file.name.split(".").pop().toLowerCase();
+  const code = await file.text();
 
-  reader.onload = async () => {
-    const userCode = reader.result;
-    let allPass = true;
+  if (ext === "py") return judgePython(prob, filename, code);
+  if (ext === "java") return judgeJava(prob, filename, code);
 
-    for (const tc of prob.testCases) {
-      const expected = tc.expected.toString();
-      const actual = await runPythonWithInput(userCode, tc.input);
-
-      if (actual !== expected) {
-        allPass = false;
-        break;
-      }
-    }
-
-    const resultBox = document.getElementById("result");
-
-    if (allPass) {
-      saveProgress(filename, prob.id);
-
-      resultBox.innerHTML = `
-    <div class="result-pass">
-        🎉 <strong>全部測試通過！</strong>
-    </div>
-`;
-    } else {
-      resultBox.innerHTML = `
-        <div class="result-fail">
-            ❌ <strong>答案不正確，請再試一次。</strong>
-        </div>
-      `;
-    }
-
-    updateProgress(filename);
-    loadProblemList(filename); // ⭐ 更新✓完成標記
-  };
-
-  reader.readAsText(file);
+  alert("❌ 僅支援 .py 或 .java！");
 }
 
-// ========================================================
-// 7. 進度儲存 + 進度條 + 清除進度
-// ========================================================
+/* ========================================================
+   7. Python / Java 批改
+======================================================== */
+
+async function judgePython(prob, filename, code) {
+  let ok = true;
+
+  for (const tc of prob.testCases) {
+    const actual = await runPythonWithInput(code, tc.input);
+    if (actual !== tc.expected.toString()) ok = false;
+  }
+
+  showResult(ok, filename, prob);
+}
+
+async function judgeJava(prob, filename, code) {
+  let ok = true;
+
+  for (const tc of prob.testCases) {
+    const actual = await runJavaWithInput(code, tc.input);
+    if (actual !== tc.expected.toString()) ok = false;
+  }
+
+  showResult(ok, filename, prob);
+}
+
+/* ========================================================
+   8. 顯示批改結果 & 儲存進度
+======================================================== */
+
+function showResult(ok, filename, prob) {
+  const box = document.getElementById("result");
+
+  if (ok) {
+    saveProgress(filename, prob.id);
+    box.innerHTML = `<div class="result-pass">🎉 全部通過！</div>`;
+  } else {
+    box.innerHTML = `<div class="result-fail">❌ 答案不正確</div>`;
+  }
+
+  updateProgress(filename);
+}
+
+/* ========================================================
+   儲存 / 更新進度
+======================================================== */
+
 function saveProgress(filename, pid) {
   const key = "prog_" + filename;
   let prog = JSON.parse(localStorage.getItem(key) || "[]");
+
   if (!prog.includes(pid)) prog.push(pid);
+
   localStorage.setItem(key, JSON.stringify(prog));
 }
 
@@ -291,33 +294,116 @@ function updateProgress(filename) {
   const key = "prog_" + filename;
   const prog = JSON.parse(localStorage.getItem(key) || "[]");
 
-  const total = CURRENT_PROBLEMS.length;
   const done = prog.length;
+  const total = CURRENT_PROBLEMS.length;
 
-  const percent = total === 0 ? 0 : Math.round((done / total) * 100);
-
-  document.getElementById("progress-bar").style.width = percent + "%";
-  document.getElementById("progress-text").innerText =
-    `完成度：${done}/${total}（${percent}%）`;
+  if (document.getElementById("progress-text"))
+    document.getElementById("progress-text").innerText =
+      `完成度：${done}/${total}`;
 }
 
-function clearProgress() {
+/* ========================================================
+   9. 手動執行（單筆測資）
+======================================================== */
+
+async function manualRun() {
+  const file = document.getElementById("uploadAnswer")?.files[0];
+  if (!file) return alert("請上傳 .py 或 .java 檔案");
+
+  const ext = file.name.split(".").pop().toLowerCase();
+  const code = await file.text();
+
   const url = new URL(location.href);
   const filename = url.searchParams.get("file");
+  const pid = url.searchParams.get("id");
 
-  localStorage.removeItem("prog_" + filename);
-  updateProgress(filename);
-  loadProblemList(filename);
+  const data = await loadJSON(filename);
+  const prob = data.problems.find((p) => p.id === pid);
+  const first = prob.testCases[0];
 
-  alert("已清除所有進度！");
+  let out = "";
+  if (ext === "py") out = await runPythonWithInput(code, first.input);
+  else out = await runJavaWithInput(code, first.input);
+
+  document.getElementById("result").innerHTML = `
+    <div class="result-pass">
+      <h6 class="text-center">手動執行結果：${out}</h6>
+    </div>
+  `;
 }
 
-// ========================================================
-// 8. 初始化（⭐修正不顯示BUG）
-// ========================================================
+/* ========================================================
+   10. 自動測試所有測資
+======================================================== */
+
+async function runAllTests() {
+  const file = document.getElementById("uploadAnswer")?.files[0];
+  if (!file) return alert("請上傳 .py 或 .java 檔案");
+
+  const ext = file.name.split(".").pop().toLowerCase();
+  const code = await file.text();
+
+  const url = new URL(location.href);
+  const filename = url.searchParams.get("file");
+  const pid = url.searchParams.get("id");
+
+  const data = await loadJSON(filename);
+  const prob = data.problems.find((p) => p.id === pid);
+
+  let allPass = true;
+  let html = "";
+
+  for (let i = 0; i < prob.testCases.length; i++) {
+    const tc = prob.testCases[i];
+
+    let actual =
+      ext === "py"
+        ? await runPythonWithInput(code, tc.input)
+        : await runJavaWithInput(code, tc.input);
+
+    const expected = tc.expected.toString();
+    const pass = actual === expected;
+
+    if (!pass) allPass = false;
+
+    html += `
+      <div class="mb-3 log">
+        <strong>測試案 ${i + 1}</strong>
+        <pre>輸入：${tc.input}</pre>
+        <pre>預期：${expected}</pre>
+        <pre>實際：${actual}</pre>
+        ${pass ? "✓ 通過" : "✗ 失敗"}
+      </div>
+      <hr>
+    `;
+  }
+
+  if (allPass) {
+    saveProgress(filename, prob.id);
+    updateProgress(filename);
+
+    document.getElementById("result").innerHTML = `
+      <div class="result-pass">🎉 所有測資全部通過！</div>
+      ${html}
+    `;
+  } else {
+    document.getElementById("result").innerHTML = `
+      <div class="result-fail">❌ 部分測資未通過</div>
+      ${html}
+    `;
+  }
+}
+
+/* ========================================================
+   11. 初始化入口
+======================================================== */
+
 window.onload = async () => {
-  await loadCategories();
-  await loadProblemList();
-  await loadQuestion();
-  await loadPyodideEngine();
+  if (document.getElementById("category-list")) loadCategories();
+
+  if (document.getElementById("problem-list")) loadProblemList();
+
+  if (document.getElementById("sample-box")) {
+    await loadQuestion();
+  }
 };
