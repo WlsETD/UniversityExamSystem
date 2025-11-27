@@ -3,10 +3,12 @@
    支援：
    - Scanner (next / nextInt / nextDouble / nextLine)
    - System.out.print / println
-   - int / double / boolean / String / StringBuilder
-   - 一維 / 二維 int / boolean / String 陣列
-   - for-each：for (int v : arr)
+   - int / long / double / boolean / String / StringBuilder
+   - 一維 / 二維 int / long / double / boolean / String 陣列
+   - for-each：for (int v : arr) / for (long v : arr) ...
    - Arrays.sort / Arrays.copyOfRange / Arrays.binarySearch
+   - 忽略基本型別 cast：(int)、(double)、(long)… → 直接移除
+   - static 輔助函式（例如 isPrime）
 ============================================================ */
 
 console.log("[Java Engine] Initializing...");
@@ -52,7 +54,6 @@ class JavaScanner {
     }
 }
 
-// 讓 new Function 也能找到
 globalThis.JavaScanner = JavaScanner;
 
 /* ============================================================
@@ -83,7 +84,6 @@ const Arrays = {
         arr.sort((a, b) => a - b);
     },
     copyOfRange(arr, from, to) {
-        // to 為排除上界
         return arr.slice(from, to);
     },
     binarySearch(arr, key) {
@@ -114,103 +114,51 @@ class StringBuilder {
 globalThis.StringBuilder = StringBuilder;
 
 /* ============================================================
-   4. 括號擷取器（給 print/println 用）
+   4. 前處理：移除 package / import / 單行註解
 ============================================================ */
-function extractParenthesis(code, startIndex) {
-    let i = startIndex;
-    let depth = 0;
-    let inString = false;
-    let quote = "";
-    let content = "";
-
-    while (i < code.length) {
-        const c = code[i];
-
-        if (!inString && (c === '"' || c === "'")) {
-            inString = true;
-            quote = c;
-            content += c;
-            i++;
-            continue;
-        }
-        if (inString) {
-            content += c;
-            if (c === "\\" && i + 1 < code.length) {
-                content += code[i + 1];
-                i += 2;
-                continue;
-            }
-            if (c === quote) inString = false;
-            i++;
-            continue;
-        }
-
-        if (c === "(") {
-            depth++;
-            if (depth > 1) content += c;
-        } else if (c === ")") {
-            depth--;
-            if (depth === 0) {
-                return { content, endIndex: i };
-            }
-            content += c;
-        } else {
-            content += c;
-        }
-        i++;
-    }
-    return null;
-}
-
-function enhancePrintReplace(code, name) {
-    let result = "";
-    let i = 0;
-
-    while (i < code.length) {
-        if (code.startsWith(name, i)) {
-            result += name;
-            i += name.length;
-
-            // 找 "("
-            while (i < code.length && /\s/.test(code[i])) i++;
-            if (code[i] !== "(") {
-                continue; // 非合法呼叫，直接略過
-            }
-
-            const parsed = extractParenthesis(code, i);
-            if (!parsed) return code; // 放棄強化，回傳原始 code
-
-            const args = parsed.content;
-            i = parsed.endIndex + 1;
-
-            // 吃掉後面的空白與多餘分號
-            while (i < code.length && /\s/.test(code[i])) i++;
-            if (code[i] === ";") i++;
-
-            result += "(" + args + ");";
-        } else {
-            result += code[i++];
-        }
-    }
-    return result;
-}
-
-function fixPrintSystem(code) {
-    code = enhancePrintReplace(code, "System.out.println");
-    code = enhancePrintReplace(code, "System.out.print");
+function javaPreprocess(javaCode) {
+    let code = javaCode.replace(/\r\n/g, "\n");
+    // 移除單行註解
+    code = code.replace(/\/\/.*$/gm, "");
+    // 移除 package / import
+    code = code.replace(/package\s+[^{;]+;/g, "");
+    code = code.replace(/import\s+[^;]+;/g, "");
     return code;
 }
 
 /* ============================================================
-   5. Java → JS 轉譯器
+   5. 取出 class 內部內容（忽略外層 class 包裝）
 ============================================================ */
-function javaToJsTranspile(code) {
-    // 標準化換行
+function stripOuterClass(javaCode) {
+    const m = javaCode.match(/\bclass\s+[A-Za-z_][A-Za-z0-9_]*\s*{/);
+    if (!m) return javaCode;
+
+    const startBrace = javaCode.indexOf("{", m.index);
+    if (startBrace === -1) return javaCode;
+
+    let depth = 1;
+    let i = startBrace + 1;
+    while (i < javaCode.length) {
+        const c = javaCode[i];
+        if (c === "{") depth++;
+        else if (c === "}") depth--;
+        if (depth === 0) return javaCode.substring(startBrace + 1, i);
+        i++;
+    }
+    return javaCode;
+}
+
+/* ============================================================
+   6. Java → JS 轉譯（處理型別、陣列、for-each）
+============================================================ */
+function javaToJsTranspileSimple(code) {
     code = code.replace(/\r\n/g, "\n");
 
-    // 移除 package / import
-    code = code.replace(/package\s+[^{;]+;/g, "");
-    code = code.replace(/import\s+[^;]+;/g, "");
+    // 移除基本型別 cast：(int) / (double) / (long) / ...
+    code = code.replace(
+        /\(\s*(int|double|long|float|short|byte|boolean|char)\s*\)/g,
+        ""
+    );
 
     // Scanner
     code = code.replace(
@@ -218,77 +166,153 @@ function javaToJsTranspile(code) {
         "let $1 = new JavaScanner(__input__);"
     );
 
-    // 將 printf 降級成 print
-    code = code.replace(/System\.out\.printf/g, "System.out.print");
-
-    // for-each：for (int v : arr)
+    // for-each：for (int v : arr)、for (long v : arr)… → for (let v of arr)
     code = code.replace(
-        /for\s*\(\s*int\s+([A-Za-z_][A-Za-z0-9_]*)\s*:\s*([A-Za-z_][A-Za-z0-9_]*)\s*\)/g,
-        "for (let $1 of $2)"
+        /for\s*\(\s*(int|double|boolean|String|long|float|short|byte|char)\s+([A-Za-z_][A-Za-z0-9_]*)\s*:\s*([A-Za-z_][A-Za-z0-9_]*)\s*\)/g,
+        "for (let $2 of $3)"
     );
 
-    // 陣列宣告（要先處理帶 [] 的，避免被下面的一般 int 取代）
+    // 陣列 / 變數宣告（先處理帶 [] 的）
     code = code.replace(/\bint\s*\[\s*\]\s*\[\s*\]\s+([A-Za-z_][A-Za-z0-9_]*)/g, "let $1");
     code = code.replace(/\bint\s*\[\s*\]\s+([A-Za-z_][A-Za-z0-9_]*)/g, "let $1");
     code = code.replace(/\bdouble\s*\[\s*\]\s+([A-Za-z_][A-Za-z0-9_]*)/g, "let $1");
     code = code.replace(/\bboolean\s*\[\s*\]\s+([A-Za-z_][A-Za-z0-9_]*)/g, "let $1");
     code = code.replace(/\bString\s*\[\s*\]\s+([A-Za-z_][A-Za-z0-9_]*)/g, "let $1");
 
-    // 一般變數宣告
+    // 其他基本型別陣列宣告 long / float / short / byte / char
+    code = code.replace(/\b(long|float|short|byte|char)\s*\[\s*\]\s*\[\s*\]\s+([A-Za-z_][A-Za-z0-9_]*)/g, "let $2");
+    code = code.replace(/\b(long|float|short|byte|char)\s*\[\s*\]\s+([A-Za-z_][A-Za-z0-9_]*)/g, "let $2");
+
+    // StringBuilder 變數
     code = code.replace(/\bStringBuilder\s+([A-Za-z_][A-Za-z0-9_]*)/g, "let $1");
+
+    // 一般標量變數
     code = code.replace(/\bint\s+([A-Za-z_][A-Za-z0-9_]*)/g, "let $1");
     code = code.replace(/\bdouble\s+([A-Za-z_][A-Za-z0-9_]*)/g, "let $1");
     code = code.replace(/\bboolean\s+([A-Za-z_][A-Za-z0-9_]*)/g, "let $1");
     code = code.replace(/\bString\s+([A-Za-z_][A-Za-z0-9_]*)/g, "let $1");
+    // long / float / short / byte / char scalar
+    code = code.replace(/\b(long|float|short|byte|char)\s+([A-Za-z_][A-Za-z0-9_]*)/g, "let $2");
 
-    // 多維 / 一維陣列建立：先 2D 再 1D
+    // 多維 / 一維陣列建立
     code = code.replace(
         /new\s+int\s*\[\s*([^\]]+)\s*\]\s*\[\s*([^\]]+)\s*\]/g,
         "Array.from({length: $1}, () => new Array($2).fill(0))"
     );
-
     code = code.replace(/new\s+int\s*\[\s*([^\]]+)\s*\]/g, "new Array($1).fill(0)");
     code = code.replace(/new\s+double\s*\[\s*([^\]]+)\s*\]/g, "new Array($1).fill(0)");
     code = code.replace(/new\s+boolean\s*\[\s*([^\]]+)\s*\]/g, "new Array($1).fill(false)");
     code = code.replace(/new\s+String\s*\[\s*([^\]]+)\s*\]/g, "new Array($1).fill(\"\")");
 
+    // 其他基本型別陣列建立 long / float / short / byte / char
+    code = code.replace(
+        /new\s+(long|float|short|byte|char)\s*\[\s*([^\]]+)\s*\]\s*\[\s*([^\]]+)\s*\]/g,
+        "Array.from({length: $2}, () => new Array($3).fill(0))"
+    );
+    code = code.replace(
+        /new\s+(long|float|short|byte|char)\s*\[\s*([^\]]+)\s*\]/g,
+        "new Array($2).fill(0)"
+    );
+
     // length() → length
     code = code.replace(/\.length\(\)/g, ".length");
 
-    // 強化 System.out.print / println
-    code = fixPrintSystem(code);
+    // 陣列大括號初始化：int[] a = {1,2,3}; → let a = [1,2,3];
+    code = code.replace(/=\s*{([^}]+)}/g, "= [$1]");
 
     return code;
 }
 
 /* ============================================================
-   6. 擷取 main(...) 的程式本體
+   7. 參數列表：去掉型別，只留下變數名稱
 ============================================================ */
-function extractMainBody(javaCode) {
-    const mainIndex = javaCode.search(/public\s+static\s+void\s+main/);
-    if (mainIndex === -1) return null;
+function convertParamsToJs(paramStr) {
+    paramStr = paramStr.trim();
+    if (!paramStr) return "";
+    const parts = paramStr.split(",").map(p => p.trim()).filter(Boolean);
+    const names = [];
 
-    const braceIndex = javaCode.indexOf("{", mainIndex);
-    if (braceIndex === -1) return null;
-
-    let depth = 1;
-    let i = braceIndex + 1;
-
-    while (i < javaCode.length) {
-        const c = javaCode[i];
-        if (c === "{") depth++;
-        else if (c === "}") depth--;
-
-        if (depth === 0) {
-            return javaCode.substring(braceIndex + 1, i);
-        }
-        i++;
+    for (let p of parts) {
+        // 移除泛型 <...>、final 等
+        p = p.replace(/<[^>]+>/g, "");
+        p = p.replace(/\bfinal\b/g, "").trim();
+        const m = p.match(/([A-Za-z_][A-Za-z0-9_]*)\s*$/);
+        names.push(m ? m[1] : "p");
     }
-    return null;
+    return names.join(", ");
 }
 
 /* ============================================================
-   7. 執行 Java main()
+   8. 把 static 方法（包含 main）轉成 JS function
+============================================================ */
+function transformStaticMethods(classBody) {
+    const jsChunks = [];
+    const reMethod =
+        /(public\s+|private\s+|protected\s+)?static\s+([A-Za-z0-9_<>\[\]]+)\s+([A-Za-z_][A-Za-z0-9_]*)\s*\(([^)]*)\)\s*\{/gm;
+
+    let idx = 0;
+    let mainFound = false;
+    let match;
+
+    while ((match = reMethod.exec(classBody)) !== null) {
+        const before = classBody.slice(idx, match.index);
+        if (before.trim()) {
+            jsChunks.push(javaToJsTranspileSimple(before));
+        }
+
+        const name = match[3];
+        const paramsStr = match[4];
+
+        const braceStart = reMethod.lastIndex - 1; // '{'
+        let depth = 1;
+        let i = braceStart + 1;
+
+        while (i < classBody.length && depth > 0) {
+            const c = classBody[i];
+            if (c === "{") depth++;
+            else if (c === "}") depth--;
+            i++;
+        }
+
+        const body = classBody.slice(braceStart + 1, i - 1);
+        idx = i;
+
+        const bodyJs = javaToJsTranspileSimple(body);
+
+        if (name === "main") {
+            mainFound = true;
+            jsChunks.push(
+                "function __java_main__() {\n" +
+                bodyJs +
+                "\n}\n"
+            );
+        } else {
+            const jsParams = convertParamsToJs(paramsStr);
+            jsChunks.push(
+                "function " + name + "(" + jsParams + ") {\n" +
+                bodyJs +
+                "\n}\n"
+            );
+        }
+    }
+
+    const tail = classBody.slice(idx);
+    if (tail.trim()) {
+        jsChunks.push(javaToJsTranspileSimple(tail));
+    }
+
+    let fullJs = jsChunks.join("\n");
+
+    // 如果沒找到 main，就把整個 class 當作 main body
+    if (!mainFound) {
+        fullJs = "function __java_main__() {\n" + fullJs + "\n}\n";
+    }
+
+    return fullJs;
+}
+
+/* ============================================================
+   9. 執行 Java main()
 ============================================================ */
 async function runJavaCode(javaCode, inputText) {
     // 每次執行重置輸出
@@ -298,14 +322,15 @@ async function runJavaCode(javaCode, inputText) {
         () =>
             new Promise((resolve, reject) => {
                 try {
-                    const body = extractMainBody(javaCode);
-                    if (!body) return reject("⚠ 無法找到 main 方法");
+                    const cleaned = javaPreprocess(javaCode);
+                    const classBody = stripOuterClass(cleaned);
+                    const jsCode = transformStaticMethods(classBody);
 
-                    const transpiled = javaToJsTranspile(body);
-                    // 想 debug 可以打開：
-                    // console.log("[Transpiled]\\n" + transpiled);
+                    const wrapped =
+                        jsCode +
+                        "\n__java_main__();";
 
-                    const fn = new Function("__input__", transpiled);
+                    const fn = new Function("__input__", wrapped);
                     fn(inputText || "");
 
                     resolve(System.out.output.trim());
@@ -318,7 +343,7 @@ async function runJavaCode(javaCode, inputText) {
 }
 
 /* ============================================================
-   8. 對外 API
+   10. 對外 API
 ============================================================ */
 async function runJavaWithInput(code, input) {
     try {
@@ -328,7 +353,6 @@ async function runJavaWithInput(code, input) {
     }
 }
 
-// 掛到 window，跟原來一樣給外面呼叫
 if (typeof window !== "undefined") {
     window.runJavaWithInput = runJavaWithInput;
     window.dispatchEvent(new Event("java-engine-ready"));

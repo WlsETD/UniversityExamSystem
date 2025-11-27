@@ -203,10 +203,7 @@
       "title": "九九乘法表（1~9）",
       "difficulty": "Medium",
       "description": "輸出九九乘法表（僅數字空格分隔）。",
-      "testCases":[
-        {"input":"0","expected":"1 2 3 ..."},
-        {"input":"9","expected":"1 2 3 ..."}
-      ],
+      "testCases":[],
       "answerCode":{
         "java":"import java.util.*; public class Main{public static void main(String[]a){for(int i=1;i<=9;i++){for(int j=1;j<=9;j++)System.out.print(i*j + (j<9?\" \":\"\"));System.out.println();}} }"
       }

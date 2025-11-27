@@ -19,6 +19,10 @@ let CURRENT_DIFFICULTY = "all";
 
 let pyodide = null;
 
+// 🔹 目前正在作答的題目（給上傳檔案自動批改用）
+let CURRENT_PROB_OBJ = null;
+let CURRENT_FILENAME = null;
+
 /* ========================================================
    1. 共用工具
 ======================================================== */
@@ -47,6 +51,26 @@ async function loadJSONList() {
     console.warn("⚠ 無法取得 JSON 清單");
     return [];
   }
+}
+
+/* 🔹 輸出正規化：讓判題對換行／行尾空白比較寬鬆 */
+function normalizeOutput(str) {
+  if (str == null) return "";
+
+  // 統一換行符號
+  str = String(str).replace(/\r\n/g, "\n").replace(/\r/g, "\n");
+
+  let lines = str.split("\n").map((line) =>
+    // 只刪除「行尾」空白，保留左邊縮排（星星題目才不會壞）
+    line.replace(/\s+$/g, "")
+  );
+
+  // 移除結尾多餘的空白行
+  while (lines.length > 0 && lines[lines.length - 1] === "") {
+    lines.pop();
+  }
+
+  return lines.join("\n");
 }
 
 /* ========================================================
@@ -224,7 +248,7 @@ async function runPythonWithInput(code, inputString) {
     return "⚠ Python 錯誤：" + err;
   }
 
-  return output.trim();
+  return output.trimEnd();
 }
 
 /* ========================================================
@@ -244,6 +268,10 @@ async function loadQuestion() {
   const prob = data.problems.find((p) => p.id === pid);
   if (!prob) return;
 
+  // 🔹 記錄當前題目（給上傳檔案用）
+  CURRENT_PROB_OBJ = prob;
+  CURRENT_FILENAME = filename;
+
   document.getElementById("q-title").innerText = `${pid} — ${prob.title}`;
   document.getElementById("q-desc").innerText = prob.description;
 
@@ -256,13 +284,21 @@ async function loadQuestion() {
     sampleBox.appendChild(box);
   });
 
-  // 安全的 upload input（HTML 內已存在）
+  // 上傳檔案 → 自動批改
   const uploadEl = document.getElementById("uploadAnswer");
   if (uploadEl) {
-    uploadEl.onchange = () => validateUploaded(prob, filename);
+    // 避免重複綁定
+    uploadEl.removeEventListener("change", handleUploadChange);
+    uploadEl.addEventListener("change", handleUploadChange);
   }
 
   await loadPyodideEngine();
+}
+
+/* 🔸 上傳檔案後的事件處理：自動批改目前題目 */
+async function handleUploadChange() {
+  if (!CURRENT_PROB_OBJ || !CURRENT_FILENAME) return;
+  await validateUploaded(CURRENT_PROB_OBJ, CURRENT_FILENAME);
 }
 
 /* ========================================================
@@ -291,8 +327,13 @@ async function judgePython(prob, filename, code) {
   let ok = true;
 
   for (const tc of prob.testCases) {
-    const actual = await runPythonWithInput(code, tc.input);
-    if (actual !== tc.expected.toString()) ok = false;
+    const actualRaw = await runPythonWithInput(code, tc.input);
+    const expectedRaw = tc.expected.toString();
+
+    const actual = normalizeOutput(actualRaw);
+    const expected = normalizeOutput(expectedRaw);
+
+    if (actual !== expected) ok = false;
   }
 
   showResult(ok, filename, prob);
@@ -302,8 +343,13 @@ async function judgeJava(prob, filename, code) {
   let ok = true;
 
   for (const tc of prob.testCases) {
-    const actual = await runJavaWithInput(code, tc.input);
-    if (actual !== tc.expected.toString()) ok = false;
+    const actualRaw = await runJavaWithInput(code, tc.input);
+    const expectedRaw = tc.expected.toString();
+
+    const actual = normalizeOutput(actualRaw);
+    const expected = normalizeOutput(expectedRaw);
+
+    if (actual !== expected) ok = false;
   }
 
   showResult(ok, filename, prob);
@@ -347,13 +393,11 @@ function updateProgress(filename) {
   const done = prog.length;
   const total = CURRENT_PROBLEMS.length;
 
-  // 文字
   const textEl = document.getElementById("progress-text");
   if (textEl) {
     textEl.innerText = `完成度：${done}/${total}`;
   }
 
-  // 進度條寬度
   const bar = document.getElementById("progress-bar");
   if (bar) {
     const percent = total ? (done / total) * 100 : 0;
@@ -385,9 +429,11 @@ async function manualRun() {
 
   const first = prob.testCases[0];
 
-  let out = "";
-  if (ext === "py") out = await runPythonWithInput(code, first.input);
-  else out = await runJavaWithInput(code, first.input);
+  let outRaw = "";
+  if (ext === "py") outRaw = await runPythonWithInput(code, first.input);
+  else outRaw = await runJavaWithInput(code, first.input);
+
+  const out = normalizeOutput(outRaw);
 
   const box = document.getElementById("result");
   if (box) {
@@ -427,22 +473,25 @@ async function runAllTests() {
   for (let i = 0; i < prob.testCases.length; i++) {
     const tc = prob.testCases[i];
 
-    let actual =
+    let actualRaw =
       ext === "py"
         ? await runPythonWithInput(code, tc.input)
         : await runJavaWithInput(code, tc.input);
 
-    const expected = tc.expected.toString();
-    const pass = actual === expected;
+    const expectedRaw = tc.expected.toString();
 
+    const actual = normalizeOutput(actualRaw);
+    const expected = normalizeOutput(expectedRaw);
+
+    const pass = actual === expected;
     if (!pass) allPass = false;
 
     html += `
       <div class="mb-3 log">
         <strong>測試案 ${i + 1}</strong>
         <pre>輸入：${tc.input}</pre>
-        <pre>預期：${expected}</pre>
-        <pre>實際：${actual}</pre>
+        <pre>預期：${expectedRaw}</pre>
+        <pre>實際：${actualRaw}</pre>
         ${pass ? "✓ 通過" : "✗ 失敗"}
       </div>
       <hr>
