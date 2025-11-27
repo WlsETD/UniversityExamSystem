@@ -98,22 +98,28 @@ async function loadProblemList() {
 
   CURRENT_PROBLEMS = data.problems;
 
-  document.getElementById("category-title").innerText = data.category;
-  document.getElementById("problem-count").innerText =
-    `共 ${data.problems.length} 題`;
+  const titleEl = document.getElementById("category-title");
+  const countEl = document.getElementById("problem-count");
+
+  if (titleEl) titleEl.innerText = data.category;
+  if (countEl) countEl.innerText = `共 ${data.problems.length} 題`;
 
   renderProblemList(filename);
   updateProgress(filename);
+
+  // 預設背景
+  document.body.classList.add("bg-default");
 }
 
 function renderProblemList(filename) {
   const listArea = document.getElementById("problem-list");
+  if (!listArea) return;
+
   listArea.innerHTML = "";
 
-  const filtered =
-    CURRENT_PROBLEMS.filter(
-      (p) => CURRENT_DIFFICULTY === "all" || p.difficulty === CURRENT_DIFFICULTY
-    );
+  const filtered = CURRENT_PROBLEMS.filter(
+    (p) => CURRENT_DIFFICULTY === "all" || p.difficulty === CURRENT_DIFFICULTY
+  );
 
   filtered.forEach((p) => {
     const key = "prog_" + filename;
@@ -147,6 +153,43 @@ function renderProblemList(filename) {
 
 function openProblem(filename, pid) {
   location.href = `question.html?file=${filename}&id=${pid}`;
+}
+
+/* 🔹 難度切換 + 背景切換 */
+function filterDifficulty(difficulty) {
+  CURRENT_DIFFICULTY = difficulty;
+
+  const url = new URL(location.href);
+  const filename = url.searchParams.get("file");
+
+  renderProblemList(filename);
+  updateProgress(filename);
+
+  const body = document.body;
+  body.classList.remove("bg-default", "bg-easy", "bg-medium", "bg-hard");
+
+  if (difficulty === "Easy") {
+    body.classList.add("bg-easy");
+  } else if (difficulty === "Medium") {
+    body.classList.add("bg-medium");
+  } else if (difficulty === "Hard") {
+    body.classList.add("bg-hard");
+  } else {
+    body.classList.add("bg-default");
+  }
+}
+
+/* 🔹 清除目前題庫的作答進度 */
+function clearProgress() {
+  const url = new URL(location.href);
+  const filename = url.searchParams.get("file");
+  if (!filename) return;
+
+  const key = "prog_" + filename;
+  localStorage.removeItem(key);
+
+  renderProblemList(filename);
+  updateProgress(filename);
 }
 
 /* ========================================================
@@ -196,7 +239,10 @@ async function loadQuestion() {
   const pid = url.searchParams.get("id");
 
   const data = await loadJSON(filename);
+  if (!data) return;
+
   const prob = data.problems.find((p) => p.id === pid);
+  if (!prob) return;
 
   document.getElementById("q-title").innerText = `${pid} — ${prob.title}`;
   document.getElementById("q-desc").innerText = prob.description;
@@ -211,8 +257,10 @@ async function loadQuestion() {
   });
 
   // 安全的 upload input（HTML 內已存在）
-  document.getElementById("uploadAnswer").onchange = () =>
-    validateUploaded(prob, filename);
+  const uploadEl = document.getElementById("uploadAnswer");
+  if (uploadEl) {
+    uploadEl.onchange = () => validateUploaded(prob, filename);
+  }
 
   await loadPyodideEngine();
 }
@@ -222,7 +270,8 @@ async function loadQuestion() {
 ======================================================== */
 
 async function validateUploaded(prob, filename) {
-  const file = document.getElementById("uploadAnswer").files[0];
+  const fileInput = document.getElementById("uploadAnswer");
+  const file = fileInput?.files[0];
   if (!file) return;
 
   const ext = file.name.split(".").pop().toLowerCase();
@@ -266,6 +315,7 @@ async function judgeJava(prob, filename, code) {
 
 function showResult(ok, filename, prob) {
   const box = document.getElementById("result");
+  if (!box) return;
 
   if (ok) {
     saveProgress(filename, prob.id);
@@ -297,9 +347,18 @@ function updateProgress(filename) {
   const done = prog.length;
   const total = CURRENT_PROBLEMS.length;
 
-  if (document.getElementById("progress-text"))
-    document.getElementById("progress-text").innerText =
-      `完成度：${done}/${total}`;
+  // 文字
+  const textEl = document.getElementById("progress-text");
+  if (textEl) {
+    textEl.innerText = `完成度：${done}/${total}`;
+  }
+
+  // 進度條寬度
+  const bar = document.getElementById("progress-bar");
+  if (bar) {
+    const percent = total ? (done / total) * 100 : 0;
+    bar.style.width = percent + "%";
+  }
 }
 
 /* ========================================================
@@ -307,7 +366,8 @@ function updateProgress(filename) {
 ======================================================== */
 
 async function manualRun() {
-  const file = document.getElementById("uploadAnswer")?.files[0];
+  const fileInput = document.getElementById("uploadAnswer");
+  const file = fileInput?.files[0];
   if (!file) return alert("請上傳 .py 或 .java 檔案");
 
   const ext = file.name.split(".").pop().toLowerCase();
@@ -318,18 +378,25 @@ async function manualRun() {
   const pid = url.searchParams.get("id");
 
   const data = await loadJSON(filename);
+  if (!data) return;
+
   const prob = data.problems.find((p) => p.id === pid);
+  if (!prob) return;
+
   const first = prob.testCases[0];
 
   let out = "";
   if (ext === "py") out = await runPythonWithInput(code, first.input);
   else out = await runJavaWithInput(code, first.input);
 
-  document.getElementById("result").innerHTML = `
-    <div class="result-pass">
-      <h6 class="text-center">手動執行結果：${out}</h6>
-    </div>
-  `;
+  const box = document.getElementById("result");
+  if (box) {
+    box.innerHTML = `
+      <div class="result-pass">
+        <h6 class="text-center">手動執行結果：${out}</h6>
+      </div>
+    `;
+  }
 }
 
 /* ========================================================
@@ -337,7 +404,8 @@ async function manualRun() {
 ======================================================== */
 
 async function runAllTests() {
-  const file = document.getElementById("uploadAnswer")?.files[0];
+  const fileInput = document.getElementById("uploadAnswer");
+  const file = fileInput?.files[0];
   if (!file) return alert("請上傳 .py 或 .java 檔案");
 
   const ext = file.name.split(".").pop().toLowerCase();
@@ -348,7 +416,10 @@ async function runAllTests() {
   const pid = url.searchParams.get("id");
 
   const data = await loadJSON(filename);
+  if (!data) return;
+
   const prob = data.problems.find((p) => p.id === pid);
+  if (!prob) return;
 
   let allPass = true;
   let html = "";
@@ -378,16 +449,19 @@ async function runAllTests() {
     `;
   }
 
+  const box = document.getElementById("result");
+  if (!box) return;
+
   if (allPass) {
     saveProgress(filename, prob.id);
     updateProgress(filename);
 
-    document.getElementById("result").innerHTML = `
+    box.innerHTML = `
       <div class="result-pass">🎉 所有測資全部通過！</div>
       ${html}
     `;
   } else {
-    document.getElementById("result").innerHTML = `
+    box.innerHTML = `
       <div class="result-fail">❌ 部分測資未通過</div>
       ${html}
     `;
