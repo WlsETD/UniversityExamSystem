@@ -1,454 +1,364 @@
 {
-    "category": "🍵Java 基礎語法練習",
+    "category": "🍵Java 基礎語法練習（重製版）",
     "problems": [
         {
             "id": "J101",
-            "title": "計算兩數和",
+            "title": "兩數和",
             "difficulty": "Easy",
             "description": "輸入兩個整數，輸出它們的和。",
             "testCases": [
                 {
                     "input": "3 5",
                     "expected": "8"
-                }
-            ],
-            "answerCode": {
-                "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); int a=sc.nextInt(),b=sc.nextInt(); System.out.print(a+b);} }"
-            }
-        },
-        {
-            "id": "J102",
-            "title": "計算兩數差",
-            "difficulty": "Easy",
-            "description": "輸入兩個整數，輸出第一個減第二個。",
-            "testCases": [
+                },
                 {
-                    "input": "10 3",
-                    "expected": "7"
-                }
-            ],
-            "answerCode": {
-                "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); int a=sc.nextInt(),b=sc.nextInt(); System.out.print(a-b);} }"
-            }
-        },
-        {
-            "id": "J103",
-            "title": "簡單運算題103",
-            "difficulty": "Easy",
-            "description": "輸入兩整數，輸出它們的3倍和。",
-            "testCases": [
-                {
-                    "input": "2 3",
-                    "expected": "15"
-                }
-            ],
-            "answerCode": {
-                "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); int a=sc.nextInt(),b=sc.nextInt(); System.out.print((a+b)*3);}}"
-            }
-        },
-        {
-            "id": "J104",
-            "title": "簡單運算題104",
-            "difficulty": "Easy",
-            "description": "輸入兩整數，輸出它們的4倍和。",
-            "testCases": [
-                {
-                    "input": "2 3",
-                    "expected": "20"
-                }
-            ],
-            "answerCode": {
-                "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); int a=sc.nextInt(),b=sc.nextInt(); System.out.print((a+b)*4);}}"
-            }
-        },
-        {
-            "id": "J105",
-            "title": "簡單運算題105",
-            "difficulty": "Easy",
-            "description": "輸入兩整數，輸出它們的5倍和。",
-            "testCases": [
-                {
-                    "input": "2 3",
-                    "expected": "25"
-                }
-            ],
-            "answerCode": {
-                "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); int a=sc.nextInt(),b=sc.nextInt(); System.out.print((a+b)*5);}}"
-            }
-        },
-        {
-            "id": "J106",
-            "title": "簡單運算題106",
-            "difficulty": "Easy",
-            "description": "輸入兩整數，輸出它們的6倍和。",
-            "testCases": [
-                {
-                    "input": "2 3",
+                    "input": "10 20",
                     "expected": "30"
                 }
             ],
             "answerCode": {
-                "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); int a=sc.nextInt(),b=sc.nextInt(); System.out.print((a+b)*6);}}"
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int x=sc.nextInt(),y=sc.nextInt(); System.out.print(x+y);} }"
+            }
+        },
+        {
+            "id": "J102",
+            "title": "兩數差",
+            "difficulty": "Easy",
+            "description": "輸入兩個整數，輸出第一個減第二個的結果。",
+            "testCases": [
+                {
+                    "input": "10 3",
+                    "expected": "7"
+                },
+                {
+                    "input": "5 9",
+                    "expected": "-4"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int x=sc.nextInt(),y=sc.nextInt(); System.out.print(x-y);} }"
+            }
+        },
+        {
+            "id": "J103",
+            "title": "三倍總和",
+            "difficulty": "Easy",
+            "description": "輸入兩整數，輸出(a+b)*3。",
+            "testCases": [
+                {
+                    "input": "2 3",
+                    "expected": "15"
+                },
+                {
+                    "input": "1 1",
+                    "expected": "6"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int x=sc.nextInt(),y=sc.nextInt(); System.out.print((x+y)*3);} }"
+            }
+        },
+        {
+            "id": "J104",
+            "title": "絕對值",
+            "difficulty": "Easy",
+            "description": "輸入一個整數，輸出它的絕對值。",
+            "testCases": [
+                {
+                    "input": "-5",
+                    "expected": "5"
+                },
+                {
+                    "input": "7",
+                    "expected": "7"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){Scanner sc=new Scanner(System.in);int n=sc.nextInt();System.out.print(Math.abs(n));}}"
+            }
+        },
+        {
+            "id": "J105",
+            "title": "判斷奇偶",
+            "difficulty": "Easy",
+            "description": "輸入一整數，若為偶數輸出 EVEN，否則 ODD。",
+            "testCases": [
+                {
+                    "input": "4",
+                    "expected": "EVEN"
+                },
+                {
+                    "input": "7",
+                    "expected": "ODD"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){Scanner sc=new Scanner(System.in);int n=sc.nextInt();System.out.print(n%2==0?\"EVEN\":\"ODD\");}}"
+            }
+        },
+        {
+            "id": "J106",
+            "title": "兩字串連接",
+            "difficulty": "Easy",
+            "description": "輸入兩個字串，輸出它們相接後的結果。",
+            "testCases": [
+                {
+                    "input": "Hi Java",
+                    "expected": "HiJava"
+                },
+                {
+                    "input": "A B",
+                    "expected": "AB"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{public static void main(String[]a){Scanner sc=new Scanner(System.in);String s1=sc.next(),s2=sc.next();System.out.print(s1+s2);}}"
             }
         },
         {
             "id": "J107",
-            "title": "簡單運算題107",
+            "title": "字串長度",
             "difficulty": "Easy",
-            "description": "輸入兩整數，輸出它們的7倍和。",
+            "description": "輸入一字串，輸出字串長度。",
             "testCases": [
                 {
-                    "input": "2 3",
-                    "expected": "35"
+                    "input": "Hello",
+                    "expected": "5"
+                },
+                {
+                    "input": "A",
+                    "expected": "1"
                 }
             ],
             "answerCode": {
-                "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); int a=sc.nextInt(),b=sc.nextInt(); System.out.print((a+b)*7);}}"
+                "java": "import java.util.*; public class Main{public static void main(String[]a){Scanner sc=new Scanner(System.in);String s=sc.next();System.out.print(s.length());}}"
             }
         },
         {
             "id": "J108",
-            "title": "簡單運算題108",
+            "title": "字串首字元",
             "difficulty": "Easy",
-            "description": "輸入兩整數，輸出它們的8倍和。",
+            "description": "輸入一字串，輸出第一個字元。",
             "testCases": [
                 {
-                    "input": "2 3",
-                    "expected": "40"
+                    "input": "Apple",
+                    "expected": "A"
+                },
+                {
+                    "input": "ZOO",
+                    "expected": "Z"
                 }
             ],
             "answerCode": {
-                "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); int a=sc.nextInt(),b=sc.nextInt(); System.out.print((a+b)*8);}}"
+                "java": "import java.util.*; public class Main{public static void main(String[]a){Scanner sc=new Scanner(System.in);String s=sc.next();System.out.print(s.charAt(0));}}"
             }
         },
         {
             "id": "J109",
-            "title": "簡單運算題109",
+            "title": "字串重複兩次",
             "difficulty": "Easy",
-            "description": "輸入兩整數，輸出它們的9倍和。",
+            "description": "輸入字串，輸出該字串重複兩次。",
             "testCases": [
                 {
-                    "input": "2 3",
-                    "expected": "45"
+                    "input": "Hi",
+                    "expected": "HiHi"
                 }
             ],
             "answerCode": {
-                "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); int a=sc.nextInt(),b=sc.nextInt(); System.out.print((a+b)*9);}}"
+                "java": "import java.util.*; public class Main{public static void main(String[]a){Scanner sc=new Scanner(System.in);String s=sc.next();System.out.print(s+s);}}"
             }
         },
         {
             "id": "J110",
-            "title": "簡單運算題110",
+            "title": "攝氏轉華氏",
             "difficulty": "Easy",
-            "description": "輸入兩整數，輸出它們的10倍和。",
+            "description": "輸入攝氏溫度，輸出華氏 (F = C × 9/5 + 32)。",
             "testCases": [
                 {
-                    "input": "2 3",
-                    "expected": "50"
+                    "input": "0",
+                    "expected": "32.0"
+                },
+                {
+                    "input": "100",
+                    "expected": "212.0"
                 }
             ],
             "answerCode": {
-                "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); int a=sc.nextInt(),b=sc.nextInt(); System.out.print((a+b)*10);}}"
+                "java": "import java.util.*; public class Main{public static void main(String[]a){Scanner sc=new Scanner(System.in);double c=sc.nextDouble();System.out.print(c*9/5+32);}}"
             }
         },
         {
             "id": "J111",
-            "title": "字串附加題111",
-            "difficulty": "Easy",
-            "description": "輸入字串，輸出該字串附加編號。",
+            "title": "判斷字元是否母音",
+            "difficulty": "Medium",
+            "description": "輸入一字母，若為 a e i o u（不分大小寫）輸出 YES，否則 NO。",
             "testCases": [
                 {
-                    "input": "Hi",
-                    "expected": "Hi111"
+                    "input": "a",
+                    "expected": "YES"
+                },
+                {
+                    "input": "B",
+                    "expected": "NO"
                 }
             ],
             "answerCode": {
-                "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); String s=sc.next(); System.out.print(s+\"111\");}}"
+                "java": "import java.util.*; public class Main{public static void main(String[]x){Scanner sc=new Scanner(System.in);char c=sc.next().toLowerCase().charAt(0);String v=\"aeiou\";System.out.print(v.indexOf(c)>=0?\"YES\":\"NO\");}}"
             }
         },
         {
             "id": "J112",
-            "title": "字串附加題112",
-            "difficulty": "Easy",
-            "description": "輸入字串，輸出該字串附加編號。",
+            "title": "倒轉字串",
+            "difficulty": "Medium",
+            "description": "輸入字串，輸出倒序後的結果。",
             "testCases": [
                 {
-                    "input": "Hi",
-                    "expected": "Hi112"
+                    "input": "abc",
+                    "expected": "cba"
                 }
             ],
             "answerCode": {
-                "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); String s=sc.next(); System.out.print(s+\"112\");}}"
+                "java": "import java.util.*; public class Main{public static void main(String[]x){Scanner sc=new Scanner(System.in);String s=sc.next();System.out.print(new StringBuilder(s).reverse().toString());}}"
             }
         },
         {
             "id": "J113",
-            "title": "字串附加題113",
-            "difficulty": "Easy",
-            "description": "輸入字串，輸出該字串附加編號。",
+            "title": "字串是否為回文",
+            "difficulty": "Medium",
+            "description": "輸入字串，若為回文（正反相同）輸出 YES，否則 NO。",
             "testCases": [
                 {
-                    "input": "Hi",
-                    "expected": "Hi113"
+                    "input": "level",
+                    "expected": "YES"
+                },
+                {
+                    "input": "java",
+                    "expected": "NO"
                 }
             ],
             "answerCode": {
-                "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); String s=sc.next(); System.out.print(s+\"113\");}}"
+                "java": "import java.util.*; public class Main{public static void main(String[]x){Scanner sc=new Scanner(System.in);String s=sc.next();String r=new StringBuilder(s).reverse().toString();System.out.print(s.equals(r)?\"YES\":\"NO\");}}"
             }
         },
         {
             "id": "J114",
-            "title": "字串附加題114",
-            "difficulty": "Easy",
-            "description": "輸入字串，輸出該字串附加編號。",
+            "title": "三數最大值",
+            "difficulty": "Medium",
+            "description": "輸入三整數，輸出其中最大值。",
             "testCases": [
                 {
-                    "input": "Hi",
-                    "expected": "Hi114"
+                    "input": "3 9 5",
+                    "expected": "9"
+                },
+                {
+                    "input": "10 2 8",
+                    "expected": "10"
                 }
             ],
             "answerCode": {
-                "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); String s=sc.next(); System.out.print(s+\"114\");}}"
+                "java": "import java.util.*; public class Main{public static void main(String[]x){Scanner sc=new Scanner(System.in);int a=sc.nextInt(),b=sc.nextInt(),c=sc.nextInt();int m=Math.max(a,Math.max(b,c));System.out.print(m);}}"
             }
         },
         {
             "id": "J115",
-            "title": "字串附加題115",
-            "difficulty": "Easy",
-            "description": "輸入字串，輸出該字串附加編號。",
+            "title": "字串統計（母音數）",
+            "difficulty": "Medium",
+            "description": "輸入字串，計算其中母音個數。",
             "testCases": [
                 {
-                    "input": "Hi",
-                    "expected": "Hi115"
+                    "input": "Apple",
+                    "expected": "2"
+                },
+                {
+                    "input": "JAVA",
+                    "expected": "2"
                 }
             ],
             "answerCode": {
-                "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); String s=sc.next(); System.out.print(s+\"115\");}}"
+                "java": "import java.util.*; public class Main{public static void main(String[]x){Scanner sc=new Scanner(System.in);String s=sc.next().toLowerCase();int c=0;for(char ch:s.toCharArray())if(\"aeiou\".indexOf(ch)>=0)c++;System.out.print(c);}}"
             }
         },
         {
             "id": "J116",
-            "title": "字串附加題116",
-            "difficulty": "Easy",
-            "description": "輸入字串，輸出該字串附加編號。",
+            "title": "簡易加密（每字元+1）",
+            "difficulty": "Medium",
+            "description": "輸入字串，每字元 ASCII+1 後輸出。",
             "testCases": [
                 {
-                    "input": "Hi",
-                    "expected": "Hi116"
+                    "input": "abc",
+                    "expected": "bcd"
+                },
+                {
+                    "input": "XYZ",
+                    "expected": "YZ["
                 }
             ],
             "answerCode": {
-                "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); String s=sc.next(); System.out.print(s+\"116\");}}"
+                "java": "import java.util.*; public class Main{public static void main(String[]x){Scanner sc=new Scanner(System.in);String s=sc.next();StringBuilder r=new StringBuilder();for(char c:s.toCharArray())r.append((char)(c+1));System.out.print(r);}}"
             }
         },
         {
             "id": "J117",
-            "title": "字串附加題117",
-            "difficulty": "Easy",
-            "description": "輸入字串，輸出該字串附加編號。",
+            "title": "字串壓縮（連續字元計數）",
+            "difficulty": "Hard",
+            "description": "輸入字串，例如 aabccc → a2b1c3。",
             "testCases": [
                 {
-                    "input": "Hi",
-                    "expected": "Hi117"
+                    "input": "aabccc",
+                    "expected": "a2b1c3"
+                },
+                {
+                    "input": "xyz",
+                    "expected": "x1y1z1"
                 }
             ],
             "answerCode": {
-                "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); String s=sc.next(); System.out.print(s+\"117\");}}"
+                "java": "import java.util.*; public class Main{public static void main(String[]x){Scanner sc=new Scanner(System.in);String s=sc.next();StringBuilder r=new StringBuilder();int cnt=1;for(int i=1;i<=s.length();i++){if(i<s.length() && s.charAt(i)==s.charAt(i-1))cnt++;else{r.append(s.charAt(i-1)).append(cnt);cnt=1;}}System.out.print(r);}}"
             }
         },
         {
             "id": "J118",
-            "title": "字串附加題118",
-            "difficulty": "Easy",
-            "description": "輸入字串，輸出該字串附加編號。",
+            "title": "字串刪除母音",
+            "difficulty": "Hard",
+            "description": "輸入字串，刪除所有母音後輸出。",
             "testCases": [
                 {
-                    "input": "Hi",
-                    "expected": "Hi118"
+                    "input": "beautiful",
+                    "expected": "btfl"
                 }
             ],
             "answerCode": {
-                "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); String s=sc.next(); System.out.print(s+\"118\");}}"
+                "java": "import java.util.*; public class Main{public static void main(String[]x){Scanner sc=new Scanner(System.in);String s=sc.next().toLowerCase();StringBuilder r=new StringBuilder();for(char c:s.toCharArray())if(\"aeiou\".indexOf(c)<0)r.append(c);System.out.print(r);}}"
             }
         },
         {
             "id": "J119",
-            "title": "字串附加題119",
-            "difficulty": "Easy",
-            "description": "輸入字串，輸出該字串附加編號。",
+            "title": "字串交錯輸出",
+            "difficulty": "Hard",
+            "description": "輸入兩字串，依序交錯輸出。例如 abc + XYZ → aXbYcZ。",
             "testCases": [
                 {
-                    "input": "Hi",
-                    "expected": "Hi119"
+                    "input": "abc XYZ",
+                    "expected": "aXbYcZ"
                 }
             ],
             "answerCode": {
-                "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); String s=sc.next(); System.out.print(s+\"119\");}}"
+                "java": "import java.util.*; public class Main{public static void main(String[]x){Scanner sc=new Scanner(System.in);String a=sc.next(),b=sc.next();StringBuilder r=new StringBuilder();int n=Math.min(a.length(),b.length());for(int i=0;i<n;i++)r.append(a.charAt(i)).append(b.charAt(i));System.out.print(r);}}"
             }
         },
         {
             "id": "J120",
-            "title": "字串附加題120",
-            "difficulty": "Easy",
-            "description": "輸入字串，輸出該字串附加編號。",
+            "title": "字串數字加總",
+            "difficulty": "Hard",
+            "description": "輸入含數字的字串（如 a1b2c3），輸出所有數字的和。",
             "testCases": [
                 {
-                    "input": "Hi",
-                    "expected": "Hi120"
+                    "input": "a1b2c3",
+                    "expected": "6"
                 }
             ],
             "answerCode": {
-                "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); String s=sc.next(); System.out.print(s+\"120\");}}"
-            }
-        },
-        {
-            "id": "J121",
-            "title": "字串附加題121",
-            "difficulty": "Easy",
-            "description": "輸入字串，輸出該字串附加編號。",
-            "testCases": [
-                {
-                    "input": "Hi",
-                    "expected": "Hi121"
-                }
-            ],
-            "answerCode": {
-                "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); String s=sc.next(); System.out.print(s+\"121\");}}"
-            }
-        },
-        {
-            "id": "J122",
-            "title": "字串附加題122",
-            "difficulty": "Easy",
-            "description": "輸入字串，輸出該字串附加編號。",
-            "testCases": [
-                {
-                    "input": "Hi",
-                    "expected": "Hi122"
-                }
-            ],
-            "answerCode": {
-                "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); String s=sc.next(); System.out.print(s+\"122\");}}"
-            }
-        },
-        {
-            "id": "J123",
-            "title": "字串附加題123",
-            "difficulty": "Easy",
-            "description": "輸入字串，輸出該字串附加編號。",
-            "testCases": [
-                {
-                    "input": "Hi",
-                    "expected": "Hi123"
-                }
-            ],
-            "answerCode": {
-                "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); String s=sc.next(); System.out.print(s+\"123\");}}"
-            }
-        },
-        {
-            "id": "J124",
-            "title": "字串附加題124",
-            "difficulty": "Easy",
-            "description": "輸入字串，輸出該字串附加編號。",
-            "testCases": [
-                {
-                    "input": "Hi",
-                    "expected": "Hi124"
-                }
-            ],
-            "answerCode": {
-                "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); String s=sc.next(); System.out.print(s+\"124\");}}"
-            }
-        },
-        {
-            "id": "J125",
-            "title": "字串附加題125",
-            "difficulty": "Easy",
-            "description": "輸入字串，輸出該字串附加編號。",
-            "testCases": [
-                {
-                    "input": "Hi",
-                    "expected": "Hi125"
-                }
-            ],
-            "answerCode": {
-                "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); String s=sc.next(); System.out.print(s+\"125\");}}"
-            }
-        },
-        {
-            "id": "J126",
-            "title": "字串附加題126",
-            "difficulty": "Easy",
-            "description": "輸入字串，輸出該字串附加編號。",
-            "testCases": [
-                {
-                    "input": "Hi",
-                    "expected": "Hi126"
-                }
-            ],
-            "answerCode": {
-                "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); String s=sc.next(); System.out.print(s+\"126\");}}"
-            }
-        },
-        {
-            "id": "J127",
-            "title": "字串附加題127",
-            "difficulty": "Easy",
-            "description": "輸入字串，輸出該字串附加編號。",
-            "testCases": [
-                {
-                    "input": "Hi",
-                    "expected": "Hi127"
-                }
-            ],
-            "answerCode": {
-                "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); String s=sc.next(); System.out.print(s+\"127\");}}"
-            }
-        },
-        {
-            "id": "J128",
-            "title": "字串附加題128",
-            "difficulty": "Easy",
-            "description": "輸入字串，輸出該字串附加編號。",
-            "testCases": [
-                {
-                    "input": "Hi",
-                    "expected": "Hi128"
-                }
-            ],
-            "answerCode": {
-                "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); String s=sc.next(); System.out.print(s+\"128\");}}"
-            }
-        },
-        {
-            "id": "J129",
-            "title": "字串附加題129",
-            "difficulty": "Easy",
-            "description": "輸入字串，輸出該字串附加編號。",
-            "testCases": [
-                {
-                    "input": "Hi",
-                    "expected": "Hi129"
-                }
-            ],
-            "answerCode": {
-                "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); String s=sc.next(); System.out.print(s+\"129\");}}"
-            }
-        },
-        {
-            "id": "J130",
-            "title": "字串附加題130",
-            "difficulty": "Easy",
-            "description": "輸入字串，輸出該字串附加編號。",
-            "testCases": [
-                {
-                    "input": "Hi",
-                    "expected": "Hi130"
-                }
-            ],
-            "answerCode": {
-                "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); String s=sc.next(); System.out.print(s+\"130\");}}"
+                "java": "import java.util.*; public class Main{public static void main(String[]x){Scanner sc=new Scanner(System.in);String s=sc.next();int sum=0;for(char c:s.toCharArray())if(Character.isDigit(c))sum+=c-'0';System.out.print(sum);}}"
             }
         }
     ]
