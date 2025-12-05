@@ -5,7 +5,7 @@
    - System.out.print / println
    - int / long / double / boolean / String / StringBuilder
    - 一維 / 二維 int / long / double / boolean / String 陣列
-   - for-each：for (int v : arr) / for (long v : arr) ...
+   - for-each：for (int v : arr) / for (long v : arr) / for (char c : s.toCharArray()) ...
    - Arrays.sort / Arrays.copyOfRange / Arrays.binarySearch
    - 忽略基本型別 cast：(int)、(double)、(long)… → 直接移除
    - static 輔助函式（例如 isPrime）
@@ -149,9 +149,118 @@ function stripOuterClass(javaCode) {
 }
 
 /* ============================================================
-   6. Java → JS 轉譯（處理型別、陣列、for-each）
+   6.1 for-each 轉換器：
+       for (type v : expr)  →  for (let v of expr)
+       支援 expr = 陣列 / 方法呼叫（如 s.toCharArray()）
+============================================================ */
+function transformForEachLoops(code) {
+    let out = "";
+    let i = 0;
+    const n = code.length;
+    const identRe = /[A-Za-z0-9_]/;
+
+    while (i < n) {
+        const idx = code.indexOf("for", i);
+        if (idx === -1) {
+            out += code.slice(i);
+            break;
+        }
+
+        // 先把 "for" 前面的片段寫出
+        out += code.slice(i, idx);
+
+        const before = idx > 0 ? code[idx - 1] : "";
+        const after = idx + 3 < n ? code[idx + 3] : "";
+
+        // 不是獨立關鍵字 for，就略過（例如 "format"）
+        if ((before && identRe.test(before)) || (after && identRe.test(after))) {
+            out += "for";
+            i = idx + 3;
+            continue;
+        }
+
+        // 寫入 "for"
+        out += "for";
+        let j = idx + 3;
+
+        // 保留空白
+        while (j < n && /\s/.test(code[j])) {
+            out += code[j];
+            j++;
+        }
+
+        // 不符合 for(...)，直接跳過
+        if (j >= n || code[j] !== "(") {
+            i = j;
+            continue;
+        }
+
+        // 解析 () 內容，取得整個 header
+        const start = j;
+        let depth = 0;
+        let k = j;
+        let inString = false;
+        let quote = "";
+
+        while (k < n) {
+            const c = code[k];
+            if (!inString && (c === '"' || c === "'")) {
+                inString = true;
+                quote = c;
+            } else if (inString) {
+                if (c === "\\" && k + 1 < n) {
+                    k++; // 跳過 escaped 字元
+                } else if (c === quote) {
+                    inString = false;
+                }
+            } else {
+                if (c === "(") depth++;
+                else if (c === ")") {
+                    depth--;
+                    if (depth === 0) break;
+                }
+            }
+            k++;
+        }
+
+        if (k >= n || depth !== 0) {
+            // 括號沒配好，就原樣輸出
+            out += code.slice(start, k);
+            i = k;
+            continue;
+        }
+
+        const header = code.slice(start + 1, k); // () 內的內容
+        let newHeader = header;
+
+        // for-each 不會有 ';'，有 ';' 的就是傳統 for
+        if (!header.includes(";")) {
+            const m = header
+                .trim()
+                .match(
+                    /^\s*(?:final\s+)?(?:int|long|double|float|short|byte|char|boolean|String)\s+([A-Za-z_][A-Za-z0-9_]*)\s*:\s*(.+)$/s
+                );
+            if (m) {
+                const varName = m[1];
+                const expr = m[2].trim();
+                newHeader = `let ${varName} of ${expr}`;
+            }
+        }
+
+        out += "(" + newHeader + ")";
+        i = k + 1;
+    }
+
+    return out;
+}
+
+/* ============================================================
+   6. Java → JS 轉譯（處理型別、陣列、for-each 等）
 ============================================================ */
 function javaToJsTranspileSimple(code) {
+    // 先處理 for-each（包含字串 toCharArray 等複雜表達式）
+    code = transformForEachLoops(code);
+
     code = code.replace(/\r\n/g, "\n");
 
     // 移除基本型別 cast：(int) / (double) / (long) / ...
@@ -164,12 +273,6 @@ function javaToJsTranspileSimple(code) {
     code = code.replace(
         /Scanner\s+([A-Za-z_][A-Za-z0-9_]*)\s*=\s*new\s+Scanner\(System\.in\);/g,
         "let $1 = new JavaScanner(__input__);"
-    );
-
-    // for-each：for (int v : arr)、for (long v : arr)… → for (let v of arr)
-    code = code.replace(
-        /for\s*\(\s*(int|double|boolean|String|long|float|short|byte|char)\s+([A-Za-z_][A-Za-z0-9_]*)\s*:\s*([A-Za-z_][A-Za-z0-9_]*)\s*\)/g,
-        "for (let $2 of $3)"
     );
 
     // 陣列 / 變數宣告（先處理帶 [] 的）
