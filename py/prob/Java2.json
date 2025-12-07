@@ -233,7 +233,7 @@
     {
       "id": "J212",
       "title": "電費計算（分段費率）",
-      "difficulty": "Medium",
+      "difficulty": "Easy",
       "description": "輸入度數 kWh：<=100 每度 5 元；101~200 每度 7 元；>200 每度 10 元。",
       "testCases": [
         {
@@ -246,11 +246,11 @@
         },
         {
           "input": "250",
-          "expected": "2050"
-        }
+          "expected": "1700"
+        } 
       ],
       "answerCode": {
-        "java": "import java.util.*; public class Main{public static void main(String[]x){Scanner sc=new Scanner(System.in);int n=sc.nextInt(),cost; if(n<=100)cost=n*5; else if(n<=200)cost=100*5+(n-100)*7; else cost=100*5+100*7+(n-200)*10; System.out.print(cost);} }"
+        "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); int kwh=sc.nextInt(); int fee; if(kwh<=100){ fee=kwh*5; } else if(kwh<=200){ fee=100*5+(kwh-100)*7; } else { fee=100*5+100*7+(kwh-200)*10; } System.out.print(fee); }}"
       }
     },
     {
