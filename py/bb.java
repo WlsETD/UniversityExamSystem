@@ -7,8 +7,7 @@ public class bb {
         int b = sc.nextInt();
         int c = sc.nextInt();
 
-        int result = (a << 1) + (b >> 1) + (a ^ c) - (b % a);
-
+        int result = a + b * c - (a % b) - 1;
         System.out.print(result);
     }
 }

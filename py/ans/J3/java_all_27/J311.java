@@ -1,0 +1,1 @@
+import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int x=sc.nextInt(); double y=sc.nextDouble(); System.out.print(x*y + y);} }
