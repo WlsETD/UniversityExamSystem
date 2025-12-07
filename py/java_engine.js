@@ -531,7 +531,11 @@ async function runJavaCode(javaCode, inputText) {
                     const fn = new Function("__input__", wrapped);
                     fn(inputText || "");
 
-                    resolve(System.out.output.trim());
+                    let out = System.out.output;
+                    // 只刪尾端的空白 / 換行，不動開頭空白
+                    out = out.replace(/\s+$/, "");
+                    resolve(out);
+
                 } catch (err) {
                     reject("⚠ Java 執行錯誤：" + err);
                 }

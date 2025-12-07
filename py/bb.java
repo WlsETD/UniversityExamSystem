@@ -6,13 +6,13 @@ public class bb {
         int n = sc.nextInt();
 
         for (int i = 1; i <= n; i++) {
-            int stars = 2 * i - 1; // 第 i 行要印的星星數
-
-            for (int j = 0; j < stars; j++) {
+            for (int s = 1; s <= n - i; s++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= 2 * i - 1; k++) {
                 System.out.print("*");
             }
-
-            if (i < n) { // 最後一行後面不要再多一個換行也可以
+            if (i < n) {
                 System.out.println();
             }
         }

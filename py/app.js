@@ -437,9 +437,11 @@ async function manualRun() {
 
   const box = document.getElementById("result");
   if (box) {
+    // 🔧 改成用 <pre> 顯示，保留多行 / 縮排
     box.innerHTML = `
       <div class="result-pass">
-        <h6 class="text-center">手動執行結果：${out}</h6>
+        <h6 class="text-center">手動執行結果：</h6>
+        <pre>${out}</pre>
       </div>
     `;
   }
@@ -486,12 +488,15 @@ async function runAllTests() {
     const pass = actual === expected;
     if (!pass) allPass = false;
 
+    // 🔧 預期 / 實際 改成換行顯示整段輸出
     html += `
       <div class="mb-3 log">
         <strong>測試案 ${i + 1}</strong>
         <pre>輸入：${tc.input}</pre>
-        <pre>預期：${expectedRaw}</pre>
-        <pre>實際：${actualRaw}</pre>
+        <pre>預期：
+${expectedRaw}</pre>
+        <pre>實際：
+${actualRaw}</pre>
         ${pass ? "✓ 通過" : "✗ 失敗"}
       </div>
       <hr>
