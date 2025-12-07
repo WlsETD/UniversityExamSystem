@@ -159,7 +159,7 @@
             "testCases": [
                 {
                     "input": "3 2.5",
-                    "expected": "9.5"
+                    "expected": "10"
                 }
             ],
             "answerCode": {
