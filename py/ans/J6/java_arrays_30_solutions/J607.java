@@ -1,0 +1,1 @@
+import java.util.*; public class Main{ public static void main(String[]x){ Scanner sc=new Scanner(System.in); int c=0; for(int i=0;i<5;i++) if(sc.nextInt()%2==0) c++; System.out.print(c); } }

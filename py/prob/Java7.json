@@ -1,0 +1,365 @@
+{
+  "category": "🍵Java 物件導向程式設計（類別、繼承、多型）",
+  "problems": [
+    {
+      "id": "J701",
+      "title": "類別 Point：座標和",
+      "difficulty": "Easy",
+      "description": "定義類別 Point，包含兩個整數欄位 x、y，並在 main 中讀入 x、y，建立物件後輸出 x+y。",
+      "testCases": [
+        { "input": "3 5", "expected": "8" }
+      ]
+    },
+    {
+      "id": "J702",
+      "title": "類別 Student：姓名與成績",
+      "difficulty": "Easy",
+      "description": "定義類別 Student，包含字串 name 與整數 score，建構子用來設定兩欄位。在 main 中讀入 name 與 score，建立 Student 物件，並輸出「name score」。",
+      "testCases": [
+        { "input": "Tom 80", "expected": "Tom 80" }
+      ]
+    },
+    {
+      "id": "J703",
+      "title": "類別 Rectangle：面積計算",
+      "difficulty": "Easy",
+      "description": "定義類別 Rectangle，包含整數寬 width、高 height，建構子用來設定寬與高，並提供方法 area() 回傳面積。在 main 中讀入寬與高，輸出面積。",
+      "testCases": [
+        { "input": "3 4", "expected": "12" }
+      ]
+    },
+    {
+      "id": "J704",
+      "title": "類別 Employee：薪資計算",
+      "difficulty": "Easy",
+      "description": "定義類別 Employee，包含整數欄位 hourlyWage（時薪）與 hours（時數），方法 getSalary() 回傳時薪*時數。在 main 中讀入時薪與時數，建立 Employee 並輸出薪資。",
+      "testCases": [
+        { "input": "120 10", "expected": "1200" }
+      ]
+    },
+    {
+      "id": "J705",
+      "title": "類別 Product：總金額",
+      "difficulty": "Easy",
+      "description": "定義類別 Product，包含整數 price（單價）、quantity（數量），方法 total() 回傳總金額。在 main 中讀入 price 與 quantity，輸出總金額。",
+      "testCases": [
+        { "input": "50 3", "expected": "150" }
+      ]
+    },
+    {
+      "id": "J706",
+      "title": "類別 Circle：圓周長",
+      "difficulty": "Easy",
+      "description": "定義類別 Circle，欄位 radius（半徑），方法 length() 回傳圓周長 2*π*r。請在 main 中讀入 r，以 Math.PI 計算並輸出到小數點後兩位。",
+      "testCases": [
+        { "input": "3", "expected": "18.85" }
+      ]
+    },
+    {
+      "id": "J707",
+      "title": "建構子多載：Person",
+      "difficulty": "Easy",
+      "description": "定義類別 Person，欄位 name 與 age，提供兩個建構子：Person(String name, int age) 與 Person(String name)（預設 age=0）。在 main 中讀入 name 與 age，使用兩參數建構子建立物件並輸出「name(age)」。",
+      "testCases": [
+        { "input": "Amy 18", "expected": "Amy(18)" }
+      ]
+    },
+    {
+      "id": "J708",
+      "title": "類別 Time：時間格式化",
+      "difficulty": "Easy",
+      "description": "定義類別 Time，欄位 hour、minute，方法 format() 以兩位數格式輸出「hh:mm」（不足補0）。在 main 中讀入 hour 與 minute 並輸出格式化結果。",
+      "testCases": [
+        { "input": "9 5", "expected": "09:05" }
+      ]
+    },
+    {
+      "id": "J709",
+      "title": "類別 Fraction：分數小數值",
+      "difficulty": "Easy",
+      "description": "定義類別 Fraction，欄位 numerator、denominator，方法 value() 回傳分數的小數值。在 main 中讀入分子與分母，輸出到小數點後兩位。",
+      "testCases": [
+        { "input": "1 4", "expected": "0.25" }
+      ]
+    },
+    {
+      "id": "J710",
+      "title": "類別 Temperature：攝氏轉華氏",
+      "difficulty": "Easy",
+      "description": "定義類別 Temperature，欄位 celsius，方法 toFahrenheit() 依公式 F = C*9/5+32 計算華氏溫度。在 main 中讀入攝氏溫度 C，輸出華氏溫度到小數點後一位。",
+      "testCases": [
+        { "input": "20", "expected": "68.0" }
+      ]
+    },
+    {
+      "id": "J711",
+      "title": "多個 Student 物件：平均成績",
+      "difficulty": "Medium",
+      "description": "定義類別 Student，欄位 name 與 score。main 中先讀入整數 n，再讀入 n 組「name score」，計算全部學生成績平均（整數除法，不四捨五入）並輸出。",
+      "testCases": [
+        { "input": "3 A 80 B 90 C 70", "expected": "80" }
+      ]
+    },
+    {
+      "id": "J712",
+      "title": "static 欄位：物件計數",
+      "difficulty": "Medium",
+      "description": "定義類別 Counter，包含 static int count，建構子每建立一個物件就讓 count++。在 main 中讀入整數 n，建立 n 個 Counter 物件後輸出 Counter.count。",
+      "testCases": [
+        { "input": "5", "expected": "5" }
+      ]
+    },
+    {
+      "id": "J713",
+      "title": "封裝：BankAccount 存款",
+      "difficulty": "Medium",
+      "description": "定義類別 BankAccount，私有欄位 balance，建構子 BankAccount(int balance)，方法 deposit(int amount) 增加餘額，getBalance() 回傳餘額。main 讀入初始餘額與存款金額，輸出存款後餘額。",
+      "testCases": [
+        { "input": "100 50", "expected": "150" }
+      ]
+    },
+    {
+      "id": "J714",
+      "title": "多個物件：較大面積",
+      "difficulty": "Medium",
+      "description": "沿用 Rectangle 類別概念，定義 Rectangle，欄位 width、height，方法 area()。main 讀入兩個長方形的寬高 w1 h1 w2 h2，輸出較大面積（整數）。",
+      "testCases": [
+        { "input": "3 4 5 2", "expected": "12" }
+      ]
+    },
+    {
+      "id": "J715",
+      "title": "方法回傳等第：Score",
+      "difficulty": "Medium",
+      "description": "定義類別 Score，欄位 value，方法 grade()：>=90 回傳 'A'，>=80 回傳 'B'，>=70 回傳 'C'，其餘 'F'。main 讀入一個分數，建立物件後輸出等第。",
+      "testCases": [
+        { "input": "85", "expected": "B" }
+      ]
+    },
+    {
+      "id": "J716",
+      "title": "toString 覆寫：Person",
+      "difficulty": "Medium",
+      "description": "定義類別 Person，欄位 name、age，覆寫 toString() 回傳「name(age)」。在 main 中讀入 name 與 age，建立 Person 並直接 System.out.print(person)。",
+      "testCases": [
+        { "input": "Amy 18", "expected": "Amy(18)" }
+      ]
+    },
+    {
+      "id": "J717",
+      "title": "類別 Complex：複數加法",
+      "difficulty": "Medium",
+      "description": "定義類別 Complex，欄位 real、imag，建構子設定兩欄位，方法 add(Complex other) 回傳新 Complex，其實部為相加、虛部為相加。main 中讀入兩個複數 a+bi、c+di（順序為 a b c d），輸出相加結果的實部與虛部，中間以空白分隔。",
+      "testCases": [
+        { "input": "1 2 3 4", "expected": "4 6" }
+      ]
+    },
+    {
+      "id": "J718",
+      "title": "static 方法：MathUtil.max3",
+      "difficulty": "Medium",
+      "description": "定義類別 MathUtil，提供 static 方法 max3(int a,int b,int c) 回傳三數中的最大值。main 讀入三個整數並輸出 max3 的結果。",
+      "testCases": [
+        { "input": "3 7 5", "expected": "7" }
+      ]
+    },
+    {
+      "id": "J719",
+      "title": "多個物件：找最高的人",
+      "difficulty": "Medium",
+      "description": "定義類別 Person，欄位 name、height。main 讀入整數 n，再讀入 n 組「name height」，找出身高最高者並輸出其 name（若有多位同高，輸出第一個）。",
+      "testCases": [
+        { "input": "3 Amy 160 Bob 170 Carl 165", "expected": "Bob" }
+      ]
+    },
+    {
+      "id": "J720",
+      "title": "static 方法：字串反轉",
+      "difficulty": "Medium",
+      "description": "定義類別 StringUtil，提供 static 方法 reverse(String s) 回傳反轉後的字串。main 讀入一個不含空白的字串並輸出反轉結果。",
+      "testCases": [
+        { "input": "hello", "expected": "olleh" }
+      ]
+    },
+    {
+      "id": "J721",
+      "title": "繼承與覆寫：Person / Student",
+      "difficulty": "Medium",
+      "description": "定義父類別 Person，欄位 name，方法 info() 回傳 \"Person:\"+name。子類別 Student 繼承 Person，增加欄位 score，覆寫 info() 回傳 \"Student:\"+name+\",score=\"+score。main 以 Person 型別參考指向 Student 物件，輸出 info()。",
+      "testCases": [
+        { "input": "Amy 90", "expected": "Student:Amy,score=90" }
+      ]
+    },
+    {
+      "id": "J722",
+      "title": "繼承：Vehicle / Car",
+      "difficulty": "Medium",
+      "description": "定義父類別 Vehicle，欄位 speed。子類別 Car 繼承 Vehicle，增加欄位 brand。main 讀入 brand 與 speed，建立 Car 物件後輸出「brand speed」。",
+      "testCases": [
+        { "input": "Toyota 60", "expected": "Toyota 60" }
+      ]
+    },
+    {
+      "id": "J723",
+      "title": "繼承與方法覆寫：Employee / Manager",
+      "difficulty": "Medium",
+      "description": "定義父類別 Employee，欄位 name、baseSalary，方法 getPay() 回傳 baseSalary。子類別 Manager 繼承 Employee，新增欄位 bonus，覆寫 getPay() 回傳 baseSalary+bonus。main 讀入 name、baseSalary、bonus，建立 Manager 物件後以 Employee 型別呼叫 getPay() 並輸出。",
+      "testCases": [
+        { "input": "Alice 30000 5000", "expected": "35000" }
+      ]
+    },
+    {
+      "id": "J724",
+      "title": "多型：Animal / Dog / Cat",
+      "difficulty": "Medium",
+      "description": "定義父類別 Animal，方法 sound() 回傳 \"???\"。子類別 Dog 覆寫 sound() 回傳 \"Woof\"，子類別 Cat 覆寫 sound() 回傳 \"Meow\"。main 讀入字串 dog 或 cat，建立對應物件（以 Animal 型別儲存），呼叫 sound() 並輸出。",
+      "testCases": [
+        { "input": "dog", "expected": "Woof" }
+      ]
+    },
+    {
+      "id": "J725",
+      "title": "繼承與多型：Shape / Rectangle / Square",
+      "difficulty": "Medium",
+      "description": "定義父類別 Shape，方法 area() 回傳 0。子類別 Rectangle，欄位 w、h，覆寫 area() 回傳 w*h。再定義子類別 Square 繼承 Rectangle，建構子只收一個邊長 s，呼叫父類別建構子 (s,s)。main 讀入正方形邊長 s，以 Shape 型別參考指向 Square 物件並輸出 area()。",
+      "testCases": [
+        { "input": "4", "expected": "16" }
+      ]
+    },
+    {
+      "id": "J726",
+      "title": "多型：Person / Student / Teacher",
+      "difficulty": "Medium",
+      "description": "定義父類別 Person，欄位 name，方法 role() 回傳 \"Person\"，方法 info() 回傳 role()+\":\"+name。子類別 Student 覆寫 role() 回傳 \"Student\"，子類別 Teacher 覆寫 role() 回傳 \"Teacher\"。main 讀入一個字元型別 ('S' 或 'T') 與 name，建立對應子類別物件並輸出 info()。",
+      "testCases": [
+        { "input": "S Amy", "expected": "Student:Amy" }
+      ]
+    },
+    {
+      "id": "J727",
+      "title": "繼承：Shape / Triangle",
+      "difficulty": "Medium",
+      "description": "定義父類別 Shape，方法 area() 回傳 0。子類別 Triangle，欄位 base、height，覆寫 area() 回傳 (base*height)/2（整數除法）。main 讀入底與高，建立 Triangle 物件並輸出面積。",
+      "testCases": [
+        { "input": "5 4", "expected": "10" }
+      ]
+    },
+    {
+      "id": "J728",
+      "title": "繼承與 toString 覆寫",
+      "difficulty": "Medium",
+      "description": "定義父類別 Person，欄位 name，toString() 回傳 \"Person:\"+name。子類別 Student 多一個欄位 score，覆寫 toString() 回傳 \"Student:\"+name+\",score=\"+score。main 讀入 name 與 score，建立 Student 物件並直接 System.out.print(物件)。",
+      "testCases": [
+        { "input": "Bob 75", "expected": "Student:Bob,score=75" }
+      ]
+    },
+    {
+      "id": "J729",
+      "title": "多型陣列：多個 Shape 面積總和",
+      "difficulty": "Hard",
+      "description": "定義抽象概念 Shape，這裡以父類別 Shape 提供 area() 回傳 0。子類別 Rectangle、Triangle 分別覆寫 area()。main 讀入兩個圖形資料：第一個為長方形寬高 w h，第二個為三角形底高 b h2，將兩者存入 Shape 陣列並計算面積總和輸出（整數）。",
+      "testCases": [
+        { "input": "3 4 5 4", "expected": "22" }
+      ]
+    },
+    {
+      "id": "J730",
+      "title": "多型參數：印出 Animal 聲音",
+      "difficulty": "Hard",
+      "description": "延伸 Animal 題型，定義 Animal 類別與 Dog、Cat 子類別（與先前類似）。再定義 Util 類別，內有 static 方法 printSound(Animal a) 會輸出 a.sound()。main 讀入 dog 或 cat，建立物件後呼叫 Util.printSound()。",
+      "testCases": [
+        { "input": "cat", "expected": "Meow" }
+      ]
+    },
+    {
+      "id": "J731",
+      "title": "抽象類別：Shape / Rectangle",
+      "difficulty": "Hard",
+      "description": "定義抽象類別 Shape，宣告抽象方法 int area()。子類別 Rectangle 含欄位 w、h，實作 area() 回傳 w*h。main 讀入 w、h，以 Shape 型別參考指向 Rectangle 物件並輸出面積。",
+      "testCases": [
+        { "input": "3 5", "expected": "15" }
+      ]
+    },
+    {
+      "id": "J732",
+      "title": "抽象類別：Employee / HourlyEmployee",
+      "difficulty": "Hard",
+      "description": "定義抽象類別 Employee，欄位 name，抽象方法 int getPay()。子類別 HourlyEmployee 含欄位 wage（時薪）、hours（時數），getPay() 回傳 wage*hours。main 讀入 name、wage、hours，建立 HourlyEmployee 物件（以 Employee 型別參考）並輸出 getPay()。",
+      "testCases": [
+        { "input": "Amy 150 8", "expected": "1200" }
+      ]
+    },
+    {
+      "id": "J733",
+      "title": "介面：Printable / Report",
+      "difficulty": "Hard",
+      "description": "定義介面 Printable，宣告方法 String print()。類別 Report 含欄位 title、content，實作 print() 回傳 \"title:content\"。main 讀入 title 與 content（皆不含空白），以 Printable 介面參考指向 Report 物件並輸出 print()。",
+      "testCases": [
+        { "input": "Sales Good", "expected": "Sales:Good" }
+      ]
+    },
+    {
+      "id": "J734",
+      "title": "介面：Calculator（加法實作）",
+      "difficulty": "Hard",
+      "description": "定義介面 Calculator，宣告方法 int calc(int a,int b)。類別 AddCalculator 實作 calc(a,b) 回傳 a+b。main 讀入兩個整數，建立 Calculator 參考指向 AddCalculator，並輸出 calc 的結果。",
+      "testCases": [
+        { "input": "7 5", "expected": "12" }
+      ]
+    },
+    {
+      "id": "J735",
+      "title": "介面與多型：加法或乘法計算器",
+      "difficulty": "Hard",
+      "description": "沿用 Calculator 介面概念，定義 AddCalculator 實作 a+b，MulCalculator 實作 a*b。main 讀入字串 op（add 或 mul）與兩個整數 a、b，建立對應實作物件並以介面呼叫 calc(a,b) 輸出結果。",
+      "testCases": [
+        { "input": "mul 3 5", "expected": "15" }
+      ]
+    },
+    {
+      "id": "J736",
+      "title": "物件組合：Person 擁有 Address",
+      "difficulty": "Medium",
+      "description": "定義類別 Address，欄位 city。類別 Person 含欄位 name 與 Address addr，其建構子 Person(String name,String city) 會建立 Address 物件。方法 info() 回傳 \"name@city\"。main 讀入 name 與 city，建立 Person 並輸出 info()。",
+      "testCases": [
+        { "input": "Tom Taipei", "expected": "Tom@Taipei" }
+      ]
+    },
+    {
+      "id": "J737",
+      "title": "物件組合：線段長度",
+      "difficulty": "Hard",
+      "description": "定義類別 Point，欄位 x、y。類別 Line 含兩個 Point p1、p2，方法 length() 回傳兩點距離（使用 Math.sqrt），結果輸出到小數點後兩位。main 讀入 x1 y1 x2 y2，計算線段長度。",
+      "testCases": [
+        { "input": "0 0 3 4", "expected": "5.00" }
+      ]
+    },
+    {
+      "id": "J738",
+      "title": "靜態工廠方法與自動編號",
+      "difficulty": "Hard",
+      "description": "定義類別 Student，私有建構子 Student(String name,int id)，私有 static int nextId 初始為 1。提供 static Student create(String name) 工廠方法，自動給予遞增 id。方法 info() 回傳 \"name#id\"。main 讀入兩個名字，分別建立兩個 Student 並各自輸出一行 info()。",
+      "testCases": [
+        { "input": "Amy Bob", "expected": "Amy#1\nBob#2" }
+      ]
+    },
+    {
+      "id": "J739",
+      "title": "static final 常數：圓面積",
+      "difficulty": "Medium",
+      "description": "定義類別 Circle，欄位 radius，static final double PI=3.14159，方法 area() 回傳 PI*radius*radius。main 讀入半徑 r，建立 Circle 並輸出面積，保留小數點後兩位。",
+      "testCases": [
+        { "input": "2", "expected": "12.57" }
+      ]
+    },
+    {
+      "id": "J740",
+      "title": "封裝與方法操作：銀行帳戶",
+      "difficulty": "Hard",
+      "description": "定義類別 Account，私有欄位 balance，建構子 Account(int balance)。方法 deposit(int amount) 增加餘額，withdraw(int amount) 若餘額足夠則扣除，否則不變。方法 getBalance() 回傳餘額。main 讀入初始餘額、存款金額、提款金額，依序進行後輸出最後餘額。",
+      "testCases": [
+        { "input": "100 50 30", "expected": "120" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int[] x=new int[5]; int s=0; for(int i=0;i<5;i++){ x[i]=sc.nextInt(); s+=x[i]; } System.out.print(s); } }

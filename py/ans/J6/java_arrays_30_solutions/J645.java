@@ -1,0 +1,1 @@
+import java.util.*; public class Main{ public static void main(String[]args){ Scanner sc=new Scanner(System.in); int[] a=new int[4],b=new int[4],c=new int[8]; for(int i=0;i<4;i++)a[i]=sc.nextInt(); for(int i=0;i<4;i++)b[i]=sc.nextInt(); for(int i=0;i<4;i++){ c[i]=a[i]; c[i+4]=b[i]; } Arrays.sort(c); for(int i=0;i<8;i++)System.out.print(c[i] + (i<7?" ":"")); } }
