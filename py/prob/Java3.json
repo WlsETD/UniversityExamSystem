@@ -456,7 +456,7 @@
             "testCases": [
                 {
                     "input": "4 8 3",
-                    "expected": "13"
+                    "expected": "19"
                 }
             ],
             "answerCode": {
