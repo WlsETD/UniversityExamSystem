@@ -399,7 +399,7 @@
             "testCases": [
                 {
                     "input": "50",
-                    "expected": "6000"
+                    "expected": "6300"
                 }
             ],
             "answerCode": {
