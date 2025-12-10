@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英文選擇題</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="systemcode/system.css">
+    <link rel="stylesheet" href="https://wlsetd.github.io/minigames/syscss">
+    <style>
+       .start {      
+            background-color: #080127;
+        }
+
+        .ff {
+            animation: ii 1s ease-out forwards;
+        }      
+    </style>
+</head>
+<div class="start">
+    <i class="fa-solid fa-earth-americas ff"></i>
+</div>
+<body>
+    <div class="container">
+        <header>
+            <button class="theme-toggle" id="theme-toggle" aria-label="切換主題">🌙</button>
+            <a href="https://wlsetd.github.io/UniversityExamSystem/index.html" class="home-btn"><i class="fa-solid fa-house"></i></a>
+            <h1>英文</h1>
+            <p>無限循環練習，鞏固英文知識</p>
+        </header>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+
+        <div class="question-container">
+            <div class="question-number" id="question-number"></div>
+            <div class="question-text" id="question-text"></div>
+
+            <div class="options" id="options-container"></div>
+
+            <div class="feedback" id="feedback"></div>
+        </div>
+
+        <div class="controls">
+            <button id="submit-btn">提交答案</button>
+            <button id="next-btn">下一題</button>
+            <button id="download-errors-btn">下載錯題本</button>
+        </div>
+
+        <div class="stats">
+            <div>已練習: <span class="score" id="total-answered">0</span> 題</div>
+            <div>正確率: <span class="score" id="accuracy">0%</span></div>
+        </div>
+    </div>
+    <script>
+
+    
+    </script>
+    <script src="systemcode/system.js"></script>
+    <script src="https://wlsetd.github.io/minigames/sys.js"></script>
+    <link rel="stylesheet" href="system.css">
+    <script src="system.js"></script>
+</body>
+
+</html>
