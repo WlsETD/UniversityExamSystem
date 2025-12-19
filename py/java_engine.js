@@ -9,6 +9,7 @@
    - Arrays.sort / Arrays.copyOfRange / Arrays.binarySearch
    - 忽略基本型別 cast：(int)、(double)、(long)… → 直接移除
    - static 輔助函式（例如 isPrime）、Character.isDigit 等
+   - 基本 OOP：class / 欄位 / 建構子 / 實例方法（J701–J740 題組）
 ============================================================ */
 
 console.log("[Java Engine] Initializing...");
@@ -216,6 +217,167 @@ function stripOuterClass(javaCode) {
 }
 
 /* ============================================================
+   5.5 OOP class 基本支援（J701–J740）
+   - 支援簡單 class / 欄位 / 建構子 / 實例方法
+   - 不改動原本 static method → __java_main__ 的流程
+   - 只處理「目前片段中的 class」，例如 Main 裡的內部類別
+============================================================ */
+function transformClassesForJsSegment(code) {
+    // 支援前面可能有 public / private / protected / final / static
+    const reClass =
+        /(?:\b(?:public|private|protected|final)\s+)?(?:\bstatic\s+)?\bclass\s+([A-Za-z_][A-Za-z0-9_]*)\s*([^{]*)\{/g;
+
+    let out = "";
+    let lastIndex = 0;
+    let m;
+
+    while ((m = reClass.exec(code)) !== null) {
+        const className = m[1];
+        const headerStart = m.index;
+        const braceIndex = reClass.lastIndex - 1;
+
+        let depth = 1;
+        let i = braceIndex + 1;
+        while (i < code.length && depth > 0) {
+            const ch = code[i];
+            if (ch === "{") depth++;
+            else if (ch === "}") depth--;
+            i++;
+        }
+        if (depth !== 0) {
+            // 大括號不成對，就不要動原始 code，避免壞掉
+            return code;
+        }
+
+        const body = code.slice(braceIndex + 1, i - 1);
+        let headerText = code.slice(headerStart, braceIndex);
+
+        // 去掉 access 修飾詞 / static / implements
+        headerText = headerText.replace(/\b(public|private|protected|final|static)\s+/g, "");
+        headerText = headerText.replace(/\bimplements\b[^<{]+/g, "");
+
+        const newBody = transformClassBodyForJs(body, className);
+
+        out += code.slice(lastIndex, headerStart);
+        out += headerText + "{\n" + newBody + "\n}";
+        lastIndex = i;
+    }
+
+    if (lastIndex === 0) return code;
+    out += code.slice(lastIndex);
+    return out;
+}
+
+function transformClassBodyForJs(body, className) {
+    let newBody = body;
+    // ⭐ 紀錄這個類別裡宣告過的「實例欄位名稱」
+    const fieldNames = new Set();
+
+    // 1. 建構子名稱改成 constructor
+    const ctorNameRe = new RegExp("\\b" + className + "\\s*\\(", "g");
+    newBody = newBody.replace(ctorNameRe, "constructor(");
+
+    // 2. 方法宣告：移除回傳型別（含 static）
+    //    e.g. "static int sum(" → "static sum("
+    //         "int sum("        → "sum("
+    newBody = newBody.replace(
+        /\b(static\s+)?(int|double|boolean|char|long|float|short|byte|void|String)\s+([A-Za-z_][A-Za-z0-9_]*)\s*\(/g,
+        (match, s, t, name) => (s || "") + name + "("
+    );
+
+    // 3. 欄位宣告：int x, y = 3; → x; y;
+    //    並把欄位名稱記到 fieldNames（static 欄位先忽略）
+    newBody = newBody.replace(
+        /(public|private|protected|final)?\s*(static\s+)?(int|double|boolean|char|long|float|short|byte|String)\s+([A-Za-z0-9_,\s=]+);/g,
+        (match, a, b, c, d) => {
+            const names = d
+                .split(",")
+                .map(x => x.trim().replace(/=.*/, ""))
+                .filter(Boolean);
+            if (names.length === 0) return "";
+            if (!b) {
+                for (const n of names) fieldNames.add(n);
+            }
+            return names.map(n => n + ";").join("\n");
+        }
+    );
+
+    // 4. 移除多餘的修飾詞（class 內部）
+    newBody = newBody.replace(/\b(public|private|protected|final)\s+/g, "");
+
+    // 5. 把 constructor / 實例方法 / 靜態方法 的參數型別拿掉
+    //    e.g. "constructor(int x, String name) {" → "constructor(x, name) {"
+    //         "int sum(int a, int b) {"          → "sum(a, b) {"
+    newBody = newBody.replace(
+        /\b(?!if\b|for\b|while\b|switch\b|catch\b)(static\s+)?([A-Za-z_][A-Za-z0-9_]*)\s*\(([^)]*)\)\s*\{/g,
+        (match, staticPart, name, params) => {
+            const jsParams = convertParamsToJs(params);
+            return (staticPart || "") + name + "(" + jsParams + ") {";
+        }
+    );
+
+    // 6. 在所有「非 static」方法 / 建構子 裡，把欄位名稱自動補成 this.xxx
+    newBody = injectThisForFields(newBody, fieldNames);
+
+    return newBody;
+}
+
+// 在 class 內容字串裡，找到每個方法 / 建構子的 body，
+// 對「實例方法 & 建構子」的內文，把欄位名稱補成 this.xxx。
+function injectThisForFields(classBody, fieldNames) {
+    if (!fieldNames || fieldNames.size === 0) return classBody;
+
+    let result = "";
+    let i = 0;
+    const n = classBody.length;
+
+    const methodRe =
+        /\b(static\s+)?(constructor|[A-Za-z_][A-Za-z0-9_]*)\s*\(([^)]*)\)\s*\{/g;
+
+    let m;
+    while ((m = methodRe.exec(classBody)) !== null) {
+        const isStatic = !!m[1];
+        const braceStart = methodRe.lastIndex - 1; // 指向 '{'
+
+        // 把方法宣告與 '{' 之前的部分原樣接上
+        result += classBody.slice(i, braceStart + 1);
+
+        // 用大括號深度找到對應的 body 區間
+        let depth = 1;
+        let j = braceStart + 1;
+        while (j < n && depth > 0) {
+            const ch = classBody[j];
+            if (ch === "{") depth++;
+            else if (ch === "}") depth--;
+            j++;
+        }
+
+        const body = classBody.slice(braceStart + 1, j - 1);
+        let patched = body;
+
+        if (!isStatic) {
+            for (const field of fieldNames) {
+                // 只改「獨立識別字」 field：
+                //  - 左邊不是字母/數字/底線/點
+                //  - 右邊不是字母/數字/底線
+                //  這樣不會動到 obj.field 或 field2 這種情況
+                const re = new RegExp(`(?<![\\w.])${field}(?![\\w])`, "g");
+                patched = patched.replace(re, `this.${field}`);
+            }
+        }
+
+        result += patched;
+        result += "}";   // 補回這個方法/建構子的結尾大括號
+        i = j;
+    }
+
+    // 把最後剩餘的字串補上
+    result += classBody.slice(i);
+    return result;
+}
+
+
+/* ============================================================
    6.1 for-each 轉換器：
         for (type v : expr)  →  for (let v of expr)
         支援 expr = 陣列 / 方法呼叫（如 s.toCharArray()）
@@ -320,6 +482,9 @@ function transformForEachLoops(code) {
    6. Java → JS 轉譯（處理型別、陣列、for-each 等）
 ============================================================ */
 function javaToJsTranspileSimple(code) {
+    // 先把 class 結構轉成 JS 可接受的語法（欄位 / 建構子 / 實例方法）
+    code = transformClassesForJsSegment(code);
+
     // 先處理 for-each（包含 toCharArray 這類表達式）
     code = transformForEachLoops(code);
 
