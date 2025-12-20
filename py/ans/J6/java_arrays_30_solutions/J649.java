@@ -1,1 +1,0 @@
-import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(); int[] x=new int[n]; for(int i=0;i<n;i++)x[i]=sc.nextInt(); Arrays.sort(x); boolean first=true; for(int i=0;i<n;i++){ if(i==0 || x[i]!=x[i-1]){ if(!first)System.out.print(" "); System.out.print(x[i]); first=false; } } } }

@@ -1,1 +1,0 @@
-import java.util.*; public class Main{ public static void main(String[]x){ Scanner sc=new Scanner(System.in); int[] a=new int[5]; for(int i=0;i<5;i++)a[i]=sc.nextInt(); for(int i=1;i<5;i++){ if(a[i]<=a[i-1]){ System.out.print("NO"); return;} } System.out.print("YES"); } }

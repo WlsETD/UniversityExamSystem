@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>段考練習系統</title>
+
+  <!-- Bootstrap / Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+  <!-- 系統樣式（保留） -->
+  <link rel="stylesheet" href="../systemcode/system.css" />
+  <link rel="stylesheet" href="https://wlsetd.github.io/minigames/syscss" />
+
+  <!-- 你的補強樣式（保留：請在 filecode.css 內負責日/夜色票與霓虹玻璃） -->
+  <link rel="stylesheet" href="./filecode.css" />
+
+  <style>
+    /* 只做字體清晰度，不改排版 */
+    html,
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: geometricPrecision;
+    }
+
+    /* theme button：不改布局，只補一個隱藏 label 給 JS 同步用 */
+    .sys-theme-label {
+      display: none;
+    }
+  </style>
+</head>
+
+<body class="sys-body">
+  <!-- ✅ 首頁同款背景層（filecode.css 提供 .bg / .bg-overlay） -->
+  <div class="bg" aria-hidden="true"></div>
+  <div class="bg-overlay" aria-hidden="true"></div>
+
+  <!-- ✅ Loading Overlay -->
+  <div id="sys-loading" class="sys-loading" aria-live="polite" aria-busy="true">
+    <div class="sys-loading-card">
+      <div class="spinner-border" role="status" aria-hidden="true"></div>
+      <div class="sys-loading-text mt-3">載入題庫中…</div>
+      <div class="sys-loading-sub mt-1">請稍候</div>
+    </div>
+  </div>
+
+  <!-- ✅ Topbar -->
+  <nav class="navbar sys-topbar sticky-top">
+    <div class="container-fluid px-3 px-lg-4">
+      <div class="d-flex align-items-center gap-2">
+        <a class="btn sys-icon-btn" href="index.html" aria-label="回題庫選單" title="回題庫選單">
+          <i class="fa-solid fa-list"></i>
+        </a>
+
+        <!-- ✅ 主題切換（保留 id=theme-toggle，並加入 icon + label 供 JS 更新） -->
+        <button class="btn sys-icon-btn" id="theme-toggle" type="button" aria-label="切換日夜模式" title="切換日夜模式">
+          <i class="fa-solid fa-moon"></i>
+          <span id="theme-label" class="sys-theme-label">夜間</span>
+        </button>
+
+        <a class="btn sys-icon-btn" href="index.html" aria-label="回首頁"
+          title="回首頁">
+          <i class="fa-solid fa-house"></i>
+        </a>
+      </div>
+
+      <div class="ms-3 d-none d-md-block">
+        <div class="sys-title">作答模式</div>
+        <div class="sys-subtitle">支援選擇題與填充題；提交後播放答對/答錯音效</div>
+      </div>
+
+      <div class="ms-auto d-flex align-items-center gap-3">
+        <div class="sys-mini-stat d-none d-lg-flex">
+          <span class="label">已練習</span>
+          <span class="value" id="total-answered">0</span>
+        </div>
+        <div class="sys-mini-stat d-none d-lg-flex">
+          <span class="label">正確率</span>
+          <span class="value" id="accuracy">0%</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ✅ Main -->
+  <main class="container sys-page-wrap py-4 py-lg-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10 col-xl-9">
+        <section class="card sys-card">
+          <div class="card-body p-3 p-md-4 p-lg-4">
+
+            <!-- Progress -->
+            <div class="progress sys-progress mb-3">
+              <div class="progress-bar sys-progress-bar" id="progress" style="width:0%"></div>
+            </div>
+
+            <!-- Question -->
+            <div class="question-container">
+              <div class="question-number" id="question-number"></div>
+              <div class="question-text" id="question-text"></div>
+
+              <div class="options mt-3" id="options-container"></div>
+              <div class="feedback mt-3" id="feedback"></div>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls d-flex flex-wrap gap-2 mt-4">
+              <button id="submit-btn" class="btn sys-btn-primary">提交答案</button>
+              <button id="next-btn" class="btn sys-btn-ghost">下一題</button>
+              <button id="download-errors-btn" class="btn sys-btn-warn">下載錯題本</button>
+            </div>
+
+            <hr class="sys-divider my-4">
+
+            <!-- Bottom stats（手機/平板顯示；避免重複 ID） -->
+            <div class="stats d-flex flex-wrap gap-3 d-lg-none">
+              <div>已練習: <span class="score" data-mirror="total-answered">0</span> 題</div>
+              <div>正確率: <span class="score" data-mirror="accuracy">0%</span></div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- 小提示 -->
+        <div class="sys-tip mt-3">
+          <i class="fa-solid fa-circle-info me-2"></i>
+          提示：填充題可直接按 Enter 提交；錯題本會輸出為 JSON。
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- 題庫核心（保留） -->
+  <script src="./system.js"></script>
+
+  <!-- ✅ Loader：最少顯示約 2 秒；收到 system:ready 後才會關 -->
+  <script>
+    const SYS_LOADING_TOTAL_MS = 2000;
+    const SYS_LOADING_FADE_MS = 180;
+    const sysT0 = performance.now();
+
+    function hideSysLoading() {
+      const el = document.getElementById("sys-loading");
+      if (!el || el.classList.contains("is-hidden")) return;
+
+      const elapsed = performance.now() - sysT0;
+      const delay = Math.max(0, SYS_LOADING_TOTAL_MS - SYS_LOADING_FADE_MS - elapsed);
+
+      setTimeout(() => {
+        el.classList.add("is-hidden");
+        el.setAttribute("aria-busy", "false");
+        setTimeout(() => el.remove(), SYS_LOADING_FADE_MS + 60);
+      }, delay);
+    }
+
+    window.addEventListener("system:ready", hideSysLoading);
+    setTimeout(hideSysLoading, 8000);
+  </script>
+
+  <!-- ✅ Theme：與 index 同款 data-theme，並同步 body.light-mode（修切換混搭） -->
+  <script>
+    "use strict";
+
+    const THEME_KEY = "theme";
+    const elThemeToggle = document.getElementById("theme-toggle");
+    const elThemeLabel = document.getElementById("theme-label");
+
+    function getPreferredTheme() {
+      const saved = localStorage.getItem(THEME_KEY);
+      if (saved === "dark" || saved === "light") return saved;
+      return window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+    }
+
+    function paintToggle(theme) {
+      const isDark = theme === "dark";
+      if (elThemeLabel) elThemeLabel.textContent = isDark ? "夜間" : "日間";
+      if (elThemeToggle) {
+        const icon = elThemeToggle.querySelector("i");
+        if (icon) icon.className = isDark ? "fa-solid fa-moon" : "fa-solid fa-sun";
+        elThemeToggle.setAttribute("aria-label", isDark ? "切換到日間模式" : "切換到夜間模式");
+        elThemeToggle.setAttribute("title", isDark ? "切換到日間模式" : "切換到夜間模式");
+      }
+    }
+
+    // 單一真相：同時設定 html[data-theme] + body.light-mode
+    function applyTheme(theme, { persist = false } = {}) {
+      if (theme !== "dark" && theme !== "light") return;
+
+      document.documentElement.setAttribute("data-theme", theme);
+      document.body.classList.toggle("light-mode", theme === "light");
+
+      paintToggle(theme);
+
+      if (persist) localStorage.setItem(THEME_KEY, theme);
+    }
+
+    function toggleTheme(e) {
+      e?.preventDefault?.();
+      e?.stopImmediatePropagation?.();
+      e?.stopPropagation?.();
+
+      const cur = document.documentElement.getAttribute("data-theme") || "dark";
+      const next = cur === "dark" ? "light" : "dark";
+      applyTheme(next, { persist: true });
+    }
+
+    // init
+    applyTheme(getPreferredTheme(), { persist: true });
+
+    // capture=true：先攔截，避免 system.js 也綁同顆按鈕造成雙切換
+    elThemeToggle?.addEventListener("click", toggleTheme, true);
+
+    // 監聽 body.light-mode 被其他程式改掉 → 同步回 html[data-theme]
+    const syncObs = new MutationObserver(() => {
+      const want = document.body.classList.contains("light-mode") ? "light" : "dark";
+      const cur = document.documentElement.getAttribute("data-theme") || "dark";
+      if (cur !== want) {
+        document.documentElement.setAttribute("data-theme", want);
+        localStorage.setItem(THEME_KEY, want);
+        paintToggle(want);
+      }
+    });
+    syncObs.observe(document.body, { attributes: true, attributeFilter: ["class"] });
+
+    // 跨分頁同步
+    window.addEventListener("storage", (ev) => {
+      if (ev.key === THEME_KEY && (ev.newValue === "dark" || ev.newValue === "light")) {
+        applyTheme(ev.newValue, { persist: false });
+      }
+    });
+  </script>
+
+  <!-- ✅ 手機/平板統計欄鏡像顯示（避免重複 ID） -->
+  <script>
+    (function mirrorStats() {
+      const map = {
+        "total-answered": () => document.getElementById("total-answered")?.textContent ?? "0",
+        "accuracy": () => document.getElementById("accuracy")?.textContent ?? "0%"
+      };
+
+      const mirrors = Array.from(document.querySelectorAll("[data-mirror]"));
+      function sync() {
+        for (const el of mirrors) {
+          const key = el.getAttribute("data-mirror");
+          const getter = map[key];
+          if (getter) el.textContent = getter();
+        }
+      }
+
+      sync();
+
+      const targets = ["total-answered", "accuracy"]
+        .map(id => document.getElementById(id))
+        .filter(Boolean);
+
+      if (targets.length) {
+        const obs = new MutationObserver(sync);
+        for (const t of targets) obs.observe(t, { childList: true, characterData: true, subtree: true });
+      } else {
+        setInterval(sync, 250);
+      }
+    })();
+  </script>
+</body>
+
+</html>

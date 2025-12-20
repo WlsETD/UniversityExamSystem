@@ -7,139 +7,112 @@
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Font Awesome -->
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
-    <!-- Pyodide (Python Engine) -->
-    <script defer src="https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js"></script>
 
-    <!-- Java Engine -->
-    <script defer src="java_engine.js"></script>
-
-    <!-- Main Judge Logic -->
+    <!-- app.js -->
     <script defer src="app.js"></script>
 
     <style>
-        /* 全局風格 */
         body {
             background: #1e293b;
             color: #f1f5f9;
-            font-family: "Segoe UI", sans-serif;
-            line-height: 1.6;
         }
 
-        /* Header */
         header {
             background: #0f172a;
-            border-bottom: 2px solid #334155;
+            border-bottom: 3px solid #334155;
         }
 
         #back-link {
             color: #ffffff;
             cursor: pointer;
+            min-width: 40px;
+            height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 42px;
-            height: 42px;
-            border-radius: 8px;
-        }
-
-        #back-link:hover {
-            background: #fff;
-            color: #0f172a;
-            transition: 0.3s;
-            width: auto;
+            border-radius: 5px;
             padding: 5px;
         }
 
-        #back-link:hover::after {
-            content: "Back";
-            margin-left: 8px;
+        #back-link:hover {
             color: #13263d;
-            font-weight: 700;
+            background: white; 
+            transition: 0.3s;
 
+            
+        }
+        #back-link:hover::after {
+            color: #13263d;
+            transition: 0.3s;
+            content: "Back";
+            font-weight: bolder;
+            opacity: 1;
+            
+            
+        }
+        #back-linkr::after {
+            opacity: 0;
+            transition: 1s;
+            
         }
 
-        /* 主要題目區 */
         .problem-panel {
             background: #0f172a;
             border: 1px solid #334155;
             padding: 40px;
-            border-radius: 18px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+            border-radius: 14px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
         }
 
         .problem-title {
             font-size: 32px;
             font-weight: 800;
+            margin-bottom: 15px;
         }
 
-        p#q-desc {
-            opacity: 0.85;
-            font-size: 17px;
-        }
-
-        /* Sample 區塊 */
         .sample-box div {
             background: #1e293b;
-            padding: 16px 20px;
-            border-radius: 12px;
+            padding: 14px 16px;
+            border-radius: 10px;
             border: 1px solid #334155;
-            margin-bottom: 12px;
-            font-size: 15px;
+            margin-bottom: 10px;
         }
 
-        /* 結果顯示 */
         #result {
-            padding: 0;
+            padding: 14px 18px;
             border-radius: 10px;
             white-space: pre-wrap;
-            margin-top: 20px;
-            font-size: 16px;
+            margin-top: 15px;
         }
 
         .result-pass {
-            background: #14532d;
-            color: #d1fae5;
-            border: 1px solid #1d7a46;
-            min-height: 10vh;
+            padding: 18px;
             border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-
+            background: #0f5132;
+            /* 深綠 */
+            color: #d1fae5;
+            /* 淺綠文字 */
+            border: 1px solid #145a41;
+            transition: 0.3s ease;
         }
 
         .result-fail {
-            background: #4c1d1d;
-            color: #ffe4e4;
-            border: 1px solid #7d2a2a;
+            padding: 18px;
             border-radius: 10px;
-            align-items: center;
-            justify-content: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 10vh;
-            padding: 20px;
+            background: #552020;
+            /* 深紅 */
+            color: #ffe4e4;
+            /* 淺粉紅文字 */
+            border: 1px solid #7d2a2a;
+            transition: 0.3s ease;
         }
 
         .result-pass,
         .result-fail {
             animation: fadeInScale 0.35s ease-out;
-        }
-        .log{
-            background: #ffffff;
-            color: #242424;
-            border: 1px solid #ffffff;
-            border-radius: 10px;
-            align-items: center;
-            justify-content: center;
-            min-height: 10vh;
-            padding: 20px;
         }
 
         @keyframes fadeInScale {
@@ -153,151 +126,70 @@
                 transform: scale(1);
             }
         }
-
-        /* Java Engine Badge */
-        #java-engine-status {
-            position: fixed;
-            top: 14px;
-            right: 14px;
-            padding: 8px 16px;
-            font-size: 14px;
-            border-radius: 8px;
-            background: #374151;
-            color: #f3f4f6;
-            font-weight: 600;
-            z-index: 99999;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
-        }
-
-        /* 上傳按鈕美化 */
-        #uploadAnswer {
-            padding: 14px;
-            background: #f8fafc;
-            border: 2px solid #64748b;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-
-        #java {
-            background-color: #a6141487;
-            color: #fff7ed;
-            border-radius: 10px;
-            padding: 5px 10px 5px 10px;
-            border: 1px solid #ff000087;
-
-        }
-
-        #python {
-            background-color: #1e579c7d;
-            color: #e0f2fe;
-            border-radius: 10px;
-            padding: 5px 10px 5px 10px;
-            border: 1px solid #1e579c;
-
-        }
-
-        #java::after {
-            content: "Java Engine Loading..";
-            animation: 5s forwards j;
-            font-weight: bolder;
-            font-size: 20px;
-        }
-
-        #python::after {
-            content: "Python Engine Loading...";
-            animation: 3s forwards p;
-            font-weight: bolder;
-            font-size: 20px;
-        }
-
-        @keyframes j {
-            0% {
-                content: "Java Engine Loading.";
-            }
-
-            25% {
-                content: "Java Engine Loading..";
-            }
-
-            50% {
-                content: "Java Engine Loading...";
-            }
-
-            100% {
-                content: "Java Engine Loaded ✔";
-            }
-        }
-
-        @keyframes p {
-            0% {
-                content: "Python Engine Loading...";
-            }
-
-            25% {
-                content: "Python Engine Loading..";
-            }
-
-            50% {
-                content: "Python Engine Loading...";
-            }
-
-
-            100% {
-                content: "Python Engine Loaded ✔";
-            }
-        }
+       
     </style>
 </head>
 
 <body>
 
-    <!-- Java Engine Status -->
-
-
-
-    <!-- Header -->
+    <!-- 🔹 Header -->
     <header class="py-3 px-4 sticky-top d-flex justify-content-between align-items-center">
-        <span id="back-link" onclick="history.back()">
-            <i class="fa-solid fa-right-to-bracket fs-5"></i>
-        </span>
+        <span id="back-link" onclick="history.back()"><i class="fa-solid fa-right-to-bracket fs-5"></i></span>
         <span class="text-secondary small">Python / Java Online Judge</span>
-        <div class="d-flex">
-            <div class="mx-3" id="java"></div>
-            <div class="mx-3" id="python"></div>
-        </div>
     </header>
 
-    <!-- Main Content -->
+    <!-- 🔹 主內容 -->
     <div class="container py-5">
-        <div class="row justify-content-center g-4">
-            <div class="col-lg-10 col-xl-8">
+
+        <div class="row g-4">
+
+            <!-- 右側 題目內容 -->
+            <div class="col-12">
 
                 <div class="problem-panel">
 
-                    <h1 id="q-title" class="problem-title mt-2"></h1>
+                    <h1 id="q-title" class="problem-title mt-3"></h1>
                     <p id="q-desc"></p>
 
-                    <h4 class="fw-bold mb-3 mt-5">🧪 Sample 測試</h4>
-                    <div id="sample-box" class="sample-box my-4"></div>
+                    <h4 class="fw-bold mb-2 mt-5">🧪 Sample 測試</h4>
+                    <div id="sample-box" class="sample-box my-5"></div>
 
-                    <h4 class="fw-bold mt-5">📤 上傳你的程式檔案（.py 或 .java）</h4>
-
-                    <div id="upload-area" class="my-3">
-                        <input type="file" id="uploadAnswer" accept=".py,.java" class="form-control">
-                    </div>
-
-                    <div class="d-flex gap-3 mt-4">
-                        <button class="btn btn-primary btn-lg" onclick="manualRun()">手動執行測試</button>
-                        <button class="btn btn-success btn-lg" onclick="runAllTests()">自動測試全部測資</button>
-                    </div>
+                    <h4 class="fw-bold mt-4">📤 請上傳你的程式檔案（.py 或 .java）</h4>
 
                     <div id="result"></div>
-
                 </div>
-
             </div>
+
         </div>
     </div>
+
+    <script>
+        // 啟動後載入題目
+        loadQuestion();
+
+        // 使用者上傳檔案後觸發
+        function handleUploadFile() {
+            const url = new URL(location.href);
+            const filename = url.searchParams.get("file");
+            const pid = url.searchParams.get("id");
+
+            loadJSON(filename).then(data => {
+                const prob = data.problems.find(p => p.id === pid);
+                if (!prob) return;
+
+                if (!prob.answerCode) {
+                    document.getElementById("result").innerHTML = `
+                    <div style="padding:12px;background:#51230f;color:#ffe4e4;border-radius:8px;">
+                        ❌ 本題沒有設定標準程式碼答案（answerCode）
+                    </div>
+                `;
+                    return;
+                }
+
+                checkUploadedAnswer(prob.answerCode);
+            });
+        }
+    </script>
 
 </body>
 

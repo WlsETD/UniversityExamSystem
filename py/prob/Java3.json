@@ -159,7 +159,7 @@
             "testCases": [
                 {
                     "input": "3 2.5",
-                    "expected": "10"
+                    "expected": "9.5"
                 }
             ],
             "answerCode": {
@@ -309,7 +309,7 @@
             "testCases": [
                 {
                     "input": "3 2",
-                    "expected": "11"
+                    "expected": "7"
                 }
             ],
             "answerCode": {
@@ -396,7 +396,7 @@
             "testCases": [
                 {
                     "input": "8",
-                    "expected": "20"
+                    "expected": "12"
                 }
             ],
             "answerCode": {
@@ -456,7 +456,7 @@
             "testCases": [
                 {
                     "input": "4 8 3",
-                    "expected": "19"
+                    "expected": "13"
                 }
             ],
             "answerCode": {

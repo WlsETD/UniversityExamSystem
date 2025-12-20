@@ -1,1 +1,0 @@
-import java.util.*; public class Main{ public static void main(String[]x){ Scanner sc=new Scanner(System.in); int[] a=new int[5]; for(int i=0;i<5;i++)a[i]=sc.nextInt(); int L=sc.nextInt(),R=sc.nextInt(); int c=0; for(int v:a) if(v>=L && v<=R) c++; System.out.print(c); } }

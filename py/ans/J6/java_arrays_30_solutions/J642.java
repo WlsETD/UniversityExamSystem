@@ -1,1 +1,0 @@
-import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(); int[] x=new int[n]; for(int i=0;i<n;i++)x[i]=sc.nextInt(); int best=1,cur=1; for(int i=1;i<n;i++){ if(x[i]>x[i-1])cur++; else cur=1; if(cur>best)best=cur; } System.out.print(best); } }

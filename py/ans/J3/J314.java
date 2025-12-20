@@ -1,1 +1,0 @@
-import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int x=sc.nextInt(),y=sc.nextInt(); System.out.print(x>0 && y>0);} }

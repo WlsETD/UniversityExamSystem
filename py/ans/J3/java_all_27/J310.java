@@ -1,1 +1,0 @@
-import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); boolean v=sc.nextBoolean(); System.out.print(!v);} }

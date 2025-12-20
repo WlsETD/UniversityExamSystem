@@ -1,1 +1,0 @@
-import java.util.*; public class Main{ public static void main(String[]x){ Scanner sc=new Scanner(System.in); int[] a=new int[6]; for(int i=0;i<6;i++)a[i]=sc.nextInt(); int[] b=Arrays.copyOfRange(a,2,5); for(int i=0;i<b.length;i++)System.out.print(b[i]+(i<b.length-1?" ":"")); } }

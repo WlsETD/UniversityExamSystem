@@ -1,0 +1,760 @@
+/* =========================================================
+   filecode.css (SYSTEM THEME)
+   - Same theme system as Guide/style.css
+   - Theme switch: html[data-theme="dark|light"]
+   - Fix: light mode still showing dark buttons (Bootstrap btn-* override)
+   - Improve text clarity
+========================================================= */
+
+/* ---------- Text clarity ---------- */
+html,
+body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ✅ 不要全域 transition（會讓文字看起來糊/拖影） */
+* {
+  box-sizing: border-box;
+}
+
+/* ---------- Theme Tokens ---------- */
+:root {
+  --radius: 22px;
+  --r-btn: 14px;
+
+  /* default (dark) */
+  --bg0: #060014;
+  --bg1: #0a0522;
+
+  --text: rgba(255, 255, 255, .94);
+  --muted: rgba(236, 226, 255, .72);
+
+  --card: rgba(12, 6, 30, .66);
+  --glass: rgba(255, 255, 255, .06);
+  --glass2: rgba(255, 255, 255, .09);
+  --border: rgba(214, 185, 255, .14);
+
+  --shadow: 0 18px 55px rgba(0, 0, 0, .55);
+  --shadow2: 0 30px 85px rgba(0, 0, 0, .60);
+
+  --accent: rgba(168, 85, 247, .95);
+  --accent2: rgba(236, 72, 153, .88);
+  --focus: 0 0 0 4px rgba(168, 85, 247, .14);
+
+  --ok: rgba(34, 197, 94, .95);
+  --bad: rgba(244, 63, 94, .95);
+
+  --opt-text: var(--text);
+  --opt-bg: var(--glass);
+  --opt-bg-hover: var(--glass2);
+}
+
+/* ---------- Dark ---------- */
+html[data-theme="dark"] {
+  --bg0: #060014;
+  --bg1: #0a0522;
+
+  --text: rgba(255, 255, 255, .94);
+  --muted: rgba(236, 226, 255, .72);
+
+  --card: rgba(12, 6, 30, .66);
+  --glass: rgba(255, 255, 255, .06);
+  --glass2: rgba(255, 255, 255, .09);
+  --border: rgba(214, 185, 255, .14);
+
+  --accent: rgba(168, 85, 247, .95);
+  --accent2: rgba(236, 72, 153, .88);
+  --focus: 0 0 0 4px rgba(168, 85, 247, .14);
+
+  --opt-text: rgba(255, 255, 255, .96);
+  --opt-bg: rgba(255, 255, 255, .06);
+  --opt-bg-hover: rgba(255, 255, 255, .10);
+}
+
+/* ---------- Light ---------- */
+html[data-theme="light"] {
+  --bg0: #f6f0ff;
+  --bg1: #eef0ff;
+
+  --text: rgba(18, 20, 33, .94);
+  --muted: rgba(52, 40, 86, .60);
+
+  --card: rgba(255, 255, 255, .86);
+  --glass: rgba(255, 255, 255, .74);
+  --glass2: rgba(255, 255, 255, .88);
+  --border: rgba(122, 92, 200, .16);
+
+  --shadow: 0 20px 55px rgba(40, 28, 80, .14);
+  --shadow2: 0 26px 70px rgba(40, 28, 80, .16);
+
+  --accent: rgba(139, 92, 246, .95);
+  --accent2: rgba(236, 72, 153, .85);
+  --focus: 0 0 0 4px rgba(139, 92, 246, .16);
+
+  --opt-text: rgba(18, 20, 33, .94);
+  --opt-bg: rgba(255, 255, 255, .78);
+  --opt-bg-hover: rgba(255, 255, 255, .92);
+}
+
+/* ---------- Body ---------- */
+body.sys-body,
+.sys-body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: var(--text);
+  background: linear-gradient(180deg, var(--bg0), var(--bg1));
+}
+
+/* ---------- Background Layers (index vibe) ---------- */
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: -3;
+  background:
+    radial-gradient(1200px 720px at 16% 26%, rgba(168, 85, 247, .22), transparent 58%),
+    radial-gradient(1050px 680px at 82% 40%, rgba(59, 130, 246, .12), transparent 60%),
+    radial-gradient(980px 620px at 68% 82%, rgba(236, 72, 153, .12), transparent 58%),
+    linear-gradient(180deg, var(--bg0), var(--bg1));
+  filter: saturate(1.06);
+}
+
+html[data-theme="light"] .bg {
+  background:
+    radial-gradient(1200px 720px at 16% 26%, rgba(167, 139, 250, .42), transparent 60%),
+    radial-gradient(1050px 680px at 82% 40%, rgba(196, 181, 253, .46), transparent 62%),
+    radial-gradient(980px 620px at 68% 82%, rgba(251, 207, 232, .30), transparent 60%),
+    linear-gradient(180deg, var(--bg0), var(--bg1));
+  filter: saturate(1.02);
+}
+
+.bg-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(820px 540px at 50% 18%, rgba(255, 255, 255, .07), transparent 62%),
+    linear-gradient(180deg, rgba(0, 0, 0, .22), rgba(0, 0, 0, .68));
+  opacity: .94;
+}
+
+html[data-theme="light"] .bg-overlay {
+  background:
+    radial-gradient(900px 560px at 50% 18%, rgba(255, 255, 255, .62), transparent 66%),
+    linear-gradient(180deg, rgba(255, 255, 255, .34), rgba(255, 255, 255, .76));
+  opacity: .94;
+}
+
+/* ---------- Layout ---------- */
+.sys-page-wrap {
+  max-width: 1180px;
+}
+
+@media (max-width: 992px) {
+  .sys-page-wrap {
+    max-width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+/* hide nav if any */
+#bank-nav {
+  display: none !important;
+}
+
+/* kill unexpected white containers */
+.container,
+.container-fluid,
+main,
+section,
+.card,
+.card-body,
+.bg-white,
+[class*="bg-white"] {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+/* ---------- Topbar ---------- */
+.sys-topbar {
+  background: rgba(12, 6, 30, .55) !important;
+  border-bottom: 1px solid var(--border) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+html[data-theme="light"] .sys-topbar {
+  background: rgba(255, 255, 255, .76) !important;
+}
+
+/* icon btn */
+.sys-icon-btn {
+  border: 1px solid var(--border) !important;
+  background: var(--glass) !important;
+  color: var(--text) !important;
+  border-radius: var(--r-btn) !important;
+  padding: 8px 10px !important;
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
+
+@media (hover:hover) and (pointer:fine) {
+  .sys-icon-btn:hover {
+    transform: translateY(-1px);
+    border-color: rgba(168, 85, 247, .34) !important;
+    background: var(--glass2) !important;
+  }
+
+  html[data-theme="light"] .sys-icon-btn:hover {
+    border-color: rgba(139, 92, 246, .28) !important;
+  }
+}
+
+/* theme toggle pill */
+.sys-theme-toggle {
+  border: 1px solid var(--border) !important;
+  background: var(--glass) !important;
+  color: var(--text) !important;
+  border-radius: 999px !important;
+  padding: 8px 12px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  font-weight: 900 !important;
+  letter-spacing: .2px;
+  transition: transform .15s ease, background .15s ease, border-color .15s ease, opacity .15s ease;
+}
+
+.sys-theme-toggle i {
+  font-size: .95rem;
+  opacity: .95;
+}
+
+@media (hover:hover) and (pointer:fine) {
+  .sys-theme-toggle:hover {
+    transform: translateY(-1px);
+    border-color: rgba(168, 85, 247, .38) !important;
+    background: var(--glass2) !important;
+  }
+
+  html[data-theme="light"] .sys-theme-toggle:hover {
+    border-color: rgba(139, 92, 246, .30) !important;
+  }
+}
+
+.sys-theme-toggle:active {
+  transform: translateY(0px);
+  opacity: .92;
+}
+
+/* ---------- Card ---------- */
+.sys-card {
+  border-radius: var(--radius) !important;
+  background: var(--card) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow) !important;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.sys-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  transform: translateY(-35%);
+  background: linear-gradient(90deg,
+      rgba(168, 85, 247, .18),
+      rgba(236, 72, 153, .12),
+      rgba(59, 130, 246, .10));
+  opacity: .22;
+  pointer-events: none;
+}
+
+.sys-card .card-body {
+  position: relative;
+  padding: 22px !important;
+}
+
+@media (max-width: 992px) {
+  .sys-card {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 14px 45px rgba(0, 0, 0, .45) !important;
+  }
+
+  .sys-card .card-body {
+    padding: 16px !important;
+  }
+}
+
+/* Divider */
+.sys-divider {
+  border-color: rgba(255, 255, 255, .12) !important;
+  opacity: 1 !important;
+}
+
+html[data-theme="light"] .sys-divider {
+  border-color: rgba(52, 40, 86, .14) !important;
+}
+
+/* ---------- Progress ---------- */
+.sys-progress {
+  height: 10px !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, .06) !important;
+  border: 1px solid var(--border) !important;
+  overflow: hidden;
+}
+
+html[data-theme="light"] .sys-progress {
+  background: rgba(52, 40, 86, .06) !important;
+}
+
+.sys-progress-bar {
+  background: linear-gradient(90deg, var(--accent), rgba(236, 72, 153, .45)) !important;
+}
+
+/* ---------- Question ---------- */
+.question-number {
+  font-weight: 900;
+  color: var(--muted);
+  letter-spacing: .2px;
+  margin-bottom: 10px;
+}
+
+.question-text {
+  font-size: 1.15rem;
+  font-weight: 1000;
+  color: var(--text);
+  margin-bottom: 14px;
+  line-height: 1.65;
+}
+
+/* ---------- Options Layout ---------- */
+.options {
+  margin-top: 16px;
+}
+
+@media (min-width: 768px) {
+  .options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .options .option,
+  .options button,
+  .options .btn,
+  .options .list-group-item {
+    margin-bottom: 0 !important;
+  }
+}
+
+.options .fill-in-input,
+.options input[type="text"] {
+  grid-column: 1 / -1;
+}
+
+/* ---------- HARD RESET: Kill Bootstrap btn-* in options (KEY FIX) ---------- */
+#options-container .btn,
+#options-container button,
+#options-container .list-group-item,
+.options .btn,
+.options button,
+.options .list-group-item {
+  /* 把 bootstrap 的 btn-primary/bg/color 全部打回我們的 token */
+  --bs-btn-bg: transparent !important;
+  --bs-btn-hover-bg: transparent !important;
+  --bs-btn-active-bg: transparent !important;
+  --bs-btn-color: inherit !important;
+  --bs-btn-hover-color: inherit !important;
+  --bs-btn-active-color: inherit !important;
+  --bs-btn-border-color: transparent !important;
+  --bs-btn-hover-border-color: transparent !important;
+  --bs-btn-active-border-color: transparent !important;
+  --bs-btn-focus-shadow-rgb: 0, 0, 0 !important;
+
+  border-radius: 14px !important;
+  border: 1px solid var(--border) !important;
+
+  background: var(--opt-bg) !important;
+  background-color: var(--opt-bg) !important;
+
+  color: var(--opt-text) !important;
+  text-align: left;
+  padding: 12px 14px !important;
+  margin-bottom: 10px;
+
+  box-shadow: none !important;
+  outline: none !important;
+
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
+
+/* hover */
+@media (hover:hover) and (pointer:fine) {
+
+  #options-container .btn:hover,
+  #options-container button:hover,
+  #options-container .list-group-item:hover,
+  .options .btn:hover,
+  .options button:hover,
+  .options .list-group-item:hover {
+    transform: translateY(-1px);
+    background: var(--opt-bg-hover) !important;
+    background-color: var(--opt-bg-hover) !important;
+    border-color: rgba(168, 85, 247, .30) !important;
+  }
+
+  html[data-theme="light"] #options-container .btn:hover,
+  html[data-theme="light"] .options .btn:hover {
+    border-color: rgba(139, 92, 246, .28) !important;
+  }
+}
+
+/* Selected / Active / Pressed / Checked (radio-like) */
+#options-container .btn.active,
+#options-container button.active,
+#options-container .btn.selected,
+#options-container button.selected,
+#options-container [aria-pressed="true"],
+.option.selected,
+.btn-check:checked+.btn {
+  border-color: rgba(168, 85, 247, .55) !important;
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, .16) !important;
+  background: rgba(168, 85, 247, .16) !important;
+  background-color: rgba(168, 85, 247, .16) !important;
+  color: var(--opt-text) !important;
+}
+
+html[data-theme="light"] #options-container .btn.active,
+html[data-theme="light"] .btn-check:checked+.btn {
+  border-color: rgba(139, 92, 246, .45) !important;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, .14) !important;
+  background: rgba(139, 92, 246, .12) !important;
+  background-color: rgba(139, 92, 246, .12) !important;
+}
+
+/* Correct / Incorrect */
+#options-container .correct,
+.option.correct {
+  border-color: rgba(34, 197, 94, .40) !important;
+  background: rgba(34, 197, 94, .10) !important;
+  background-color: rgba(34, 197, 94, .10) !important;
+}
+
+#options-container .incorrect,
+.option.incorrect {
+  border-color: rgba(244, 63, 94, .40) !important;
+  background: rgba(244, 63, 94, .10) !important;
+  background-color: rgba(244, 63, 94, .10) !important;
+}
+
+/* Fill-in input */
+.fill-in-input {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--opt-bg);
+  color: var(--opt-text);
+  padding: 12px 14px;
+  outline: none;
+  transition: box-shadow .15s ease, border-color .15s ease, background .15s ease;
+}
+
+.fill-in-input::placeholder {
+  color: var(--muted);
+  opacity: .95;
+}
+
+.fill-in-input:focus {
+  border-color: rgba(168, 85, 247, .35);
+  box-shadow: var(--focus);
+  background: var(--opt-bg-hover);
+}
+
+html[data-theme="light"] .fill-in-input:focus {
+  border-color: rgba(139, 92, 246, .30);
+}
+
+/* ---------- Feedback (fix light text too pale) ---------- */
+.feedback {
+  margin-top: 30px;
+  padding: 18px 16px;
+  font-weight: 950;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, .04);
+  color: var(--text);
+}
+
+html[data-theme="light"] .feedback {
+  background: rgba(52, 40, 86, .04);
+  color: rgba(18, 20, 33, .92) !important;
+}
+
+.feedback.correct {
+  border-color: rgba(34, 197, 94, .35) !important;
+  background: rgba(34, 197, 94, .08) !important;
+  color: rgba(210, 255, 238, .95) !important;
+}
+
+html[data-theme="light"] .feedback.correct {
+  color: rgba(12, 90, 58, .96) !important;
+}
+
+.feedback.incorrect {
+  border-color: rgba(244, 63, 94, .35) !important;
+  background: rgba(244, 63, 94, .08) !important;
+  color: rgba(255, 215, 225, .95) !important;
+}
+
+html[data-theme="light"] .feedback.incorrect {
+  color: rgba(145, 18, 61, .96) !important;
+}
+
+.feedback i {
+  color: currentColor !important;
+}
+
+/* ---------- Buttons ---------- */
+.btn.sys-btn-primary,
+.sys-btn-primary {
+  border: 1px solid rgba(168, 85, 247, .30) !important;
+  background: linear-gradient(90deg, rgba(168, 85, 247, .18), rgba(236, 72, 153, .12)) !important;
+  color: var(--text) !important;
+  border-radius: var(--r-btn) !important;
+  padding: 10px 14px !important;
+  font-weight: 1000 !important;
+  transition: transform .15s ease, filter .15s ease, border-color .15s ease;
+}
+
+html[data-theme="light"] .btn.sys-btn-primary,
+html[data-theme="light"] .sys-btn-primary {
+  color: rgba(18, 20, 33, .94) !important;
+}
+
+.btn.sys-btn-ghost,
+.sys-btn-ghost {
+  border: 1px solid var(--border) !important;
+  background: var(--glass) !important;
+  color: var(--text) !important;
+  border-radius: var(--r-btn) !important;
+  padding: 10px 14px !important;
+  font-weight: 1000 !important;
+}
+
+html[data-theme="light"] .btn.sys-btn-ghost,
+html[data-theme="light"] .sys-btn-ghost {
+  color: rgba(18, 20, 33, .94) !important;
+}
+
+.btn.sys-btn-warn,
+.sys-btn-warn {
+  border: 1px solid rgba(255, 210, 90, 0.25) !important;
+  background: rgba(255, 210, 90, 0.10) !important;
+  color: rgba(120, 78, 0, 0.92) !important;
+  border-radius: var(--r-btn) !important;
+  padding: 10px 14px !important;
+  font-weight: 1000 !important;
+}
+
+html[data-theme="dark"] .btn.sys-btn-warn,
+html[data-theme="dark"] .sys-btn-warn {
+  color: rgba(255, 245, 220, 0.95) !important;
+}
+
+@media (hover:hover) and (pointer:fine) {
+
+  .btn.sys-btn-primary:hover,
+  .sys-btn-primary:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.06);
+  }
+}
+
+/* Disabled */
+button:disabled,
+.btn:disabled {
+  opacity: .55 !important;
+  transform: none !important;
+  cursor: not-allowed !important;
+}
+
+/* Stats */
+.stats {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.score {
+  font-weight: 1000;
+  color: rgba(196, 140, 255, .95);
+}
+
+html[data-theme="light"] .score {
+  color: rgba(139, 92, 246, .95);
+}
+
+/* ---------- Loading ---------- */
+.sys-loading {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6, 3, 18, 0.68);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: opacity 180ms ease, visibility 180ms ease;
+}
+
+html[data-theme="light"] .sys-loading {
+  background: rgba(255, 255, 255, .78);
+}
+
+.sys-loading.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.sys-loading-card {
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  box-shadow: var(--shadow2);
+  padding: 18px 22px;
+  min-width: 240px;
+  text-align: center;
+  color: var(--text);
+}
+
+html[data-theme="light"] .sys-loading-card {
+  color: rgba(18, 20, 33, .94);
+}
+
+.sys-loading-card .spinner-border {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-width: .22rem;
+}
+
+.sys-loading-text {
+  opacity: .92;
+  font-weight: 1000;
+  letter-spacing: .2px;
+  margin-top: 10px;
+}
+
+/* Focus */
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus);
+  border-radius: 10px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .sys-loading {
+    transition: none !important;
+  }
+}
+
+/* =========================================================
+   THEME SYNC PATCH
+   - 如果外部只切到 body.light-mode，仍套用正確的 light tokens
+========================================================= */
+.sys-body.light-mode {
+  --bg0: #f6f0ff;
+  --bg1: #eef0ff;
+
+  --text: rgba(18, 20, 33, .94);
+  --muted: rgba(52, 40, 86, .60);
+
+  --card: rgba(255, 255, 255, .86);
+  --glass: rgba(255, 255, 255, .74);
+  --glass2: rgba(255, 255, 255, .88);
+  --border: rgba(122, 92, 200, .16);
+
+  --accent: rgba(139, 92, 246, .95);
+  --accent2: rgba(236, 72, 153, .85);
+
+  --opt-text: rgba(18, 20, 33, .94);
+  --opt-bg: rgba(255, 255, 255, .78);
+  --opt-bg-hover: rgba(255, 255, 255, .92);
+}
+
+/* =========================================================
+   OPTIONS HARD OVERRIDE
+   - 不管 btn-primary / btn-light / btn-dark，都強制吃你的 token
+   - 修切換後殘留深藍或白底
+========================================================= */
+#options-container .btn,
+#options-container button,
+#options-container label.btn,
+#options-container .list-group-item,
+#options-container .option {
+  background: var(--opt-bg) !important;
+  background-color: var(--opt-bg) !important;
+  color: var(--opt-text) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: none !important;
+}
+
+#options-container .btn:hover,
+#options-container button:hover,
+#options-container label.btn:hover,
+#options-container .list-group-item:hover,
+#options-container .option:hover {
+  background: var(--opt-bg-hover) !important;
+  background-color: var(--opt-bg-hover) !important;
+  border-color: rgba(139, 92, 246, .28) !important;
+}
+
+/* active / selected / pressed / checked */
+#options-container .btn.active,
+#options-container button.active,
+#options-container .btn.selected,
+#options-container button.selected,
+#options-container [aria-pressed="true"],
+#options-container .option.selected,
+#options-container .btn-check:checked+.btn {
+  background: rgba(139, 92, 246, .12) !important;
+  background-color: rgba(139, 92, 246, .12) !important;
+  border-color: rgba(139, 92, 246, .45) !important;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, .14) !important;
+  color: var(--opt-text) !important;
+}
+
+/* dark mode selected：改用更深紫，避免「亮到看不見」 */
+html[data-theme="dark"] #options-container .btn.active,
+html[data-theme="dark"] #options-container .option.selected,
+html[data-theme="dark"] #options-container .btn-check:checked+.btn {
+  background: rgba(168, 85, 247, .16) !important;
+  background-color: rgba(168, 85, 247, .16) !important;
+  border-color: rgba(168, 85, 247, .55) !important;
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, .16) !important;
+}
+
+/* 提升日間題目文字對比（你截圖那種「題目很淡」） */
+html[data-theme="light"] .question-number,
+.sys-body.light-mode .question-number {
+  color: rgba(52, 40, 86, .70) !important;
+}
+
+html[data-theme="light"] .question-text,
+.sys-body.light-mode .question-text {
+  color: rgba(18, 20, 33, .94) !important;
+}

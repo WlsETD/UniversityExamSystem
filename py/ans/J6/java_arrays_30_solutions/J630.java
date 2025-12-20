@@ -1,1 +1,0 @@
-import java.util.*; public class Main{ public static void main(String[]x){ Scanner sc=new Scanner(System.in); int[] a=new int[6]; int s=0; for(int i=0;i<6;i++){ a[i]=sc.nextInt(); s+=a[i]; } double avg=s/6.0; boolean first=true; for(int v:a){ if(v>avg){ if(!first)System.out.print(" "); System.out.print(v); first=false; } } } }

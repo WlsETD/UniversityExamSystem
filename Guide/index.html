@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>段考練習系統</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+  <!-- index.html 位於 Guide/ -->
+  <link rel="stylesheet" href="./style.css">
+
+  <style>
+    .cat-block {
+      margin-top: 26px;
+    }
+
+    .cat-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .cat-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: .2px;
+      color: var(--text);
+      margin: 0;
+      font-size: 2rem;
+      opacity: .95;
+      padding: 10px;
+      background: linear-gradient(90deg, rgba(169, 85, 247, 0.652), rgba(236, 72, 154, 0.624));
+      border-radius: 10px;
+    }
+
+    .cat-sub {
+      color: var(--muted);
+      font-size: .92rem;
+      margin: 0;
+      white-space: nowrap;
+      opacity: .9;
+    }
+
+    .bank-search {
+      border-radius: 999px !important;
+      padding: 12px 16px !important;
+      border: 1px solid var(--border) !important;
+      background: var(--glass) !important;
+      color: var(--text) !important;
+    }
+
+    .bank-search::placeholder {
+      color: var(--muted);
+      opacity: .85;
+    }
+
+    .bank-search:focus {
+      box-shadow: 0 0 0 .25rem rgba(168, 85, 247, .16) !important;
+      border-color: rgba(168, 85, 247, .32) !important;
+      outline: none !important;
+    }
+
+    .load-error {
+      margin-top: 16px;
+      border-radius: 18px;
+      padding: 14px 16px;
+      border: 1px solid rgba(255, 90, 130, .25);
+      background: rgba(255, 90, 130, .08);
+      color: rgba(255, 230, 236, .92);
+      font-weight: 700;
+    }
+
+    /* Hero badge row：左 badge + 右側 toggle */
+    .hero-badge-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .theme-toggle-btn {
+      border: 1px solid var(--border);
+      background: var(--glass);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 8px 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: .2px;
+      cursor: pointer;
+      user-select: none;
+      transition: transform .15s ease, background .15s ease, border-color .15s ease, opacity .15s ease;
+    }
+
+    .theme-toggle-btn:hover {
+      transform: translateY(-1px);
+      border-color: rgba(168, 85, 247, .38);
+    }
+
+    .theme-toggle-btn:active {
+      transform: translateY(0px);
+      opacity: .9;
+    }
+
+    .theme-toggle-btn i {
+      font-size: .95rem;
+      opacity: .95;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Splash -->
+  <div class="splash" aria-hidden="true">
+    <div class="splash-card">
+      <div class="splash-icon">
+        <i class="fa-solid fa-layer-group"></i>
+      </div>
+      <div class="splash-bar" role="presentation"></div>
+      <div class="splash-text">Loading…</div>
+    </div>
+  </div>
+
+  <!-- Background -->
+  <div class="bg" aria-hidden="true"></div>
+  <div class="bg-overlay" aria-hidden="true"></div>
+
+  <main class="page">
+    <section class="container py-5">
+      <!-- Hero -->
+      <header class="hero mx-auto mb-4">
+        <div class="hero-badge-row">
+          <div class="hero-badge">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>Exam Banks</span>
+          </div>
+
+          <!-- ✅ 日/夜間切換 -->
+          <button id="theme-toggle" class="theme-toggle-btn" type="button" aria-label="切換日夜模式">
+            <i class="fa-solid fa-moon"></i>
+            <span id="theme-label">夜間</span>
+          </button>
+        </div>
+
+        <h1 class="hero-title">段考練習系統</h1>
+        <p class="hero-subtitle">選擇分類與題庫開始練習</p>
+
+        <div class="mt-4">
+          <input id="search" class="form-control bank-search" type="text" placeholder="搜尋題庫（分類 / 題庫名稱 / bank id）">
+        </div>
+
+        <div id="status" class="mt-3" style="color:var(--muted);font-weight:800;">
+          讀取題庫索引中…
+        </div>
+      </header>
+
+      <!-- Dynamic banks -->
+      <div id="banks-root"></div>
+
+      <footer class="foot mt-5">
+        <div class="foot-inner">
+          <span class="foot-dot"></span>
+          <span>Exam Banks</span>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    "use strict";
+
+    /* ===========================
+       THEME (index 也支援日/夜)
+    ============================ */
+    const THEME_KEY = "theme"; // 與 system.html 共用同一把 key
+    const elThemeToggle = document.getElementById("theme-toggle");
+    const elThemeLabel = document.getElementById("theme-label");
+
+    function getPreferredTheme() {
+      const saved = localStorage.getItem(THEME_KEY);
+      if (saved === "dark" || saved === "light") return saved;
+      return window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+    }
+
+    function applyTheme(theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+      const isDark = theme === "dark";
+
+      if (elThemeLabel) elThemeLabel.textContent = isDark ? "夜間" : "日間";
+      if (elThemeToggle) {
+        const icon = elThemeToggle.querySelector("i");
+        if (icon) {
+          icon.className = isDark ? "fa-solid fa-moon" : "fa-solid fa-sun";
+        }
+        elThemeToggle.setAttribute("aria-label", isDark ? "切換到日間模式" : "切換到夜間模式");
+      }
+    }
+
+    function toggleTheme() {
+      const cur = document.documentElement.getAttribute("data-theme") || "dark";
+      const next = cur === "dark" ? "light" : "dark";
+      localStorage.setItem(THEME_KEY, next);
+      applyTheme(next);
+    }
+
+    // init theme
+    applyTheme(getPreferredTheme());
+    elThemeToggle?.addEventListener("click", toggleTheme);
+
+    /* ========= CONFIG =========
+       index.html 位於 Guide/
+    */
+    const INDEX_URL = "./banks.index.json";
+    const SYSTEM_PAGE = "./system.html";
+
+    // Splash 最短總時間（含淡出）約 2 秒
+    const SPLASH_TOTAL_MS = 2000;
+    const SPLASH_FADE_MS = 450;
+    const splashT0 = performance.now();
+
+    const elRoot = document.getElementById("banks-root");
+    const elStatus = document.getElementById("status");
+    const elSearch = document.getElementById("search");
+
+    let cats = []; // [{id,name,manifest,banks:[{id,name,file}]}]
+
+    function iconForCat(catId) {
+      const id = String(catId || "").toLowerCase();
+      if (id.includes("computer")) return "fa-computer";
+      if (id.includes("economy")) return "fa-chart-line";
+      if (id.includes("english")) return "fa-earth-americas";
+      return "fa-folder-open";
+    }
+
+    function escapeHtml(s) {
+      return String(s)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    async function fetchJson(url) {
+      const res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) throw new Error(`HTTP ${res.status}：${url}`);
+      return await res.json();
+    }
+
+    function normalizeIndex(raw) {
+      if (!Array.isArray(raw)) throw new Error("banks.index.json 必須是陣列");
+      return raw.map((c) => ({
+        id: String(c.id),
+        name: String(c.name || c.id),
+        manifest: String(c.manifest),
+      }));
+    }
+
+    function normalizeBanks(raw) {
+      const arr = Array.isArray(raw) ? raw : raw?.banks;
+      if (!Array.isArray(arr)) throw new Error("banks.json 格式錯誤：需為陣列或 {banks:[...]}");
+      return arr.map((b) => ({
+        id: String(b.id),
+        name: String(b.name || b.title || b.id),
+        file: String(b.file || ""),
+      }));
+    }
+
+    function hideSplash() {
+      const s = document.querySelector(".splash");
+      if (!s) return;
+
+      const elapsed = performance.now() - splashT0;
+      const fadeStartDelay = Math.max(0, SPLASH_TOTAL_MS - SPLASH_FADE_MS - elapsed);
+
+      setTimeout(() => {
+        s.style.opacity = "0";
+        s.style.pointerEvents = "none";
+        setTimeout(() => s.remove(), SPLASH_FADE_MS);
+      }, fadeStartDelay);
+    }
+
+    function makeTile({ catId, catName, bankId, bankName }) {
+      const icon = iconForCat(catId);
+      const href = `${SYSTEM_PAGE}?cat=${encodeURIComponent(catId)}&bank=${encodeURIComponent(bankId)}`;
+
+      // 每行 3 張（lg），平板 2 張（md），手機 1 張（xs）
+      return `
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="tile">
+            <div class="tile-top">
+              <div class="tile-icon">
+                <i class="fa-solid ${escapeHtml(icon)}"></i>
+              </div>
+              <div class="tile-meta">
+                <h2 class="tile-title">${escapeHtml(bankName)}</h2>
+                <p class="tile-desc">${escapeHtml(catName)} ・ 題庫練習</p>
+              </div>
+            </div>
+
+            <a class="tile-action" href="${escapeHtml(href)}" aria-label="前往 ${escapeHtml(bankName)}">
+              <span>開始</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+        </div>
+      `;
+    }
+
+    function makeBackTile() {
+      return `
+        <div class="col-12 col-md-6 col-lg-4">
+        </div>
+      `;
+    }
+
+    function render(filterText) {
+      const k = String(filterText || "").trim().toLowerCase();
+
+      let html = "";
+      let totalShown = 0;
+
+      cats.forEach((cat) => {
+        const banks = cat.banks.filter((b) => {
+          if (!k) return true;
+          const hay = `${cat.name} ${b.id} ${b.name}`.toLowerCase();
+          return hay.includes(k);
+        });
+
+        if (banks.length === 0) return;
+
+        const icon = iconForCat(cat.id);
+
+        // ✅ 分類標題回來
+        html += `
+          <section class="cat-block">
+            <div class="cat-head">
+              <h3 class="cat-title">
+                <i class="fa-solid ${escapeHtml(icon)}"></i>
+                <span>${escapeHtml(cat.name)}</span>
+              </h3>
+              <p class="cat-sub">${banks.length} 份題庫</p>
+            </div>
+
+            <div class="row g-4 justify-content-start">
+              ${banks.map((b) => {
+          totalShown++;
+          return makeTile({
+            catId: cat.id,
+            catName: cat.name,
+            bankId: b.id,
+            bankName: b.name,
+          });
+        }).join("")}
+            </div>
+          </section>
+        `;
+      });
+
+      if (!k) {
+        html += `
+          <section class="cat-block">
+            <div class="row g-4 justify-content-start">
+              ${makeBackTile()}
+            </div>
+          </section>
+        `;
+      }
+
+      if (!html) {
+        html = `
+          <div class="load-error">
+            <i class="fa-solid fa-magnifying-glass me-2"></i>
+            找不到符合的題庫。
+          </div>
+        `;
+      }
+
+      elRoot.innerHTML = html;
+
+      if (elStatus) {
+        const totalBanks = cats.reduce((s, c) => s + c.banks.length, 0);
+        elStatus.textContent = k
+          ? `搜尋中：顯示 ${totalShown} / ${totalBanks} 份題庫`
+          : `已載入 ${cats.length} 個分類、${totalBanks} 份題庫`;
+      }
+    }
+
+    function debounce(fn, wait = 160) {
+      let t = null;
+      return (...args) => {
+        clearTimeout(t);
+        t = setTimeout(() => fn(...args), wait);
+      };
+    }
+
+    async function boot() {
+      try {
+        if (elStatus) elStatus.textContent = "讀取題庫索引中…";
+
+        // indexAbs 指向：/Guide/banks.index.json
+        const indexAbs = new URL(INDEX_URL, location.href).toString();
+        const indexRaw = await fetchJson(indexAbs);
+        const index = normalizeIndex(indexRaw);
+
+        // manifestAbs 用 banks.index.json 的位置做基底解析，避免 /Guide/Guide/ 錯誤
+        const catPromises = index.map(async (c) => {
+          const manifestAbs = new URL(c.manifest, indexAbs).toString();
+          const banksRaw = await fetchJson(manifestAbs);
+          const banks = normalizeBanks(banksRaw);
+          return { ...c, banks };
+        });
+
+        cats = await Promise.all(catPromises);
+
+        render("");
+        hideSplash();
+      } catch (err) {
+        console.error(err);
+        if (elStatus) elStatus.textContent = "載入失敗";
+
+        elRoot.innerHTML = `
+          <div class="load-error">
+            <i class="fa-solid fa-triangle-exclamation me-2"></i>
+            題庫索引載入失敗：${escapeHtml(err.message || String(err))}
+            <div style="opacity:.85;margin-top:6px;">
+              請確認：<code>./banks.index.json</code> 存在於 Guide/，
+              且各分類的 <code>banks.json</code> 路徑正確（例如 <code>./english/banks.json</code>）。
+            </div>
+          </div>
+        `;
+        hideSplash();
+      }
+    }
+
+    elSearch?.addEventListener("input", debounce((e) => render(e.target.value), 160));
+    boot();
+  </script>
+</body>
+
+</html>

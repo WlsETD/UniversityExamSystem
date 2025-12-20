@@ -1,0 +1,847 @@
+[
+
+            {
+                "type": "multiple-choice",
+                "question": "第二代電腦到第三代電腦的分野是發明了什麼技術？",
+                "options": ["超大型積體電路", "電晶體", "積體電路", "真空管"],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "根據由早到晚的順序寫出後述元件的演進過程：(1) VLSI (2) 電晶體 (3) 真空管 (4) IC",
+                "options": ["1234", "3412", "3241", "3214"],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列關於電腦未來發展的敘述何者錯誤？",
+                "options": ["人工智慧成長", "速度愈來愈快", "體積愈來愈小", "體重愈來愈大"],
+                "correctAnswer": 3
+            },
+            {
+                "type": "multiple-choice",
+                "question": "電腦的基本組成不包括下列哪個單元？",
+                "options": ["處理單元", "快取單元", "控制單元", "輸入單元"],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者不是屬於輸出單元？",
+                "options": ["螢幕", "印表機", "喇叭", "固態硬碟"],
+                "correctAnswer": 3
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列哪種活動往往需要連線到大型電腦？",
+                "options": ["存取文件", "製作影片", "播放音樂", "從 ATM 提款"],
+                "correctAnswer": 3
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者不是超級電腦的用途？",
+                "options": ["天氣預測", "彈道模擬", "武器設計", "車載系統"],
+                "correctAnswer": 3
+            },
+            {
+                "type": "multiple-choice",
+                "question": "世界上第一位程式設計師是誰？",
+                "options": ["Steve Jobs", "Bill Gates", "Ada Lovelace", "Thomas J. Watson"],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者不是資訊科技可能引發的問題？",
+                "options": ["環保問題", "升學壓力", "影響健康", "數位落差"],
+                "correctAnswer": 1
+            },
+            {
+                "type": "multiple-choice",
+                "question": "四核心微處理器使用下列哪種元件？",
+                "options": ["超大型積體電路", "電晶體", "積體電路", "真空管"],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者是儲存在硬體中的軟體？",
+                "options": ["轉換鍵", "韌體", "記憶體", "電晶體"],
+                "correctAnswer": 1
+            },
+            {
+                "type": "multiple-choice",
+                "question": "人工智慧技術可以應用到下列何者？",
+                "options": ["自駕車", "自然語言處理", "機器人", "以上皆是"],
+                "correctAnswer": 3
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者原本專門用來處理圖形運算，近年亦被用於訓練 AI 模型？",
+                "options": ["CPU", "GPU", "NPU", "TPU"],
+                "correctAnswer": 1
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者不屬於電腦的輸入單元？",
+                "options": ["鍵盤", "滑鼠", "投影機", "電競耳麥"],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列關於人工智慧的敘述何者錯誤？",
+                "options": [
+                    "圖靈測試（Turing Test）是用來評估機器是否具有智慧",
+                    "基於規則的專家系統能解決複雜問題",
+                    "智慧感應、機器翻譯可歸屬為通用人工智慧（AGI）",
+                    "人工智慧一詞源自1956年在達特茅斯學院舉行的一場會議"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "在機器學習中，下列何者是利用已知答案的大量資料來訓練機器，讓機器學習如何解決問題？",
+                "options": ["非監督式學習", "監督式學習", "半監督式學習", "強化學習"],
+                "correctAnswer": 1
+            },
+            {
+                "type": "multiple-choice",
+                "question": "在機器學習中，下列何者是代理程式在環境中行動，透過所獲得的獎勵或懲罰來學習如何達到目標？",
+                "options": ["非監督式學習", "監督式學習", "半監督式學習", "強化學習"],
+                "correctAnswer": 3
+            },
+            {
+                "type": "multiple-choice",
+                "question": "在神經網路的架構中，下列哪個層次負責從輸入資料中進行處理與學習？",
+                "options": ["輸入層", "隱藏層", "輸出層", "卷積層"],
+                "correctAnswer": 1
+            },
+            {
+                "type": "multiple-choice",
+                "question": "在卷積神經網路中，下列哪個層次負責從圖像資料中提取局部特徵以產生特徵圖？",
+                "options": ["輸入層", "卷積層", "池化層", "全連接層"],
+                "correctAnswer": 1
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者可以根據輸入的文字自動產生圖像？",
+                "options": ["Stable Diffusion", "Midjourney", "DALL·E", "以上皆可"],
+                "correctAnswer": 3
+            },
+            {
+                "type": "multiple-choice",
+                "question": "量子電腦的資料基本單位叫做什麼？",
+                "options": ["bit", "qubit", "TB", "EB"],
+                "correctAnswer": 1
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者不是區塊鏈的特點？",
+                "options": ["中心化", "不可竄改性", "匿名性", "可追蹤性"],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者有使用到區塊鏈的技術？",
+                "options": ["自駕車", "IBM 雲生", "比特幣", "寶可夢 Go 遊戲"],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "擊敗圍棋世界冠軍的 AlphaGo 有使用下列哪種技術？",
+                "options": ["區塊鏈", "深度學習", "物聯網", "虛擬實境"],
+                "correctAnswer": 1
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者不屬於深度學習的應用？",
+                "options": ["分析醫學影像", "深偽", "自然語言處理", "加密貨幣"],
+                "correctAnswer": 3
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者可以讓使用者置身於電腦所創造出來的模擬環境中，感受到視覺、聽覺及觸覺？",
+                "options": ["VR", "IoT", "AI", "Deepfake"],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者適合用來處理具有順序性及時序性的問題，例如自然語言？",
+                "options": ["前饋神經網路（FNN）", "卷積神經網路（CNN）", "循環神經網路（RNN）", "生成對抗網路（GAN）"],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者為電腦的資料基本單位？",
+                "options": ["位元", "位元組", "字元", "字組"],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "1GB 等於多少位元組？",
+                "options": ["2^10", "2^20", "2^30", "2^40"],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者可用來描述檔案的大小或硬碟的容量？",
+                "options": ["bps", "PPM", "KHz", "GB"],
+                "correctAnswer": 3
+            },
+            {
+                "type": "multiple-choice",
+                "question": "電腦儲存容量 GB、KB、TB、MB 從大到小排序的結果為何？",
+                "options": ["GB > MB > TB > KB", "TB > GB > MB > KB", "MB > TB > GB > KB", "TB > GB > MB > KB"],
+                "correctAnswer": 3
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列關於點陣圖的敘述何者錯誤？",
+                "options": [
+                    "圖形的彩度深度會影響圖形的品質",
+                    "可以依照任意比例縮放而不會影響圖形的品質",
+                    "以像素來展現圖形的色彩層次變化",
+                    "浪費儲存空間"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者指的是每個像素所能顯示的色彩數？",
+                "options": ["圖形尺寸", "解析度", "列印尺寸", "色彩深度"],
+                "correctAnswer": 3
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者適合用來壓縮音訊？",
+                "options": ["PSD", "GIF", "MP3", "JPEG"],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者支援透明度與動畫？",
+                "options": ["RAW", "BMP", "JPEG", "TIFF"],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列哪種編碼方式可以用來表示不同語系的文字？",
+                "options": ["EBCDIC", "ASCII", "Unicode", "BIG5"],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列關於向量圖的敘述何者正確？",
+                "options": [
+                    "適合儲存照片",
+                    "以高壓縮率大時容易產生鋸齒狀",
+                    "以數學公式產生的幾何形狀所組成",
+                    "必須搭配 JPEG、GIF 等壓縮技術來減少檔案大小"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者是採取無失真壓縮？",
+                "options": ["WAV", "FLAC", "MP3", "AAC"],
+                "correctAnswer": 1
+            },
+            {
+                "type": "multiple-choice",
+                "question": "所謂『8K 電視』是採取下列哪個視訊標準？",
+                "options": ["PAL", "UHDTV", "NTSC", "HDTV"],
+                "correctAnswer": 1
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列有關時間或儲存容量的換算何者錯誤？",
+                "options": ["1PB = 1024TB", "1EB = 2^60B", "1 毫秒 = 10^-6 秒", "1 奈秒 = 10^-9 秒"],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "48 的 8 位元補數為何？（假設使用 8 位元儲存整數）",
+                "options": ["10110000", "00110000", "00011000", "10001011"],
+                "correctAnswer": 1
+            },
+            {
+                "type": "multiple-choice",
+                "question": "53₈ = 47ₓ，x 為何？",
+                "options": ["16", "12", "10", "9"],
+                "correctAnswer": 3
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者不是視訊檔格式？",
+                "options": ["MPEG", "WMV", "PNG", "AVI"],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者為 6又5/8 的二進位表示法？",
+                "options": ["110.101", "110.11", "110.011", "100.101"],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "假設一間學校有 1000 個學生，至少需要多少位元來編碼學號？",
+                "options": ["9", "10", "11", "12"],
+                "correctAnswer": 1
+            },
+            {
+                "type": "multiple-choice",
+                "question": "以 600PPI 的裝置輸出 3266×2450 的數位照片，會得到多大的結果？",
+                "options": ["5.12×7.24", "5.44×4.08", "6.34×4.52", "8.32×6.36"],
+                "correctAnswer": 1
+            },
+            {
+                "type": "multiple-choice",
+                "question": "假設以 4 位元 2’s 補數表示 +8，下列何者正確？",
+                "options": ["1000", "1111", "0100", "無"],
+                "correctAnswer": 3
+            },
+            {
+                "type": "multiple-choice",
+                "question": "假設以 8 位元 2’s 補數表示整數，則 -251 應該表示為下列何者？",
+                "options": ["11110101", "11111001", "00000101", "11110110"],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "假設網路下載速度是 15Mbps，那麼下載一個 200GB 的檔案需要多少時間？",
+                "options": ["約 2.9 小時", "約 3.7 小時", "約 29 小時", "約 37 小時"],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "根據 IEEE 754 Single 格式儲存一個單精度浮點數，試問 11000101110110011001100 表示下列何者？",
+                "options": ["-1.010111×2^8", "-1.010111×2^-8", "1.010111×2^7", "-0.101011×2^-7"],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列哪個階層與十進位的 64 不同？",
+                "options": ["(1000000)₂", "(2010)₃", "(3F)₁₆", "(100)₈"],
+                "correctAnswer": 3
+            },
+            {
+                "type": "multiple-choice",
+                "question": "在 ASCII 編碼中，若字母 F 的十六進位碼為 41，則對應的十進位為何？",
+                "options": ["71", "70", "47", "46"],
+                "correctAnswer": 1
+            },
+            {
+                "type": "multiple-choice",
+                "question": "假設以 32 位元 2’s 補數表示整數，則有效範圍為何？",
+                "options": ["-2^31 ~ 2^31-1", "-2^30 ~ 2^30", "-2^-31 ~ 2^31-1", "-2^31 ~ 2^31"],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "一張 20×20 的 16 色彩色圖，在沒有壓縮時，至少需要多少位元組儲存空間？",
+                "options": ["1600", "400", "200", "6400"],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "若要將一張 4×6 彩色照片掃描為 3,840,000 像素的影像，則掃描時的解析度應設定為多少？",
+                "options": ["200dpi", "300dpi", "400dpi", "500dpi"],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "PC 的系統參數是儲存在下列哪個元件，這些參數包括硬碟型態、系統日期時間、開機順序等？",
+                "options": ["CMOS", "BIOS", "晶片組", "時脈產生器"],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者為常見輸入裝置？",
+                "options": ["喇叭", "掃描器", "麥克風", "藍牙耳機"],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "當電腦同時執行數個應用程式時，下列何者對於效能的影響最大？",
+                "options": ["連接到網路的速度", "硬碟的容量", "記憶體的容量", "光碟機的倍速"],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者可以產生訊號控制 CPU 內部的元件完成工作？",
+                "options": ["控制單元", "算術邏輯單元", "電子電路", "匯流排"],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列關於 USB 的敘述何者錯誤？",
+                "options": [
+                    "Universal Serial Bus 的縮寫",
+                    "傳輸速率比序列埠快",
+                    "最多可以接 63 個周邊設備",
+                    "支援隨插即用"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者是位於 CPU 內部的記憶體？",
+                "options": ["快取記憶體", "暫存器", "快取記憶體", "主記憶體"],
+                "correctAnswer": 1
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者不屬於輸出單元？",
+                "options": ["Webcam", "LCD", "喇叭", "繪圖機"],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列哪種記憶體適合作為主記憶體？",
+                "options": ["ROM", "SRAM", "DRAM", "快閃記憶體"],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者不屬於隨機存取的儲存裝置？",
+                "options": ["光碟", "隨身碟", "磁帶", "硬碟"],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "電腦的哪個部份負責執行算術運算與邏輯運算？",
+                "options": ["ROM", "介面卡", "CPU", "RAM"],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "在電腦關機後，下列哪個元件仍會在備用電源的支援下繼續運作？",
+                "options": ["時脈", "CPU", "硬碟", "記憶卡"],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者可以用來描述檔案的大小或硬碟的容量？",
+                "options": ["bps", "PPM", "KHz", "GB"],
+                "correctAnswer": 3
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者所儲存的資料會因為電源中斷而消失？",
+                "options": ["ROM", "RAM", "硬碟", "光碟"],
+                "correctAnswer": 1
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列哪種記憶體只能用來暫時儲存資料？",
+                "options": ["快閃記憶體", "快取記憶體", "硬碟", "光碟"],
+                "correctAnswer": 1
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者可以用來描述 CPU 的速度？",
+                "options": ["DPI", "GHz", "bps", "MB"],
+                "correctAnswer": 1
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列哪個動作可以將經常使用的程式或資料儲存在連續空間，提升硬碟效率？",
+                "options": ["磁碟重組", "磁碟清理", "磁碟格式化", "磁碟掃描"],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列哪種印表機最適合用來列印連續報表紙或三聯單？",
+                "options": ["點陣印表機", "噴墨印表機", "雷射印表機", "繪圖機"],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "根據由快到慢的順序寫出後述記憶體單元的速度：(1) 硬碟 (2) 暫存器 (3) 主記憶體 (4) 快取記憶體",
+                "options": ["4321", "4231", "3241", "2413"],
+                "correctAnswer": 3
+            },
+            {
+                "type": "multiple-choice",
+                "question": "小明更換了電腦的螢幕，卻無法顯示畫面，下列何者最有可能的原因？",
+                "options": [
+                    "螢幕的訊號線鬆脫",
+                    "螢幕驅動程式設定錯誤",
+                    "螢幕的解析度太高",
+                    "主機板 BIOS 錯誤"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "小明的滑鼠原可正常操作，但近日在移動游標時出現不平穩情況，下列何者最有可能的原因？",
+                "options": ["滑鼠的程式不正確", "滑鼠的底部髒污", "滑鼠線鬆脫", "滑鼠鍵損壞"],
+                "correctAnswer": 1
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列哪種情況將導致使用者無法登入網路？",
+                "options": [
+                    "網路線鬆脫",
+                    "網路卡的驅動程式需要更新",
+                    "音效卡的驅動程式需要更新",
+                    "印表機的纜線碰撞"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "印表機通常可以透過下列哪個連接埠連接到電腦？",
+                "options": ["PS/2", "RJ-45", "SATA", "USB"],
+                "correctAnswer": 3
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者是在升級電腦的 RAM 之前應該採取的重要步驟？",
+                "options": [
+                    "確認電腦可用的磁碟空間",
+                    "確認主機板支援的最大RAM容量",
+                    "確認作業系統可以處理增加的 RAM",
+                    "確認 CPU 可以支援的最大 RAM 容量"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列哪種光碟可以儲存超過 20GB 的資料？",
+                "options": ["VCD", "CD-RW", "雙層 DVD", "BD"],
+                "correctAnswer": 3
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者是利用三維條碼來獲得輸入？",
+                "options": ["OCR", "OMR", "MICR", "QR碼"],
+                "correctAnswer": 3
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列哪種裝置內部沒有移動式的機械元件？",
+                "options": ["光碟機", "USB 隨身碟", "內接式硬碟", "外接式硬碟"],
+                "correctAnswer": 1
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列哪種光碟型式無法寫入資料？",
+                "options": ["CD-R", "DVD-RAM", "BD-RE", "VCD"],
+                "correctAnswer": 3
+            },
+            {
+                "type": "multiple-choice",
+                "question": "小明將資料複製到 USB 隨身碟，並於複製對話方塊結束後取出此裝置，之後發現隨身碟內資料損毀，下列何動作有助於防止該情況？",
+                "options": [
+                    "使用安全移除硬體選項",
+                    "以安全模式啟動電腦",
+                    "使用 USB 3.0 連接埠",
+                    "以系統管理員身份登入電腦"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者有助於降低資料遺失的風險？",
+                "options": ["定期更新電腦", "定期清潔電腦", "定期更新驅動程式", "定期備份資料"],
+                "correctAnswer": 3
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何種工具可以減少資料所占用的磁碟空間？",
+                "options": ["檔案壓縮", "磁碟備份", "防毒軟體", "磁碟重組"],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者是固態磁碟與傳統硬碟的主要區別？",
+                "options": [
+                    "固態磁碟沒有存取頭和旋轉碟片機械結構",
+                    "固態磁碟的儲存資料不會因電源關閉而消失",
+                    "固態磁碟所儲存的資料不會損壞",
+                    "固態磁碟的容量更大"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列哪種類型的印表機是以粉末作為材料，且每頁成本最低？",
+                "options": ["撞擊式", "熱感應式", "噴墨式", "雷射式"],
+                "correctAnswer": 3
+            },
+            {
+                "type": "multiple-choice",
+                "question": "電腦的哪個元件是用來暫時儲存資料？",
+                "options": ["電源", "CPU", "RAM", "硬碟"],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列哪個介面可以用來連接固態硬碟？",
+                "options": ["M.2", "LPT", "DP", "PS/2"],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "在更換雷射印表機的碳粉匣之前，應先做下列哪個動作？",
+                "options": [
+                    "用密封袋將碳粉匣封好",
+                    "避免將碳粉曝曬在陽光下",
+                    "搖晃數次讓碳粉平均分佈後回收",
+                    "向製造商詢問如何回收"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "type": "multiple-choice",
+                "question": "在電腦系統硬體中，下列何者用來連接 CPU、記憶體與周邊？",
+                "options": ["介面", "擴充槽", "匯流排", "乙太網路"],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "算術邏輯單元（ALU）主要功能為：",
+                "options": ["進行算術邏輯運算", "模擬電路內的電子訊號", "儲存暫存資料", "控制資料傳輸方向"],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者不是常用的顯示介面？",
+                "options": ["DVI", "HDMI", "DP", "SATA"],
+                "correctAnswer": 3
+            },
+            {
+                "type": "multiple-choice",
+                "question": "時脈是 CPU 的重要元件之一，目前常使用的單位是 GHz，試問 GHz 為？",
+                "options": ["每秒 10 億次", "每秒 1 億次", "每秒 1 千萬次", "每秒 1 百萬次"],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列關於應用軟體的敘述何者錯誤？",
+                "options": [
+                    "可以協助使用者解決問題",
+                    "Illustrator 屬於向量繪圖軟體",
+                    "主要負責分配系統資源",
+                    "Photoshop 屬於影像處理軟體"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者不屬於開放原始碼軟體？",
+                "options": ["Linux", "MySQL", "AutoCAD", "PHP"],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者通常會被歸類為系統軟體？",
+                "options": ["ChatGPT", "Midjourney", "UNIX", "診療系統"],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者屬於雲端軟體服務？",
+                "options": ["PowerPoint", "Google Colab", "Visual Studio", "Anaconda"],
+                "correctAnswer": 1
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者不是作業系統的功能？",
+                "options": [
+                    "儲存資料",
+                    "提供執行應用軟體的環境",
+                    "提供使用者介面",
+                    "管理電腦硬體資源"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者不是個人電腦的作業系統？",
+                "options": ["Windows", "Linux", "macOS", "Android"],
+                "correctAnswer": 3
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者採取命令列使用者介面？",
+                "options": ["iOS", "MS-DOS", "Linux", "wear OS"],
+                "correctAnswer": 1
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者是在電腦升級到新版本作業系統時最有可能發生的風險？",
+                "options": [
+                    "感染電腦病毒",
+                    "驅動程式不相容",
+                    "電腦硬體損壞",
+                    "應用軟體的相容性"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "type": "multiple-choice",
+                "question": "在一部僅有一個 CPU 的電腦中，為了讓不同的使用者可以同時執行各自的程式，必須採取下列哪種程式技術，才能讓每個使用者像同時操作電腦？",
+                "options": ["分散式系統", "管理系統", "平行系統", "分時系統"],
+                "correctAnswer": 3
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者不屬於物件導向程式語言？",
+                "options": ["Python", "Java", "C", "C#"],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列關於作業系統的敘述何者錯誤？",
+                "options": [
+                    "OS 負責管理 CPU 的使用",
+                    "OS 包含硬體驅動程式",
+                    "OS 會管理記憶體的使用",
+                    "Word 等應用程式是 OS 的一部分"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列關於編譯程式的敘述何者正確？",
+                "options": [
+                    "將高階語言程式轉成機器語言指令",
+                    "處理基本的輸入／輸出動作",
+                    "控制多個程式交叉執行的運作",
+                    "將符號表示的程式轉換成二進位"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列敘述何者錯誤？",
+                "options": [
+                    "分時系統將 CPU 排程演算法比其他作業系統簡單",
+                    "即時系統通常用於非常重視回應時間的系統",
+                    "單工系統一次只能服務一位使用者",
+                    "多處理系統能夠增加工作量、提升效能"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者正確？",
+                "options": [
+                    "作業系統的殼層指的是使用者介面",
+                    "手持式系統不需要加入無線通訊技術",
+                    "分散式系統是透過網路連結多部電腦來執行工作",
+                    "由於記憶體很便宜，所以手持式系統無須考慮有效管理記憶體"
+                ],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者不是網路的用途？",
+                "options": ["資源分享", "沒有資安疑慮", "雲端運算", "訊息傳遞與交換"],
+                "correctAnswer": 1
+            },
+            {
+                "type": "multiple-choice",
+                "question": "同一個校區的校園網路屬於下列哪種類型網路？",
+                "options": ["區域網路", "廣域網路", "都會網路", "個人網路"],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列關於區域網路與廣域網路的比較何者錯誤？",
+                "options": [
+                    "廣域網路的涵蓋範圍較大",
+                    "區域網路傳輸品質較佳",
+                    "區域網路的設備價格較低",
+                    "區域網路的傳輸速率較慢"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "type": "multiple-choice",
+                "question": "連接跨國企業各分公司的網路屬於下列哪種類型？",
+                "options": ["WAN", "LAN", "MAN", "WPAN"],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列關於主從式網路的說明何者正確？",
+                "options": [
+                    "伺服器當機不影響整個網路",
+                    "適用於小型網路",
+                    "使用者可以決定共享哪些資源",
+                    "安全控管較佳"
+                ],
+                "correctAnswer": 3
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者屬於無線廣域網路？",
+                "options": ["藍牙", "乙太網路", "衛星網路", "ZigBee"],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "在 OSI 參考模型中，Chrome 等瀏覽器應用軟體應該屬於哪個層次？",
+                "options": ["應用層", "表達層", "會議層", "傳輸層"],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "在 OSI 參考模型中，下列何者不是實體層的工作？",
+                "options": ["定義 TCP 協定", "定義傳輸媒介", "定義訊號編碼方式", "定義網路拓樸"],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "無線電波的溝通模式屬於下列何者？",
+                "options": ["全雙工", "半雙工", "單工", "全單工"],
+                "correctAnswer": 1
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列敘述何者正確？",
+                "options": [
+                    "星狀拓樸的容錯能力比網狀拓樸好",
+                    "網狀拓樸使用的纜線較少，成本較低",
+                    "匯流排拓樸安裝簡單，但故障排除困難",
+                    "環狀拓樸容易產生碰撞，不適用於高流量網路"
+                ],
+                "correctAnswer": 2
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列關於光纖的敘述何者錯誤？",
+                "options": [
+                    "安裝需要專業技術",
+                    "成本低",
+                    "體積小材質輕",
+                    "不受電磁干擾"
+                ],
+                "correctAnswer": 1
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何個網路設備可以找出傳送封包的最佳路徑？",
+                "options": ["路由器", "橋接器", "集線器", "網線器"],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者不屬於無線網路的傳輸媒介？",
+                "options": ["微波", "光纖", "無線電波", "紅外線"],
+                "correctAnswer": 1
+            },
+            {
+                "type": "multiple-choice",
+                "question": "下列何者是最常見的區域網路標準？",
+                "options": ["Gigabit Ethernet", "藍牙", "FDDI", "Token Ring"],
+                "correctAnswer": 0
+            },
+            {
+                "type": "multiple-choice",
+                "question": "架設高速網路或跨國網路通常會使用下列何者？",
+                "options": ["紫外線", "雙絞線", "光纖", "紅外線"],
+                "correctAnswer": 2
+            }
+
+        ]

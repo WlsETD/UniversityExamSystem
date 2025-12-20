@@ -1,0 +1,717 @@
+[
+    {
+        "type": "multiple-choice",
+        "question": "Fujiyoshida 的中文意思是？",
+        "options": [
+            "富士吉田市（日本）",
+            "東京",
+            "大阪",
+            "京都"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "get all your information 的中文意思是？",
+        "options": [
+            "取得所有資訊",
+            "寫信",
+            "買東西",
+            "打掃房間"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "give advice 的中文意思是？",
+        "options": [
+            "給予建議",
+            "詢問問題",
+            "拒絕幫助",
+            "發送訊息"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "give me some advice 的中文意思是？",
+        "options": [
+            "給我一些建議",
+            "請吃飯",
+            "告訴我時間",
+            "幫我買東西"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "go camping 的中文意思是？",
+        "options": [
+            "去露營",
+            "去游泳",
+            "去購物",
+            "去工作"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "go shopping 的中文意思是？",
+        "options": [
+            "去購物",
+            "去上課",
+            "去旅行",
+            "去運動"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "go sightseeing 的中文意思是？",
+        "options": [
+            "去觀光",
+            "去運動",
+            "去上班",
+            "去讀書"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "go to festivals 的中文意思是？",
+        "options": [
+            "參加節慶",
+            "上班",
+            "出差",
+            "上課"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "great for sightseeing 的中文意思是？",
+        "options": [
+            "非常適合觀光",
+            "很遠",
+            "很冷",
+            "很危險"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "guidebook 的中文意思是？",
+        "options": [
+            "旅遊指南",
+            "筆記本",
+            "教科書",
+            "小說"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "happy to give advice 的中文意思是？",
+        "options": [
+            "樂於給予建議",
+            "害怕說話",
+            "不想幫忙",
+            "保持安靜"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "immigration 的中文意思是？",
+        "options": [
+            "入境（移民）",
+            "出發",
+            "訂票",
+            "登機"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "in pairs 的中文意思是？",
+        "options": [
+            "兩人一組",
+            "單獨",
+            "四人一組",
+            "分開"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "in small groups 的中文意思是？",
+        "options": [
+            "小組進行",
+            "大會議",
+            "獨自行動",
+            "分開活動"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "interesting place for sightseeing 的中文意思是？",
+        "options": [
+            "有趣的觀光地點",
+            "商業區",
+            "住宅區",
+            "工業區"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "invite 的中文意思是？",
+        "options": [
+            "邀請",
+            "拒絕",
+            "等候",
+            "通知"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "I think you should 的中文意思是？",
+        "options": [
+            "我認為你應該",
+            "我不想你",
+            "我知道你是",
+            "我忘記了"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "I want to visit Japan 的中文意思是？",
+        "options": [
+            "我想去日本",
+            "我住在日本",
+            "我來自日本",
+            "我討厭日本"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "I’d like 的中文意思是？",
+        "options": [
+            "我想要",
+            "我不想",
+            "我害怕",
+            "我拒絕"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "Japanese gardens 的中文意思是？",
+        "options": [
+            "日本庭園",
+            "英國花園",
+            "中國公園",
+            "美國森林"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "Lake District of England 的中文意思是？",
+        "options": [
+            "英國湖區",
+            "倫敦",
+            "巴黎",
+            "蘇格蘭"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "leave on the 25th or the 26th 的中文意思是？",
+        "options": [
+            "25或26號出發",
+            "25或26號回家",
+            "25號上課",
+            "26號工作"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "live music 的中文意思是？",
+        "options": [
+            "現場音樂",
+            "古典音樂",
+            "電子音樂",
+            "輕音樂"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "local magazines 的中文意思是？",
+        "options": [
+            "當地雜誌",
+            "外國報紙",
+            "旅遊指南",
+            "書店書籍"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "make your vacation more interesting 的中文意思是？",
+        "options": [
+            "讓你的假期更有趣",
+            "取消假期",
+            "延長假期",
+            "結束假期"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "mine 的中文意思是？",
+        "options": [
+            "我的",
+            "你的",
+            "他的",
+            "她的"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "moors 的中文意思是？",
+        "options": [
+            "荒原",
+            "山脈",
+            "河流",
+            "森林"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "Mount Fuji 的中文意思是？",
+        "options": [
+            "富士山",
+            "阿爾卑斯山",
+            "聖母峰",
+            "喜馬拉雅山"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "New Orleans 的中文意思是？",
+        "options": [
+            "紐奧良",
+            "紐約",
+            "芝加哥",
+            "波士頓"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "New Zealand 的中文意思是？",
+        "options": [
+            "紐西蘭",
+            "澳洲",
+            "英國",
+            "加拿大"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "next year 的中文意思是？",
+        "options": [
+            "明年",
+            "今年",
+            "去年",
+            "後年"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "not too far from Tokyo 的中文意思是？",
+        "options": [
+            "離東京不太遠",
+            "在東京裡面",
+            "東京北邊",
+            "遠離東京"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "out of the city center 的中文意思是？",
+        "options": [
+            "離開市中心",
+            "進入市區",
+            "靠近車站",
+            "在市中心"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "Patagonia 的中文意思是？",
+        "options": [
+            "巴塔哥尼亞（南美地區）",
+            "撒哈拉沙漠",
+            "阿拉斯加",
+            "亞馬遜"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "peat bog 的中文意思是？",
+        "options": [
+            "泥炭沼澤",
+            "熱帶雨林",
+            "冰原",
+            "高原"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "perfect for canoeing 的中文意思是？",
+        "options": [
+            "非常適合划獨木舟",
+            "適合游泳",
+            "適合登山",
+            "適合跑步"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "perfect for sightseeing 的中文意思是？",
+        "options": [
+            "非常適合觀光",
+            "很難到達",
+            "不安全",
+            "太擁擠"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "places for relaxation 的中文意思是？",
+        "options": [
+            "放鬆的地方",
+            "運動場",
+            "工作區",
+            "學校"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "play sports 的中文意思是？",
+        "options": [
+            "運動",
+            "休息",
+            "工作",
+            "上課"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "popular 的中文意思是？",
+        "options": [
+            "受歡迎的",
+            "冷門的",
+            "危險的",
+            "昂貴的"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "reason for visit 的中文意思是？",
+        "options": [
+            "訪問原因",
+            "行程安排",
+            "住宿地點",
+            "交通方式"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "real language 的中文意思是？",
+        "options": [
+            "真實語言",
+            "書面語",
+            "古文",
+            "虛構語"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "rising and falling intonation 的中文意思是？",
+        "options": [
+            "升降語調",
+            "語法結構",
+            "聲音大小",
+            "文法重點"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "seat number 的中文意思是？",
+        "options": [
+            "座位號碼",
+            "航班號碼",
+            "房號",
+            "票號"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "speaking strategy 的中文意思是？",
+        "options": [
+            "口說策略",
+            "聽力技巧",
+            "文法規則",
+            "閱讀方法"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "suburbs 的中文意思是？",
+        "options": [
+            "郊區",
+            "市中心",
+            "山區",
+            "商業區"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "take trains 的中文意思是？",
+        "options": [
+            "搭火車",
+            "搭飛機",
+            "搭公車",
+            "走路"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "talk to local people 的中文意思是？",
+        "options": [
+            "與當地人交談",
+            "打電話",
+            "寫信",
+            "購物"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "the La Boca neighborhood 的中文意思是？",
+        "options": [
+            "拉波卡區（阿根廷）",
+            "倫敦市區",
+            "東京郊區",
+            "巴黎中心"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "the mountain of Blencathra 的中文意思是？",
+        "options": [
+            "布倫卡瑟拉山（英國）",
+            "富士山",
+            "阿爾卑斯山",
+            "聖母峰"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "train station 的中文意思是？",
+        "options": [
+            "火車站",
+            "公車站",
+            "捷運站",
+            "港口"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "try to find the owner 的中文意思是？",
+        "options": [
+            "試著找到主人",
+            "丟掉物品",
+            "購買禮物",
+            "換地方"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "type of room 的中文意思是？",
+        "options": [
+            "房型",
+            "房號",
+            "床號",
+            "票號"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "underline 的中文意思是？",
+        "options": [
+            "劃底線",
+            "刪除",
+            "塗色",
+            "標註"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "United Kingdom 的中文意思是？",
+        "options": [
+            "英國",
+            "美國",
+            "加拿大",
+            "法國"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "use should to give advice 的中文意思是？",
+        "options": [
+            "用 should 來給建議",
+            "用 can 來提問",
+            "用 may 來表示可能",
+            "用 must 來強調"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "used for farming 的中文意思是？",
+        "options": [
+            "用於農耕",
+            "用於釣魚",
+            "用於運動",
+            "用於玩具"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "vacation for two people 的中文意思是？",
+        "options": [
+            "兩人度假",
+            "家庭旅遊",
+            "公司出差",
+            "畢業旅行"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "Venice 的中文意思是？",
+        "options": [
+            "威尼斯",
+            "羅馬",
+            "巴黎",
+            "倫敦"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "very beautiful 的中文意思是？",
+        "options": [
+            "非常美麗",
+            "非常醜",
+            "非常貴",
+            "非常吵"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "very crowded 的中文意思是？",
+        "options": [
+            "非常擁擠",
+            "非常空曠",
+            "非常乾淨",
+            "非常安靜"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "very warm 的中文意思是？",
+        "options": [
+            "非常溫暖",
+            "非常冷",
+            "非常濕",
+            "非常乾"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "visit every day 的中文意思是？",
+        "options": [
+            "每天拜訪",
+            "每天上課",
+            "每天工作",
+            "每天運動"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "when to go 的中文意思是？",
+        "options": [
+            "何時出發",
+            "去哪裡",
+            "為什麼去",
+            "誰要去"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "why don’t you try 的中文意思是？",
+        "options": [
+            "你為什麼不試試看",
+            "你為什麼不去",
+            "你要去哪裡",
+            "你想做什麼"
+        ],
+        "correctAnswer": 0
+    }
+]

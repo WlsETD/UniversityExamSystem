@@ -1,1 +1,0 @@
-import java.util.*; public class Main{ public static void main(String[]args){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(); boolean[] seen=new boolean[10002]; for(int i=0;i<n;i++){ int v=sc.nextInt(); if(v>0 && v<=10001) seen[v]=true; } for(int i=1;i<=10001;i++){ if(!seen[i]){ System.out.print(i); break; } } } }
