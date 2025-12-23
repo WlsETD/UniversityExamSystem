@@ -1,454 +1,534 @@
 [
   {
     "type": "multiple-choice",
-    "question": "下列何種加密方式是對稱式加密？",
-    "options": ["DES", "RSA", "DSA", "ECC"],
+    "question": "13-1 下列何者可以公開金鑰為基礎的加密演算法？",
+    "options": ["DES", "AES", "RC4", "RSA"],
     "correctAnswer": 3
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者不是電腦病毒的傳播方式？",
-    "options": ["電子郵件附件", "USB 隨身碟", "網頁瀏覽", "電源供應器"],
+    "question": "13-2 下列何者應該不是電腦病毒的發作症狀？",
+    "options": ["系統出現怪異聲音或訊息", "USB 損壞", "系統反應變慢或異常", "程式執行的檔案突然無法執行"],
     "correctAnswer": 1
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者是阻擋外來網路攻擊的設備？",
-    "options": ["集線器", "交換器", "防火牆", "數據機"],
+    "question": "13-3 下列何者是電腦病毒的感染途徑？",
+    "options": ["透過電子郵件附件", "透過外接式儲存媒體", "透過下載的程式", "以上皆是"],
     "correctAnswer": 3
   },
   {
     "type": "multiple-choice",
-    "question": "下列哪一項不是作業系統的功能？",
-    "options": ["檔案管理", "記憶體管理", "程序管理", "文字編輯"],
+    "question": "13-4 下列哪項安全攻擊手法的目的是要破解密碼？",
+    "options": ["阻斷服務攻擊", "無線網路竊聽", "釣魚攻擊", "暴力攻擊"],
     "correctAnswer": 3
   },
   {
     "type": "multiple-choice",
-    "question": "在使用對稱式加密時，下列何者為必要條件？",
-    "options": ["加密與解密使用相同金鑰", "使用公開金鑰", "不需要金鑰", "只能用於網路傳輸"],
-    "correctAnswer": 0
-  },
-  {
-    "type": "multiple-choice",
-    "question": "下列哪一項不是資訊安全的基本要素？",
-    "options": ["機密性", "完整性", "可用性", "可攜性"],
+    "question": "13-5 在使用對稱式加密的前提下，N 個使用者需要協調幾個秘密金鑰？",
+    "options": ["N", "N²", "N(N−1)/2", "2N"],
     "correctAnswer": 2
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者為電子郵件的主要協定？",
-    "options": ["SMTP", "FTP", "HTTP", "DNS"],
-    "correctAnswer": 0
-  },
-  {
-    "type": "multiple-choice",
-    "question": "網域名稱系統（DNS）的主要功能為何？",
-    "options": ["IP 位址轉網域名稱", "網域名稱轉 IP 位址", "資料加密", "檔案傳輸"],
-    "correctAnswer": 1
-  },
-  {
-    "type": "multiple-choice",
-    "question": "下列何者屬於惡意程式（Malware）？",
-    "options": ["防火牆", "防毒軟體", "木馬程式", "備份軟體"],
-    "correctAnswer": 3
-  },
-  {
-    "type": "multiple-choice",
-    "question": "下列何者為電子郵件的組成要素？",
-    "options": ["封包", "附件", "資料庫", "網頁"],
-    "correctAnswer": 1
-  },
-  {
-    "type": "multiple-choice",
-    "question": "下列何者是駭客常用的攻擊方式？",
-    "options": ["資料備份", "系統更新", "釣魚郵件", "防毒掃描"],
+    "question": "13-6 下列哪個安全服務和功能要求系統必須確保資訊不會外洩？",
+    "options": ["認證", "完整性", "保密性", "不可否認性"],
     "correctAnswer": 2
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者不是防毒軟體的功能？",
-    "options": ["病毒掃描", "病毒隔離", "病毒清除", "資料加密"],
-    "correctAnswer": 2
-  },
-  {
-    "type": "multiple-choice",
-    "question": "下列何者屬於社交工程（Social Engineering）攻擊？",
-    "options": ["假冒身分詐騙", "暴力破解", "封包監聽", "阻斷服務"],
+    "question": "13-7 下列何者會傳染其它檔案？",
+    "options": ["電腦病毒", "間諜軟體", "特洛伊木馬", "垃圾郵件"],
     "correctAnswer": 0
   },
   {
     "type": "multiple-choice",
-    "question": "下列哪一項可以提高密碼的安全性？",
-    "options": ["使用生日", "使用簡單字串", "混合大小寫與符號", "長期不更換"],
+    "question": "13-8 下列哪種手段會透過 DNS 將合法網址導向偽裝 IP 位址？",
+    "options": ["間諜軟體", "網址釣魚", "網路蠕蟲", "電腦病毒"],
     "correctAnswer": 1
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者可以防止資料遺失？",
-    "options": ["資料備份", "資料刪除", "關閉防火牆", "停用帳號"],
-    "correctAnswer": 1
-  },
-  {
-    "type": "multiple-choice",
-    "question": "下列何者屬於資訊倫理的正確行為？",
-    "options": ["非法下載軟體", "未經授權使用資料", "尊重智慧財產權", "散布病毒"],
+    "question": "13-9 下列哪種手段會誘騙使用者透過電子郵件或網站提供資訊？",
+    "options": ["電腦病毒", "電腦蠕蟲", "特洛伊木馬", "網路釣魚"],
     "correctAnswer": 3
   },
-
   {
     "type": "multiple-choice",
-    "question": "下列何者不是關聯式資料庫管理系統（DBMS）？",
+    "question": "13-10 下列何者會命令被感染的電腦對其它電腦發動攻擊？",
+    "options": ["防毒軟體", "殭屍程式", "後門", "電腦病毒"],
+    "correctAnswer": 1
+  },
+  {
+    "type": "multiple-choice",
+    "question": "13-11 下列何者能夠主動偵測網路攻擊？",
+    "options": ["防毒軟體", "防火牆", "入侵偵測系統", "代理伺服器"],
+    "correctAnswer": 2
+  },
+  {
+    "type": "multiple-choice",
+    "question": "13-12 下列關於密碼設定的說明何者錯誤？",
+    "options": ["不要使用生日之類的密碼", "盡量不要在紙上寫下密碼", "密碼的長度與安全性無關", "使用者應定期變更密碼"],
+    "correctAnswer": 2
+  },
+  {
+    "type": "multiple-choice",
+    "question": "13-13 下列何者無法降低電腦中毒的機率？",
+    "options": ["定期做完整備份", "啟動防毒軟體並定期更新", "啟動防火牆", "勿開啟陌生郵件附件"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "13-14 在使用非對稱式加密的前提下，甲要讓只有乙能解密資料，甲應使用何者加密？",
+    "options": ["甲方的公鑰", "乙方的公鑰", "甲方的私鑰", "乙方的私鑰"],
+    "correctAnswer": 1
+  },
+  {
+    "type": "multiple-choice",
+    "question": "13-15 下列何者可以用來分隔私人網路與網際網路，並根據規則過濾進出網路的封包？",
+    "options": ["防毒軟體", "防火牆", "入侵偵測系統", "代理伺服器"],
+    "correctAnswer": 1
+  },
+  {
+    "type": "multiple-choice",
+    "question": "13-16 為了避免電腦中了勒索病毒而無法開啟重要檔案，下列何者是比較好的防範措施？",
+    "options": ["到資源回收桶還原檔案", "使用磁碟清理工具清理病毒", "定期使用磁碟重組工具", "定期備份檔案於離線儲存裝置"],
+    "correctAnswer": 3
+  },
+  {
+    "type": "multiple-choice",
+    "question": "9-1 下列關於雲端運算的敘述何者錯誤？",
+    "options": [
+      "雲端運算沒有資料失竊的風險",
+      "使用者無須知道服務提供的細節",
+      "Gmail 屬於 SaaS 服務模式",
+      "企業租用雲端運算服務能夠節省成本"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "9-2 下列關於物聯網的敘述何者正確？",
+    "options": [
+      "不會使用到無線網路技術",
+      "屬於 VoIP 的應用",
+      "主要用來遠端管理伺服器",
+      "將物體連接起來所形成的網路"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "type": "multiple-choice",
+    "question": "9-3 像 Google Cloud Run 這種開發與代管網路應用程式的平台屬於雲端運算的哪種服務模式？",
+    "options": [
+      "基礎設施即服務（IaaS）",
+      "平台即服務（PaaS）",
+      "軟體即服務（SaaS）",
+      "資料即服務（DaaS）"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "type": "multiple-choice",
+    "question": "9-4 像 Google Docs 這種線上文件服務屬於雲端運算的哪種服務模式？",
+    "options": [
+      "基礎設施即服務（IaaS）",
+      "平台即服務（PaaS）",
+      "軟體即服務（SaaS）",
+      "資料即服務（DaaS）"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "type": "multiple-choice",
+    "question": "9-5 可以讓實體物件連上網路並透過網路進行識別與定位，使物件之間能夠溝通並促進自動化的技術稱為什麼？",
+    "options": [
+      "人工智慧",
+      "機器學習",
+      "雲端服務",
+      "物聯網"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "type": "multiple-choice",
+    "question": "9-6 全球定位系統（GPS）與電子羅盤屬於物聯網架構中的哪個層次？",
+    "options": [
+      "感知層",
+      "網路層",
+      "應用層",
+      "會議層"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "9-7 Google 地圖屬於雲端運算的哪種部署模式？",
+    "options": [
+      "公有雲",
+      "私有雲",
+      "混合雲",
+      "社群雲"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "9-8 下列何者指的是將應用程式與資料處理的運算由網路中心節點移往網路邊緣節點？",
+    "options": [
+      "雲端運算",
+      "邊緣運算",
+      "集中運算",
+      "平行運算"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "type": "multiple-choice",
+    "question": "11-1 下列何者不適合以資料庫管理系統來處理？",
+    "options": ["選課系統", "客戶應收帳款", "簡報", "病歷系統"],
+    "correctAnswer": 2
+  },
+  {
+    "type": "multiple-choice",
+    "question": "11-2 下列何者不屬於 DBMS？",
     "options": ["SQL Server", "MariaDB", "Access", "Visio"],
-    "correctAnswer": 2
-  },
-  {
-    "type": "multiple-choice",
-    "question": "下列何者屬於資料庫管理系統？",
-    "options": ["Excel", "PowerPoint", "MySQL", "Word"],
     "correctAnswer": 3
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者為資料庫的基本操作語言？",
-    "options": ["HTML", "SQL", "CSS", "Java"],
+    "question": "11-3 下列哪種技術可以幫助網站分析顧客的消費行為？",
+    "options": ["網路探勘", "管理資訊系統", "3D 列印", "專家系統"],
     "correctAnswer": 0
   },
   {
     "type": "multiple-choice",
-    "question": "在資料庫應用架構中，下列哪一項屬於前端介面？",
-    "options": ["資料庫伺服器", "應用程式", "使用者介面", "資料表"],
+    "question": "11-4 在資料的階層架構中，下列哪個敘述錯誤？",
+    "options": [
+      "可以用來識別所有記錄的欄位稱為主鍵",
+      "記錄是由一個或多個欄位所組成",
+      "資料庫是一個或多個資料檔案的集合",
+      "位元是使用者存取資料的最小單位"
+    ],
     "correctAnswer": 3
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者不是資料倉儲的應用？",
-    "options": ["決策支援", "線上分析", "交易處理", "資料探勘"],
+    "question": "11-5 下列何者不是資料倉儲的應用？",
+    "options": ["機器人", "線上分析處理（OLAP）", "決策支援系統", "資料探勘"],
     "correctAnswer": 0
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者屬於 NoSQL 非關聯式資料庫？",
-    "options": ["SQL Server", "SimpleDB", "Access", "DB2"],
+    "question": "11-6 下列何者屬於 NoSQL 非關聯式資料庫？",
+    "options": ["SQL Server", "SimpleDB", "Access", "IBM DB2"],
     "correctAnswer": 1
   },
   {
     "type": "multiple-choice",
-    "question": "以學生資料為例，下列何者最適合作為主鍵（Primary Key）？",
-    "options": ["姓名", "學號", "生日", "電話"],
+    "question": "11-7 以學生基本資料為例，下列何者最適合作為主鍵欄位？",
+    "options": ["姓名", "生日", "學號", "性別"],
     "correctAnswer": 2
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者是一個分散式資料處理平台？",
-    "options": ["MySQL", "Hadoop", "Access", "Oracle"],
+    "question": "11-8 下列何者是一個能夠儲存並管理大數據的雲端平台？",
+    "options": ["MySQL", "Objectivity", "Access", "Hadoop"],
     "correctAnswer": 3
   },
   {
     "type": "multiple-choice",
-    "question": "關聯式資料庫中，資料儲存的基本單位為？",
-    "options": ["欄位", "資料表", "紀錄", "索引"],
+    "question": "11-9 關聯式資料庫的查詢語言叫做什麼？",
+    "options": ["OQL", "SQL", "RQL", "MySQL"],
     "correctAnswer": 1
   },
   {
     "type": "multiple-choice",
-    "question": "下列關於 GEO 衛星的敘述何者錯誤？",
-    "options": ["軌道高度高", "延遲時間短", "覆蓋範圍大", "需三顆即可全球覆蓋"],
+    "question": "11-10 下列關於大數據的敘述何者正確？",
+    "options": [
+      "資料量巨大到無法在一定時間內以人工進行截取",
+      "可應用於物聯網、電子商務、經濟金融等領域",
+      "可協助製造業透過分析提升良率",
+      "以上皆是"
+    ],
     "correctAnswer": 3
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者不是資料庫的操作語言？",
-    "options": ["SQL", "DDL", "DML", "HTML"],
+    "question": "11-11 下列關於關聯式資料庫的敘述何者正確？",
+    "options": [
+      "SQL Server 和 MongoDB 均屬於關聯式資料庫",
+      "一個關聯式資料庫可以包含多個資料表",
+      "資料表可用 INSERT 指令合併成一個資料表",
+      "同一欄位可儲存不同型別的資料"
+    ],
     "correctAnswer": 1
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者主要用於資料表之間的關聯？",
-    "options": ["索引", "外鍵", "主鍵", "欄位"],
+    "question": "11-12 下列存取資料庫的行為，何者合乎資訊倫理？",
+    "options": [
+      "進入教務系統修改自己的成績",
+      "在圖書館系統查詢計算機概論書單",
+      "使用臨時帳號讀取與工作無關的機密資料",
+      "入侵學校網站修改網頁錯字"
+    ],
     "correctAnswer": 1
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者屬於大數據分析工具？",
-    "options": ["Google MapReduce", "Tableau", "Hadoop", "SurveyCake"],
+    "question": "11-13 下列何者屬於大數據分析工具？",
+    "options": ["Google Form", "Tableau", "Hadoop MapReduce", "SurveyCake"],
     "correctAnswer": 2
   },
   {
     "type": "multiple-choice",
-    "question": "資料庫中最基本的資料結構為何？",
-    "options": ["欄位", "資料表", "紀錄", "索引"],
+    "question": "11-14 下列何者是關聯式資料庫的基本資料結構？",
+    "options": ["表格（table）", "陣列（array）", "樹（tree）", "堆疊（stack）"],
     "correctAnswer": 0
   },
   {
     "type": "multiple-choice",
-    "question": "下列關於雲端運算的敘述何者正確？",
-    "options": ["可依需求彈性使用資源", "必須自行架設主機", "只能在公司內部使用", "成本一定較高"],
-    "correctAnswer": 0
-  },
-  {
-    "type": "multiple-choice",
-    "question": "下列何者不是雲端運算的特性？",
-    "options": ["彈性擴充", "隨用隨付", "高度集中管理", "必須離線使用"],
-    "correctAnswer": 3
-  },
-  {
-    "type": "multiple-choice",
-    "question": "Google Cloud Run 主要屬於哪一種雲端服務模式？",
-    "options": ["IaaS", "PaaS", "SaaS", "DaaS"],
+    "question": "8-1 IP 位址 11001100001110000000111100000110 可以表示成下列何者？",
+    "options": ["204.104.30.6", "204.112.30.6", "204.112.15.12", "204.104.15.6"],
     "correctAnswer": 1
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者屬於軟體即服務（SaaS）的例子？",
-    "options": ["Google Docs", "Amazon EC2", "Google App Engine", "Docker"],
-    "correctAnswer": 2
-  },
-  {
-    "type": "multiple-choice",
-    "question": "雲端運算中，使用者僅需管理應用程式的服務模式為？",
-    "options": ["IaaS", "PaaS", "SaaS", "On-premise"],
+    "question": "8-2 下列何者最有可能是行政院國家科學委員會的網址？",
+    "options": ["www.nsc.net.tw", "www.nsc.edu.tw", "www.nsc.com.tw", "www.nsc.gov.tw"],
     "correctAnswer": 3
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者為雲端運算的優點？",
-    "options": ["降低初期建置成本", "需要大量人力維護", "資源固定不可調整", "不需網路"],
-    "correctAnswer": 0
-  },
-  {
-    "type": "multiple-choice",
-    "question": "Google Docs 線上文件服務屬於哪種雲端服務模式？",
-    "options": ["SaaS", "PaaS", "IaaS", "DaaS"],
-    "correctAnswer": 0
-  },
-  {
-    "type": "multiple-choice",
-    "question": "雲端運算中，基礎建設由服務供應商負責的模式為？",
-    "options": ["IaaS", "PaaS", "SaaS", "Hybrid"],
+    "question": "8-3 URL 中開頭的 https:// 指的是下列何者？",
+    "options": ["瀏覽器版本", "通訊協定", "HTML 網頁", "固定的開頭"],
     "correctAnswer": 1
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者為合法的 IPv4 位址？",
-    "options": ["256.1.1.1", "192.168.1.1", "300.2.2.2", "abc.def.ghi.jkl"],
-    "correctAnswer": 1
-  },
-  {
-    "type": "multiple-choice",
-    "question": "URL 中的 https:// 代表什麼？",
-    "options": ["檔案格式", "加密傳輸協定", "網頁語言", "作業系統"],
-    "correctAnswer": 3
-  },
-  {
-    "type": "multiple-choice",
-    "question": "TCP/IP 參考模型中，下列何者屬於應用層？",
-    "options": ["HTTP", "IP", "ARP", "ICMP"],
-    "correctAnswer": 1
-  },
-  {
-    "type": "multiple-choice",
-    "question": "下列何者為網路通訊中負責封包傳送的協定？",
-    "options": ["HTTP", "FTP", "IP", "SMTP"],
+    "question": "8-4 網際網路採取下列哪種通訊協定？",
+    "options": ["IPX", "AppleTalk", "TCP/IP", "X.25"],
     "correctAnswer": 2
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者主要用於網域名稱解析？",
-    "options": ["HTTP", "FTP", "DNS", "SMTP"],
+    "question": "8-5 下列何者主要的用途是製作網頁？",
+    "options": ["BASIC", "C++", "PROLOG", "HTML"],
     "correctAnswer": 3
   },
-
   {
     "type": "multiple-choice",
-    "question": "IPv4 位址長度為多少位元？",
-    "options": ["16", "32", "64", "128"],
+    "question": "8-6 在 TCP/IP 參考模型中，下列哪個通訊協定屬於應用層？",
+    "options": ["TCP", "UDP", "FTP", "IP"],
     "correctAnswer": 2
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者不是應用層通訊協定？",
-    "options": ["HTTP", "SMTP", "FTP", "IP"],
+    "question": "8-7 中文網域名稱註冊服務由哪個機構負責？",
+    "options": ["TWNIC", "IETF", "APNIC", "ISOC"],
     "correctAnswer": 0
   },
   {
     "type": "multiple-choice",
-    "question": "ARP 的主要功能為？",
-    "options": ["IP 轉 MAC", "MAC 轉 IP", "資料加密", "封包分割"],
+    "question": "8-8 下列哪種通訊協定可以在郵件伺服器之間傳送電子郵件？",
+    "options": ["MAPI", "SMS", "NNTP", "SMTP"],
     "correctAnswer": 3
   },
   {
     "type": "multiple-choice",
-    "question": "OSI 七層模型中，實體層的主要功能為？",
-    "options": ["錯誤偵測", "資料加密", "位元傳輸", "路由選擇"],
+    "question": "8-9 下列何者可以用來解譯網域名稱？",
+    "options": ["TCP", "SSL", "IP", "DNS"],
     "correctAnswer": 3
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者為封包交換網路的特性？",
-    "options": ["專線連接", "彈性路徑", "高延遲", "單一路徑"],
+    "question": "8-10 IPv6 可能的位址數目是 IPv4 的幾倍？",
+    "options": ["32", "96", "2^96", "2^128"],
     "correctAnswer": 2
   },
-
   {
     "type": "multiple-choice",
-    "question": "下列何者不是伺服器端語言？",
+    "question": "8-11 下列何者不是在伺服器端執行？",
     "options": ["ASP.NET", "JavaScript", "JSP", "PHP"],
     "correctAnswer": 1
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者為網頁前端技術？",
-    "options": ["HTML", "CGI", "JSP", "ASP"],
+    "question": "8-12 下列何者主要的用途是定義網頁的外觀？",
+    "options": ["XML", "CGI", "JavaScript", "CSS"],
     "correctAnswer": 3
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者主要用於資料呈現？",
+    "question": "8-13 若要舉行視訊會議，您認為可以使用下列哪套軟體？",
     "options": ["Chrome", "Canva", "Zoom", "PowerPoint"],
     "correctAnswer": 2
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者不是網路服務？",
-    "options": ["Email", "FTP", "HTTP", "Excel"],
+    "question": "8-14 若要直播電玩賽事，您認為可以使用下列哪個平台？",
+    "options": ["Flickr", "Twitch", "Netflix", "Google Drive"],
     "correctAnswer": 1
   },
   {
     "type": "multiple-choice",
-    "question": "IP 位址主要功能為？",
-    "options": ["識別網路裝置", "資料加密", "路由選擇", "封包排序"],
-    "correctAnswer": 0
-  },
-
-  {
-    "type": "multiple-choice",
-    "question": "下列何者屬於 Class C 網路？",
-    "options": ["192.168.1.0", "10.0.0.0", "127.0.0.1", "224.0.0.0"],
-    "correctAnswer": 1
-  },
-  {
-    "type": "multiple-choice",
-    "question": "網路遮罩的用途為？",
-    "options": ["加密資料", "區分網路與主機", "轉換協定", "檔案壓縮"],
-    "correctAnswer": 1
-  },
-  {
-    "type": "multiple-choice",
-    "question": "下列何者為私有 IP 位址？",
-    "options": ["8.8.8.8", "192.168.0.1", "140.112.1.1", "1.1.1.1"],
+    "question": "8-15 下列哪個 URI 的寫法錯誤？",
+    "options": ["mailto://jean@mail.lucky.com", "ftp://ftp.lucky.com", "file:///c:/Windows/win.ini", "http://www.lucky.com"],
     "correctAnswer": 0
   },
   {
     "type": "multiple-choice",
-    "question": "IPv6 位址長度為？",
-    "options": ["32", "64", "96", "128"],
+    "question": "8-16 如欲將一個 Class B 網路劃分為五個子網路，其子網路遮罩須設定為何？",
+    "options": ["255.255.0.0", "255.255.224.0", "255.255.240.0", "255.255.248.0"],
+    "correctAnswer": 1
+  },
+  {
+    "type": "multiple-choice",
+    "question": "8-17 IP 位址的第一個數字為 140，表示該位址屬於哪種網路等級？",
+    "options": ["Class A", "Class B", "Class C", "Class D"],
+    "correctAnswer": 1
+  },
+  {
+    "type": "multiple-choice",
+    "question": "8-18 假設網路 163.13.0.0 的子遮罩為 255.255.24.192，下列何者屬於不同的子網路？",
+    "options": ["163.13.25.72", "163.13.23.71", "163.13.48.96", "163.13.80.80"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "8-19 假設主機的 IP 位址為 152.40.5.77，遮罩為 255.255.255.252，那麼主機的網路編號為何？",
+    "options": ["152.40.5.72", "152.40.5.64", "152.40.5.70", "152.40.5.76"],
     "correctAnswer": 3
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者為 DNS 查詢流程的第一步？",
-    "options": ["向本機快取查詢", "向根伺服器查詢", "向權威伺服器查詢", "向 ISP 查詢"],
+    "question": "8-20 如欲將 IP 位址 140.112.30.22～140.112.30.80 劃分為兩個子網路，子遮罩應設定為下列何者？",
+    "options": ["255.255.255.254", "255.255.255.192", "255.255.255.248", "255.255.255.224"],
     "correctAnswer": 1
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者為 2.4GHz ISM 頻段技術？",
-    "options": ["Wi-Fi", "LTE", "NFC", "ZigBee"],
+    "question": "7-1. 和有線網路相比，下列何者不是無線網路的優點？",
+    "options": ["架設成本較低", "機動性較高", "容易架設", "容易維護"],
     "correctAnswer": 0
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者不是短距離無線通訊技術？",
-    "options": ["藍牙", "Wi-Fi", "ZigBee", "GSM"],
+    "question": "7-2. 下列何者使用 2.4GHz ISM 頻段？",
+    "options": ["藍牙", "UWB", "802.11a", "NFC"],
     "correctAnswer": 0
   },
   {
     "type": "multiple-choice",
-    "question": "RFID 的主要應用為？",
-    "options": ["網頁瀏覽", "身分辨識", "資料備份", "影像處理"],
+    "question": "7-3. 下列何者不屬於近距離無線通訊標準？",
+    "options": ["藍牙", "ZigBee", "NFC", "LTE"],
     "correctAnswer": 3
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者為無線感測網路（WSN）的特性？",
-    "options": ["高耗電", "節點多且低功耗", "高速傳輸", "長距離"],
+    "question": "7-4. 下列關於 RFID 的敘述何者錯誤？",
+    "options": [
+      "悠遊卡屬於 RFID 的應用",
+      "RFID 就是平常看見的條碼",
+      "RFID 具有防磁、耐高溫的特點",
+      "RFID 的傳輸媒介為無線電"
+    ],
     "correctAnswer": 1
   },
   {
     "type": "multiple-choice",
-    "question": "WiMAX 屬於哪一代行動通訊？",
-    "options": ["2G", "3G", "4G", "5G"],
+    "question": "7-5. 下列何者比較適合應用於手機行動支付？",
+    "options": ["LTE", "WiMAX", "NFC", "UWB"],
     "correctAnswer": 2
   },
-
   {
     "type": "multiple-choice",
-    "question": "ZigBee 的主要特性為？",
-    "options": ["高速", "低功耗", "高頻寬", "長距離"],
+    "question": "7-6. 下列何者比較適合應用於無線感測網路？",
+    "options": ["Wi-Fi", "ZigBee", "LTE", "WiMAX"],
     "correctAnswer": 1
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者屬於 3G 行動通訊系統？",
+    "question": "7-7. 下列何者比較適合應用於物聯網和車聯網？",
+    "options": ["2G", "5G", "衛星通訊", "802.11"],
+    "correctAnswer": 1
+  },
+  {
+    "type": "multiple-choice",
+    "question": "7-8. 第二代行動通訊可以傳送下列何者？",
+    "options": ["類比聲音", "數位影像", "數位聲音", "類比影像"],
+    "correctAnswer": 2
+  },
+  {
+    "type": "multiple-choice",
+    "question": "7-9. 下列何者屬於第三代行動通訊系統？",
     "options": ["AMPS", "WCDMA", "UWB", "LTE"],
     "correctAnswer": 1
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者為無線區域網路標準？",
-    "options": ["802.3", "802.5", "802.11", "802.16"],
+    "question": "7-10. 下列關於 GEO 衛星的敘述何者錯誤？",
+    "options": [
+      "GEO 衛星的發射成本比 MEO 與 LEO 衛星來得高",
+      "GEO 衛星的傳輸延遲比 MEO 與 LEO 衛星來得長",
+      "GEO 衛星的訊號涵蓋範圍比 MEO 與 LEO 衛星來得小",
+      "GEO 衛星屬於赤道軌道衛星"
+    ],
     "correctAnswer": 2
   },
   {
     "type": "multiple-choice",
-    "question": "NFC 通訊距離約為？",
-    "options": ["10 公尺", "1 公尺", "10 公分", "1 公里"],
-    "correctAnswer": 1
-  },
-  {
-    "type": "multiple-choice",
-    "question": "4G 行動通訊標準為？",
-    "options": ["EDGE", "LTE-Advanced", "GPRS", "CDMA2000"],
-    "correctAnswer": 2
-  },
-
-  {
-    "type": "multiple-choice",
-    "question": "5G 行動通訊的主要特性為？",
-    "options": ["低速", "高延遲", "高速低延遲", "只能語音"],
+    "question": "7-11. 下列何者是低軌道衛星（LEO）的應用？",
+    "options": ["衛星實況轉播", "全球定位系統（GPS）", "同步氣象衛星", "SpaceX 星鏈"],
     "correctAnswer": 3
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者為行動通訊中的基地台？",
-    "options": ["UE", "Node B", "Router", "Switch"],
+    "question": "7-12. 下列何者是 4G 行動通訊標準之一？",
+    "options": ["GSM", "LTE-Advanced", "GPRS", "CDMA2000"],
     "correctAnswer": 1
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者為 4G 通訊技術？",
-    "options": ["GPRS", "EDGE", "LTE", "HSPA"],
+    "question": "7-13. 下列關於 5G 行動通訊的敘述何者錯誤？",
+    "options": [
+      "最高下行速率可達 20Gbps，最高上行速率可達 10Gbps",
+      "能夠連結並支援數十萬個無線感測器",
+      "適合應用於 VR、AR、無人機、自駕車等領域",
+      "通訊標準為 3GPP 所提出的 LTE-A Pro"
+    ],
     "correctAnswer": 3
   },
   {
     "type": "multiple-choice",
-    "question": "行動通訊中 UE 指的是？",
-    "options": ["使用者設備", "基地台", "核心網路", "傳輸設備"],
+    "question": "7-14. 下列關於 Wi-Fi、藍牙、5G 的敘述何者錯誤？",
+    "options": [
+      "三者的傳輸速率以藍牙最慢",
+      "藍牙的標準為 IEEE 802.15",
+      "三者的傳輸距離以 Wi-Fi 最遠",
+      "Wi-Fi 的標準為 IEEE 802.11x"
+    ],
     "correctAnswer": 2
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者為無線通訊的干擾來源？",
-    "options": ["牆壁", "微波爐", "距離", "電壓"],
+    "question": "7-15. 下列關於藍牙與 NFC 的敘述何者錯誤？",
+    "options": [
+      "藍牙的傳輸距離比 NFC 遠",
+      "NFC 的目標是取代藍牙",
+      "藍牙的傳輸速率比 NFC 快",
+      "NFC 的安全性比藍牙高"
+    ],
     "correctAnswer": 1
   },
   {
     "type": "multiple-choice",
-    "question": "下列何者為低功耗廣域網路（LPWAN）技術？",
-    "options": ["LTE", "NB-IoT", "Wi-Fi", "Bluetooth"],
+    "question": "7-16. 透過商品上的微晶片來辨識與確認商品狀態的無線辨識技術稱為什麼？",
+    "options": ["RFID", "ZigBee", "藍牙", "UWB"],
     "correctAnswer": 0
   }
+
 
 
 ]
