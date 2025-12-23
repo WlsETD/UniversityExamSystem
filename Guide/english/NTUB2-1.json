@@ -1,182 +1,332 @@
 [
   {
     "type": "grammar",
-    "question": "Koalas are endangered because their habitats are ______.",
-    "options": ["disappearing", "disappear", "disappeared", "to disappear"],
+    "question": "選出文法正確的句子。",
+    "options": [
+      "Koalas are endangered because their habitats are disappearing.",
+      "Koalas is endangered because their habitats are disappearing.",
+      "Koalas are endangered because their habitat are disappearing.",
+      "Koalas are endangered because their habitats is disappearing."
+    ],
     "correctAnswer": 0
   },
   {
     "type": "grammar",
-    "question": "Many animals will die out if people ______ cutting down forests.",
-    "options": ["keep", "kept", "will keep", "are kept"],
+    "question": "選出文法正確的句子。",
+    "options": [
+      "Many animals will die out if people keep cutting down forests.",
+      "Many animals will die out if people keeps cutting down forests.",
+      "Many animals will die out if people kept cutting down forests.",
+      "Many animals will die out if people are keep cutting down forests."
+    ],
     "correctAnswer": 0
   },
   {
     "type": "grammar",
-    "question": "We should do our best to ______ the environment.",
-    "options": ["protect", "protecting", "protected", "to protecting"],
+    "question": "選出文法正確的句子。",
+    "options": [
+      "We should do our best to protect the environment.",
+      "We should do our best protect the environment.",
+      "We should do our best to protecting the environment.",
+      "We should do our best protecting the environment to."
+    ],
     "correctAnswer": 0
   },
   {
     "type": "grammar",
-    "question": "Scientists are working hard ______ endangered species.",
-    "options": ["to save", "save", "saving", "saved"],
+    "question": "選出文法正確的句子。",
+    "options": [
+      "Scientists are working hard to save endangered species.",
+      "Scientists are working hard save endangered species.",
+      "Scientists are working hard saving endangered species.",
+      "Scientists are working hard for save endangered species."
+    ],
     "correctAnswer": 0
   },
   {
     "type": "grammar",
-    "question": "Climate change is a serious ______ to wildlife.",
-    "options": ["threat", "thread", "throat", "throw"],
+    "question": "選出文法正確的句子。",
+    "options": [
+      "Climate change is a serious threat to wildlife.",
+      "Climate change is a serious threaten to wildlife.",
+      "Climate change are a serious threat to wildlife.",
+      "Climate change is serious threat to the wildlife."
+    ],
     "correctAnswer": 0
   },
   {
     "type": "grammar",
-    "question": "The baby kangaroo stays ______ its mother’s pouch.",
-    "options": ["in", "on", "at", "to"],
+    "question": "選出文法正確的句子。",
+    "options": [
+      "The baby kangaroo stays in its mother’s pouch.",
+      "The baby kangaroo stays on its mother’s pouch.",
+      "The baby kangaroo stays at its mother’s pouch.",
+      "The baby kangaroo stays to its mother’s pouch."
+    ],
     "correctAnswer": 0
   },
   {
     "type": "grammar",
-    "question": "Many animals lose their homes due ______ deforestation.",
-    "options": ["to", "for", "with", "by"],
+    "question": "選出文法正確的句子。",
+    "options": [
+      "Many animals lose their homes due to deforestation.",
+      "Many animals lose their homes due for deforestation.",
+      "Many animals lose their homes due deforestation.",
+      "Many animals lose their homes due with deforestation."
+    ],
     "correctAnswer": 0
   },
   {
     "type": "grammar",
-    "question": "Researchers use camera traps to ______ wild animals.",
-    "options": ["observe", "obtain", "offer", "open"],
+    "question": "選出文法正確的句子。",
+    "options": [
+      "Researchers use camera traps to observe wild animals.",
+      "Researchers use camera traps observe wild animals.",
+      "Researchers use camera traps for observe wild animals.",
+      "Researchers use camera traps to observing wild animals."
+    ],
     "correctAnswer": 0
   },
   {
     "type": "grammar",
-    "question": "The government made new ______ to protect wildlife.",
-    "options": ["regulations", "relations", "reactions", "registrations"],
+    "question": "選出文法正確的句子。",
+    "options": [
+      "The government made new regulations to protect wildlife.",
+      "The government made new regulation to protect wildlife.",
+      "The government make new regulations to protect wildlife.",
+      "The government made new regulations for protect wildlife."
+    ],
     "correctAnswer": 0
   },
   {
     "type": "grammar",
-    "question": "A new reserve ______ last year to protect endangered animals.",
-    "options": ["was built", "build", "is building", "has build"],
+    "question": "選出文法正確的句子。",
+    "options": [
+      "A new reserve was built last year to protect endangered animals.",
+      "A new reserve built last year to protect endangered animals.",
+      "A new reserve was build last year to protect endangered animals.",
+      "A new reserve is built last year to protect endangered animals."
+    ],
     "correctAnswer": 0
   },
   {
     "type": "grammar",
-    "question": "People should raise awareness ______ environmental protection.",
-    "options": ["about", "from", "into", "during"],
+    "question": "選出文法正確的句子。",
+    "options": [
+      "People should raise awareness about environmental protection.",
+      "People should raise awareness of to environmental protection.",
+      "People should raise awareness for environmental protection.",
+      "People should raise awareness into environmental protection."
+    ],
     "correctAnswer": 0
   },
   {
     "type": "grammar",
-    "question": "The zoo is a safe place for animals in ______.",
-    "options": ["captivity", "activity", "creativity", "community"],
+    "question": "選出文法正確的句子。",
+    "options": [
+      "The zoo is a safe place for animals in captivity.",
+      "The zoo is a safe place for animals on captivity.",
+      "The zoo is a safe place for animals in captive.",
+      "The zoo is a safe place for animals at captivity."
+    ],
     "correctAnswer": 0
   },
   {
     "type": "grammar",
-    "question": "If we don’t act now, some species may become ______.",
-    "options": ["extinct", "excited", "excellent", "expensive"],
+    "question": "選出文法正確的句子。",
+    "options": [
+      "If we don’t act now, some species may become extinct.",
+      "If we don’t act now, some species may became extinct.",
+      "If we don’t act now, some species may becoming extinct.",
+      "If we don’t act now, some species may become extinction."
+    ],
     "correctAnswer": 0
   },
   {
     "type": "grammar",
-    "question": "We need to ______ pollution to protect our planet.",
-    "options": ["reduce", "remove", "relax", "release"],
+    "question": "選出文法正確的句子。",
+    "options": [
+      "We need to reduce pollution to protect our planet.",
+      "We need reduce pollution to protect our planet.",
+      "We need to reducing pollution to protect our planet.",
+      "We need reducing pollution to protect our planet."
+    ],
     "correctAnswer": 0
   },
   {
     "type": "grammar",
-    "question": "Using renewable energy can help ______ pollution.",
-    "options": ["reduce", "reducing", "reduced", "to reducing"],
+    "question": "選出文法正確的句子。",
+    "options": [
+      "Using renewable energy can reduce pollution.",
+      "Using renewable energy can reduces pollution.",
+      "Using renewable energy can reducing pollution.",
+      "Using renewable energy can reduced pollution."
+    ],
     "correctAnswer": 0
   },
   {
     "type": "grammar",
-    "question": "Snow leopards are endangered ______ hunting and climate change.",
-    "options": ["because of", "because", "so", "although"],
+    "question": "選出文法正確的句子。",
+    "options": [
+      "Snow leopards are endangered because of hunting and climate change.",
+      "Snow leopards are endangered because hunting and climate change.",
+      "Snow leopards are endangered because of hunt and climate change.",
+      "Snow leopards is endangered because of hunting and climate change."
+    ],
     "correctAnswer": 0
   },
   {
     "type": "grammar",
-    "question": "The leopard is a predator that ______ at night.",
-    "options": ["hunts", "hunt", "hunted", "hunting"],
+    "question": "選出文法正確的句子。",
+    "options": [
+      "The leopard is a strong predator that hunts at night.",
+      "The leopard is a strong predator that hunt at night.",
+      "The leopard is a strong predator who hunts at night.",
+      "The leopard is a strong predator which hunts at night."
+    ],
     "correctAnswer": 0
   },
   {
     "type": "grammar",
-    "question": "Koalas ______ leaves and sleep a lot.",
-    "options": ["eat", "eats", "ate", "eating"],
+    "question": "選出文法正確的句子。",
+    "options": [
+      "Koalas eat leaves and sleep a lot.",
+      "Koalas eats leaves and sleep a lot.",
+      "Koalas eat leaves and sleeps a lot.",
+      "Koalas eating leaves and sleep a lot."
+    ],
     "correctAnswer": 0
   },
   {
     "type": "grammar",
-    "question": "The scientist discovered new information ______ the species.",
-    "options": ["about", "at", "for", "to"],
+    "question": "選出文法正確的句子。",
+    "options": [
+      "The scientist discovered new information about the species.",
+      "The scientist discovered new information of the species.",
+      "The scientist discovered new informations about the species.",
+      "The scientist discovered new information for the species."
+    ],
     "correctAnswer": 0
   },
   {
     "type": "grammar",
-    "question": "She donated money to the wildlife ______.",
-    "options": ["foundation", "function", "formation", "fountain"],
+    "question": "選出文法正確的句子。",
+    "options": [
+      "She donated money to a wildlife foundation.",
+      "She donated money for a wildlife foundation.",
+      "She donated money into a wildlife foundation.",
+      "She donated money at a wildlife foundation."
+    ],
     "correctAnswer": 0
   },
   {
     "type": "grammar",
-    "question": "It is important ______ students to learn about conservation.",
-    "options": ["for", "to", "with", "by"],
+    "question": "選出文法正確的句子。",
+    "options": [
+      "It is important for students to learn about conservation.",
+      "It is important to students to learn about conservation.",
+      "It is important for students learning about conservation.",
+      "It is important students to learn about conservation."
+    ],
     "correctAnswer": 0
   },
   {
     "type": "grammar",
-    "question": "The nurse takes care of patients ______ the hospital.",
-    "options": ["in", "on", "at", "to"],
+    "question": "選出文法正確的句子。",
+    "options": [
+      "The nurse takes care of patients in the hospital.",
+      "The nurse takes care patients in the hospital.",
+      "The nurse takes care of patients at the hospital in.",
+      "The nurse takes care to patients in the hospital."
+    ],
     "correctAnswer": 0
   },
   {
     "type": "grammar",
-    "question": "They built a new hospital to provide medical ______.",
-    "options": ["treatment", "traffic", "tradition", "temperature"],
+    "question": "選出文法正確的句子。",
+    "options": [
+      "They built a new hospital to provide medical treatment.",
+      "They built a new hospital for provide medical treatment.",
+      "They built a new hospital to providing medical treatment.",
+      "They build a new hospital to provide medical treatment."
+    ],
     "correctAnswer": 0
   },
   {
     "type": "grammar",
-    "question": "We must ______ sure the animals are safe.",
-    "options": ["make", "do", "take", "put"],
+    "question": "選出文法正確的句子。",
+    "options": [
+      "We must make sure the animals are safe.",
+      "We must do sure the animals are safe.",
+      "We must take sure the animals are safe.",
+      "We must put sure the animals are safe."
+    ],
     "correctAnswer": 0
   },
   {
     "type": "grammar",
-    "question": "He is interested ______ learning about wildlife.",
-    "options": ["in", "on", "at", "for"],
+    "question": "選出文法正確的句子。",
+    "options": [
+      "He is interested in learning about wildlife.",
+      "He is interested on learning about wildlife.",
+      "He is interested at learning about wildlife.",
+      "He is interested for learning about wildlife."
+    ],
     "correctAnswer": 0
   },
   {
     "type": "grammar",
-    "question": "The teacher asked the students ______ quietly.",
-    "options": ["to sit", "sit", "sitting", "sat"],
+    "question": "選出文法正確的句子。",
+    "options": [
+      "The teacher asked the students to sit quietly.",
+      "The teacher asked the students sit quietly.",
+      "The teacher asked the students sitting quietly.",
+      "The teacher asked the students sat quietly."
+    ],
     "correctAnswer": 0
   },
   {
     "type": "grammar",
-    "question": "Animals need clean air and water ______ survive.",
-    "options": ["to", "for", "so", "with"],
+    "question": "選出文法正確的句子。",
+    "options": [
+      "Animals need clean air and water to survive.",
+      "Animals need clean air and water for survive.",
+      "Animals need clean air and water survive.",
+      "Animals need clean air and water to surviving."
+    ],
     "correctAnswer": 0
   },
   {
     "type": "grammar",
-    "question": "This is the reserve ______ many endangered animals live.",
-    "options": ["where", "which", "who", "what"],
+    "question": "選出文法正確的句子。",
+    "options": [
+      "This is the reserve where many endangered animals live.",
+      "This is the reserve which many endangered animals live.",
+      "This is the reserve that many endangered animals live in it.",
+      "This is the reserve where do many endangered animals live."
+    ],
     "correctAnswer": 0
   },
   {
     "type": "grammar",
-    "question": "Deforestation is one of the ______ problems for wildlife.",
-    "options": ["biggest", "bigger", "big", "more big"],
+    "question": "選出文法正確的句子。",
+    "options": [
+      "Deforestation is one of the biggest problems for wildlife.",
+      "Deforestation is one of the bigger problems for wildlife.",
+      "Deforestation is one of the most big problems for wildlife.",
+      "Deforestation is one of the big problems for wildlife."
+    ],
     "correctAnswer": 0
   },
   {
     "type": "grammar",
-    "question": "If people stop hunting, more animals ______ survive.",
-    "options": ["will", "would", "are", "did"],
+    "question": "選出文法正確的句子。",
+    "options": [
+      "If people stop hunting, more animals will survive.",
+      "If people stop hunting, more animals would survive.",
+      "If people stop hunting, more animals are survive.",
+      "If people stop hunting, more animals will survived."
+    ],
     "correctAnswer": 0
   }
 ]
