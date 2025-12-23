@@ -1,3 +1,4 @@
 [
-  { "id": "com", "name": "計算機概論", "file": "com.json" }
+  { "id": "com", "name": "計算機概論", "file": "com.json" },
+  { "id": "wireless", "name": "計算機概論期末", "file": "com2.json" }
 ]

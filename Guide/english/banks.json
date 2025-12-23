@@ -10,9 +10,9 @@
     "file": "NTUB1-1.json"
   },
   {
-    "id": "ntub-fill2",
-    "name": "北商大 1 期末選擇",
-    "file": "NTUB2.json"
+    "id": "ntub-fill2-1",
+    "name": "北商大 1 期末單字選擇",
+    "file": "NTUB2-2.json"
   },
   {
     "id": "ntuse-mid-choice1",
@@ -33,5 +33,10 @@
     "id": "ntuse-mid-choice5",
     "name": "雲科大C1",
     "file": "NTUSEC1.json"
+  },
+   {
+    "id": "ntuse-mid-choice6",
+    "name": "北商期末文法題",
+    "file": "NTUB2-1.json"
   }
 ]
