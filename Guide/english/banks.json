@@ -33,11 +33,10 @@
     "id": "ntuse-mid-choice5",
     "name": "雲科大C1",
     "file": "NTUSEC1.json"
-  }
+  },
    {
     "id": "ntuse-mid-choice6",
     "name": "北商期末文法題",
     "file": "NTUB2-1.json"
   }
-]
 ]
