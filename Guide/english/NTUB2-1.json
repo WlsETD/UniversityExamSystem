@@ -1,6 +1,6 @@
 [
   {
-    "type": "grammar",
+    "type": "multiple-choice",
     "question": "選出文法正確的句子。",
     "options": [
       "Koalas are endangered because their habitats are disappearing.",
@@ -11,7 +11,7 @@
     "correctAnswer": 0
   },
   {
-    "type": "grammar",
+    "type": "multiple-choice",
     "question": "選出文法正確的句子。",
     "options": [
       "Many animals will die out if people keep cutting down forests.",
@@ -22,7 +22,7 @@
     "correctAnswer": 0
   },
   {
-    "type": "grammar",
+    "type": "multiple-choice",
     "question": "選出文法正確的句子。",
     "options": [
       "We should do our best to protect the environment.",
@@ -33,7 +33,7 @@
     "correctAnswer": 0
   },
   {
-    "type": "grammar",
+    "type": "multiple-choice",
     "question": "選出文法正確的句子。",
     "options": [
       "Scientists are working hard to save endangered species.",
@@ -44,7 +44,7 @@
     "correctAnswer": 0
   },
   {
-    "type": "grammar",
+    "type": "multiple-choice",
     "question": "選出文法正確的句子。",
     "options": [
       "Climate change is a serious threat to wildlife.",
@@ -55,7 +55,7 @@
     "correctAnswer": 0
   },
   {
-    "type": "grammar",
+    "type": "multiple-choice",
     "question": "選出文法正確的句子。",
     "options": [
       "The baby kangaroo stays in its mother’s pouch.",
@@ -66,7 +66,7 @@
     "correctAnswer": 0
   },
   {
-    "type": "grammar",
+    "type": "multiple-choice",
     "question": "選出文法正確的句子。",
     "options": [
       "Many animals lose their homes due to deforestation.",
@@ -77,7 +77,7 @@
     "correctAnswer": 0
   },
   {
-    "type": "grammar",
+    "type": "multiple-choice",
     "question": "選出文法正確的句子。",
     "options": [
       "Researchers use camera traps to observe wild animals.",
@@ -88,7 +88,7 @@
     "correctAnswer": 0
   },
   {
-    "type": "grammar",
+    "type": "multiple-choice",
     "question": "選出文法正確的句子。",
     "options": [
       "The government made new regulations to protect wildlife.",
@@ -99,7 +99,7 @@
     "correctAnswer": 0
   },
   {
-    "type": "grammar",
+    "type": "multiple-choice",
     "question": "選出文法正確的句子。",
     "options": [
       "A new reserve was built last year to protect endangered animals.",
@@ -110,7 +110,7 @@
     "correctAnswer": 0
   },
   {
-    "type": "grammar",
+    "type": "multiple-choice",
     "question": "選出文法正確的句子。",
     "options": [
       "People should raise awareness about environmental protection.",
@@ -121,7 +121,7 @@
     "correctAnswer": 0
   },
   {
-    "type": "grammar",
+    "type": "multiple-choice",
     "question": "選出文法正確的句子。",
     "options": [
       "The zoo is a safe place for animals in captivity.",
@@ -132,7 +132,7 @@
     "correctAnswer": 0
   },
   {
-    "type": "grammar",
+    "type": "multiple-choice",
     "question": "選出文法正確的句子。",
     "options": [
       "If we don’t act now, some species may become extinct.",
@@ -143,7 +143,7 @@
     "correctAnswer": 0
   },
   {
-    "type": "grammar",
+    "type": "multiple-choice",
     "question": "選出文法正確的句子。",
     "options": [
       "We need to reduce pollution to protect our planet.",
@@ -154,7 +154,7 @@
     "correctAnswer": 0
   },
   {
-    "type": "grammar",
+    "type": "multiple-choice",
     "question": "選出文法正確的句子。",
     "options": [
       "Using renewable energy can reduce pollution.",
@@ -165,7 +165,7 @@
     "correctAnswer": 0
   },
   {
-    "type": "grammar",
+    "type": "multiple-choice",
     "question": "選出文法正確的句子。",
     "options": [
       "Snow leopards are endangered because of hunting and climate change.",
@@ -176,7 +176,7 @@
     "correctAnswer": 0
   },
   {
-    "type": "grammar",
+    "type": "multiple-choice",
     "question": "選出文法正確的句子。",
     "options": [
       "The leopard is a strong predator that hunts at night.",
@@ -187,7 +187,7 @@
     "correctAnswer": 0
   },
   {
-    "type": "grammar",
+    "type": "multiple-choice",
     "question": "選出文法正確的句子。",
     "options": [
       "Koalas eat leaves and sleep a lot.",
@@ -198,7 +198,7 @@
     "correctAnswer": 0
   },
   {
-    "type": "grammar",
+    "type": "multiple-choice",
     "question": "選出文法正確的句子。",
     "options": [
       "The scientist discovered new information about the species.",
@@ -209,7 +209,7 @@
     "correctAnswer": 0
   },
   {
-    "type": "grammar",
+    "type": "multiple-choice",
     "question": "選出文法正確的句子。",
     "options": [
       "She donated money to a wildlife foundation.",
@@ -220,7 +220,7 @@
     "correctAnswer": 0
   },
   {
-    "type": "grammar",
+    "type": "multiple-choice",
     "question": "選出文法正確的句子。",
     "options": [
       "It is important for students to learn about conservation.",
@@ -231,7 +231,7 @@
     "correctAnswer": 0
   },
   {
-    "type": "grammar",
+    "type": "multiple-choice",
     "question": "選出文法正確的句子。",
     "options": [
       "The nurse takes care of patients in the hospital.",
@@ -242,7 +242,7 @@
     "correctAnswer": 0
   },
   {
-    "type": "grammar",
+    "type": "multiple-choice",
     "question": "選出文法正確的句子。",
     "options": [
       "They built a new hospital to provide medical treatment.",
@@ -253,7 +253,7 @@
     "correctAnswer": 0
   },
   {
-    "type": "grammar",
+    "type": "multiple-choice",
     "question": "選出文法正確的句子。",
     "options": [
       "We must make sure the animals are safe.",
@@ -264,7 +264,7 @@
     "correctAnswer": 0
   },
   {
-    "type": "grammar",
+    "type": "multiple-choice",
     "question": "選出文法正確的句子。",
     "options": [
       "He is interested in learning about wildlife.",
@@ -275,7 +275,7 @@
     "correctAnswer": 0
   },
   {
-    "type": "grammar",
+    "type": "multiple-choice",
     "question": "選出文法正確的句子。",
     "options": [
       "The teacher asked the students to sit quietly.",
@@ -286,7 +286,7 @@
     "correctAnswer": 0
   },
   {
-    "type": "grammar",
+    "type": "multiple-choice",
     "question": "選出文法正確的句子。",
     "options": [
       "Animals need clean air and water to survive.",
@@ -297,7 +297,7 @@
     "correctAnswer": 0
   },
   {
-    "type": "grammar",
+    "type": "multiple-choice",
     "question": "選出文法正確的句子。",
     "options": [
       "This is the reserve where many endangered animals live.",
@@ -308,7 +308,7 @@
     "correctAnswer": 0
   },
   {
-    "type": "grammar",
+    "type": "multiple-choice",
     "question": "選出文法正確的句子。",
     "options": [
       "Deforestation is one of the biggest problems for wildlife.",
@@ -319,7 +319,7 @@
     "correctAnswer": 0
   },
   {
-    "type": "grammar",
+    "type": "multiple-choice",
     "question": "選出文法正確的句子。",
     "options": [
       "If people stop hunting, more animals will survive.",
