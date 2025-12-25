@@ -1,0 +1,442 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "1.關於「公開資訊觀測站」的功能,下列何者正確?",
+    "options": [
+      "只能查詢政府公告的政策資訊",
+      "可查詢上市、上櫃公司的財務報表與重大訊息",
+      "提供企業內部員工個資查詢服務",
+      "僅限投資銀行專業人員使用"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "type": "multiple-choice",
+    "question": "2.下列何者最符合小規模、低成本創業的特徵?",
+    "options": [
+      "需要龐大資金與多名員工",
+      "以個人或小團隊方式靈活運作",
+      "必須先有完整的公司制度",
+      "適合大企業進行測試"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "type": "multiple-choice",
+    "question": "3.在數位時代,創業者應該如何利用科技優勢?",
+    "options": [
+      "應用人工智慧",
+      "忽略數據分析",
+      "減少技術使用",
+      "完全依賴傳統方法"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "4.「公開資訊觀測站」主要由哪兩個單位共同建置?",
+    "options": [
+      "經濟部與財政部",
+      "證券交易所與櫃買中心",
+      "金融監督管理委員會與國發會",
+      "財政部與內政部"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "type": "multiple-choice",
+    "question": "5.為何有人會選擇小規模創業?",
+    "options": [
+      "需要大量的員工",
+      "資金充足",
+      "想先試驗市場的反應",
+      "想要避免靈活運營"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "type": "multiple-choice",
+    "question": "6.政府補貼冰淇淋產業,會對市場造成什麼影響?",
+    "options": [
+      "供給增加,價格下降",
+      "供給減少,價格上升",
+      "需求減少,價格下降",
+      "需求增加,價格上升"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "7.冰淇淋替代品(冰棒)價格上升,冰淇淋供需會如何?",
+    "options": [
+      "需求下降",
+      "需求上升",
+      "不變",
+      "供給下降"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "type": "multiple-choice",
+    "question": "8.冰淇淋製造技術進步會造成?",
+    "options": [
+      "供給曲線右移,價格下降",
+      "供給曲線左移,價格上升",
+      "需求曲線右移,價格上升",
+      "需求曲線左移,價格下降"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "9.廠商預期夏天冰淇淋價格會上升,他們會怎麼做?",
+    "options": [
+      "提前增加供給",
+      "減少供給,等待價格上升",
+      "增加需求",
+      "減少需求"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "type": "multiple-choice",
+    "question": "10.冰淇淋市場價格遠高於均衡價時,會出現什麼現象?",
+    "options": [
+      "短缺",
+      "剩餘",
+      "均衡",
+      "需求增加"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "type": "multiple-choice",
+    "question": "11.請問基礎框架的順序為何?",
+    "options": [
+      "Input-Process-Output",
+      "Process-Input-Ouput",
+      "Input-Output-Process",
+      "Ouput-Process-Input"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "12.你認為創業過程中最重要的思維轉變是什麼?",
+    "options": [
+      "從我要賣什麼到他們需要什麼",
+      "永遠不改變",
+      "忽略市場趨勢",
+      "完全依賴運氣"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "13.永續經營的關鍵要素是什麼?",
+    "options": [
+      "財務管理與風險控制",
+      "忽略社會責任",
+      "不建立評估機制",
+      "不重視價值觀"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "14.請問大數據中哪個4V中可轉換成有意義的數字?",
+    "options": [
+      "Volume",
+      "Velocity",
+      "Veracity",
+      "Variety"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "type": "multiple-choice",
+    "question": "15.以人為本的創業理念如何幫助企業成功?",
+    "options": [
+      "建立信任關係",
+      "忽略客戶需求",
+      "降低產品質量",
+      "完全不創新"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "16.哪一個屬於Unsupervised Learning?",
+    "options": [
+      "股票價格預測",
+      "疾病診斷",
+      "分群",
+      "垃圾郵件分類"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "type": "multiple-choice",
+    "question": "17.台灣商品標示價格通常採用哪一種消費稅方式?",
+    "options": [
+      "外加營業稅",
+      "稅拔(未稅)",
+      "內含營業稅",
+      "免稅制"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "type": "multiple-choice",
+    "question": "18.請問圖片是如何轉換成有意義的數字?",
+    "options": [
+      "AI可以直接理解的内容",
+      "設計出變數已代表之位置及顏色。",
+      "設計變數x.y計算出x.y代表之出現次數",
+      "圖片的基礎上增加一個變數,此變數為幀數。"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "type": "multiple-choice",
+    "question": "19.哪個不是深度學習常見的演算法?",
+    "options": [
+      "DNN",
+      "RNN",
+      "SVM",
+      "LSTM"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "type": "multiple-choice",
+    "question": "20.請問Output類型中何者是屬於問題的分類?",
+    "options": [
+      "氣溫",
+      "股價",
+      "是或不是",
+      "降雨量"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "type": "multiple-choice",
+    "question": "21.根據台灣的稅制,下列哪一種店家的營業稅稅率最高?",
+    "options": [
+      "樓下的「便利商店」",
+      "機場的「免稅商店」",
+      "傳統市場的「生鮮蔬菜攤」",
+      "有陪侍服務的「夜總會/酒吧」"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "type": "multiple-choice",
+    "question": "22.消費稅(如營業稅)的收入主要被政府用來做什麼?",
+    "options": [
+      "全數作為退稅金額,直接退回給消費者",
+      "作為發票獎金的來源,並用於公共建設",
+      "專門用於支付政府公務人員的薪水",
+      "投資於海外市場,以增加國家的財政收入"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "type": "multiple-choice",
+    "question": "23.一個售價 38 元的菠蘿麵包,營業稅約是多少?",
+    "options": [
+      "0.5元",
+      "1元",
+      "1.8元",
+      "3.8元"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "type": "multiple-choice",
+    "question": "24.下列哪一種情況,你付的錢裡面不需要包含5%營業稅?",
+    "options": [
+      "在便利商店買「蘋果牛奶」",
+      "在麵包店買「蘋果派」",
+      "在迪化街買包裝好的「蘋果乾」",
+      "在傳統市場買未切的「新鮮蘋果」"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "type": "multiple-choice",
+    "question": "價格上升需求量變低，下列外在因素何者為非?",
+    "options": [
+      "物價指數",
+      "經濟成長指數",
+      "季節指數",
+      "天氣指數"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "type": "multiple-choice",
+    "question": "25關於MBS的全文,下列翻譯何者正確?",
+    "options": [
+      "Macro Business Simulation game",
+      "Macro Economic Strategy game",
+      "Macro Industry Strategy game",
+      "Macro Bureau Strike game"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "26在MBS中,學生需考慮的經營決策有哪些面向?",
+    "options": [
+      "僅限於產品價格",
+      "只考量市場回饋",
+      "行銷預算、研發預算及採購物資數量",
+      "專注於生產成本"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "type": "multiple-choice",
+    "question": "27 我們可以透過五感來認識品牌，不包含哪個?",
+    "options": [
+      "聽覺",
+      "視覺",
+      "感覺",
+      "味覺"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "type": "multiple-choice",
+    "question": "28 在MBS中,學生通常會扮演什麼角色?",
+    "options": [
+      "員工",
+      "消費者",
+      "經理人或公司管理者",
+      "法律顧問"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "type": "multiple-choice",
+    "question": "29 MBS的最大優點之一是什麼?",
+    "options": [
+      "決策錯誤會造成真的財務損失",
+      "可在低風險環境練習管理",
+      "僅能用於財務課程",
+      "絕對不需要團隊合作"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "type": "multiple-choice",
+    "question": "30 關於小永和豆漿經營以下何者為非?",
+    "options": [
+      "可自行調整採購、人事、定價等決策參數",
+      "可自行取一個店鋪名稱",
+      "是套能讓學生學習到財務三報表的系統",
+      "目前有能正常使用的小永和豆漿經營系統"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "type": "multiple-choice",
+    "question": "31 啤酒遊戲(Beer Game)最早是由哪個學校設計的?",
+    "options": [
+      "哈佛大學",
+      "史丹佛大學",
+      "麻省理工學院(MIT)",
+      "劍橋大學"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "type": "multiple-choice",
+    "question": "32 在啤酒遊戲中，玩家最主要的目標是什麼?",
+    "options": [
+      "讓工廠生產越多越好",
+      "盡量賺取最多的利潤",
+      "滿足客戶需求並降低庫存與缺貨成本",
+      "讓訂單越多越好"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "type": "multiple-choice",
+    "question": "33 以下哪一現象是啤酒遊戲中最常出現的問題?",
+    "options": [
+      "群體效應",
+      "牛鞭效應",
+      "蝴蝶效應",
+      "網路效應"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "type": "multiple-choice",
+    "question": "34 造成牛鞭效應的主要原因不包刮下列哪一項?",
+    "options": [
+      "訂單延遲",
+      "資訊不透明",
+      "團隊溝通良好",
+      "過度反應"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "type": "multiple-choice",
+    "question": "35 啤酒遊戲帶給我們最重要的學習是什麼?",
+    "options": [
+      "個人努力最重要",
+      "越快反應越好",
+      "要有整體觀與良好溝通",
+      "訂單越多越安全"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "type": "multiple-choice",
+    "question": "36 每次麥當勞廣告最後都會聽到一段音樂，這屬於五感中的什麼?",
+    "options": [
+      "視覺",
+      "聽覺",
+      "嗅覺",
+      "味覺"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "type": "multiple-choice",
+    "question": "37 美國行銷協會(AMA)對品牌的定義包含下列哪個?",
+    "options": [
+      "設計",
+      "標記",
+      "符號",
+      "以上皆是"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "type": "multiple-choice",
+    "question": "38 為什麼需要品牌?",
+    "options": [
+      "建立品牌忠誠",
+      "為了降低成本",
+      "為了讓大家都一樣",
+      "消費者願意支付低價"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "39 兩公司聯名共創新產品是屬於哪種品牌策略?",
+    "options": [
+      "單一品牌",
+      "家族品牌",
+      "合作品牌",
+      "自有品牌"
+    ],
+    "correctAnswer": 2
+  }
+]
