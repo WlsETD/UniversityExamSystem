@@ -898,6 +898,30 @@ function lockRemainingSeconds() {
       document.body.appendChild(s);
     })();
   </script>
+
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCdaN2HicgCNN2Qsy3w1Ey4HJjMQcKQg0U",
+    authDomain: "universityexamsystem-f7b7d.firebaseapp.com",
+    projectId: "universityexamsystem-f7b7d",
+    storageBucket: "universityexamsystem-f7b7d.firebasestorage.app",
+    messagingSenderId: "988290997736",
+    appId: "1:988290997736:web:1fd661ca1f38409e16185d",
+    measurementId: "G-QKKV7D3YP0"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 </body>
 
 </html>
