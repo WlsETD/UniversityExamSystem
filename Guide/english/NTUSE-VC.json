@@ -1,0 +1,1232 @@
+[
+    {
+        "type": "fill-in",
+        "question": "Okay. Do we have _?",
+        "correctAnswer": "everything",
+        "acceptableAnswers": [
+            "everything"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "I have my _.",
+        "correctAnswer": "passport",
+        "acceptableAnswers": [
+            "passport"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Whose ticket is _?",
+        "correctAnswer": "this",
+        "acceptableAnswers": [
+            "this"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "It’s _.",
+        "correctAnswer": "mine",
+        "acceptableAnswers": [
+            "mine"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Those are my _.",
+        "correctAnswer": "sunglasses",
+        "acceptableAnswers": [
+            "sunglasses"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Can you _ them to me?",
+        "correctAnswer": "pass",
+        "acceptableAnswers": [
+            "pass"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Here you _.",
+        "correctAnswer": "go",
+        "acceptableAnswers": [
+            "go"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Is this sunblock _?",
+        "correctAnswer": "yours",
+        "acceptableAnswers": [
+            "yours"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "No, it’s not _.",
+        "correctAnswer": "mine",
+        "acceptableAnswers": [
+            "mine"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Whose camera is _?",
+        "correctAnswer": "this",
+        "acceptableAnswers": [
+            "this"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "It _ to my brother.",
+        "correctAnswer": "belongs",
+        "acceptableAnswers": [
+            "belongs"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "I need it for our _.",
+        "correctAnswer": "trip",
+        "acceptableAnswers": [
+            "trip"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Hello. I’m _ the flight to Buenos Aires.",
+        "correctAnswer": "on",
+        "acceptableAnswers": [
+            "on"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "It’s _ 11:00.",
+        "correctAnswer": "at",
+        "acceptableAnswers": [
+            "at"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "I need to check _.",
+        "correctAnswer": "in",
+        "acceptableAnswers": [
+            "in"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Can I _ your ticket and your passport?",
+        "correctAnswer": "see",
+        "acceptableAnswers": [
+            "see"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Here you _.",
+        "correctAnswer": "are",
+        "acceptableAnswers": [
+            "are"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Do you have a US _?",
+        "correctAnswer": "visa",
+        "acceptableAnswers": [
+            "visa"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "It’s _ my passport.",
+        "correctAnswer": "in",
+        "acceptableAnswers": [
+            "in"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Would you _ a window or aisle seat?",
+        "correctAnswer": "like",
+        "acceptableAnswers": [
+            "like"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "A window seat, _.",
+        "correctAnswer": "please",
+        "acceptableAnswers": [
+            "please"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Is your bag to check in _ carry on?",
+        "correctAnswer": "or",
+        "acceptableAnswers": [
+            "or"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "I’d like to check it _.",
+        "correctAnswer": "in",
+        "acceptableAnswers": [
+            "in"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Here’s your boarding _.",
+        "correctAnswer": "pass",
+        "acceptableAnswers": [
+            "pass"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Your seat _ is 18A.",
+        "correctAnswer": "number",
+        "acceptableAnswers": [
+            "number"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "The flight _ at 10:00.",
+        "correctAnswer": "boards",
+        "acceptableAnswers": [
+            "boards"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "It’s at gate number _.",
+        "correctAnswer": "five",
+        "acceptableAnswers": [
+            "five",
+            "5"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "It’s to the _ after you go through security.",
+        "correctAnswer": "right",
+        "acceptableAnswers": [
+            "right"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Go _ security first.",
+        "correctAnswer": "through",
+        "acceptableAnswers": [
+            "through"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Have a nice _.",
+        "correctAnswer": "trip",
+        "acceptableAnswers": [
+            "trip"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Good afternoon. How can I _ you?",
+        "correctAnswer": "help",
+        "acceptableAnswers": [
+            "help"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "I have a car rental for 7 _.",
+        "correctAnswer": "days",
+        "acceptableAnswers": [
+            "days"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Do you have a booking _?",
+        "correctAnswer": "number",
+        "acceptableAnswers": [
+            "number"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Is that _?",
+        "correctAnswer": "correct",
+        "acceptableAnswers": [
+            "correct"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Do you have a contact number, Mr. _?",
+        "correctAnswer": "Lee",
+        "acceptableAnswers": [
+            "Lee"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "My cell phone _ is 07745673896.",
+        "correctAnswer": "number",
+        "acceptableAnswers": [
+            "number"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Do you have an address _ Argentina?",
+        "correctAnswer": "in",
+        "acceptableAnswers": [
+            "in"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "I’m at Hotel Central _ Avanita, Brazil.",
+        "correctAnswer": "on",
+        "acceptableAnswers": [
+            "on"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Good evening, sir. Can I help _?",
+        "correctAnswer": "you",
+        "acceptableAnswers": [
+            "you"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "I have a _.",
+        "correctAnswer": "reservation",
+        "acceptableAnswers": [
+            "reservation"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "What’s your last _?",
+        "correctAnswer": "name",
+        "acceptableAnswers": [
+            "name"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Do you _ that L-E-E or L-I?",
+        "correctAnswer": "spell",
+        "acceptableAnswers": [
+            "spell"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Is it for one _ or two?",
+        "correctAnswer": "night",
+        "acceptableAnswers": [
+            "night"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "You have a single room, room _.",
+        "correctAnswer": "303",
+        "acceptableAnswers": [
+            "303"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "It’s on the third _.",
+        "correctAnswer": "floor",
+        "acceptableAnswers": [
+            "floor"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Write your passport number on this _.",
+        "correctAnswer": "form",
+        "acceptableAnswers": [
+            "form"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "And _ here, please.",
+        "correctAnswer": "sign",
+        "acceptableAnswers": [
+            "sign"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "How long of a walk is it _ La Boca?",
+        "correctAnswer": "to",
+        "acceptableAnswers": [
+            "to"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "I want to _ Japan next year.",
+        "correctAnswer": "visit",
+        "acceptableAnswers": [
+            "visit"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Can you give me some _?",
+        "correctAnswer": "advice",
+        "acceptableAnswers": [
+            "advice"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Do you think I should go in the _?",
+        "correctAnswer": "summer",
+        "acceptableAnswers": [
+            "summer"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "It’s very _ in the summer.",
+        "correctAnswer": "hot",
+        "acceptableAnswers": [
+            "hot"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "You should go in the _.",
+        "correctAnswer": "spring",
+        "acceptableAnswers": [
+            "spring"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "It’s a beautiful time _ year.",
+        "correctAnswer": "of",
+        "acceptableAnswers": [
+            "of"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "The Japanese gardens are _.",
+        "correctAnswer": "famous",
+        "acceptableAnswers": [
+            "famous"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Do I need to _ a car?",
+        "correctAnswer": "rent",
+        "acceptableAnswers": [
+            "rent"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "No, you don’t need _.",
+        "correctAnswer": "to",
+        "acceptableAnswers": [
+            "to"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "It’s a good idea to take _.",
+        "correctAnswer": "trains",
+        "acceptableAnswers": [
+            "trains",
+            "train"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "They are _ between the big cities.",
+        "correctAnswer": "fast",
+        "acceptableAnswers": [
+            "fast"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "I fly _ Tokyo.",
+        "correctAnswer": "into",
+        "acceptableAnswers": [
+            "into"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Tokyo is very _.",
+        "correctAnswer": "expensive",
+        "acceptableAnswers": [
+            "expensive"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "It’s so _.",
+        "correctAnswer": "crowded",
+        "acceptableAnswers": [
+            "crowded"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Why don’t you _ in Fuji Yoshida?",
+        "correctAnswer": "stay",
+        "acceptableAnswers": [
+            "stay"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "It’s not too _ from Tokyo.",
+        "correctAnswer": "far",
+        "acceptableAnswers": [
+            "far"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "It’s a small city _ Mount Fuji.",
+        "correctAnswer": "near",
+        "acceptableAnswers": [
+            "near"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "The hotels are _.",
+        "correctAnswer": "nice",
+        "acceptableAnswers": [
+            "nice"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Don’t _ everything.",
+        "correctAnswer": "plan",
+        "acceptableAnswers": [
+            "plan"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Tourists often study _ before vacation.",
+        "correctAnswer": "maps",
+        "acceptableAnswers": [
+            "maps",
+            "a map"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "It’s fun to go _.",
+        "correctAnswer": "sightseeing",
+        "acceptableAnswers": [
+            "sightseeing"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Sometimes it’s interesting to leave the map at the _.",
+        "correctAnswer": "hotel",
+        "acceptableAnswers": [
+            "hotel"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "You can leave the city _ and visit new places.",
+        "correctAnswer": "center",
+        "acceptableAnswers": [
+            "center",
+            "centre"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Try the local _.",
+        "correctAnswer": "food",
+        "acceptableAnswers": [
+            "food"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Go to food _ where local people sell fresh food.",
+        "correctAnswer": "markets",
+        "acceptableAnswers": [
+            "markets",
+            "market"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Find out where local people _.",
+        "correctAnswer": "go",
+        "acceptableAnswers": [
+            "go"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Find out about festivals and _.",
+        "correctAnswer": "events",
+        "acceptableAnswers": [
+            "events",
+            "event"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Ask local people for _.",
+        "correctAnswer": "suggestions",
+        "acceptableAnswers": [
+            "suggestions",
+            "suggestion"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Don’t always use the _.",
+        "correctAnswer": "guidebook",
+        "acceptableAnswers": [
+            "guidebook"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Don’t always use the _.",
+        "correctAnswer": "internet",
+        "acceptableAnswers": [
+            "internet",
+            "the internet"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "I’m hungry. What’s in the _?",
+        "correctAnswer": "fridge",
+        "acceptableAnswers": [
+            "fridge",
+            "refrigerator"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "There are some _.",
+        "correctAnswer": "eggs",
+        "acceptableAnswers": [
+            "eggs",
+            "egg"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Do you have any _?",
+        "correctAnswer": "vegetables",
+        "acceptableAnswers": [
+            "vegetables",
+            "vegetable"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "I have an _ and a red pepper.",
+        "correctAnswer": "onion",
+        "acceptableAnswers": [
+            "onion"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Let’s make a Spanish _.",
+        "correctAnswer": "omelette",
+        "acceptableAnswers": [
+            "omelette",
+            "omelet"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Do you have any olive _?",
+        "correctAnswer": "oil",
+        "acceptableAnswers": [
+            "oil"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "I have some corn _.",
+        "correctAnswer": "oil",
+        "acceptableAnswers": [
+            "oil"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "That should be _.",
+        "correctAnswer": "okay",
+        "acceptableAnswers": [
+            "okay",
+            "OK",
+            "ok"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "We need some _.",
+        "correctAnswer": "potatoes",
+        "acceptableAnswers": [
+            "potatoes",
+            "potato"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "I can go to the _.",
+        "correctAnswer": "store",
+        "acceptableAnswers": [
+            "store",
+            "shop"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "I’ll start _.",
+        "correctAnswer": "cooking",
+        "acceptableAnswers": [
+            "cooking"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "My name’s Alex and I’m your _ this evening.",
+        "correctAnswer": "waiter",
+        "acceptableAnswers": [
+            "waiter"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Can we order our _ first?",
+        "correctAnswer": "drinks",
+        "acceptableAnswers": [
+            "drinks",
+            "drink"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "I’d like a _ of iced tea, please.",
+        "correctAnswer": "glass",
+        "acceptableAnswers": [
+            "glass"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Do you have any mineral _?",
+        "correctAnswer": "water",
+        "acceptableAnswers": [
+            "water"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "I’ll have a _ of mineral water.",
+        "correctAnswer": "bottle",
+        "acceptableAnswers": [
+            "bottle"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Would you like sparkling or _?",
+        "correctAnswer": "still",
+        "acceptableAnswers": [
+            "still"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Are you ready to _?",
+        "correctAnswer": "order",
+        "acceptableAnswers": [
+            "order"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Would you like an _?",
+        "correctAnswer": "appetizer",
+        "acceptableAnswers": [
+            "appetizer",
+            "starter"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Just the main _.",
+        "correctAnswer": "dish",
+        "acceptableAnswers": [
+            "dish"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Does the steak come _ a salad?",
+        "correctAnswer": "with",
+        "acceptableAnswers": [
+            "with"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "It comes with French fries and _.",
+        "correctAnswer": "salad",
+        "acceptableAnswers": [
+            "salad"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "How would you like your steak? _ , please.",
+        "correctAnswer": "Medium",
+        "acceptableAnswers": [
+            "Medium",
+            "medium"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Would you like anything _?",
+        "correctAnswer": "else",
+        "acceptableAnswers": [
+            "else"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "It’s my new _.",
+        "correctAnswer": "diet",
+        "acceptableAnswers": [
+            "diet"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "I eat a lot of meat and _.",
+        "correctAnswer": "fish",
+        "acceptableAnswers": [
+            "fish"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "I don’t eat much _.",
+        "correctAnswer": "bread",
+        "acceptableAnswers": [
+            "bread"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "I eat a _ vegetables.",
+        "correctAnswer": "few",
+        "acceptableAnswers": [
+            "few",
+            "a few"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "How much _ can you eat?",
+        "correctAnswer": "fruit",
+        "acceptableAnswers": [
+            "fruit"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Just a little after every _.",
+        "correctAnswer": "meal",
+        "acceptableAnswers": [
+            "meal"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "What about _?",
+        "correctAnswer": "snacks",
+        "acceptableAnswers": [
+            "snacks",
+            "snack"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "I can eat a few _.",
+        "correctAnswer": "nuts",
+        "acceptableAnswers": [
+            "nuts",
+            "nut"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Sometimes I eat a little _.",
+        "correctAnswer": "chocolate",
+        "acceptableAnswers": [
+            "chocolate"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "It’s organic, so there isn’t much _ in it.",
+        "correctAnswer": "sugar",
+        "acceptableAnswers": [
+            "sugar"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Urban farming is when people farm in the middle of the _.",
+        "correctAnswer": "city",
+        "acceptableAnswers": [
+            "city"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "A photographer traveled to urban farms all over the _.",
+        "correctAnswer": "US",
+        "acceptableAnswers": [
+            "US",
+            "U.S.",
+            "USA",
+            "United States"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "One man has bees on the _ of a hotel.",
+        "correctAnswer": "roof",
+        "acceptableAnswers": [
+            "roof"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "There’s a small farm next _ a baseball stadium.",
+        "correctAnswer": "to",
+        "acceptableAnswers": [
+            "to"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Volunteers help in a _ at the White House.",
+        "correctAnswer": "garden",
+        "acceptableAnswers": [
+            "garden"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "The most surprising is at a state _.",
+        "correctAnswer": "prison",
+        "acceptableAnswers": [
+            "prison"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Prisoners take gardening _.",
+        "correctAnswer": "classes",
+        "acceptableAnswers": [
+            "classes",
+            "class"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Urban farming is seen as an answer to world food _.",
+        "correctAnswer": "shortages",
+        "acceptableAnswers": [
+            "shortages",
+            "shortage"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "What are you _?",
+        "correctAnswer": "doing",
+        "acceptableAnswers": [
+            "doing"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Not _.",
+        "correctAnswer": "much",
+        "acceptableAnswers": [
+            "much"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Come and _ us.",
+        "correctAnswer": "join",
+        "acceptableAnswers": [
+            "join"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "You’ll never _.",
+        "correctAnswer": "guess",
+        "acceptableAnswers": [
+            "guess"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "I’m ice _ with Alan.",
+        "correctAnswer": "skating",
+        "acceptableAnswers": [
+            "skating"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "How’s the studying _?",
+        "correctAnswer": "going",
+        "acceptableAnswers": [
+            "going"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "I’m not studying right _.",
+        "correctAnswer": "now",
+        "acceptableAnswers": [
+            "now"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "I’m taking a _.",
+        "correctAnswer": "break",
+        "acceptableAnswers": [
+            "break"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "In fact, I’m playing _ with some friends.",
+        "correctAnswer": "basketball",
+        "acceptableAnswers": [
+            "basketball"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "I’m shopping for _.",
+        "correctAnswer": "clothes",
+        "acceptableAnswers": [
+            "clothes"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "I need clothes for my new _.",
+        "correctAnswer": "job",
+        "acceptableAnswers": [
+            "job"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "I hate being _ all the time.",
+        "correctAnswer": "inside",
+        "acceptableAnswers": [
+            "inside"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "I prefer _ sports.",
+        "correctAnswer": "outdoor",
+        "acceptableAnswers": [
+            "outdoor"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "It looks _.",
+        "correctAnswer": "dangerous",
+        "acceptableAnswers": [
+            "dangerous"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "I don’t want to _.",
+        "correctAnswer": "fall",
+        "acceptableAnswers": [
+            "fall"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "That’s why we use _.",
+        "correctAnswer": "ropes",
+        "acceptableAnswers": [
+            "ropes",
+            "rope"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Do you need a lot of _?",
+        "correctAnswer": "equipment",
+        "acceptableAnswers": [
+            "equipment"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "It costs a lot of _.",
+        "correctAnswer": "money",
+        "acceptableAnswers": [
+            "money"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Esports go .",
+        "correctAnswer": "global",
+        "acceptableAnswers": [
+            "global"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": ", gamers play online around the world.",
+        "correctAnswer": "Nowadays",
+        "acceptableAnswers": [
+            "Nowadays",
+            "nowadays"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Gamers play online _ hundreds of different people.",
+        "correctAnswer": "against",
+        "acceptableAnswers": [
+            "against"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Millions of fans _ these esports.",
+        "correctAnswer": "watch",
+        "acceptableAnswers": [
+            "watch"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "They watch in large _.",
+        "correctAnswer": "stadiums",
+        "acceptableAnswers": [
+            "stadiums",
+            "stadium"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Professional players are very _.",
+        "correctAnswer": "competitive",
+        "acceptableAnswers": [
+            "competitive"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "They can train for up to 14 hours a _.",
+        "correctAnswer": "day",
+        "acceptableAnswers": [
+            "day"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "The industry is _ about a billion dollars.",
+        "correctAnswer": "worth",
+        "acceptableAnswers": [
+            "worth"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Some people don’t _ it’s a real sport.",
+        "correctAnswer": "believe",
+        "acceptableAnswers": [
+            "believe"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Players are not physically _.",
+        "correctAnswer": "active",
+        "acceptableAnswers": [
+            "active"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "Fans _.",
+        "correctAnswer": "disagree",
+        "acceptableAnswers": [
+            "disagree"
+        ]
+    },
+    {
+        "type": "fill-in",
+        "question": "In the future, esports _ be part of the Olympic Games.",
+        "correctAnswer": "might",
+        "acceptableAnswers": [
+            "might"
+        ]
+    }
+]
