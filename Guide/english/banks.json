@@ -35,8 +35,13 @@
     "file": "NTUSEC1.json"
   },
    {
-    "id": "ntuse-mid-choice6",
+    "id": "ntub-mid-choice6",
     "name": "北商期末文法題",
     "file": "NTUB2-1.json"
+  },
+  {
+    "id": "ntuse-voice",
+    "name": "雲科音訊題",
+    "file": "NTUSE-VC.json"
   }
 ]
