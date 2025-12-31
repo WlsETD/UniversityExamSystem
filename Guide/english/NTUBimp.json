@@ -803,7 +803,50 @@
       "By watching for smoke from trees"
     ],
     "correctAnswer": 1
+  },
+  {
+    "type": "multiple-choice",
+    "category": "vocabulary",
+    "question": "Complete the sentence: In recent years, human activity has driven the cassowary nearly to ______.",
+    "options": ["reproduction", "extinction", "capture", "signal"],
+    "correctAnswer": 1
+  },
+  {
+    "type": "multiple-choice",
+    "category": "vocabulary",
+    "question": "Complete the sentence: They ______ shy away from people, but are seen occasionally in city suburbs.",
+    "options": ["tend to", "grasp", "threatens", "reproduction"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "category": "vocabulary",
+    "question": "Complete the sentence: They are seen occasionally in city ______.",
+    "options": ["suburbs", "capture", "primary", "signal"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "category": "vocabulary",
+    "question": "Complete the sentence: The birds even fall into traps meant to ______ wild pigs.",
+    "options": ["capture", "signal", "reproduce", "grasp"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "category": "vocabulary",
+    "question": "Complete the sentence: But it is land development that really ______ cassowaries.",
+    "options": ["grasp", "signal", "threatens", "tend to"],
+    "correctAnswer": 2
+  },
+  {
+    "type": "multiple-choice",
+    "category": "vocabulary",
+    "question": "Complete the sentence: Roads carve up the forest, so their ______ habitat is no longer a single area.",
+    "options": ["primary", "signal", "capture", "reproduction"],
+    "correctAnswer": 0
   }
+
 
 
 
