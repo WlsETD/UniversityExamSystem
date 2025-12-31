@@ -845,9 +845,186 @@
     "question": "Complete the sentence: Roads carve up the forest, so their ______ habitat is no longer a single area.",
     "options": ["primary", "signal", "capture", "reproduction"],
     "correctAnswer": 0
-  }
-
-
-
+  },
+  {
+    "type": "multiple-choice",
+    "category": "reading",
+    "question": "1. What is the main idea of paragraph C?",
+    "options": [
+      "Local herders are uncooperative in attempts to save snow leopards.",
+      "The snow leopard’s endangerment is due in part to the black market.",
+      "Snow leopards are killed for their fur and body parts.",
+      "It is difficult to enforce the laws made to protect the snow leopard."
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "type": "multiple-choice",
+    "category": "reading",
+    "question": "2. In the last sentence of paragraph D, this trend refers to ________.",
+    "options": [
+      "the fall in the snow leopard population",
+      "the pressures caused by the black market",
+      "increasing conflict with the herders",
+      "the opinion of conservationists"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "category": "reading",
+    "question": "3. According to conservationists, what’s the best way to save the snow leopard?",
+    "options": [
+      "create a nature park where they can be free",
+      "move herders away from where the snow leopard lives",
+      "pass laws to punish people who kill snow leopards for their fur",
+      "make people recognize the value of living snow leopards"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "type": "multiple-choice",
+    "category": "reading",
+    "question": "4. Which of these is NOT true about the Himalayan Homestays program?",
+    "options": [
+      "The organization helps herders to build fences.",
+      "Herders provide accommodations to guests.",
+      "Some herders work as nature guides.",
+      "Visitors pay a weekly fee to stay at a herder’s house."
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "type": "multiple-choice",
+    "category": "reading",
+    "question": "5. Why is the Mongolian women’s status in the community “elevated” (paragraph I)?",
+    "options": [
+      "They can encourage their neighbors.",
+      "They are saving money for the snow leopards.",
+      "They are earning money for the community.",
+      "They are living higher up in the mountain."
+    ],
+    "correctAnswer": 2
+  },
+  {
+  "type": "multiple-choice",
+  "category": "reading",
+  "question": "1. What is paragraph C mainly about?",
+  "options": [
+    "how Mount Fuji became an important religious site",
+    "the healing properties of Mount Fuji",
+    "reasons people climb Mount Fuji",
+    "the visitors to Mount Fuji"
+  ],
+  "correctAnswer": 2
+},
+{
+  "type": "multiple-choice",
+  "category": "reading",
+  "question": "2. Which of these statements about Mount Fuji is NOT true?",
+  "options": [
+    "It is in Japan.",
+    "Scientists believe it may erupt soon.",
+    "It has erupted recently.",
+    "Locals have traditions concerning the mountain."
+  ],
+  "correctAnswer": 2
+},
+{
+  "type": "multiple-choice",
+  "category": "reading",
+  "question": "3. In paragraph G, line 4, the word symptoms could be replaced with _____.",
+  "options": [
+    "earthquakes",
+    "signs",
+    "sounds",
+    "lessons"
+  ],
+  "correctAnswer": 1
+},
+{
+  "type": "multiple-choice",
+  "category": "reading",
+  "question": "4. What was the reason for the evacuation from El Popo in 2000?",
+  "options": [
+    "People could see smoke and ash.",
+    "People felt the ground shaking.",
+    "People saw the surface change shape.",
+    "People heard a loud noise."
+  ],
+  "correctAnswer": 0
+},
+{
+  "type": "multiple-choice",
+  "category": "reading",
+  "question": "5. Which statement is true about both Mount Fuji and El Popo?",
+  "options": [
+    "They have both erupted recently.",
+    "They are both less than 100 kilometers from a very large city.",
+    "Locals present gifts to both volcanoes for protection.",
+    "They both provide rich soil used for producing coffee."
+  ],
+  "correctAnswer": 2
+},
+{
+  "type": "multiple-choice",
+  "category": "reading",
+  "question": "1. What is this reading mainly about?",
+  "options": [
+    "how one woman is saving koalas from extinction",
+    "ways that humans and koalas can learn to live together",
+    "new methods for studying koalas in the wild",
+    "threats to koalas and efforts to protect them"
+  ],
+  "correctAnswer": 3
+},
+{
+  "type": "multiple-choice",
+  "category": "reading",
+  "question": "2. What does Megan Aitken use the blanket for?",
+  "options": [
+    "to catch the koala after it falls from a tree",
+    "to cover the koala so it doesn’t harm her",
+    "to keep the koala warm after it’s placed in the cage",
+    "to place over the cage so the koala inside stays calm"
+  ],
+  "correctAnswer": 1
+},
+{
+  "type": "multiple-choice",
+  "category": "reading",
+  "question": "3. Why is the koala that Aitken caught released in a nearby park?",
+  "options": [
+    "because koalas feed in the same trees again and again",
+    "because it’s the only place nearby that has eucalyptus trees",
+    "because that’s where the koala probably has its baby",
+    "because wild koalas are not allowed in residential areas"
+  ],
+  "correctAnswer": 1
+},
+{
+  "type": "multiple-choice",
+  "category": "reading",
+  "question": "4. According to Deidré de Villiers, what is the main thing that suburban areas must do to protect koalas?",
+  "options": [
+    "lower speed limits in areas with koalas",
+    "build green corridors for koala movement",
+    "preserve koalas’ existing eucalyptus trees",
+    "create special koala-only habitat zones"
+  ],
+  "correctAnswer": 2
+},
+{
+  "type": "multiple-choice",
+  "category": "reading",
+  "question": "5. Why do you think de Villiers captures Tee Vee?",
+  "options": [
+    "to see if she had her baby",
+    "to attach a signaling device to her",
+    "to check on her condition",
+    "to take her to an animal hospital"
+  ],
+  "correctAnswer": 2
+}
 
 ]
