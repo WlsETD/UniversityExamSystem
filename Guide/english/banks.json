@@ -43,5 +43,10 @@
     "id": "ntuse-voice",
     "name": "雲科音訊題",
     "file": "NTUSE-VC.json"
+  },
+  {
+    "id": "ntub-imp",
+    "name": "北商大 1 期末必考",
+    "file": "NTUBimp.json"
   }
 ]
