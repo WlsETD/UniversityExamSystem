@@ -203,155 +203,205 @@
   },
 
    {
-    "type": "fill-in",
-    "question": "1. 政府使用哪兩種政策來影響總體經濟：____，____。",
-    "correctAnswer": [
-      "財政政策,貨幣政策",
-      "財政政策 貨幣政策",
-      "Fiscal Policy,Monetary Policy"
+    "type": "multiple-choice",
+    "question": "1. 凱因斯不同意古典模型關於勞動市場的假設，因為古典模型無法產生大規模的失業，請問他主要的想法是：",
+    "options": [
+      "不同意古典的勞動供給曲線，但同意古典的勞動需求曲線",
+      "不同意古典的勞動需求曲線，但同意古典的勞動供給曲線",
+      "古典的勞動供給曲線都不同意",
+      "古典的勞動供給曲線都同意"
     ],
-    "answers": ["財政政策", "貨幣政策"]
+    "correctAnswer": 0
   },
   {
-    "type": "fill-in",
-    "question": "2. 在一特定時間內，一國國內所生產出之全部最終商品與服務，以當時市場價值計算的總值，稱為____。",
-    "correctAnswer": [
-      "GDP",
-      "國內生產毛額",
-      "GDP 國內生產毛額"
+    "type": "multiple-choice",
+    "question": "2. 下列何者不是古典經濟理論的內容？",
+    "options": [
+      "總體均衡是常態，挹注等於流漏",
+      "利率由貨幣供給與需求決定",
+      "長期而言，自然失業率等於實際失業率",
+      "長期而言，所得水準取決於供給面"
     ],
-    "answers": ["國內生產毛額"]
+    "correctAnswer": 1
   },
   {
-    "type": "fill-in",
-    "question": "3. 在一特定時間內，一國國民所生產出來之全部最後商品與服務，以當時市場價值計算的總值，稱為____。",
-    "correctAnswer": [
-      "GNP",
-      "國民生產毛額",
-      "GNP 國民生產毛額"
-    ],
-    "answers": ["國民生產毛額"]
+    "type": "multiple-choice",
+    "question": "3. 人力資本、勞動、機器設備、廠房、產出等五項中，屬於流量變數的有幾項？",
+    "options": ["1項", "2項", "3項", "4項"],
+    "correctAnswer": 1
   },
   {
-    "type": "fill-in",
-    "question": "4. 下列的社會福利無法從 GDP 中看出：____、____、____、____。",
-    "correctAnswer": [
-      "地下經濟活動,休閒時間的考量,商品品質的高低,外部性",
-      "地下經濟活動 休閒時間的考量 商品品質的高低 外部性"
-    ],
-    "answers": ["地下經濟活動", "休閒時間的考量", "商品品質的高低", "外部性"]
+    "type": "multiple-choice",
+    "question": "4. 若由分配面衡量國民所得，不應包括下列何者？",
+    "options": ["勞動報酬", "地租", "利息", "淨出口"],
+    "correctAnswer": 3
   },
   {
-    "type": "fill-in",
-    "question": "5. 失業的種類：____、____、____、____。",
-    "correctAnswer": [
-      "摩擦性失業,結構性失業,季節性失業,循環性失業",
-      "摩擦性失業 結構性失業 季節性失業 循環性失業"
-    ],
-    "answers": ["摩擦性失業", "結構性失業", "季節性失業", "循環性失業"]
+    "type": "multiple-choice",
+    "question": "5. 假設臺灣今年共進口外國生產的酒類，價值 1 億元，且全部售出，在其它條件不變且不考慮酒商的利潤及政府稅收下，此項活動對臺灣今年度 GDP 的貢獻為：",
+    "options": ["0 元", "0.5 億元", "1 億元", "2 億元"],
+    "correctAnswer": 0
   },
   {
-    "type": "fill-in",
-    "question": "6. 自然失業率是經濟體系自然運作下的失業，其為____與____的總和。",
-    "correctAnswer": [
-      "摩擦性失業,結構性失業",
-      "摩擦性失業 結構性失業"
-    ],
-    "answers": ["摩擦性失業", "結構性失業"]
+    "type": "multiple-choice",
+    "question": "6. 若臺灣 2014 年的名目 GDP 為 1 兆 8,000 億元，實質 GDP 為 1 兆 5,000 億元，則臺灣該年的 GDP 平減指數為：",
+    "options": ["67", "83", "120", "110"],
+    "correctAnswer": 2
   },
   {
-    "type": "fill-in",
-    "question": "7. 常用的物價指數有哪三種：____、____、____。",
-    "correctAnswer": [
-      "GDP平減物價指數,CPI,WPI",
-      "GDP Deflator,CPI,WPI"
+    "type": "multiple-choice",
+    "question": "7. 下列何者被歸類於非勞動力？",
+    "options": [
+      "張先生目前處於無薪休假狀態，在家中等待被公司召回",
+      "王先生白天在超商工作，晚上念大學夜間部",
+      "李先生被公司解雇，正在尋找新的工作",
+      "張小姐大學畢業後，卻賦閒在家不肯找工作"
     ],
-    "answers": ["GDP平減物價指數", "CPI", "WPI"]
+    "correctAnswer": 3
   },
   {
-    "type": "fill-in",
-    "question": "8. 經濟成長的來源有哪四種：____、____、____、____。",
-    "correctAnswer": [
-      "物質資本,人力資本,天然資源,技術知識",
-      "Physical capital,Human capital,Natural resources,Technology"
+    "type": "multiple-choice",
+    "question": "8. 根據效率工資理論，廠商會依據哪一項原則來訂定實質工資水準？",
+    "options": [
+      "依政府規定的最低工資水準",
+      "能使勞工的努力程度達到最大",
+      "能使廠商僱用及訓練成本最小化",
+      "由勞資雙方議價"
     ],
-    "answers": ["物質資本", "人力資本", "天然資源", "技術知識"]
+    "correctAnswer": 1
   },
   {
-    "type": "fill-in",
-    "question": "9. 代表商品市場與貨幣市場同時達到均衡的物價與所得的組合稱為：____。",
-    "correctAnswer": [
-      "總需求曲線",
-      "AD",
-      "Aggregate Demand"
-    ],
-    "answers": ["總需求曲線"]
+    "type": "multiple-choice",
+    "question": "9. 下列何者不會影響摩擦性失業？",
+    "options": ["增加就業服務站", "媒合平台興起", "失業保險", "最低工資"],
+    "correctAnswer": 3
   },
   {
-    "type": "fill-in",
-    "question": "10. 顯示廠商所生產商品與服務及一般物價水準間的關係稱為：____。",
-    "correctAnswer": [
-      "總供給曲線",
-      "AS",
-      "Aggregate Supply"
-    ],
-    "answers": ["總供給曲線"]
+    "type": "multiple-choice",
+    "question": "10. 去年在島托邦國的實質 GDP 為 5,000 億元且人口為 2,000 萬人；今年實質 GDP 為 5,610 億元且人口為 2,200 萬人，今年平均每人實質 GDP 成長率約為：",
+    "options": ["12%", "10%", "2%", "8%"],
+    "correctAnswer": 2
   },
   {
-    "type": "fill-in",
-    "question": "11. 經濟活動（如就業與生產）的波動，一個循環是許多經濟指標同時發生擴張，隨後發生衰退，然後又開始復甦的情形，稱為：____。",
-    "correctAnswer": [
-      "景氣循環",
-      "Business Cycle"
-    ],
-    "answers": ["景氣循環"]
+    "type": "multiple-choice",
+    "question": "11. 假設某國只生產 X 與 Y 兩種最終商品，如果 X 的產出成長率為 2%，且 Y 的產出成長率為 −20%，則該國的經濟成長率：",
+    "options": ["大於零", "小於零", "等於零", "資料不足，無法判斷"],
+    "correctAnswer": 3
   },
   {
-    "type": "fill-in",
-    "question": "12. 消費支出不受所得影響的部分稱為：____。",
-    "correctAnswer": [
-      "自發性消費支出",
-      "自發性消費",
-      "Autonomous Consumption"
-    ],
-    "answers": ["自發性消費支出"]
+    "type": "multiple-choice",
+    "question": "12. 梭羅剩餘（Solow residual）用來衡量下列何種經濟概念？",
+    "options": ["技術進步", "國民所得", "資本勞動比", "經濟成長"],
+    "correctAnswer": 0
   },
   {
-    "type": "fill-in",
-    "question": "13. 消費支出會受所得影響的部分稱為：____。",
-    "correctAnswer": [
-      "誘發性消費支出",
-      "誘發性消費",
-      "Induced Consumption"
-    ],
-    "answers": ["誘發性消費支出"]
+    "type": "multiple-choice",
+    "question": "13. 政府降低個人所得稅率屬於",
+    "options": ["擴張性財政政策", "緊縮性財政政策", "擴張性貨幣政策", "緊縮性貨幣政策"],
+    "correctAnswer": 0
   },
   {
-    "type": "fill-in",
-    "question": "14. 當所得增加 1 元時，消費增加的金額稱為：____。",
-    "correctAnswer": [
-      "邊際消費傾向",
-      "MPC",
-      "Marginal Propensity to Consume"
-    ],
-    "answers": ["邊際消費傾向"]
+    "type": "multiple-choice",
+    "question": "14. 若該國自發性投資為 100，邊際投資傾向為 0.1，則該國均衡所得為：",
+    "options": ["2,000", "2,100", "2,500", "3,000"],
+    "correctAnswer": 3
   },
   {
-    "type": "fill-in",
-    "question": "15. 自發性支出變動引起均衡所得呈倍數的改變稱為：____。",
-    "correctAnswer": [
-      "乘數效果",
-      "Multiplier Effect"
-    ],
-    "answers": ["乘數效果"]
+    "type": "multiple-choice",
+    "question": "15. 在簡單凱因斯模型中，政府支出為：",
+    "options": ["800", "600", "400", "200"],
+    "correctAnswer": 1
   },
   {
-    "type": "fill-in",
-    "question": "16. 貨幣有三種功能：____、____、____。",
-    "correctAnswer": [
-      "交易媒介,計價單位,價值儲存",
-      "Medium of exchange,Unit of account,Store of value"
+    "type": "multiple-choice",
+    "question": "16. 下列何者並非以物易物交易方式的主要缺點？",
+    "options": [
+      "不易達成慾望的雙重巧合",
+      "物品運送成本高",
+      "無法找零，不易滿足等值互償",
+      "收支時點不一致會影響消費"
     ],
-    "answers": ["交易媒介", "計價單位", "價值儲存"]
+    "correctAnswer": 1
+  },
+  {
+    "type": "multiple-choice",
+    "question": "17. 如果儲蓄者提高儲蓄，依可貸資金理論推測：",
+    "options": [
+      "投資與實質利率下降",
+      "經濟成長率下降",
+      "本國匯率下降",
+      "實質利率下降，投資增加"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "type": "multiple-choice",
+    "question": "18. 若法定準備率為 20%，超額準備 5,000 萬元，實際準備為：",
+    "options": ["11,000 萬元", "16,000 萬元", "21,000 萬元", "26,000 萬元"],
+    "correctAnswer": 2
+  },
+  {
+    "type": "multiple-choice",
+    "question": "19. 何者為設有中央銀行的國際組織？",
+    "options": ["亞太經濟合作會議", "北美自由貿易區", "世界貿易組織", "歐盟歐元區"],
+    "correctAnswer": 3
+  },
+  {
+    "type": "multiple-choice",
+    "question": "20. 央行降低法定存款準備率，短期結果為：",
+    "options": [
+      "實質利率上升，所得上升",
+      "實質利率上升，所得下降",
+      "實質利率下降，所得上升",
+      "實質利率下降，所得下降"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "type": "multiple-choice",
+    "question": "21. 調高法定準備率將造成：",
+    "options": [
+      "準備金供給左移，利率上升",
+      "準備金供給右移，利率下降",
+      "準備金需求左移，利率下降",
+      "準備金需求右移，利率上升"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "type": "multiple-choice",
+    "question": "22. 何種狀況將讓長期總供給曲線右移？",
+    "options": ["結構性失業率下降", "實際通膨率上升", "摩擦性失業率上升", "循環性失業率下降"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "23. 若貨幣中立性假說成立，量化寬鬆將導致：",
+    "options": ["實質利率下降", "就業率上升", "實質工資上升", "通膨率上升"],
+    "correctAnswer": 3
+  },
+  {
+    "type": "multiple-choice",
+    "question": "24. 若勞動市場未達充分就業，增稅將導致：",
+    "options": ["產出與物價下降", "產出與物價上升", "產出不變物價上升", "產出下降物價不變"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "25. 若預期通膨率為 5%，為維持購買力，貨幣工資率應增加：",
+    "options": ["2%", "5%", "7%", "12%"],
+    "correctAnswer": 1
+  },
+  {
+    "type": "multiple-choice",
+    "question": "26. 依費雪效果，貨幣成長率上升將導致：",
+    "options": ["名目利率上漲", "名目利率下降", "實質利率上漲", "實質利率下降"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "27. 未預期的通貨膨脹不會造成：",
+    "options": ["皮鞋成本增加", "菜單成本增加", "財富重分配", "自然失業率下降"],
+    "correctAnswer": 3
   }
 ]
