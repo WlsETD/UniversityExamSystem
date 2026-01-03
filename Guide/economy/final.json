@@ -202,7 +202,7 @@
     "correctAnswer": 3
   },
 
-  {
+   {
     "type": "fill-in",
     "question": "1. 政府使用哪兩種政策來影響總體經濟：____，____。",
     "correctAnswer": [
@@ -220,7 +220,7 @@
       "國內生產毛額",
       "GDP 國內生產毛額"
     ],
-    "answers": ["GDP", "國內生產毛額"]
+    "answers": ["國內生產毛額"]
   },
   {
     "type": "fill-in",
@@ -230,14 +230,14 @@
       "國民生產毛額",
       "GNP 國民生產毛額"
     ],
-    "answers": ["GNP", "國民生產毛額"]
+    "answers": ["國民生產毛額"]
   },
   {
     "type": "fill-in",
     "question": "4. 下列的社會福利無法從 GDP 中看出：____、____、____、____。",
     "correctAnswer": [
-      "地下經濟活動,休閒時間,商品品質,外部性",
-      "地下經濟活動 休閒時間 商品品質 外部性"
+      "地下經濟活動,休閒時間的考量,商品品質的高低,外部性",
+      "地下經濟活動 休閒時間的考量 商品品質的高低 外部性"
     ],
     "answers": ["地下經濟活動", "休閒時間的考量", "商品品質的高低", "外部性"]
   },
@@ -263,8 +263,8 @@
     "type": "fill-in",
     "question": "7. 常用的物價指數有哪三種：____、____、____。",
     "correctAnswer": [
-      "GDP平減指數,CPI,WPI",
-      "GDP deflator,CPI,WPI"
+      "GDP平減物價指數,CPI,WPI",
+      "GDP Deflator,CPI,WPI"
     ],
     "answers": ["GDP平減物價指數", "CPI", "WPI"]
   },
@@ -299,7 +299,7 @@
   },
   {
     "type": "fill-in",
-    "question": "11. 經濟活動（如就業與生產）的波動稱為：____。",
+    "question": "11. 經濟活動（如就業與生產）的波動，一個循環是許多經濟指標同時發生擴張，隨後發生衰退，然後又開始復甦的情形，稱為：____。",
     "correctAnswer": [
       "景氣循環",
       "Business Cycle"
@@ -310,8 +310,8 @@
     "type": "fill-in",
     "question": "12. 消費支出不受所得影響的部分稱為：____。",
     "correctAnswer": [
-      "自發性消費",
       "自發性消費支出",
+      "自發性消費",
       "Autonomous Consumption"
     ],
     "answers": ["自發性消費支出"]
@@ -320,8 +320,8 @@
     "type": "fill-in",
     "question": "13. 消費支出會受所得影響的部分稱為：____。",
     "correctAnswer": [
-      "誘發性消費",
       "誘發性消費支出",
+      "誘發性消費",
       "Induced Consumption"
     ],
     "answers": ["誘發性消費支出"]
@@ -338,7 +338,7 @@
   },
   {
     "type": "fill-in",
-    "question": "15. 自發性支出變動引起均衡所得呈倍數變化稱為：____。",
+    "question": "15. 自發性支出變動引起均衡所得呈倍數的改變稱為：____。",
     "correctAnswer": [
       "乘數效果",
       "Multiplier Effect"
