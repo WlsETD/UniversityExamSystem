@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>段考練習系統 - 錯題題庫匯入</title>
+
+  <style>
+    :root{
+      --bg1:#07051a;
+      --bg2:#120a3a;
+      --glass: rgba(255,255,255,.08);
+      --glass2: rgba(255,255,255,.12);
+      --line: rgba(255,255,255,.14);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.68);
+      --a: #7c5cff;
+      --b: #39d3ff;
+      --c: #ff4fd8;
+      --shadow: 0 18px 55px rgba(0,0,0,.55);
+      --radius: 18px;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      min-height:100vh;
+      color:var(--text);
+      font-family: "Microsoft JhengHei","PingFang TC",system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+      background:
+        radial-gradient(900px 500px at 20% 10%, rgba(124,92,255,.22), transparent 60%),
+        radial-gradient(800px 500px at 80% 20%, rgba(57,211,255,.18), transparent 55%),
+        radial-gradient(900px 650px at 50% 85%, rgba(255,79,216,.10), transparent 60%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+    }
+    .wrap{ max-width: 980px; margin: 0 auto; padding: 26px 18px 60px; }
+    .topbar{ display:flex; align-items:flex-start; justify-content:space-between; gap:14px; margin-bottom: 16px; }
+    .title{ line-height:1.2; }
+    .title h1{ margin:0 0 6px; font-size: 20px; font-weight: 800; letter-spacing:.2px; }
+    .title p{ margin:0; font-size: 13px; color:var(--muted); }
+
+    .card{
+      background: linear-gradient(180deg, var(--glass2), var(--glass));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .card::before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(420px 120px at 20% 0%, rgba(124,92,255,.25), transparent 55%),
+        radial-gradient(420px 120px at 80% 0%, rgba(57,211,255,.22), transparent 55%);
+      pointer-events:none;
+      filter: blur(10px);
+      opacity:.9;
+    }
+    .card > .inner{ position:relative; padding: 16px; backdrop-filter: blur(10px); }
+
+    .grid{ display:grid; grid-template-columns: 1.1fr .9fr; gap:14px; }
+    @media (max-width: 880px){ .grid{ grid-template-columns: 1fr; } }
+
+    .row{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      font-size:12px;
+      color: var(--muted);
+    }
+    .dot{
+      width:9px;height:9px;border-radius:50%;
+      background: var(--b);
+      box-shadow: 0 0 18px rgba(57,211,255,.65);
+    }
+
+    .btn{
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--text);
+      padding: 10px 12px;
+      border-radius: 12px;
+      cursor:pointer;
+      transition: transform .06s ease, background .15s ease, border-color .15s ease;
+      font-weight: 700;
+      font-size: 13px;
+      user-select:none;
+    }
+    .btn:hover{ background: rgba(255,255,255,.08); }
+    .btn:active{ transform: translateY(1px); }
+    .btn.primary{
+      border-color: rgba(124,92,255,.42);
+      background: rgba(124,92,255,.18);
+      box-shadow: 0 0 22px rgba(124,92,255,.18);
+    }
+    .btn.warn{
+      border-color: rgba(255,79,216,.38);
+      background: rgba(255,79,216,.13);
+      box-shadow: 0 0 22px rgba(255,79,216,.14);
+    }
+    .btn.ghost{ background: transparent; }
+    input[type="file"]{ display:none; }
+
+    .status{ margin-top:10px; font-size: 12px; color: var(--muted); min-height: 18px; }
+    .status.error{ color: #ff7a7a; }
+
+    .qhead{ display:flex; justify-content:space-between; align-items:flex-start; gap: 10px; margin-bottom: 10px; }
+    .qtitle{ font-size: 15px; font-weight: 800; margin:0; line-height:1.45; }
+    .progress{
+      font-size: 12px;
+      color: var(--muted);
+      white-space:nowrap;
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.16);
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
+
+    .options{ display:grid; gap:10px; margin-top: 12px; }
+
+    .opt{
+      text-align:left;
+      width:100%;
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--text);
+      padding: 12px 12px;
+      border-radius: 14px;
+      cursor:pointer;
+      transition: background .15s ease, transform .06s ease, border-color .15s ease;
+      line-height: 1.35;
+      font-size: 13px;
+    }
+    .opt:hover{ background: rgba(255,255,255,.08); }
+    .opt:active{ transform: translateY(1px); }
+    .opt.correct{
+      border-color: rgba(57,211,255,.65);
+      background: rgba(57,211,255,.12);
+      box-shadow: 0 0 18px rgba(57,211,255,.16);
+    }
+    .opt.wrong{
+      border-color: rgba(255,79,216,.55);
+      background: rgba(255,79,216,.12);
+      box-shadow: 0 0 18px rgba(255,79,216,.14);
+    }
+
+    .panel h3{ margin:0 0 10px; font-size: 13px; color: var(--muted); letter-spacing:.2px; }
+    .kv{ display:grid; grid-template-columns: 110px 1fr; gap:8px 10px; font-size: 13px; align-items:center; }
+    .kv .k{ color: var(--muted); }
+    .kv .v{ font-weight:800; }
+
+    .divider{ height:1px; background: rgba(255,255,255,.12); margin: 12px 0; }
+    .small{ font-size:12px; color: var(--muted); line-height:1.5; }
+    .footer{ margin-top: 14px; font-size: 12px; color: var(--muted); text-align:center; opacity:.85; }
+
+    /* ===== fill-in UI ===== */
+    .fillin-wrap{ display:grid; gap:10px; }
+    .fillin-input{
+      width:100%;
+      border:1px solid var(--line);
+      background: rgba(0,0,0,.18);
+      color: var(--text);
+      padding: 12px 12px;
+      border-radius: 14px;
+      font-size: 13px;
+      outline: none;
+    }
+    .fillin-input:focus{
+      border-color: rgba(57,211,255,.55);
+      box-shadow: 0 0 0 3px rgba(57,211,255,.12);
+    }
+    .fillin-hint{
+      font-size:12px;
+      color: var(--muted);
+      line-height:1.5;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="title">
+        <h1>段考練習系統（支援錯題題庫上傳）</h1>
+        <p>支援兩種題庫格式：題目陣列 <code>[...]</code> 或包裝物件 <code>{ meta, questions }</code>。</p>
+      </div>
+
+      <div class="badge">
+        <span class="dot"></span>
+        <span id="bankLabel">原題庫</span>
+      </div>
+    </div>
+
+    <div class="grid">
+      <!-- Quiz -->
+      <div class="card">
+        <div class="inner">
+          <div class="qhead">
+            <p class="qtitle" id="qText">—</p>
+            <div class="progress" id="progressText">0 / 0</div>
+          </div>
+
+          <div class="options" id="optionsBox"></div>
+
+          <div class="divider"></div>
+
+          <div class="row">
+            <button class="btn ghost" id="btnPrev" type="button">上一題</button>
+            <button class="btn ghost" id="btnNext" type="button">下一題</button>
+            <button class="btn primary" id="btnRestart" type="button">重新開始</button>
+            <button class="btn warn" id="btnExportWrong" type="button">匯出錯題 JSON</button>
+          </div>
+
+          <div class="status" id="quizStatus"></div>
+        </div>
+      </div>
+
+      <!-- Side Panel -->
+      <div class="card panel">
+        <div class="inner">
+          <h3>錯題題庫（wrong JSON）</h3>
+
+          <div class="row">
+            <label class="btn" for="wrongFile">選擇錯題 JSON</label>
+            <input id="wrongFile" type="file" accept="application/json,.json"/>
+            <button class="btn primary" id="btnImportWrong" type="button">匯入</button>
+          </div>
+
+          <div class="row" style="margin-top:10px;">
+            <button class="btn ghost" id="btnUseDefault" type="button">使用原題庫</button>
+            <button class="btn ghost" id="btnUseWrong" type="button">使用錯題題庫</button>
+            <button class="btn ghost" id="btnClearWrong" type="button">清除錯題題庫</button>
+          </div>
+
+          <div class="status" id="wrongStatus"></div>
+
+          <div class="divider"></div>
+
+          <h3>統計</h3>
+          <div class="kv">
+            <div class="k">總題數</div><div class="v" id="statTotal">0</div>
+            <div class="k">已作答</div><div class="v" id="statAnswered">0</div>
+            <div class="k">答對</div><div class="v" id="statCorrect">0</div>
+            <div class="k">答錯</div><div class="v" id="statWrong">0</div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="small">
+            題庫來源不論是原題庫或錯題題庫，系統都會統一使用 questions 陣列進行出題，確保功能一致。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">LocalStorage 會保存錯題題庫與上次使用的模式。</div>
+  </div>
+
+<script>
+/* ===============================
+   1) 原題庫示範（你可改成你自己的 JSON）
+   - 支援：陣列 / {meta, questions}
+   =============================== */
+window.DEFAULT_BANK = {
+  meta: {
+    title: "示範題庫",
+    exportedAt: new Date().toISOString(),
+    count: 4
+  },
+  questions: [
+    {
+      "type":"multiple-choice",
+      "question":"predict 的意思是？",
+      "options":["預測","阻止","修復","放棄"],
+      "correctAnswer":0
+    },
+    {
+      "type":"multiple-choice",
+      "question":"earthquake 的意思是？",
+      "options":["地震","火山","颱風","洪水"],
+      "correctAnswer":0
+    },
+    {
+      "type":"fill-in",
+      "question":"HTTP 的預設連接埠是？",
+      "correctAnswer":"80"
+    },
+    {
+      "type":"fill-in",
+      "question":"DNS 的全名是？（大小寫不拘）",
+      "correctAnswer":["Domain Name System","domain name system"]
+    }
+  ]
+};
+</script>
+
+<script>
+/* ===============================
+   2) WrongBank 模組
+   - 支援：題目陣列 / {meta, questions}
+   - 題型支援：multiple-choice / fill-in
+   =============================== */
+(function () {
+  const KEY_WRONG_BANK = "wrong_bank_json_v1";
+  const KEY_ACTIVE_BANK = "active_bank_v1"; // "default" | "wrong"
+
+  function getActiveBank() { return localStorage.getItem(KEY_ACTIVE_BANK) || "default"; }
+  function setActiveBank(mode) { localStorage.setItem(KEY_ACTIVE_BANK, mode); }
+
+  function normalizeBank(input){
+    if (Array.isArray(input)) return { questions: input, meta: null };
+    if (input && typeof input === "object" && Array.isArray(input.questions)) {
+      return { questions: input.questions, meta: input.meta || null };
+    }
+    return { questions: null, meta: null };
+  }
+
+  function validateQuestionsArray(bank) {
+    if (!Array.isArray(bank)) return { ok: false, message: "questions 必須是陣列（Array）" };
+    if (bank.length === 0) return { ok: false, message: "題庫是空的" };
+
+    for (let i = 0; i < bank.length; i++) {
+      const q = bank[i];
+
+      // 共通檢查
+      if (typeof q !== "object" || q === null || Array.isArray(q))
+        return { ok: false, message: `第 ${i + 1} 題不是物件` };
+
+      if (!["multiple-choice", "fill-in"].includes(q.type))
+        return { ok: false, message: `第 ${i + 1} 題 type 必須是 "multiple-choice" 或 "fill-in"` };
+
+      if (typeof q.question !== "string" || !q.question.trim())
+        return { ok: false, message: `第 ${i + 1} 題 question 必須是非空字串` };
+
+      // multiple-choice
+      if (q.type === "multiple-choice") {
+        if (!Array.isArray(q.options) || q.options.length < 2)
+          return { ok: false, message: `第 ${i + 1} 題 options 必須至少 2 個` };
+
+        if (!q.options.every(x => typeof x === "string"))
+          return { ok: false, message: `第 ${i + 1} 題 options 內必須全部是字串` };
+
+        if (!Number.isInteger(q.correctAnswer))
+          return { ok: false, message: `第 ${i + 1} 題 correctAnswer 必須是整數` };
+
+        if (q.correctAnswer < 0 || q.correctAnswer >= q.options.length)
+          return { ok: false, message: `第 ${i + 1} 題 correctAnswer 超出 options 範圍` };
+      }
+
+      // fill-in
+      if (q.type === "fill-in") {
+        const ca = q.correctAnswer;
+        const okString = (typeof ca === "string" && ca.trim().length > 0);
+        const okArray = (Array.isArray(ca) && ca.length > 0 && ca.every(a => typeof a === "string"));
+        if (!okString && !okArray) {
+          return { ok: false, message: `第 ${i + 1} 題 fill-in 的 correctAnswer 必須是非空字串或字串陣列` };
+        }
+      }
+    }
+
+    return { ok: true, message: "OK" };
+  }
+
+  function validateQuestionBank(input) {
+    const norm = normalizeBank(input);
+    if (!norm.questions) return { ok: false, message: "題庫格式不支援：需為題目陣列或包含 questions 的物件" };
+    return validateQuestionsArray(norm.questions);
+  }
+
+  function hasWrongBank() {
+    const raw = localStorage.getItem(KEY_WRONG_BANK);
+    if (!raw) return false;
+    try { return validateQuestionBank(JSON.parse(raw)).ok; } catch { return false; }
+  }
+
+  function readWrongBank() {
+    const raw = localStorage.getItem(KEY_WRONG_BANK);
+    if (!raw) return null;
+    try {
+      const data = JSON.parse(raw);
+      const check = validateQuestionBank(data);
+      if (!check.ok) return null;
+      const norm = normalizeBank(data);
+      return norm.questions;
+    } catch {
+      return null;
+    }
+  }
+
+  async function getDefaultBank() {
+    const src = window.DEFAULT_BANK;
+    const norm = normalizeBank(src);
+    if (norm.questions && norm.questions.length) return norm.questions;
+    throw new Error("找不到 DEFAULT_BANK（請提供 window.DEFAULT_BANK（題目陣列或含 questions 的物件）或改成 fetch 你的題庫）");
+  }
+
+  async function getQuestions() {
+    const mode = getActiveBank();
+    if (mode === "wrong") {
+      const wrong = readWrongBank();
+      if (wrong && wrong.length) return wrong;
+      setActiveBank("default");
+      return await getDefaultBank();
+    }
+    return await getDefaultBank();
+  }
+
+  function saveWrongBank(anySupportedFormat) { localStorage.setItem(KEY_WRONG_BANK, JSON.stringify(anySupportedFormat)); }
+  function clearWrongBank() {
+    localStorage.removeItem(KEY_WRONG_BANK);
+    if (getActiveBank() === "wrong") setActiveBank("default");
+  }
+
+  window.WrongBank = {
+    getActiveBank, setActiveBank,
+    normalizeBank,
+    validateQuestionBank,
+    hasWrongBank, readWrongBank,
+    saveWrongBank, clearWrongBank,
+    getQuestions
+  };
+})();
+</script>
+
+<script>
+/* ===============================
+   3) Quiz Engine（支援 multiple-choice + fill-in）
+   =============================== */
+let questionBank = [];
+let currentIndex = 0;
+
+// idx -> (MC: number) | (Fill-in: string)
+const answers = new Map();
+const wrongSet = new Set();
+
+const elQ = document.getElementById("qText");
+const elOptions = document.getElementById("optionsBox");
+const elProgress = document.getElementById("progressText");
+const elQuizStatus = document.getElementById("quizStatus");
+const elWrongStatus = document.getElementById("wrongStatus");
+const elBankLabel = document.getElementById("bankLabel");
+
+const statTotal = document.getElementById("statTotal");
+const statAnswered = document.getElementById("statAnswered");
+const statCorrect = document.getElementById("statCorrect");
+const statWrong = document.getElementById("statWrong");
+
+const btnPrev = document.getElementById("btnPrev");
+const btnNext = document.getElementById("btnNext");
+const btnRestart = document.getElementById("btnRestart");
+const btnExportWrong = document.getElementById("btnExportWrong");
+
+const wrongFile = document.getElementById("wrongFile");
+const btnImportWrong = document.getElementById("btnImportWrong");
+const btnUseDefault = document.getElementById("btnUseDefault");
+const btnUseWrong = document.getElementById("btnUseWrong");
+const btnClearWrong = document.getElementById("btnClearWrong");
+
+let pendingWrongText = "";
+
+function setStatus(el, msg, isError){
+  el.textContent = msg || "";
+  el.classList.toggle("error", !!isError);
+}
+
+function resetQuizState(){
+  currentIndex = 0;
+  answers.clear();
+  wrongSet.clear();
+  setStatus(elQuizStatus, "", false);
+}
+
+function updateBankLabel(){
+  const mode = WrongBank.getActiveBank();
+  elBankLabel.textContent = mode === "wrong" ? "錯題題庫" : "原題庫";
+}
+
+// 你要大小寫敏感：把這裡的 toLowerCase() 移掉即可
+function normalizeText(v){
+  return String(v ?? "").trim();
+}
+
+function isCorrectAnswer(q, selected){
+  if (!q) return false;
+
+  if (q.type === "multiple-choice") {
+    return Number.isInteger(selected) && selected === q.correctAnswer;
+  }
+
+  if (q.type === "fill-in") {
+    const user = normalizeText(selected);
+    if (!user) return false;
+
+    const userN = user.toLowerCase();
+    if (Array.isArray(q.correctAnswer)) {
+      return q.correctAnswer.some(a => normalizeText(a).toLowerCase() === userN);
+    }
+    return normalizeText(q.correctAnswer).toLowerCase() === userN;
+  }
+
+  return false;
+}
+
+function calcStats(){
+  const total = questionBank.length;
+  const answered = answers.size;
+
+  let c = 0, w = 0;
+  wrongSet.clear();
+
+  for (const [idx, selected] of answers.entries()){
+    const q = questionBank[idx];
+    if (!q) continue;
+
+    if (isCorrectAnswer(q, selected)) c++;
+    else { w++; wrongSet.add(idx); }
+  }
+
+  statTotal.textContent = total;
+  statAnswered.textContent = answered;
+  statCorrect.textContent = c;
+  statWrong.textContent = w;
+}
+
+function renderQuestion(){
+  if (!questionBank.length){
+    elQ.textContent = "題庫是空的";
+    elOptions.innerHTML = "";
+    elProgress.textContent = "0 / 0";
+    calcStats();
+    return;
+  }
+
+  const q = questionBank[currentIndex];
+  elQ.textContent = q.question;
+  elProgress.textContent = `${currentIndex + 1} / ${questionBank.length}`;
+
+  elOptions.innerHTML = "";
+
+  // multiple-choice
+  if (q.type === "multiple-choice") {
+    const selected = answers.get(currentIndex);
+
+    q.options.forEach((opt, i) => {
+      const btn = document.createElement("button");
+      btn.className = "opt";
+      btn.type = "button";
+      btn.textContent = `${String.fromCharCode(65 + i)}. ${opt}`;
+
+      if (selected != null){
+        if (i === q.correctAnswer) btn.classList.add("correct");
+        if (i === selected && selected !== q.correctAnswer) btn.classList.add("wrong");
+        btn.disabled = true;
+      }
+
+      btn.addEventListener("click", () => {
+        answers.set(currentIndex, i);
+        const ok = isCorrectAnswer(q, i);
+        setStatus(elQuizStatus, ok ? "答對" : "答錯（已記錄為錯題）", !ok);
+        calcStats();
+        renderQuestion();
+      });
+
+      elOptions.appendChild(btn);
+    });
+  }
+
+  // fill-in
+  if (q.type === "fill-in") {
+    const already = answers.get(currentIndex);
+
+    const wrap = document.createElement("div");
+    wrap.className = "fillin-wrap";
+
+    const input = document.createElement("input");
+    input.className = "fillin-input";
+    input.type = "text";
+    input.placeholder = "請輸入答案";
+    input.autocomplete = "off";
+    input.spellcheck = false;
+
+    const submit = document.createElement("button");
+    submit.className = "btn primary";
+    submit.type = "button";
+    submit.textContent = "送出";
+
+    const hint = document.createElement("div");
+    hint.className = "fillin-hint";
+    hint.textContent = "提示：可直接按 Enter 送出";
+
+    if (already != null) {
+      input.value = String(already);
+      input.disabled = true;
+      submit.disabled = true;
+
+      const ok = isCorrectAnswer(q, already);
+      hint.textContent = ok ? "答對" : "答錯（已記錄為錯題）";
+    }
+
+    const doSubmit = () => {
+      const val = input.value.trim();
+      answers.set(currentIndex, val);
+
+      const ok = isCorrectAnswer(q, val);
+      setStatus(elQuizStatus, ok ? "答對" : "答錯（已記錄為錯題）", !ok);
+
+      calcStats();
+      renderQuestion();
+    };
+
+    submit.addEventListener("click", () => {
+      if (already != null) return;
+      doSubmit();
+    });
+
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        if (already == null) doSubmit();
+      }
+    });
+
+    wrap.appendChild(input);
+    wrap.appendChild(submit);
+    wrap.appendChild(hint);
+    elOptions.appendChild(wrap);
+  }
+
+  calcStats();
+}
+
+function goto(delta){
+  if (!questionBank.length) return;
+  currentIndex += delta;
+  if (currentIndex < 0) currentIndex = 0;
+  if (currentIndex >= questionBank.length) currentIndex = questionBank.length - 1;
+  setStatus(elQuizStatus, "", false);
+  renderQuestion();
+}
+
+btnPrev.addEventListener("click", () => goto(-1));
+btnNext.addEventListener("click", () => goto(1));
+btnRestart.addEventListener("click", () => { resetQuizState(); renderQuestion(); });
+
+btnExportWrong.addEventListener("click", () => {
+  const wrongQuestions = Array.from(wrongSet).map(idx => questionBank[idx]);
+
+  if (!wrongQuestions.length){
+    setStatus(elQuizStatus, "目前沒有錯題可匯出", true);
+    return;
+  }
+
+  const blob = new Blob([JSON.stringify(wrongQuestions, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "wrong_bank.json";
+  a.click();
+
+  URL.revokeObjectURL(url);
+  setStatus(elQuizStatus, `已匯出錯題：${wrongQuestions.length} 題`, false);
+});
+
+/* ===== Wrong bank import/switch ===== */
+wrongFile.addEventListener("change", async (e) => {
+  const file = e.target.files?.[0];
+  if (!file) return;
+
+  try{
+    pendingWrongText = await file.text();
+    setStatus(elWrongStatus, `已選擇：${file.name}（尚未匯入）`, false);
+  }catch{
+    pendingWrongText = "";
+    setStatus(elWrongStatus, "讀取檔案失敗", true);
+  }
+});
+
+btnImportWrong.addEventListener("click", () => {
+  if (!pendingWrongText){
+    setStatus(elWrongStatus, "尚未選擇 JSON 檔案", true);
+    return;
+  }
+
+  let data;
+  try{
+    data = JSON.parse(pendingWrongText);
+  }catch{
+    setStatus(elWrongStatus, "JSON 解析失敗：不是合法 JSON", true);
+    return;
+  }
+
+  const check = WrongBank.validateQuestionBank(data);
+  if (!check.ok){
+    setStatus(elWrongStatus, `題庫格式不正確：${check.message}`, true);
+    return;
+  }
+
+  WrongBank.saveWrongBank(data);
+  setStatus(elWrongStatus, "匯入成功（已保存到 localStorage）", false);
+});
+
+btnUseDefault.addEventListener("click", async () => {
+  WrongBank.setActiveBank("default");
+  await bootBank();
+});
+
+btnUseWrong.addEventListener("click", async () => {
+  if (!WrongBank.hasWrongBank()){
+    setStatus(elWrongStatus, "尚無可用的錯題題庫，請先匯入", true);
+    return;
+  }
+  WrongBank.setActiveBank("wrong");
+  await bootBank();
+});
+
+btnClearWrong.addEventListener("click", async () => {
+  WrongBank.clearWrongBank();
+  pendingWrongText = "";
+  wrongFile.value = "";
+  setStatus(elWrongStatus, "已清除錯題題庫", false);
+  await bootBank();
+});
+
+/* ===== 你系統的對接點 ===== */
+window.applyQuestionBank = function(questions){
+  questionBank = questions;
+  resetQuizState();
+  updateBankLabel();
+  renderQuestion();
+};
+
+async function bootBank(){
+  try{
+    const questions = await WrongBank.getQuestions();
+    window.applyQuestionBank(questions);
+  }catch(err){
+    console.error(err);
+    setStatus(elWrongStatus, err.message || "載入題庫失敗", true);
+  }
+}
+
+bootBank();
+</script>
+</body>
+</html>

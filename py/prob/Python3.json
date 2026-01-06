@@ -1,0 +1,537 @@
+{
+    "category": "🐍Python 迴圈練習",
+    "problems": [
+        {
+            "id": "P301",
+            "title": "while 加總 1 到 n",
+            "difficulty": "Easy",
+            "description": "輸入整數 n，使用 while 計算 1 到 n 的總和。",
+            "testCases": [
+                {
+                    "input": "5",
+                    "expected": "15"
+                },
+                {
+                    "input": "10",
+                    "expected": "55"
+                }
+            ],
+            "answerCode": {
+                "python": "n = int(input())\ni = 1\ntotal = 0\nwhile i <= n:\n    total += i\n    i += 1\nprint(total)"
+            }
+        },
+        {
+            "id": "P302",
+            "title": "while 計算偶數總和",
+            "difficulty": "Easy",
+            "description": "輸入 n，輸出 1 到 n 之間所有偶數的總和。",
+            "testCases": [
+                {
+                    "input": "10",
+                    "expected": "30"
+                },
+                {
+                    "input": "6",
+                    "expected": "12"
+                }
+            ],
+            "answerCode": {
+                "python": "n = int(input())\ni = 1\ntotal = 0\nwhile i <= n:\n    if i % 2 == 0:\n        total += i\n    i += 1\nprint(total)"
+            }
+        },
+        {
+            "id": "P303",
+            "title": "for 加總 1 到 n",
+            "difficulty": "Easy",
+            "description": "使用 for…in range 計算 1 到 n 之和。",
+            "testCases": [
+                {
+                    "input": "3",
+                    "expected": "6"
+                },
+                {
+                    "input": "7",
+                    "expected": "28"
+                }
+            ],
+            "answerCode": {
+                "python": "n = int(input())\nprint(sum(range(1, n+1)))"
+            }
+        },
+        {
+            "id": "P304",
+            "title": "for 計算奇數總和",
+            "difficulty": "Easy",
+            "description": "輸入 n，輸出 1 到 n 間的奇數總和。",
+            "testCases": [
+                {
+                    "input": "10",
+                    "expected": "25"
+                },
+                {
+                    "input": "9",
+                    "expected": "25"
+                }
+            ],
+            "answerCode": {
+                "python": "n = int(input())\ntotal = 0\nfor i in range(1, n+1):\n    if i % 2 == 1:\n        total += i\nprint(total)"
+            }
+        },
+        {
+            "id": "P305",
+            "title": "倒數印出 1 到 n",
+            "difficulty": "Easy",
+            "description": "輸入 n，倒數印出 n 到 1，每行一個。",
+            "testCases": [
+                {
+                    "input": "5",
+                    "expected": "5\n4\n3\n2\n1"
+                },
+                {
+                    "input": "3",
+                    "expected": "3\n2\n1"
+                }
+            ],
+            "answerCode": {
+                "python": "n = int(input())\nfor i in range(n, 1-1, -1):\n    print(i)"
+            }
+        },
+        {
+            "id": "P306",
+            "title": "階乘 while",
+            "difficulty": "Easy",
+            "description": "輸入 n，用 while 計算 n!。",
+            "testCases": [
+                {
+                    "input": "5",
+                    "expected": "120"
+                },
+                {
+                    "input": "3",
+                    "expected": "6"
+                }
+            ],
+            "answerCode": {
+                "python": "n = int(input())\nf = 1\ni = 1\nwhile i <= n:\n    f *= i\n    i += 1\nprint(f)"
+            }
+        },
+        {
+            "id": "P307",
+            "title": "階乘 for",
+            "difficulty": "Easy",
+            "description": "輸入 n，使用 for 計算 n!。",
+            "testCases": [
+                {
+                    "input": "4",
+                    "expected": "24"
+                },
+                {
+                    "input": "6",
+                    "expected": "720"
+                }
+            ],
+            "answerCode": {
+                "python": "n = int(input())\nf = 1\nfor i in range(1, n+1):\n    f *= i\nprint(f)"
+            }
+        },
+        {
+            "id": "P308",
+            "title": "while 計算 n 的位數和",
+            "difficulty": "Medium",
+            "description": "輸入整數 n，輸出其每位數相加的結果。",
+            "testCases": [
+                {
+                    "input": "1234",
+                    "expected": "10"
+                },
+                {
+                    "input": "999",
+                    "expected": "27"
+                }
+            ],
+            "answerCode": {
+                "python": "n = int(input())\ns = 0\nwhile n != 0:\n    s += n % 10\n    n //= 10\nprint(s)"
+            }
+        },
+
+
+        {
+            "id": "P309",
+            "title": "數字反轉",
+            "difficulty": "Medium",
+            "description": "輸入整數 n，輸出其反轉（例如 123 → 321）。",
+            "testCases": [
+                {
+                    "input": "123",
+                    "expected": "321"
+                },
+                {
+                    "input": "907",
+                    "expected": "709"
+                }
+            ],
+            "answerCode": {
+                "python": "n = int(input())\nrev = 0\nwhile n > 0:\n    rev = rev*10 + n % 10\n    n //= 10\nprint(rev)"
+            }
+        },
+        {
+            "id": "P310",
+            "title": "for 計算區間和 a 到 b",
+            "difficulty": "Medium",
+            "description": "輸入 a, b（a ≤ b），輸出 a + ... + b。",
+            "testCases": [
+                {
+                    "input": "3\n7",
+                    "expected": "25"
+                },
+                {
+                    "input": "1\n100",
+                    "expected": "5050"
+                }
+            ],
+            "answerCode": {
+                "python": "a = int(input())\nb = int(input())\nprint(sum(range(a, b+1)))"
+            }
+        },
+        {
+            "id": "P311",
+            "title": "找出 1~n 的所有因數",
+            "difficulty": "Medium",
+            "description": "輸入 n，輸出 n 的所有因數，每行一個。",
+            "testCases": [
+                {
+                    "input": "6",
+                    "expected": "1\n2\n3\n6"
+                },
+                {
+                    "input": "10",
+                    "expected": "1\n2\n5\n10"
+                }
+            ],
+            "answerCode": {
+                "python": "n = int(input())\nfor i in range(1, n+1):\n    if n % i == 0:\n        print(i)"
+            }
+        },
+        {
+            "id": "P312",
+            "title": "判斷質數（while）",
+            "difficulty": "Medium",
+            "description": "輸入 n，若為質數輸出 True，否則 False。",
+            "testCases": [
+                {
+                    "input": "7",
+                    "expected": "True"
+                },
+                {
+                    "input": "9",
+                    "expected": "False"
+                }
+            ],
+            "answerCode": {
+                "python": "n = int(input())\nif n < 2:\n    print(False)\nelse:\n    i = 2\n    isPrime = True\n    while i * i <= n:\n        if n % i == 0:\n            isPrime = False\n            break\n        i += 1\n    print(isPrime)"
+            }
+        },
+        {
+            "id": "P313",
+            "title": "平方表（巢狀迴圈）",
+            "difficulty": "Medium",
+            "description": "輸入 n，輸出 1² 到 n²（用空白分隔）。",
+            "testCases": [
+                {
+                    "input": "5",
+                    "expected": "1 4 9 16 25"
+                },
+                {
+                    "input": "3",
+                    "expected": "1 4 9"
+                }
+            ],
+            "answerCode": {
+                "python": "n = int(input())\nout = []\nfor i in range(1, n+1):\n    out.append(str(i*i))\nprint(' '.join(out))"
+            }
+        },
+        {
+            "id": "P314",
+            "title": "九九乘法表（垂直）",
+            "difficulty": "Medium",
+            "description": "印出 1~9 的九九乘法表，每段間空行。",
+            "testCases": [
+                {
+                    "input": "",
+                    "expected": "1*1=1"
+                }
+            ],
+            "answerCode": {
+                "python": "for x in range(1, 10):\n    for y in range(1, 10):\n        print(f\"{x}*{y}={x*y}\")\n    print()"
+            }
+        },
+        {
+            "id": "P315",
+            "title": "九九乘法表（橫向）",
+            "difficulty": "Hard",
+            "description": "印出對齊的九九乘法表（同一列不換行）。",
+            "testCases": [
+                {
+                    "input": "",
+                    "expected": "1*1=1"
+                }
+            ],
+            "answerCode": {
+                "python": "for x in range(1, 10):\n    for y in range(1, 10):\n        print(f\"{x}*{y}={x*y}\", end=' ')\n    print()"
+            }
+        },
+        {
+            "id": "P316",
+            "title": "for 印出星星三角形",
+            "difficulty": "Easy",
+            "description": "輸入 n，輸出 n 層星星三角形。",
+            "testCases": [
+                {
+                    "input": "3",
+                    "expected": "*\n**\n***"
+                },
+                {
+                    "input": "5",
+                    "expected": "*\n**\n***\n****\n*****"
+                }
+            ],
+            "answerCode": {
+                "python": "n = int(input())\nfor i in range(1, n+1):\n    print('*' * i)"
+            }
+        },
+        {
+            "id": "P317",
+            "title": "for 印出等腰三角形",
+            "difficulty": "Hard",
+            "description": "輸入 n，印出等腰三角形。",
+            "testCases": [
+                {
+                    "input": "3",
+                    "expected": "  *\n ***\n*****"
+                }
+            ],
+            "answerCode": {
+                "python": "n = int(input())\nfor i in range(1, n+1):\n    print(' '*(n-i) + '*'*(2*i-1))"
+            }
+        },
+        {
+            "id": "P318",
+            "title": "計算數列：1 + 2 + 4 + 8 + ...",
+            "difficulty": "Medium",
+            "description": "輸入 k，輸出數列 1 + 2 + 4...（2^(k-1)）的總和。",
+            "testCases": [
+                {
+                    "input": "3",
+                    "expected": "7"
+                },
+                {
+                    "input": "5",
+                    "expected": "31"
+                }
+            ],
+            "answerCode": {
+                "python": "k = int(input())\ntotal = 0\nv = 1\nfor i in range(k):\n    total += v\n    v *= 2\nprint(total)"
+            }
+        },
+        {
+            "id": "P319",
+            "title": "for 找最小值",
+            "difficulty": "Easy",
+            "description": "輸入一串整數，輸出最小值。",
+            "testCases": [
+                {
+                    "input": "3 7 2 8",
+                    "expected": "2"
+                },
+                {
+                    "input": "10 5 9",
+                    "expected": "5"
+                }
+            ],
+            "answerCode": {
+                "python": "nums = list(map(int, input().split()))\nprint(min(nums))"
+            }
+        },
+        {
+            "id": "P320",
+            "title": "for 計算平方和",
+            "difficulty": "Medium",
+            "description": "輸入 n，輸出 1²+2²+⋯+n²。",
+            "testCases": [
+                {
+                    "input": "3",
+                    "expected": "14"
+                },
+                {
+                    "input": "5",
+                    "expected": "55"
+                }
+            ],
+            "answerCode": {
+                "python": "n = int(input())\ntotal = 0\nfor i in range(1, n+1):\n    total += i*i\nprint(total)"
+            }
+        },
+        {
+            "id": "P321",
+            "title": "while 印出所有 5 的倍數",
+            "difficulty": "Easy",
+            "description": "輸入 n，印出 1 到 n 間所有 5 的倍數。",
+            "testCases": [
+                {
+                    "input": "20",
+                    "expected": "5\n10\n15\n20"
+                }
+            ],
+            "answerCode": {
+                "python": "n = int(input())\ni = 1\nwhile i <= n:\n    if i % 5 == 0:\n        print(i)\n    i += 1"
+            }
+        },
+        {
+            "id": "P322",
+            "title": "for 計算等差級數",
+            "difficulty": "Medium",
+            "description": "輸入首項 a、公差 d、項數 n，輸出總和。",
+            "testCases": [
+                {
+                    "input": "1\n2\n4",
+                    "expected": "16"
+                },
+                {
+                    "input": "3\n3\n3",
+                    "expected": "27"
+                }
+            ],
+            "answerCode": {
+                "python": "a = int(input())\nd = int(input())\nn = int(input())\ntotal = 0\nfor i in range(n):\n    total += a + d*i\nprint(total)"
+            }
+        },
+        {
+            "id": "P323",
+            "title": "判斷是否完全平方數",
+            "difficulty": "Medium",
+            "description": "輸入 n，若 n = k*k 則輸出 True。",
+            "testCases": [
+                {
+                    "input": "16",
+                    "expected": "True"
+                },
+                {
+                    "input": "20",
+                    "expected": "False"
+                }
+            ],
+            "answerCode": {
+                "python": "n = int(input())\nisPerfect = False\nfor i in range(1, n+1):\n    if i*i == n:\n        isPerfect = True\n        break\nprint(isPerfect)"
+            }
+        },
+        {
+            "id": "P324",
+            "title": "計算最大公因數（暴力法）",
+            "difficulty": "Hard",
+            "description": "輸入 a b，用迴圈找 GCD。",
+            "testCases": [
+                {
+                    "input": "12\n18",
+                    "expected": "6"
+                },
+                {
+                    "input": "7\n13",
+                    "expected": "1"
+                }
+            ],
+            "answerCode": {
+                "python": "a = int(input())\nb = int(input())\ng = 1\nfor i in range(1, min(a,b)+1):\n    if a % i == 0 and b % i == 0:\n        g = i\nprint(g)"
+            }
+        },
+        {
+            "id": "P325",
+            "title": "階梯式星星",
+            "difficulty": "Easy",
+            "description": "輸入 n，輸出 n 行，每行遞增星星數。",
+            "testCases": [
+                {
+                    "input": "4",
+                    "expected": "*\n**\n***\n****"
+                }
+            ],
+            "answerCode": {
+                "python": "n = int(input())\nfor i in range(1, n+1):\n    print('*'*i)"
+            }
+        },
+        {
+            "id": "P326",
+            "title": "倒三角星星",
+            "difficulty": "Hard",
+            "description": "輸入 n，輸出倒三角形星星。",
+            "testCases": [
+                {
+                    "input": "3",
+                    "expected": "***\n**\n*"
+                }
+            ],
+            "answerCode": {
+                "python": "n = int(input())\nfor i in range(n, 0, -1):\n    print('*'*i)"
+            }
+        },
+        {
+            "id": "P327",
+            "title": "找最長字串",
+            "difficulty": "Hard",
+            "description": "輸入 n，再輸入 n 個字串，輸出最長者。",
+            "testCases": [
+                {
+                    "input": "3\nhi\nhello\nok",
+                    "expected": "hello"
+                }
+            ],
+            "answerCode": {
+                "python": "n = int(input())\nbest = ''\nfor i in range(n):\n    s = input()\n    if len(s) > len(best):\n        best = s\nprint(best)"
+            }
+        },
+        {
+            "id": "P328",
+            "title": "連乘積",
+            "difficulty": "Medium",
+            "description": "輸入 n，輸出 1*2*3*…*n 的結果。",
+            "testCases": [
+                {
+                    "input": "5",
+                    "expected": "120"
+                }
+            ],
+            "answerCode": {
+                "python": "n = int(input())\np = 1\nfor i in range(1, n+1):\n    p *= i\nprint(p)"
+            }
+        },
+        {
+            "id": "P329",
+            "title": "計算奇數平方和",
+            "difficulty": "Hard",
+            "description": "輸入 n，計算所有奇數 i 的 i² 和。",
+            "testCases": [
+                {
+                    "input": "5",
+                    "expected": "35"
+                }
+            ],
+            "answerCode": {
+                "python": "n = int(input())\ntotal = 0\nfor i in range(1, n+1, 2):\n    total += i*i\nprint(total)"
+            }
+        },
+        {
+            "id": "P330",
+            "title": "巢狀迴圈製作加法表",
+            "difficulty": "Hard",
+            "description": "輸入 n，印出 n×n 的加法表。",
+            "testCases": [
+                {
+                    "input": "3",
+                    "expected": "1+1=2 1+2=3 1+3=4\n2+1=3 2+2=4 2+3=5\n3+1=4 3+2=5 3+3=6"
+                }
+            ],
+            "answerCode": {
+                "python": "n = int(input())\nfor i in range(1, n+1):\n    row = []\n    for j in range(1, n+1):\n        row.append(f\"{i}+{j}={i+j}\")\n    print(' '.join(row))"
+            }
+        }
+    ]
+}

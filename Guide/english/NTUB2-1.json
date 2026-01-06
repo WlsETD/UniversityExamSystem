@@ -1,0 +1,182 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "選出正確答案：Koalas ______ in Australia.",
+    "options": ["live", "lives", "living", "to live"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "選出正確答案：A koala ______ leaves every day.",
+    "options": ["eats", "eat", "eating", "to eat"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "選出正確答案：Many animals are endangered because people ______ down trees.",
+    "options": ["cut", "cuts", "cutting", "to cut"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "選出正確答案：Their habitats are disappearing, so they ______ endangered.",
+    "options": ["are", "is", "be", "been"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "選出正確答案：We should do our best ______ the environment.",
+    "options": ["to protect", "protect", "protecting", "protected"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "選出正確答案：Scientists are working hard ______ endangered species.",
+    "options": ["to save", "save", "saving", "saved"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "選出正確答案：People are trying to stop ______ snow leopards.",
+    "options": ["hunting", "hunt", "to hunt", "hunted"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "選出正確答案：A snow leopard is a strong predator that ______ at night.",
+    "options": ["hunts", "hunt", "hunting", "to hunt"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "選出正確答案：Climate change is a serious threat ______ wildlife.",
+    "options": ["to", "for", "with", "at"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "選出正確答案：Many animals die out because of habitat ______.",
+    "options": ["loss", "lose", "lost", "losing"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "選出正確答案：Deforestation happens when forests ______ down.",
+    "options": ["are cut", "cut", "are cutting", "were cut downing"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "選出正確答案：A new reserve ______ to protect endangered animals last year.",
+    "options": ["was established", "established", "is establishing", "has establish"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "選出正確答案：The government made new regulations ______ wildlife.",
+    "options": ["to protect", "protecting", "protected", "protect"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "選出正確答案：Organizations donate money ______ build reserves.",
+    "options": ["to", "for", "so", "with"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "選出正確答案：She donated money ______ a wildlife foundation.",
+    "options": ["to", "for", "into", "at"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "選出正確答案：Education is important to raise awareness ______ the public.",
+    "options": ["among", "between", "during", "through"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "選出正確答案：People should raise awareness ______ environmental protection.",
+    "options": ["about", "of", "at", "with"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "選出正確答案：Researchers use camera traps ______ wild animals.",
+    "options": ["to observe", "observe", "observing", "observed"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "選出正確答案：The scientist discovered new information ______ the species.",
+    "options": ["about", "to", "at", "on"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "選出正確答案：This is the animal ______ lives in the mountains.",
+    "options": ["that", "where", "when", "whose"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "選出正確答案：This is the reserve ______ many endangered animals live.",
+    "options": ["where", "which", "who", "what"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "選出正確答案：If we don’t act now, some animals will ______.",
+    "options": ["die out", "set up", "turn off", "look out"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "選出正確答案：If people stop hunting, more animals ______ survive.",
+    "options": ["will", "would", "are", "did"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "選出正確答案：Renewable energy can ______ pollution.",
+    "options": ["reduce", "refuse", "repeat", "record"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "選出正確答案：We should use renewable energy ______ protect the Earth.",
+    "options": ["to", "for", "so", "with"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "選出正確答案：Using less fossil fuel helps ______ climate change.",
+    "options": ["slow", "slows", "slowing", "to slowing"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "選出正確答案：Many injured animals need medical ______.",
+    "options": ["treatment", "treat", "treating", "treated"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "選出正確答案：A veterinarian helps sick animals get ______.",
+    "options": ["treatment", "tradition", "temperature", "traffic"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "選出正確答案：It is important ______ students to learn about conservation.",
+    "options": ["for", "to", "with", "by"],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "選出正確答案：Deforestation is one of the ______ problems for wildlife.",
+    "options": ["biggest", "bigger", "big", "more big"],
+    "correctAnswer": 0
+  }
+]

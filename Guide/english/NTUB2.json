@@ -1,0 +1,4537 @@
+[
+  {
+    "type": "multiple-choice",
+    "question": "滅絕 的英文是？",
+    "options": [
+      "extinction",
+      "expansion",
+      "explosion",
+      "expression"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "救援 的英文是？",
+    "options": [
+      "rescue",
+      "recover",
+      "release",
+      "react"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "威脅 的英文是？",
+    "options": [
+      "threaten",
+      "tighten",
+      "treat",
+      "track"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "棲息地 的英文是？",
+    "options": [
+      "habitat",
+      "heritage",
+      "harvest",
+      "habit"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "保護 的英文是？",
+    "options": [
+      "protect",
+      "project",
+      "pretend",
+      "process"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "疾病 的英文是？",
+    "options": [
+      "disease",
+      "disaster",
+      "distance",
+      "disguise"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "研究員 的英文是？",
+    "options": [
+      "researcher",
+      "recorder",
+      "receiver",
+      "responder"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "照顧 的英文是？",
+    "options": [
+      "take care of",
+      "look out for",
+      "set up",
+      "turn off"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "醫生；獸醫 的英文是？",
+    "options": [
+      "veterinarian",
+      "volunteer",
+      "visitor",
+      "vegetarian"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "受傷 的英文是？",
+    "options": [
+      "injured",
+      "included",
+      "invited",
+      "increased"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "環境 的英文是？",
+    "options": [
+      "environment",
+      "envelope",
+      "engagement",
+      "entrance"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "威脅性 的英文是？",
+    "options": [
+      "threatening",
+      "treating",
+      "thrilling",
+      "throwing"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "動物學家 的英文是？",
+    "options": [
+      "zoologist",
+      "biologist",
+      "anthropologist",
+      "chemist"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "樹葉 的英文是？",
+    "options": [
+      "leaves",
+      "leafs",
+      "woods",
+      "trees"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "母親的育兒袋 的英文是？",
+    "options": [
+      "pouch",
+      "pocket",
+      "bag",
+      "nest"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "棲息 的英文是？",
+    "options": [
+      "live",
+      "rest",
+      "stay",
+      "exist"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "城市郊區 的英文是？",
+    "options": [
+      "suburb",
+      "district",
+      "region",
+      "province"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "威脅 的名詞形 的英文是？",
+    "options": [
+      "threat",
+      "treat",
+      "trick",
+      "track"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "物種 的英文是？",
+    "options": [
+      "species",
+      "special",
+      "specific",
+      "specimen"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "棲地喪失 的英文是？",
+    "options": [
+      "habitat loss",
+      "forest break",
+      "nature damage",
+      "land cut"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "交通事故 的英文是？",
+    "options": [
+      "car accident",
+      "car happen",
+      "car crash",
+      "car trouble"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "保育 的英文是？",
+    "options": [
+      "conservation",
+      "conversation",
+      "conversion",
+      "construction"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "瀕危的 的英文是？",
+    "options": [
+      "endangered",
+      "expanded",
+      "enlarged",
+      "engaged"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "滅亡 的英文是？",
+    "options": [
+      "die out",
+      "drop off",
+      "go away",
+      "break down"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "復育 的英文是？",
+    "options": [
+      "reproduce",
+      "rebuild",
+      "recover",
+      "remake"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "成年的 的英文是？",
+    "options": [
+      "adult",
+      "mature",
+      "old",
+      "grown"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "野生的 的英文是？",
+    "options": [
+      "wild",
+      "wide",
+      "wide-open",
+      "wooden"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "獨立的 的英文是？",
+    "options": [
+      "independent",
+      "individual",
+      "isolated",
+      "internal"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "科學家 的英文是？",
+    "options": [
+      "scientist",
+      "specialist",
+      "expert",
+      "researcher"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "危機 的英文是？",
+    "options": [
+      "crisis",
+      "crime",
+      "critical",
+      "crush"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "棲息環境 的英文是？",
+    "options": [
+      "ecosystem",
+      "environment",
+      "biome",
+      "territory"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "實驗 的英文是？",
+    "options": [
+      "experiment",
+      "exercise",
+      "experience",
+      "examine"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "減少 的英文是？",
+    "options": [
+      "reduce",
+      "remove",
+      "release",
+      "relax"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "醫療照護 的英文是？",
+    "options": [
+      "treatment",
+      "training",
+      "transport",
+      "test"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "活躍的 的英文是？",
+    "options": [
+      "active",
+      "actual",
+      "accurate",
+      "alive"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "危險 的英文是？",
+    "options": [
+      "danger",
+      "damage",
+      "dare",
+      "dark"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "氣候 的英文是？",
+    "options": [
+      "climate",
+      "weather",
+      "condition",
+      "temperature"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "氣候變遷 的英文是？",
+    "options": [
+      "climate change",
+      "global heat",
+      "earth change",
+      "temperature rise"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "環保 的英文是？",
+    "options": [
+      "environmental",
+      "natural",
+      "green",
+      "ecological"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "照顧；看顧 的英文是？",
+    "options": [
+      "care for",
+      "look for",
+      "turn to",
+      "wait for"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "森林砍伐 的英文是？",
+    "options": [
+      "deforestation",
+      "deflection",
+      "definition",
+      "deformation"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "保育人員 的英文是？",
+    "options": [
+      "conservationist",
+      "constructionist",
+      "conversationist",
+      "consultant"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "自然棲地 的英文是？",
+    "options": [
+      "natural habitat",
+      "native land",
+      "eco zone",
+      "nature field"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "受保護的 的英文是？",
+    "options": [
+      "protected",
+      "prevented",
+      "projected",
+      "provided"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "捕捉 的英文是？",
+    "options": [
+      "capture",
+      "catch",
+      "grasp",
+      "chase"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "繁殖 的英文是？",
+    "options": [
+      "breed",
+      "raise",
+      "grow",
+      "build"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "狩獵 的英文是？",
+    "options": [
+      "hunt",
+      "hurt",
+      "hit",
+      "hold"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "成對的；配偶 的英文是？",
+    "options": [
+      "mate",
+      "match",
+      "couple",
+      "partner"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "雪豹 的英文是？",
+    "options": [
+      "snow leopard",
+      "white tiger",
+      "polar cat",
+      "mountain lion"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "森林 的英文是？",
+    "options": [
+      "forest",
+      "field",
+      "farm",
+      "flock"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "保護區 的英文是？",
+    "options": [
+      "reserve",
+      "park",
+      "place",
+      "area"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "環境破壞 的英文是？",
+    "options": [
+      "environmental destruction",
+      "nature pollution",
+      "eco damage",
+      "climate break"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "減輕；緩和 的英文是？",
+    "options": [
+      "relieve",
+      "release",
+      "repair",
+      "remove"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "捐贈 的英文是？",
+    "options": [
+      "donate",
+      "deliver",
+      "devote",
+      "decorate"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "贊助 的英文是？",
+    "options": [
+      "sponsor",
+      "support",
+      "supply",
+      "serve"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "建立 的英文是？",
+    "options": [
+      "establish",
+      "enable",
+      "encourage",
+      "engage"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "組織 的英文是？",
+    "options": [
+      "organization",
+      "operation",
+      "occupation",
+      "origin"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "基金會 的英文是？",
+    "options": [
+      "foundation",
+      "function",
+      "formation",
+      "fountain"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "活動 的英文是？",
+    "options": [
+      "activity",
+      "action",
+      "act",
+      "affair"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "教育 的英文是？",
+    "options": [
+      "education",
+      "edition",
+      "execution",
+      "emotion"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "提升意識 的英文是？",
+    "options": [
+      "raise awareness",
+      "rise attention",
+      "make people know",
+      "wake attention"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "公眾 的英文是？",
+    "options": [
+      "public",
+      "popular",
+      "people",
+      "political"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "重要的 的英文是？",
+    "options": [
+      "important",
+      "impressive",
+      "immediate",
+      "impossible"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "目標 的英文是？",
+    "options": [
+      "goal",
+      "aim",
+      "game",
+      "gain"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "挑戰 的英文是？",
+    "options": [
+      "challenge",
+      "chance",
+      "change",
+      "charge"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "危險的 的英文是？",
+    "options": [
+      "dangerous",
+      "damaging",
+      "dark",
+      "deadly"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "使存活 的英文是？",
+    "options": [
+      "keep alive",
+      "stay safe",
+      "save life",
+      "continue living"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "遺傳 的英文是？",
+    "options": [
+      "genetic",
+      "general",
+      "generous",
+      "geographic"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "適應 的英文是？",
+    "options": [
+      "adapt",
+      "adjust",
+      "accept",
+      "adopt"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "氣候條件 的英文是？",
+    "options": [
+      "climatic condition",
+      "climate problem",
+      "weather situation",
+      "air pressure"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "危害 的英文是？",
+    "options": [
+      "harm",
+      "hurt",
+      "heat",
+      "hold"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "人工飼養 的英文是？",
+    "options": [
+      "captivity",
+      "factory",
+      "activity",
+      "creativity"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "野外 的英文是？",
+    "options": [
+      "in the wild",
+      "on the field",
+      "at nature",
+      "outside"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "倖存 的英文是？",
+    "options": [
+      "survive",
+      "support",
+      "supply",
+      "succeed"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "捕食者 的英文是？",
+    "options": [
+      "predator",
+      "protector",
+      "producer",
+      "presenter"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "獵物 的英文是？",
+    "options": [
+      "prey",
+      "pray",
+      "price",
+      "press"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "追蹤 的英文是？",
+    "options": [
+      "track",
+      "trace",
+      "trail",
+      "train"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "觀察 的英文是？",
+    "options": [
+      "observe",
+      "obtain",
+      "operate",
+      "offer"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "紀錄 的英文是？",
+    "options": [
+      "record",
+      "report",
+      "register",
+      "remind"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "相機陷阱 的英文是？",
+    "options": [
+      "camera trap",
+      "photo trap",
+      "picture set",
+      "image box"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "科技 的英文是？",
+    "options": [
+      "technology",
+      "technique",
+      "theory",
+      "telegraph"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "數據 的英文是？",
+    "options": [
+      "data",
+      "datum",
+      "information",
+      "details"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "分析 的英文是？",
+    "options": [
+      "analyze",
+      "announce",
+      "arrange",
+      "apply"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "科學 的英文是？",
+    "options": [
+      "science",
+      "study",
+      "school",
+      "subject"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "研究 的英文是？",
+    "options": [
+      "research",
+      "review",
+      "record",
+      "react"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "成果 的英文是？",
+    "options": [
+      "result",
+      "reward",
+      "record",
+      "resource"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "發現 的英文是？",
+    "options": [
+      "discover",
+      "decide",
+      "develop",
+      "declare"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "證據 的英文是？",
+    "options": [
+      "evidence",
+      "example",
+      "event",
+      "effect"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "行為 的英文是？",
+    "options": [
+      "behavior",
+      "belief",
+      "benefit",
+      "background"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "互動 的英文是？",
+    "options": [
+      "interaction",
+      "integration",
+      "introduction",
+      "interview"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "避免 的英文是？",
+    "options": [
+      "avoid",
+      "avert",
+      "abandon",
+      "assist"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "受到威脅 的英文是？",
+    "options": [
+      "be threatened",
+      "be trapped",
+      "be treated",
+      "be tried"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "環境污染 的英文是？",
+    "options": [
+      "pollution",
+      "population",
+      "position",
+      "production"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "增加 的英文是？",
+    "options": [
+      "increase",
+      "improve",
+      "include",
+      "invite"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "人口 的英文是？",
+    "options": [
+      "population",
+      "pollution",
+      "position",
+      "production"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "能源 的英文是？",
+    "options": [
+      "energy",
+      "electricity",
+      "engine",
+      "element"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "再生能源 的英文是？",
+    "options": [
+      "renewable energy",
+      "reusable source",
+      "repeating power",
+      "returnable fuel"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "污染 的英文是？",
+    "options": [
+      "pollute",
+      "produce",
+      "protect",
+      "prepare"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "空氣 的英文是？",
+    "options": [
+      "air",
+      "gas",
+      "wind",
+      "breeze"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "水資源 的英文是？",
+    "options": [
+      "water resource",
+      "liquid source",
+      "aqua energy",
+      "water base"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "植物 的英文是？",
+    "options": [
+      "plant",
+      "plate",
+      "plot",
+      "plain"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "動物 的英文是？",
+    "options": [
+      "animal",
+      "beast",
+      "pet",
+      "creature"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "生態 的英文是？",
+    "options": [
+      "ecology",
+      "economy",
+      "ecosystem",
+      "ecologist"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "保留 的英文是？",
+    "options": [
+      "preserve",
+      "prevent",
+      "protect",
+      "prepare"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "環境保護 的英文是？",
+    "options": [
+      "environmental protection",
+      "natural defense",
+      "earth saving",
+      "ecological safety"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "人類 的英文是？",
+    "options": [
+      "human",
+      "humankind",
+      "person",
+      "people"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "影響 的英文是？",
+    "options": [
+      "affect",
+      "attack",
+      "approach",
+      "apply"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "造成 的英文是？",
+    "options": [
+      "cause",
+      "create",
+      "connect",
+      "catch"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "導致 的英文是？",
+    "options": [
+      "lead to",
+      "let to",
+      "move to",
+      "go to"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "解決 的英文是？",
+    "options": [
+      "solve",
+      "settle",
+      "serve",
+      "supply"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "努力 的英文是？",
+    "options": [
+      "effort",
+      "energy",
+      "effect",
+      "engine"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "成功 的英文是？",
+    "options": [
+      "success",
+      "survive",
+      "support",
+      "supply"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "負責任 的英文是？",
+    "options": [
+      "responsible",
+      "responsive",
+      "reliable",
+      "resistant"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "政府 的英文是？",
+    "options": [
+      "government",
+      "governor",
+      "group",
+      "guide"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "法律 的英文是？",
+    "options": [
+      "law",
+      "rule",
+      "order",
+      "control"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "規定 的英文是？",
+    "options": [
+      "regulation",
+      "registration",
+      "relation",
+      "reaction"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "支持 的英文是？",
+    "options": [
+      "support",
+      "supply",
+      "sustain",
+      "survive"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "提供 的英文是？",
+    "options": [
+      "provide",
+      "produce",
+      "present",
+      "protect"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "確保 的英文是？",
+    "options": [
+      "ensure",
+      "insure",
+      "assure",
+      "secure"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "鼓勵 的英文是？",
+    "options": [
+      "encourage",
+      "enhance",
+      "enlarge",
+      "enable"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "促進 的英文是？",
+    "options": [
+      "promote",
+      "promise",
+      "propose",
+      "progress"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "保證 的英文是？",
+    "options": [
+      "guarantee",
+      "guard",
+      "grant",
+      "guide"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "條件 的英文是？",
+    "options": [
+      "condition",
+      "connection",
+      "construction",
+      "conclusion"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "情況 的英文是？",
+    "options": [
+      "situation",
+      "solution",
+      "selection",
+      "structure"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "例子 的英文是？",
+    "options": [
+      "example",
+      "event",
+      "evidence",
+      "effect"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "計畫 的英文是？",
+    "options": [
+      "plan",
+      "plot",
+      "program",
+      "policy"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "專案 的英文是？",
+    "options": [
+      "project",
+      "process",
+      "program",
+      "promotion"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "措施 的英文是？",
+    "options": [
+      "measure",
+      "method",
+      "manner",
+      "mission"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "發展 的英文是？",
+    "options": [
+      "develop",
+      "design",
+      "decide",
+      "deliver"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "生存 的英文是？",
+    "options": [
+      "survival",
+      "support",
+      "supply",
+      "success"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "生活 的英文是？",
+    "options": [
+      "life",
+      "live",
+      "living",
+      "lifestyle"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "文化 的英文是？",
+    "options": [
+      "culture",
+      "custom",
+      "civilization",
+      "country"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "傳統 的英文是？",
+    "options": [
+      "tradition",
+      "transition",
+      "transaction",
+      "translation"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "社會 的英文是？",
+    "options": [
+      "society",
+      "social",
+      "system",
+      "situation"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "責任 的英文是？",
+    "options": [
+      "responsibility",
+      "response",
+      "respect",
+      "requirement"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "能力 的英文是？",
+    "options": [
+      "ability",
+      "activity",
+      "attitude",
+      "advantage"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "經驗 的英文是？",
+    "options": [
+      "experience",
+      "experiment",
+      "expectation",
+      "explanation"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "關係 的英文是？",
+    "options": [
+      "relationship",
+      "relevance",
+      "reaction",
+      "reminder"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "機會 的英文是？",
+    "options": [
+      "opportunity",
+      "option",
+      "opening",
+      "offer"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "自然 的英文是？",
+    "options": [
+      "nature",
+      "nation",
+      "native",
+      "notion"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "健康 的英文是？",
+    "options": [
+      "health",
+      "heart",
+      "heat",
+      "height"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "醫學 的英文是？",
+    "options": [
+      "medicine",
+      "medical",
+      "medium",
+      "measure"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "治療 的英文是？",
+    "options": [
+      "treat",
+      "train",
+      "try",
+      "track"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "傳染 的英文是？",
+    "options": [
+      "infect",
+      "inject",
+      "inspect",
+      "inspire"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "疫苗 的英文是？",
+    "options": [
+      "vaccine",
+      "vitamin",
+      "value",
+      "vessel"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "醫院 的英文是？",
+    "options": [
+      "hospital",
+      "hostel",
+      "hotel",
+      "house"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "醫生 的英文是？",
+    "options": [
+      "doctor",
+      "dentist",
+      "director",
+      "designer"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "護士 的英文是？",
+    "options": [
+      "nurse",
+      "novice",
+      "notice",
+      "neighbor"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "照顧病人 的英文是？",
+    "options": [
+      "take care of patients",
+      "treat people",
+      "serve others",
+      "watch sick"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "溝通 的英文是？",
+    "options": [
+      "communicate",
+      "connect",
+      "comment",
+      "combine"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "表達 的英文是？",
+    "options": [
+      "express",
+      "explain",
+      "expand",
+      "expose"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "描述 的英文是？",
+    "options": [
+      "describe",
+      "decide",
+      "declare",
+      "design"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "說服 的英文是？",
+    "options": [
+      "persuade",
+      "prevent",
+      "provide",
+      "propose"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "建議 的英文是？",
+    "options": [
+      "suggest",
+      "support",
+      "supply",
+      "serve"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "討論 的英文是？",
+    "options": [
+      "discuss",
+      "debate",
+      "decide",
+      "deliver"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "回應 的英文是？",
+    "options": [
+      "respond",
+      "react",
+      "report",
+      "repeat"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "解釋 的英文是？",
+    "options": [
+      "explain",
+      "expand",
+      "explore",
+      "expose"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "舉例說明 的英文是？",
+    "options": [
+      "give an example",
+      "make an example",
+      "take an example",
+      "use an example"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "報告 的英文是？",
+    "options": [
+      "report",
+      "record",
+      "respond",
+      "reply"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "公告 的英文是？",
+    "options": [
+      "announcement",
+      "agreement",
+      "arrangement",
+      "assignment"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "資訊 的英文是？",
+    "options": [
+      "information",
+      "instruction",
+      "invitation",
+      "innovation"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "通知 的英文是？",
+    "options": [
+      "inform",
+      "invite",
+      "include",
+      "improve"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "觀點 的英文是？",
+    "options": [
+      "opinion",
+      "option",
+      "observation",
+      "objective"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "同意 的英文是？",
+    "options": [
+      "agree",
+      "allow",
+      "admit",
+      "accept"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "不同意 的英文是？",
+    "options": [
+      "disagree",
+      "disappear",
+      "disable",
+      "discuss"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "決定 的英文是？",
+    "options": [
+      "decide",
+      "declare",
+      "define",
+      "deliver"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "選擇 的英文是？",
+    "options": [
+      "choose",
+      "check",
+      "change",
+      "charge"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "理由 的英文是？",
+    "options": [
+      "reason",
+      "result",
+      "report",
+      "record"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "證明 的英文是？",
+    "options": [
+      "prove",
+      "provide",
+      "prevent",
+      "prepare"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "錯誤 的英文是？",
+    "options": [
+      "mistake",
+      "miss",
+      "mess",
+      "mix"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "學習 的英文是？",
+    "options": [
+      "study",
+      "student",
+      "stay",
+      "start"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "發表 的英文是？",
+    "options": [
+      "publish",
+      "push",
+      "propose",
+      "produce"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "文章 的英文是？",
+    "options": [
+      "article",
+      "artwork",
+      "argument",
+      "arrangement"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "標題 的英文是？",
+    "options": [
+      "title",
+      "topic",
+      "type",
+      "theme"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "段落 的英文是？",
+    "options": [
+      "paragraph",
+      "part",
+      "piece",
+      "page"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "句子 的英文是？",
+    "options": [
+      "sentence",
+      "section",
+      "structure",
+      "script"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "單字 的英文是？",
+    "options": [
+      "word",
+      "vocabulary",
+      "verb",
+      "writing"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "翻譯 的英文是？",
+    "options": [
+      "translate",
+      "transfer",
+      "transform",
+      "transport"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "理解 的英文是？",
+    "options": [
+      "understand",
+      "undertake",
+      "underline",
+      "undo"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "記憶 的英文是？",
+    "options": [
+      "memory",
+      "mind",
+      "memo",
+      "mention"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "練習 的英文是？",
+    "options": [
+      "practice",
+      "prepare",
+      "process",
+      "present"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "複習 的英文是？",
+    "options": [
+      "review",
+      "replay",
+      "rebuild",
+      "remove"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "考試 的英文是？",
+    "options": [
+      "exam",
+      "example",
+      "exercise",
+      "experience"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "分數 的英文是？",
+    "options": [
+      "score",
+      "scale",
+      "scene",
+      "scheme"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "結果 的英文是？",
+    "options": [
+      "result",
+      "reward",
+      "record",
+      "reason"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "失敗 的英文是？",
+    "options": [
+      "failure",
+      "fault",
+      "fall",
+      "fear"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "進步 的英文是？",
+    "options": [
+      "progress",
+      "project",
+      "process",
+      "program"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "extinction 的中文意思是？",
+    "options": [
+      "滅絕",
+      "爆炸",
+      "擴張",
+      "表達"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "rescue 的中文意思是？",
+    "options": [
+      "救援",
+      "回收",
+      "釋放",
+      "反應"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "threaten 的中文意思是？",
+    "options": [
+      "威脅",
+      "治療",
+      "緊縮",
+      "追蹤"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "habitat 的中文意思是？",
+    "options": [
+      "棲息地",
+      "遺產",
+      "收成",
+      "習慣"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "protect 的中文意思是？",
+    "options": [
+      "保護",
+      "計畫",
+      "假裝",
+      "過程"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "disease 的中文意思是？",
+    "options": [
+      "疾病",
+      "災難",
+      "距離",
+      "偽裝"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "researcher 的中文意思是？",
+    "options": [
+      "研究員",
+      "接收者",
+      "回答者",
+      "記錄者"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "take care of 的中文意思是？",
+    "options": [
+      "照顧",
+      "建立",
+      "關閉",
+      "談論"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "veterinarian 的中文意思是？",
+    "options": [
+      "獸醫",
+      "志工",
+      "訪客",
+      "素食者"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "injured 的中文意思是？",
+    "options": [
+      "受傷的",
+      "包含的",
+      "受邀的",
+      "增加的"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "environment 的中文意思是？",
+    "options": [
+      "環境",
+      "信封",
+      "婚約",
+      "入口"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "threatening 的中文意思是？",
+    "options": [
+      "具威脅性的",
+      "治療的",
+      "刺激的",
+      "投擲的"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "zoologist 的中文意思是？",
+    "options": [
+      "動物學家",
+      "人類學家",
+      "化學家",
+      "生物學家"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "leaves 的中文意思是？",
+    "options": [
+      "樹葉",
+      "木頭",
+      "森林",
+      "樹"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "pouch 的中文意思是？",
+    "options": [
+      "育兒袋",
+      "口袋",
+      "包包",
+      "鳥巢"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "live 的中文意思是？",
+    "options": [
+      "棲息",
+      "停留",
+      "存在",
+      "休息"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "suburb 的中文意思是？",
+    "options": [
+      "郊區",
+      "區域",
+      "省份",
+      "地區"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "threat 的中文意思是？",
+    "options": [
+      "威脅",
+      "追蹤",
+      "治療",
+      "詭計"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "species 的中文意思是？",
+    "options": [
+      "物種",
+      "標本",
+      "特殊",
+      "具體"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "habitat loss 的中文意思是？",
+    "options": [
+      "棲地喪失",
+      "森林毀壞",
+      "自然破壞",
+      "土地破裂"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "car accident 的中文意思是？",
+    "options": [
+      "車禍",
+      "車壞掉",
+      "車問題",
+      "車事件"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "conservation 的中文意思是？",
+    "options": [
+      "保育",
+      "對話",
+      "轉換",
+      "建造"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "endangered 的中文意思是？",
+    "options": [
+      "瀕危的",
+      "擴大的",
+      "訂婚的",
+      "增強的"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "die out 的中文意思是？",
+    "options": [
+      "滅亡",
+      "消失",
+      "倒下",
+      "離開"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "reproduce 的中文意思是？",
+    "options": [
+      "復育",
+      "重建",
+      "恢復",
+      "重製"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "adult 的中文意思是？",
+    "options": [
+      "成年的",
+      "成熟的",
+      "年長的",
+      "成長的"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "wild 的中文意思是？",
+    "options": [
+      "野生的",
+      "寬廣的",
+      "木製的",
+      "開放的"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "independent 的中文意思是？",
+    "options": [
+      "獨立的",
+      "個別的",
+      "內部的",
+      "孤立的"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "scientist 的中文意思是？",
+    "options": [
+      "科學家",
+      "專家",
+      "研究員",
+      "學者"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "crisis 的中文意思是？",
+    "options": [
+      "危機",
+      "犯罪",
+      "批評",
+      "粉碎"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ecosystem 的中文意思是？",
+    "options": [
+      "生態系",
+      "環境",
+      "生物群",
+      "領域"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "experiment 的中文意思是？",
+    "options": [
+      "實驗",
+      "經驗",
+      "練習",
+      "檢查"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "reduce 的中文意思是？",
+    "options": [
+      "減少",
+      "放鬆",
+      "釋放",
+      "移除"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "treatment 的中文意思是？",
+    "options": [
+      "治療",
+      "訓練",
+      "測驗",
+      "運輸"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "active 的中文意思是？",
+    "options": [
+      "活躍的",
+      "精確的",
+      "活著的",
+      "實際的"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "danger 的中文意思是？",
+    "options": [
+      "危險",
+      "黑暗",
+      "傷害",
+      "損害"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "climate 的中文意思是？",
+    "options": [
+      "氣候",
+      "溫度",
+      "條件",
+      "天氣"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "climate change 的中文意思是？",
+    "options": [
+      "氣候變遷",
+      "地球變化",
+      "溫度上升",
+      "全球暖化"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "environmental 的中文意思是？",
+    "options": [
+      "環保的",
+      "自然的",
+      "生態的",
+      "綠色的"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "care for 的中文意思是？",
+    "options": [
+      "照顧",
+      "尋找",
+      "等待",
+      "轉向"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "deforestation 的中文意思是？",
+    "options": [
+      "森林砍伐",
+      "森林火災",
+      "森林種植",
+      "森林發展"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "conservationist 的中文意思是？",
+    "options": [
+      "保育人員",
+      "建築師",
+      "顧問",
+      "環境破壞者"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "natural habitat 的中文意思是？",
+    "options": [
+      "自然棲地",
+      "自然災害",
+      "原始地區",
+      "自然景觀"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "protected 的中文意思是？",
+    "options": [
+      "受保護的",
+      "被阻止的",
+      "被提供的",
+      "被計畫的"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "capture 的中文意思是？",
+    "options": [
+      "捕捉",
+      "趕走",
+      "忽視",
+      "釋放"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "breed 的中文意思是？",
+    "options": [
+      "繁殖",
+      "建造",
+      "成長",
+      "栽種"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "hunt 的中文意思是？",
+    "options": [
+      "狩獵",
+      "打擊",
+      "傷害",
+      "抓住"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "mate 的中文意思是？",
+    "options": [
+      "配偶",
+      "夥伴",
+      "朋友",
+      "伴侶"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "snow leopard 的中文意思是？",
+    "options": [
+      "雪豹",
+      "北極熊",
+      "白虎",
+      "山獅"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "forest 的中文意思是？",
+    "options": [
+      "森林",
+      "草原",
+      "農場",
+      "村莊"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "reserve 的中文意思是？",
+    "options": [
+      "保護區",
+      "保留地",
+      "空地",
+      "禁區"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "environmental destruction 的中文意思是？",
+    "options": [
+      "環境破壞",
+      "環境保護",
+      "氣候變化",
+      "自然損害"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "relieve 的中文意思是？",
+    "options": [
+      "減輕",
+      "修復",
+      "釋放",
+      "移除"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "donate 的中文意思是？",
+    "options": [
+      "捐贈",
+      "奉獻",
+      "交付",
+      "裝飾"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "sponsor 的中文意思是？",
+    "options": [
+      "贊助",
+      "支持",
+      "供應",
+      "服務"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "establish 的中文意思是？",
+    "options": [
+      "建立",
+      "啟動",
+      "鼓勵",
+      "聘任"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "organization 的中文意思是？",
+    "options": [
+      "組織",
+      "職業",
+      "來源",
+      "活動"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "foundation 的中文意思是？",
+    "options": [
+      "基金會",
+      "來源",
+      "泉水",
+      "形式"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "activity 的中文意思是？",
+    "options": [
+      "活動",
+      "行動",
+      "動作",
+      "事件"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "education 的中文意思是？",
+    "options": [
+      "教育",
+      "版本",
+      "執行",
+      "情感"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "raise awareness 的中文意思是？",
+    "options": [
+      "提升意識",
+      "引起注意",
+      "喚醒關心",
+      "提醒公眾"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "public 的中文意思是？",
+    "options": [
+      "公眾的",
+      "人民的",
+      "流行的",
+      "政治的"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "important 的中文意思是？",
+    "options": [
+      "重要的",
+      "即時的",
+      "令人印象深刻的",
+      "不可能的"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "goal 的中文意思是？",
+    "options": [
+      "目標",
+      "遊戲",
+      "成就",
+      "獎勵"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "challenge 的中文意思是？",
+    "options": [
+      "挑戰",
+      "機會",
+      "改變",
+      "收費"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "decrease 的中文意思是？",
+    "options": [
+      "減少",
+      "延遲",
+      "防禦",
+      "下降"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "dangerous 的中文意思是？",
+    "options": [
+      "危險的",
+      "致命的",
+      "有害的",
+      "黑暗的"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "keep alive 的中文意思是？",
+    "options": [
+      "使存活",
+      "拯救生命",
+      "保持健康",
+      "繼續活著"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "genetic 的中文意思是？",
+    "options": [
+      "遺傳的",
+      "慷慨的",
+      "一般的",
+      "地理的"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "adapt 的中文意思是？",
+    "options": [
+      "適應",
+      "接受",
+      "採納",
+      "調整"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "climatic condition 的中文意思是？",
+    "options": [
+      "氣候條件",
+      "天氣狀況",
+      "空氣壓力",
+      "氣象變化"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "harm 的中文意思是？",
+    "options": [
+      "危害",
+      "加熱",
+      "傷害",
+      "保持"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "captivity 的中文意思是？",
+    "options": [
+      "人工飼養",
+      "創造力",
+      "活動",
+      "工廠"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "in the wild 的中文意思是？",
+    "options": [
+      "野外",
+      "戶外",
+      "田野",
+      "自然中"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "survive 的中文意思是？",
+    "options": [
+      "倖存",
+      "支持",
+      "供應",
+      "成功"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "predator 的中文意思是？",
+    "options": [
+      "捕食者",
+      "製造者",
+      "保護者",
+      "主持人"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "prey 的中文意思是？",
+    "options": [
+      "獵物",
+      "禱告",
+      "價格",
+      "壓力"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "track 的中文意思是？",
+    "options": [
+      "追蹤",
+      "訓練",
+      "小徑",
+      "痕跡"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "observe 的中文意思是？",
+    "options": [
+      "觀察",
+      "獲得",
+      "提供",
+      "操作"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "record 的中文意思是？",
+    "options": [
+      "紀錄",
+      "提醒",
+      "登記",
+      "報告"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "camera trap 的中文意思是？",
+    "options": [
+      "相機陷阱",
+      "影像箱",
+      "拍照機制",
+      "照相陷阱"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "technology 的中文意思是？",
+    "options": [
+      "科技",
+      "理論",
+      "技巧",
+      "電報"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "data 的中文意思是？",
+    "options": [
+      "數據",
+      "細節",
+      "資料",
+      "訊息"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "analyze 的中文意思是？",
+    "options": [
+      "分析",
+      "應用",
+      "宣告",
+      "安排"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "science 的中文意思是？",
+    "options": [
+      "科學",
+      "研究",
+      "主題",
+      "學科"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "research 的中文意思是？",
+    "options": [
+      "研究",
+      "回顧",
+      "反應",
+      "報告"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "result 的中文意思是？",
+    "options": [
+      "成果",
+      "資源",
+      "報酬",
+      "紀錄"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "discover 的中文意思是？",
+    "options": [
+      "發現",
+      "開發",
+      "宣佈",
+      "決定"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "evidence 的中文意思是？",
+    "options": [
+      "證據",
+      "例子",
+      "事件",
+      "效果"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "behavior 的中文意思是？",
+    "options": [
+      "行為",
+      "信念",
+      "利益",
+      "背景"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "interaction 的中文意思是？",
+    "options": [
+      "互動",
+      "介紹",
+      "採訪",
+      "整合"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "avoid 的中文意思是？",
+    "options": [
+      "避免",
+      "放棄",
+      "幫助",
+      "逃離"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "be threatened 的中文意思是？",
+    "options": [
+      "受到威脅",
+      "被困住",
+      "被治療",
+      "被嘗試"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "pollution 的中文意思是？",
+    "options": [
+      "污染",
+      "人口",
+      "位置",
+      "產量"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "increase 的中文意思是？",
+    "options": [
+      "增加",
+      "包括",
+      "邀請",
+      "改進"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "population 的中文意思是？",
+    "options": [
+      "人口",
+      "污染",
+      "生產",
+      "位置"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "energy 的中文意思是？",
+    "options": [
+      "能源",
+      "引擎",
+      "元素",
+      "電力"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "renewable energy 的中文意思是？",
+    "options": [
+      "再生能源",
+      "重複能源",
+      "回收能量",
+      "替代能源"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "pollute 的中文意思是？",
+    "options": [
+      "污染",
+      "製造",
+      "準備",
+      "保護"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "air 的中文意思是？",
+    "options": [
+      "空氣",
+      "風",
+      "氣體",
+      "微風"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "water resource 的中文意思是？",
+    "options": [
+      "水資源",
+      "水能",
+      "液體來源",
+      "能源來源"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "plant 的中文意思是？",
+    "options": [
+      "植物",
+      "地板",
+      "平原",
+      "地區"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "animal 的中文意思是？",
+    "options": [
+      "動物",
+      "生物",
+      "寵物",
+      "野獸"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ecology 的中文意思是？",
+    "options": [
+      "生態學",
+      "經濟",
+      "生態系",
+      "環境"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "preserve 的中文意思是？",
+    "options": [
+      "保留",
+      "保護",
+      "預防",
+      "準備"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "conserve 的中文意思是？",
+    "options": [
+      "保護",
+      "建造",
+      "消耗",
+      "考慮"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "environmental protection 的中文意思是？",
+    "options": [
+      "環境保護",
+      "自然防護",
+      "地球安全",
+      "生態安全"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "human 的中文意思是？",
+    "options": [
+      "人類",
+      "人性",
+      "人民",
+      "人種"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "affect 的中文意思是？",
+    "options": [
+      "影響",
+      "接近",
+      "應用",
+      "攻擊"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "cause 的中文意思是？",
+    "options": [
+      "造成",
+      "創造",
+      "連接",
+      "捕捉"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "lead to 的中文意思是？",
+    "options": [
+      "導致",
+      "轉向",
+      "帶領",
+      "移動"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "solve 的中文意思是？",
+    "options": [
+      "解決",
+      "提供",
+      "服務",
+      "整理"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "effort 的中文意思是？",
+    "options": [
+      "努力",
+      "效果",
+      "引擎",
+      "能量"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "success 的中文意思是？",
+    "options": [
+      "成功",
+      "生存",
+      "供應",
+      "支援"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "responsible 的中文意思是？",
+    "options": [
+      "負責任的",
+      "可靠的",
+      "反應的",
+      "有抵抗力的"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "government 的中文意思是？",
+    "options": [
+      "政府",
+      "團體",
+      "指導",
+      "管理"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "law 的中文意思是？",
+    "options": [
+      "法律",
+      "控制",
+      "秩序",
+      "規則"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "regulation 的中文意思是？",
+    "options": [
+      "規定",
+      "登記",
+      "關係",
+      "反應"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "support 的中文意思是？",
+    "options": [
+      "支持",
+      "供應",
+      "生存",
+      "維持"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "provide 的中文意思是？",
+    "options": [
+      "提供",
+      "生產",
+      "展示",
+      "保護"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ensure 的中文意思是？",
+    "options": [
+      "確保",
+      "保險",
+      "確認",
+      "保障"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "encourage 的中文意思是？",
+    "options": [
+      "鼓勵",
+      "擴展",
+      "啟用",
+      "放大"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "promote 的中文意思是？",
+    "options": [
+      "促進",
+      "建議",
+      "承諾",
+      "提議"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "guarantee 的中文意思是？",
+    "options": [
+      "保證",
+      "授予",
+      "守衛",
+      "引導"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "condition 的中文意思是？",
+    "options": [
+      "條件",
+      "結論",
+      "連接",
+      "建設"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "situation 的中文意思是？",
+    "options": [
+      "情況",
+      "方案",
+      "選擇",
+      "結構"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "example 的中文意思是？",
+    "options": [
+      "例子",
+      "事件",
+      "效果",
+      "證據"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "influence 的中文意思是？",
+    "options": [
+      "影響",
+      "興趣",
+      "重要性",
+      "效果"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "plan 的中文意思是？",
+    "options": [
+      "計畫",
+      "方案",
+      "政策",
+      "制度"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "project 的中文意思是？",
+    "options": [
+      "專案",
+      "程序",
+      "計畫",
+      "提案"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "measure 的中文意思是？",
+    "options": [
+      "措施",
+      "方法",
+      "任務",
+      "手段"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "develop 的中文意思是？",
+    "options": [
+      "發展",
+      "傳遞",
+      "決定",
+      "設計"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "survival 的中文意思是？",
+    "options": [
+      "生存",
+      "成功",
+      "支援",
+      "供應"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "life 的中文意思是？",
+    "options": [
+      "生活",
+      "生命",
+      "人生",
+      "生計"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "culture 的中文意思是？",
+    "options": [
+      "文化",
+      "文明",
+      "國家",
+      "傳統"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "tradition 的中文意思是？",
+    "options": [
+      "傳統",
+      "過渡",
+      "交易",
+      "翻譯"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "society 的中文意思是？",
+    "options": [
+      "社會",
+      "制度",
+      "情況",
+      "系統"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "responsibility 的中文意思是？",
+    "options": [
+      "責任",
+      "回應",
+      "尊重",
+      "要求"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "ability 的中文意思是？",
+    "options": [
+      "能力",
+      "態度",
+      "活動",
+      "優勢"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "experience 的中文意思是？",
+    "options": [
+      "經驗",
+      "實驗",
+      "期望",
+      "解釋"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "relationship 的中文意思是？",
+    "options": [
+      "關係",
+      "關聯",
+      "提醒",
+      "反應"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "objective 的中文意思是？",
+    "options": [
+      "目標",
+      "義務",
+      "場合",
+      "反對"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "opportunity 的中文意思是？",
+    "options": [
+      "機會",
+      "選項",
+      "開口",
+      "提供"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "endeavor 的中文意思是？",
+    "options": [
+      "努力",
+      "能量",
+      "引擎",
+      "進入"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "risk 的中文意思是？",
+    "options": [
+      "危險",
+      "規則",
+      "上升",
+      "趕忙"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "nature 的中文意思是？",
+    "options": [
+      "自然",
+      "國家",
+      "觀念",
+      "原住民"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "health 的中文意思是？",
+    "options": [
+      "健康",
+      "高度",
+      "熱度",
+      "心臟"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "medicine 的中文意思是？",
+    "options": [
+      "醫學",
+      "中等",
+      "測量",
+      "醫藥"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "treat 的中文意思是？",
+    "options": [
+      "治療",
+      "追蹤",
+      "嘗試",
+      "訓練"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "illness 的中文意思是？",
+    "options": [
+      "疾病",
+      "感染",
+      "受傷",
+      "影響"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "infect 的中文意思是？",
+    "options": [
+      "傳染",
+      "激勵",
+      "檢查",
+      "注射"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "vaccine 的中文意思是？",
+    "options": [
+      "疫苗",
+      "維他命",
+      "價值",
+      "容器"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "hospital 的中文意思是？",
+    "options": [
+      "醫院",
+      "旅館",
+      "宿舍",
+      "住宅"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "doctor 的中文意思是？",
+    "options": [
+      "醫生",
+      "設計師",
+      "導演",
+      "牙醫"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "nurse 的中文意思是？",
+    "options": [
+      "護士",
+      "鄰居",
+      "新手",
+      "通知者"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "take care of patients 的中文意思是？",
+    "options": [
+      "照顧病人",
+      "服務他人",
+      "治療人們",
+      "觀察病患"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "communicate 的中文意思是？",
+    "options": [
+      "溝通",
+      "連結",
+      "混合",
+      "評論"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "express 的中文意思是？",
+    "options": [
+      "表達",
+      "解釋",
+      "暴露",
+      "擴展"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "describe 的中文意思是？",
+    "options": [
+      "描述",
+      "設計",
+      "宣告",
+      "決定"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "persuade 的中文意思是？",
+    "options": [
+      "說服",
+      "防止",
+      "提供",
+      "建議"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "suggest 的中文意思是？",
+    "options": [
+      "建議",
+      "支持",
+      "提供",
+      "服務"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "discuss 的中文意思是？",
+    "options": [
+      "討論",
+      "辯論",
+      "遞送",
+      "決定"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "respond 的中文意思是？",
+    "options": [
+      "回應",
+      "反應",
+      "回報",
+      "重複"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "explain 的中文意思是？",
+    "options": [
+      "解釋",
+      "探索",
+      "擴展",
+      "暴露"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "give an example 的中文意思是？",
+    "options": [
+      "舉例說明",
+      "使用例子",
+      "採取範例",
+      "建立範例"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "report 的中文意思是？",
+    "options": [
+      "報告",
+      "紀錄",
+      "回應",
+      "重覆"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "announcement 的中文意思是？",
+    "options": [
+      "公告",
+      "協議",
+      "任務",
+      "安排"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "information 的中文意思是？",
+    "options": [
+      "資訊",
+      "指示",
+      "邀請",
+      "創新"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "inform 的中文意思是？",
+    "options": [
+      "通知",
+      "包括",
+      "邀請",
+      "改進"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "opinion 的中文意思是？",
+    "options": [
+      "觀點",
+      "觀察",
+      "選項",
+      "目標"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "agree 的中文意思是？",
+    "options": [
+      "同意",
+      "允許",
+      "接受",
+      "承認"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "disagree 的中文意思是？",
+    "options": [
+      "不同意",
+      "討論",
+      "消失",
+      "停用"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "decide 的中文意思是？",
+    "options": [
+      "決定",
+      "宣告",
+      "定義",
+      "傳遞"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "choose 的中文意思是？",
+    "options": [
+      "選擇",
+      "改變",
+      "收費",
+      "檢查"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "reason 的中文意思是？",
+    "options": [
+      "理由",
+      "結果",
+      "紀錄",
+      "報告"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "prove 的中文意思是？",
+    "options": [
+      "證明",
+      "提供",
+      "預防",
+      "準備"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "mistake 的中文意思是？",
+    "options": [
+      "錯誤",
+      "混亂",
+      "遺漏",
+      "跌倒"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "study 的中文意思是？",
+    "options": [
+      "學習",
+      "留在",
+      "開始",
+      "學生"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "publish 的中文意思是？",
+    "options": [
+      "發表",
+      "生產",
+      "推動",
+      "提議"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "article 的中文意思是？",
+    "options": [
+      "文章",
+      "作品",
+      "論點",
+      "安排"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "title 的中文意思是？",
+    "options": [
+      "標題",
+      "主題",
+      "類型",
+      "主旨"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "paragraph 的中文意思是？",
+    "options": [
+      "段落",
+      "部分",
+      "頁面",
+      "章節"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "sentence 的中文意思是？",
+    "options": [
+      "句子",
+      "段落",
+      "文字",
+      "章節"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "word 的中文意思是？",
+    "options": [
+      "單字",
+      "動詞",
+      "詞彙",
+      "作文"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "translate 的中文意思是？",
+    "options": [
+      "翻譯",
+      "轉移",
+      "轉變",
+      "運送"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "understand 的中文意思是？",
+    "options": [
+      "理解",
+      "承擔",
+      "強調",
+      "取消"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "memory 的中文意思是？",
+    "options": [
+      "記憶",
+      "心智",
+      "備忘錄",
+      "提及"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "practice 的中文意思是？",
+    "options": [
+      "練習",
+      "呈現",
+      "準備",
+      "過程"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "review 的中文意思是？",
+    "options": [
+      "複習",
+      "移除",
+      "重播",
+      "重建"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "exam 的中文意思是？",
+    "options": [
+      "考試",
+      "練習",
+      "範例",
+      "經驗"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "score 的中文意思是？",
+    "options": [
+      "分數",
+      "比例",
+      "場景",
+      "計畫"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "failure 的中文意思是？",
+    "options": [
+      "失敗",
+      "錯誤",
+      "恐懼",
+      "墜落"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "multiple-choice",
+    "question": "progress 的中文意思是？",
+    "options": [
+      "進步",
+      "計畫",
+      "程序",
+      "專案"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "grammar",
+    "question": "Koalas are ______ because their habitats are disappearing.",
+    "options": [
+      "endangered",
+      "endanger",
+      "endangering",
+      "endangerment"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "grammar",
+    "question": "The students must _______ their homework before playing.",
+    "options": [
+      "finish",
+      "finishing",
+      "finished",
+      "to finish"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "grammar",
+    "question": "She is interested ______ learning new languages.",
+    "options": [
+      "in",
+      "on",
+      "at",
+      "for"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "grammar",
+    "question": "We should do our best to ______ the environment.",
+    "options": [
+      "protect",
+      "protecting",
+      "protected",
+      "to protect"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "grammar",
+    "question": "He is good ______ playing basketball.",
+    "options": [
+      "at",
+      "in",
+      "on",
+      "for"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "grammar",
+    "question": "If we don’t act now, some animals will ______.",
+    "options": [
+      "die out",
+      "turn off",
+      "set up",
+      "look for"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "grammar",
+    "question": "The teacher asked the students ______ quietly.",
+    "options": [
+      "to sit",
+      "sit",
+      "sitting",
+      "sat"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "grammar",
+    "question": "Climate change is a serious ______ to wildlife.",
+    "options": [
+      "threat",
+      "thread",
+      "throat",
+      "throw"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "grammar",
+    "question": "She wants to become a ______ to help sick animals.",
+    "options": [
+      "veterinarian",
+      "vegetarian",
+      "visitor",
+      "volunteer"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "grammar",
+    "question": "They built a new hospital to provide medical ______.",
+    "options": [
+      "treatment",
+      "traffic",
+      "tradition",
+      "temperature"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "grammar",
+    "question": "The scientist discovered new ______ about the species.",
+    "options": [
+      "information",
+      "invitation",
+      "invention",
+      "instruction"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "grammar",
+    "question": "We need to ______ pollution to protect our planet.",
+    "options": [
+      "reduce",
+      "remove",
+      "relax",
+      "release"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "grammar",
+    "question": "She donated money to the wildlife ______.",
+    "options": [
+      "foundation",
+      "function",
+      "formation",
+      "fountain"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "grammar",
+    "question": "People should ______ awareness of endangered animals.",
+    "options": [
+      "raise",
+      "rise",
+      "run",
+      "reach"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "grammar",
+    "question": "The koala lives in the ______ of Australia.",
+    "options": [
+      "forest",
+      "farm",
+      "field",
+      "factory"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "grammar",
+    "question": "The baby kangaroo stays in its mother’s ______.",
+    "options": [
+      "pouch",
+      "pocket",
+      "pack",
+      "plate"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "grammar",
+    "question": "Many animals are losing their ______ due to deforestation.",
+    "options": [
+      "habitat",
+      "habit",
+      "hammer",
+      "hobby"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "grammar",
+    "question": "The government made new ______ to protect wildlife.",
+    "options": [
+      "regulations",
+      "relations",
+      "reactions",
+      "registrations"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "grammar",
+    "question": "We must take action to prevent animals from becoming ______.",
+    "options": [
+      "extinct",
+      "excited",
+      "excellent",
+      "expensive"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "grammar",
+    "question": "The zoo is a safe place for animals in ______.",
+    "options": [
+      "captivity",
+      "activity",
+      "creativity",
+      "community"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "grammar",
+    "question": "The leopard is a strong ______ that hunts at night.",
+    "options": [
+      "predator",
+      "producer",
+      "protector",
+      "presenter"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "grammar",
+    "question": "The mouse is the leopard’s ______.",
+    "options": [
+      "prey",
+      "pray",
+      "price",
+      "press"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "grammar",
+    "question": "Researchers use camera traps to ______ wild animals.",
+    "options": [
+      "observe",
+      "obtain",
+      "offer",
+      "open"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "grammar",
+    "question": "Climate change can ______ the environment a lot.",
+    "options": [
+      "affect",
+      "attack",
+      "approach",
+      "apply"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "grammar",
+    "question": "We should use ______ energy to protect the Earth.",
+    "options": [
+      "renewable",
+      "reusable",
+      "returnable",
+      "repeating"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "translation",
+    "question": "請翻譯：Koalas are endangered because of habitat loss.",
+    "correctAnswer": "無尾熊因棲息地喪失而瀕危。"
+  },
+  {
+    "type": "translation",
+    "question": "請翻譯：Many animals will die out if we don’t protect them.",
+    "correctAnswer": "如果我們不保護牠們，許多動物將會滅亡。"
+  },
+  {
+    "type": "translation",
+    "question": "請翻譯：Scientists are working hard to save endangered species.",
+    "correctAnswer": "科學家正努力拯救瀕危物種。"
+  },
+  {
+    "type": "translation",
+    "question": "請翻譯：Climate change is a serious threat to wildlife.",
+    "correctAnswer": "氣候變遷對野生動物是一項嚴重威脅。"
+  },
+  {
+    "type": "translation",
+    "question": "請翻譯：We should raise awareness about environmental protection.",
+    "correctAnswer": "我們應該提升對環境保護的意識。"
+  },
+  {
+    "type": "reading",
+    "question": "閱讀短文：Koalas live in Australia. They eat leaves and sleep a lot. Many koalas are endangered because people cut down trees and destroy their habitat. Scientists and conservationists are working together to protect them. Question: Why are koalas endangered?",
+    "options": [
+      "Because their habitat is disappearing.",
+      "Because they eat too many leaves.",
+      "Because they live in the city.",
+      "Because they are predators."
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "reading",
+    "question": "閱讀短文：Snow leopards live in the mountains. They are strong predators, but they are endangered due to hunting and climate change. People are trying to stop hunting and protect their habitats. Question: What makes snow leopards endangered?",
+    "options": [
+      "Hunting and climate change.",
+      "They live in forests.",
+      "They have too many prey.",
+      "They are too small."
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "reading",
+    "question": "閱讀短文：Many organizations donate money to protect endangered animals. They build reserves and provide medical treatment for injured animals. Education is also important to raise awareness among the public. Question: What do organizations do to help animals?",
+    "options": [
+      "Donate money and build reserves.",
+      "Cut down trees.",
+      "Increase hunting.",
+      "Pollute the environment."
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "reading",
+    "question": "閱讀短文：Deforestation happens when people cut down forests for farming or buildings. It causes habitat loss for many animals. Without homes, animals may die out. Question: What is deforestation?",
+    "options": [
+      "Cutting down forests.",
+      "Planting new trees.",
+      "Saving animals.",
+      "Building reserves."
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "type": "reading",
+    "question": "閱讀短文：Renewable energy such as wind and solar power can reduce pollution. Using less fossil fuel helps protect the environment and slows climate change. Question: Why is renewable energy important?",
+    "options": [
+      "It reduces pollution and slows climate change.",
+      "It increases pollution.",
+      "It cuts down forests.",
+      "It harms wildlife."
+    ],
+    "correctAnswer": 0
+  }
+]

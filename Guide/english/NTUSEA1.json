@@ -1,0 +1,1377 @@
+[
+    {
+        "type": "multiple-choice",
+        "question": "about 的中文意思是？",
+        "options": [
+            "關於",
+            "上方",
+            "活動",
+            "兄弟"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "above 的中文意思是？",
+        "options": [
+            "在上方",
+            "在下方",
+            "關於",
+            "朋友"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "activities 的中文意思是？",
+        "options": [
+            "活動",
+            "建築物",
+            "天氣",
+            "食物"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "adjective 的中文意思是？",
+        "options": [
+            "形容詞",
+            "動詞",
+            "名詞",
+            "副詞"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "agree 的中文意思是？",
+        "options": [
+            "同意",
+            "不同意",
+            "討論",
+            "拒絕"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "always 的中文意思是？",
+        "options": [
+            "總是",
+            "有時候",
+            "從不",
+            "偶爾"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "animals 的中文意思是？",
+        "options": [
+            "動物",
+            "植物",
+            "人類",
+            "昆蟲"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "answer 的中文意思是？",
+        "options": [
+            "答案",
+            "問題",
+            "回應",
+            "訊息"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "ask 的中文意思是？",
+        "options": [
+            "詢問",
+            "回答",
+            "告訴",
+            "寫作"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "bag 的中文意思是？",
+        "options": [
+            "袋子",
+            "箱子",
+            "帽子",
+            "鞋子"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "beach 的中文意思是？",
+        "options": [
+            "海灘",
+            "山丘",
+            "森林",
+            "湖泊"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "beautiful 的中文意思是？",
+        "options": [
+            "美麗的",
+            "醜陋的",
+            "困難的",
+            "昂貴的"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "before 的中文意思是？",
+        "options": [
+            "在...之前",
+            "在...之後",
+            "在...裡面",
+            "在...旁邊"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "between 的中文意思是？",
+        "options": [
+            "在...之間",
+            "在...上方",
+            "在...裡面",
+            "在...外面"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "book 的中文意思是？",
+        "options": [
+            "書",
+            "桌子",
+            "紙",
+            "信件"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "brother 的中文意思是？",
+        "options": [
+            "兄弟",
+            "姊妹",
+            "父親",
+            "朋友"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "camera 的中文意思是？",
+        "options": [
+            "相機",
+            "電腦",
+            "電話",
+            "燈"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "Canada 的中文意思是？",
+        "options": [
+            "加拿大",
+            "美國",
+            "澳洲",
+            "英國"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "cheap 的中文意思是？",
+        "options": [
+            "便宜的",
+            "昂貴的",
+            "困難的",
+            "快速的"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "check 的中文意思是？",
+        "options": [
+            "檢查",
+            "離開",
+            "購買",
+            "回答"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "choose 的中文意思是？",
+        "options": [
+            "選擇",
+            "拒絕",
+            "購買",
+            "等待"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "cities 的中文意思是？",
+        "options": [
+            "城市",
+            "鄉村",
+            "建築",
+            "國家"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "class 的中文意思是？",
+        "options": [
+            "班級",
+            "學生",
+            "老師",
+            "書本"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "clothes 的中文意思是？",
+        "options": [
+            "衣服",
+            "鞋子",
+            "包包",
+            "飾品"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "cold 的中文意思是？",
+        "options": [
+            "冷的",
+            "熱的",
+            "濕的",
+            "乾的"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "come 的中文意思是？",
+        "options": [
+            "來",
+            "去",
+            "離開",
+            "跑"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "country 的中文意思是？",
+        "options": [
+            "國家",
+            "城市",
+            "村莊",
+            "海邊"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "crowded 的中文意思是？",
+        "options": [
+            "擁擠的",
+            "空曠的",
+            "寧靜的",
+            "孤單的"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "dance 的中文意思是？",
+        "options": [
+            "跳舞",
+            "唱歌",
+            "跑步",
+            "畫畫"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "day 的中文意思是？",
+        "options": [
+            "白天",
+            "晚上",
+            "週末",
+            "早晨"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "delicious 的中文意思是？",
+        "options": [
+            "美味的",
+            "難吃的",
+            "便宜的",
+            "簡單的"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "different 的中文意思是？",
+        "options": [
+            "不同的",
+            "相同的",
+            "困難的",
+            "快速的"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "drink 的中文意思是？",
+        "options": [
+            "喝",
+            "吃",
+            "睡",
+            "走"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "during 的中文意思是？",
+        "options": [
+            "在...期間",
+            "在...之前",
+            "在...之後",
+            "在...外面"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "eat 的中文意思是？",
+        "options": [
+            "吃",
+            "喝",
+            "說",
+            "聽"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "evening 的中文意思是？",
+        "options": [
+            "晚上",
+            "早上",
+            "中午",
+            "下午"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "every day 的中文意思是？",
+        "options": [
+            "每天",
+            "有時候",
+            "昨天",
+            "明天"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "expensive 的中文意思是？",
+        "options": [
+            "昂貴的",
+            "便宜的",
+            "大的",
+            "小的"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "famous 的中文意思是？",
+        "options": [
+            "著名的",
+            "普通的",
+            "安靜的",
+            "新的"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "fast 的中文意思是？",
+        "options": [
+            "快速的",
+            "緩慢的",
+            "遲到的",
+            "困難的"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "food 的中文意思是？",
+        "options": [
+            "食物",
+            "飲料",
+            "水果",
+            "蔬菜"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "forest 的中文意思是？",
+        "options": [
+            "森林",
+            "山",
+            "湖泊",
+            "沙漠"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "friends 的中文意思是？",
+        "options": [
+            "朋友",
+            "家人",
+            "老師",
+            "學生"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "fun 的中文意思是？",
+        "options": [
+            "有趣",
+            "無聊",
+            "困難",
+            "安靜"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "good restaurants 的中文意思是？",
+        "options": [
+            "好餐廳",
+            "壞餐廳",
+            "小吃攤",
+            "便利商店"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "grammar 的中文意思是？",
+        "options": [
+            "文法",
+            "句子",
+            "單字",
+            "翻譯"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "happy to give advice 的中文意思是？",
+        "options": [
+            "樂於給予建議",
+            "害怕說話",
+            "拒絕幫忙",
+            "保持安靜"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "have / has 的中文意思是？",
+        "options": [
+            "有",
+            "是",
+            "在",
+            "去"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "here you go 的中文意思是？",
+        "options": [
+            "給你",
+            "你好",
+            "再見",
+            "請坐"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "history 的中文意思是？",
+        "options": [
+            "歷史",
+            "地理",
+            "數學",
+            "科學"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "holiday 的中文意思是？",
+        "options": [
+            "假期",
+            "工作",
+            "上課",
+            "會議"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "hotel 的中文意思是？",
+        "options": [
+            "飯店",
+            "餐廳",
+            "學校",
+            "商店"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "hot 的中文意思是？",
+        "options": [
+            "熱的",
+            "冷的",
+            "濕的",
+            "乾的"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "how 的中文意思是？",
+        "options": [
+            "如何",
+            "什麼",
+            "為什麼",
+            "哪裡"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "idea 的中文意思是？",
+        "options": [
+            "想法",
+            "問題",
+            "答案",
+            "朋友"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "interesting 的中文意思是？",
+        "options": [
+            "有趣的",
+            "無聊的",
+            "困難的",
+            "輕鬆的"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "know 的中文意思是？",
+        "options": [
+            "知道",
+            "忘記",
+            "看見",
+            "聽到"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "language 的中文意思是？",
+        "options": [
+            "語言",
+            "國家",
+            "學校",
+            "文化"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "learn 的中文意思是？",
+        "options": [
+            "學習",
+            "教導",
+            "玩耍",
+            "離開"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "lesson 的中文意思是？",
+        "options": [
+            "課程",
+            "遊戲",
+            "考試",
+            "假期"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "listen 的中文意思是？",
+        "options": [
+            "聽",
+            "說",
+            "看",
+            "寫"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "live 的中文意思是？",
+        "options": [
+            "居住",
+            "工作",
+            "旅行",
+            "學習"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "local 的中文意思是？",
+        "options": [
+            "當地的",
+            "國外的",
+            "遠方的",
+            "舊的"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "love history 的中文意思是？",
+        "options": [
+            "熱愛歷史",
+            "討厭數學",
+            "喜歡唱歌",
+            "喜歡運動"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "luggage 的中文意思是？",
+        "options": [
+            "行李",
+            "背包",
+            "書包",
+            "袋子"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "money 的中文意思是？",
+        "options": [
+            "金錢",
+            "時間",
+            "票",
+            "禮物"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "morning 的中文意思是？",
+        "options": [
+            "早上",
+            "晚上",
+            "中午",
+            "下午"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "museum 的中文意思是？",
+        "options": [
+            "博物館",
+            "飯店",
+            "學校",
+            "市場"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "music 的中文意思是？",
+        "options": [
+            "音樂",
+            "電影",
+            "藝術",
+            "書本"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "my world 的中文意思是？",
+        "options": [
+            "我的世界",
+            "他的城市",
+            "一個國家",
+            "那座山"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "need to 的中文意思是？",
+        "options": [
+            "需要",
+            "想要",
+            "可以",
+            "應該"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "new place 的中文意思是？",
+        "options": [
+            "新地方",
+            "舊地方",
+            "安全區",
+            "秘密基地"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "night 的中文意思是？",
+        "options": [
+            "夜晚",
+            "白天",
+            "早晨",
+            "下午"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "open land 的中文意思是？",
+        "options": [
+            "開闊的土地",
+            "城市",
+            "建築物",
+            "森林"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "pack 的中文意思是？",
+        "options": [
+            "打包",
+            "購買",
+            "打開",
+            "吃飯"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "partner 的中文意思是？",
+        "options": [
+            "夥伴",
+            "敵人",
+            "老師",
+            "家人"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "passport 的中文意思是？",
+        "options": [
+            "護照",
+            "票",
+            "身分證",
+            "證書"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "people 的中文意思是？",
+        "options": [
+            "人們",
+            "動物",
+            "朋友",
+            "客人"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "perfect 的中文意思是？",
+        "options": [
+            "完美的",
+            "錯誤的",
+            "普通的",
+            "醜陋的"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "photo 的中文意思是？",
+        "options": [
+            "照片",
+            "電影",
+            "畫作",
+            "圖片"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "play 的中文意思是？",
+        "options": [
+            "玩",
+            "學習",
+            "吃飯",
+            "睡覺"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "popular 的中文意思是？",
+        "options": [
+            "受歡迎的",
+            "冷門的",
+            "新的",
+            "困難的"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "question 的中文意思是？",
+        "options": [
+            "問題",
+            "答案",
+            "考試",
+            "句子"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "read 的中文意思是？",
+        "options": [
+            "閱讀",
+            "寫字",
+            "畫圖",
+            "說話"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "relax 的中文意思是？",
+        "options": [
+            "放鬆",
+            "緊張",
+            "生氣",
+            "忙碌"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "restaurant 的中文意思是？",
+        "options": [
+            "餐廳",
+            "飯店",
+            "學校",
+            "銀行"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "safe 的中文意思是？",
+        "options": [
+            "安全的",
+            "危險的",
+            "便宜的",
+            "快速的"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "school 的中文意思是？",
+        "options": [
+            "學校",
+            "公司",
+            "餐廳",
+            "醫院"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "see 的中文意思是？",
+        "options": [
+            "看見",
+            "聽見",
+            "說話",
+            "睡覺"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "shopping 的中文意思是？",
+        "options": [
+            "購物",
+            "學習",
+            "工作",
+            "旅行"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "similar 的中文意思是？",
+        "options": [
+            "相似的",
+            "不同的",
+            "新的",
+            "困難的"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "small 的中文意思是？",
+        "options": [
+            "小的",
+            "大的",
+            "寬的",
+            "高的"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "sometimes 的中文意思是？",
+        "options": [
+            "有時候",
+            "總是",
+            "從不",
+            "現在"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "speak 的中文意思是？",
+        "options": [
+            "說話",
+            "聽",
+            "看",
+            "寫"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "spring 的中文意思是？",
+        "options": [
+            "春天",
+            "夏天",
+            "秋天",
+            "冬天"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "stay there 的中文意思是？",
+        "options": [
+            "待在那裡",
+            "去那裡",
+            "離開那裡",
+            "走進去"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "summer 的中文意思是？",
+        "options": [
+            "夏天",
+            "冬天",
+            "春天",
+            "秋天"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "sunblock 的中文意思是？",
+        "options": [
+            "防曬乳",
+            "雨衣",
+            "手套",
+            "外套"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "sunglasses 的中文意思是？",
+        "options": [
+            "太陽眼鏡",
+            "雨傘",
+            "帽子",
+            "圍巾"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "swim 的中文意思是？",
+        "options": [
+            "游泳",
+            "跑步",
+            "走路",
+            "爬山"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "take a taxi 的中文意思是？",
+        "options": [
+            "搭計程車",
+            "開車",
+            "走路",
+            "搭火車"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "teacher 的中文意思是？",
+        "options": [
+            "老師",
+            "學生",
+            "校長",
+            "助教"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "tell a partner 的中文意思是？",
+        "options": [
+            "告訴夥伴",
+            "問問題",
+            "閱讀",
+            "玩遊戲"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "thank 的中文意思是？",
+        "options": [
+            "感謝",
+            "拒絕",
+            "請求",
+            "道歉"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "ticket 的中文意思是？",
+        "options": [
+            "票",
+            "包包",
+            "書",
+            "卡片"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "time 的中文意思是？",
+        "options": [
+            "時間",
+            "地點",
+            "人物",
+            "日期"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "to the airport 的中文意思是？",
+        "options": [
+            "去機場",
+            "在學校",
+            "去餐廳",
+            "到海邊"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "tourist 的中文意思是？",
+        "options": [
+            "觀光客",
+            "學生",
+            "老師",
+            "居民"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "travel 的中文意思是？",
+        "options": [
+            "旅行",
+            "閱讀",
+            "購物",
+            "工作"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "try 的中文意思是？",
+        "options": [
+            "嘗試",
+            "放棄",
+            "成功",
+            "休息"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "use 的中文意思是？",
+        "options": [
+            "使用",
+            "購買",
+            "丟棄",
+            "修理"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "visit 的中文意思是？",
+        "options": [
+            "拜訪",
+            "離開",
+            "搬家",
+            "開會"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "walk 的中文意思是？",
+        "options": [
+            "走路",
+            "跑步",
+            "開車",
+            "飛行"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "watch 的中文意思是？",
+        "options": [
+            "觀看",
+            "寫作",
+            "講話",
+            "跑步"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "water 的中文意思是？",
+        "options": [
+            "水",
+            "火",
+            "空氣",
+            "土"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "weather 的中文意思是？",
+        "options": [
+            "天氣",
+            "氣溫",
+            "風",
+            "雨"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "week 的中文意思是？",
+        "options": [
+            "星期",
+            "月份",
+            "季節",
+            "年份"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "what 的中文意思是？",
+        "options": [
+            "什麼",
+            "哪裡",
+            "誰",
+            "為什麼"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "when 的中文意思是？",
+        "options": [
+            "何時",
+            "哪裡",
+            "誰",
+            "什麼"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "where 的中文意思是？",
+        "options": [
+            "哪裡",
+            "何時",
+            "誰",
+            "什麼"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "why 的中文意思是？",
+        "options": [
+            "為什麼",
+            "哪裡",
+            "誰",
+            "如何"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "window 的中文意思是？",
+        "options": [
+            "窗戶",
+            "門",
+            "牆",
+            "屋頂"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "work 的中文意思是？",
+        "options": [
+            "工作",
+            "遊玩",
+            "學習",
+            "放鬆"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "write 的中文意思是？",
+        "options": [
+            "寫",
+            "看",
+            "讀",
+            "說"
+        ],
+        "correctAnswer": 0
+    },
+    {
+        "type": "multiple-choice",
+        "question": "your 的中文意思是？",
+        "options": [
+            "你的",
+            "我的",
+            "他的",
+            "她的"
+        ],
+        "correctAnswer": 0
+    }
+]

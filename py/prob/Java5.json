@@ -1,0 +1,383 @@
+{
+  "category": "🍵Java 迴圈與控制語法",
+  "problems": [
+
+    {
+      "id": "J501",
+      "title": "1 到 n 的整數輸出",
+      "difficulty": "Easy",
+      "description": "輸入整數 n，使用 for 迴圈輸出 1 到 n。",
+      "testCases": [
+        { "input": "5", "expected": "1 2 3 4 5" }
+      ],
+      "answerCode": {
+        "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(); for(int i=1;i<=n;i++){ System.out.print(i + (i<n?\" \":\"\")); } }}"}
+    },
+
+    {
+      "id": "J502",
+      "title": "計算 1 到 n 的總和",
+      "difficulty": "Easy",
+      "description": "輸入 n，使用 for 迴圈計算 1 到 n 的總和。",
+      "testCases": [
+        { "input": "5", "expected": "15" }
+      ],
+      "answerCode": {
+        "java":"import java.util.*; public class Main{ public static void main(String[]a){Scanner sc=new Scanner(System.in);int n=sc.nextInt(),sum=0;for(int i=1;i<=n;i++)sum+=i;System.out.print(sum);} }"}
+    },
+
+    {
+      "id": "J503",
+      "title": "while 迴圈：倒數輸出",
+      "difficulty": "Easy",
+      "description": "輸入 n，使用 while 迴圈輸出 n 到 1。",
+      "testCases": [
+        { "input": "5", "expected": "5 4 3 2 1" }
+      ],
+      "answerCode": {
+        "java":"import java.util.*; public class Main{ public static void main(String[]a){Scanner sc=new Scanner(System.in);int n=sc.nextInt();while(n>=1){System.out.print(n + (n>1?\" \":\"\"));n--;}} }"}
+    },
+
+    {
+      "id": "J504",
+      "title": "do-while：至少執行一次",
+      "difficulty": "Easy",
+      "description": "輸入 n，不論 n 是否大於0，都至少輸出一次 n。",
+      "testCases": [
+        { "input": "0", "expected": "0" }
+      ],
+      "answerCode": {
+        "java":"import java.util.*; public class Main{public static void main(String[]a){Scanner sc=new Scanner(System.in);int n=sc.nextInt();do{System.out.print(n);}while(false);} }"}
+    },
+
+    {
+      "id": "J505",
+      "title": "計算偶數總和",
+      "difficulty": "Easy",
+      "description": "輸入 n，輸出 1 到 n 的偶數總和。",
+      "testCases":[
+        {"input":"10","expected":"30"}
+      ],
+      "answerCode":{
+        "java":"import java.util.*; public class Main{public static void main(String[]a){Scanner sc=new Scanner(System.in);int n=sc.nextInt(),sum=0;for(int i=2;i<=n;i+=2)sum+=i;System.out.print(sum);} }"}
+    },
+
+    {
+      "id": "J506",
+      "title": "for-each：陣列總和",
+      "difficulty": "Easy",
+      "description": "輸入三個整數，使用 for-each 計算總和。",
+      "testCases":[
+        {"input":"1 2 3","expected":"6"}
+      ],
+      "answerCode":{
+        "java":"import java.util.*; public class Main{public static void main(String[]a){Scanner sc=new Scanner(System.in);int[] x={sc.nextInt(),sc.nextInt(),sc.nextInt()};int s=0;for(int v:x)s+=v;System.out.print(s);} }"}
+    },
+
+    {
+      "id": "J507",
+      "title": "while：累乘",
+      "difficulty": "Easy",
+      "description": "輸入 n，使用 while 計算 1×2×3…×n（但 n<=10）。",
+      "testCases":[
+        {"input":"5","expected":"120"}
+      ],
+      "answerCode":{
+        "java":"import java.util.*; public class Main{public static void main(String[]a){Scanner sc=new Scanner(System.in);int n=sc.nextInt(),p=1,i=1;while(i<=n){p*=i;i++;}System.out.print(p);} }"}
+    },
+
+    {
+      "id": "J508",
+      "title": "continue：跳過 3",
+      "difficulty": "Easy",
+      "description": "輸出 1~5，但跳過 3。",
+      "testCases":[
+        {"input":"0","expected":"1 2 4 5"}
+      ],
+      "answerCode":{
+        "java":"import java.util.*; public class Main{public static void main(String[]a){for(int i=1;i<=5;i++){if(i==3)continue;System.out.print(i + (i<5?\" \":\"\"));}} }"}
+    },
+
+    {
+      "id": "J509",
+      "title": "break：遇到 7 停止",
+      "difficulty": "Easy",
+      "description": "輸出 1~10，但遇到 7 時停止。",
+      "testCases":[
+        {"input":"0","expected":"1 2 3 4 5 6"}
+      ],
+      "answerCode":{
+        "java":"import java.util.*; public class Main{public static void main(String[]a){for(int i=1;i<=10;i++){if(i==7)break;System.out.print(i + (i<6?\" \":\"\"));}} }"}
+    },
+
+    {
+      "id": "J510",
+      "title": "for：輸出 n 個星號",
+      "difficulty": "Easy",
+      "description": "輸入 n，輸出 n 個 *。",
+      "testCases":[
+        {"input":"5","expected":"*****"}
+      ],
+      "answerCode":{
+        "java":"import java.util.*; public class Main{public static void main(String[]a){Scanner sc=new Scanner(System.in);int n=sc.nextInt();for(int i=0;i<n;i++)System.out.print(\"*\");}}"}
+    },
+
+
+
+    {
+      "id": "J511",
+      "title": "計算 1~n 的平方和",
+      "difficulty": "Medium",
+      "description": "輸入 n，計算 1^2 + 2^2 + ... + n^2。",
+      "testCases":[
+        {"input":"3","expected":"14"}
+      ],
+      "answerCode":{
+        "java":"import java.util.*; public class Main{public static void main(String[]a){Scanner sc=new Scanner(System.in);int n=sc.nextInt(),s=0;for(int i=1;i<=n;i++)s+=i*i;System.out.print(s);} }"}
+    },
+
+    {
+      "id": "J512",
+      "title": "奇數輸出",
+      "difficulty": "Medium",
+      "description": "輸入 n，輸出 1 到 n 的所有奇數。",
+      "testCases":[
+        {"input":"10","expected":"1 3 5 7 9"}
+      ],
+      "answerCode":{
+        "java":"import java.util.*; public class Main{public static void main(String[]a){Scanner sc=new Scanner(System.in);int n=sc.nextInt();for(int i=1;i<=n;i+=2)System.out.print(i + (i+2<=n?\" \":\"\"));}}"}
+    },
+
+    {
+      "id": "J513",
+      "title": "倒三角星星",
+      "difficulty": "Medium",
+      "description": "輸入 n，輸出倒三角形星星。",
+      "testCases":[
+        {"input":"3","expected":"***\n**\n*"}
+      ],
+      "answerCode":{
+        "java":"import java.util.*; public class Main{public static void main(String[]a){Scanner sc=new Scanner(System.in);int n=sc.nextInt();for(int i=n;i>=1;i--){for(int j=1;j<=i;j++)System.out.print(\"*\");System.out.println();}} }"}
+    },
+
+    {
+      "id": "J514",
+      "title": "九九乘法表（1~9）",
+      "difficulty": "Medium",
+      "description": "輸出 1~9 的九九乘法表（僅數字空格分隔）。",
+      "testCases":[
+        {"input":"0","expected":"1 2 3 ...（略）"}
+      ],
+      "answerCode":{
+        "java":"import java.util.*; public class Main{public static void main(String[]a){for(int i=1;i<=9;i++){for(int j=1;j<=9;j++)System.out.print(i*j + (j<9?\" \":\"\"));System.out.println();}} }"}
+    },
+
+    {
+      "id": "J515",
+      "title": "for-each：計算陣列最大值",
+      "difficulty": "Medium",
+      "description": "輸入 5 個整數，使用 for-each 求最大值。",
+      "testCases":[
+        {"input":"5 9 1 3 7","expected":"9"}
+      ],
+      "answerCode":{
+        "java":"import java.util.*; public class Main{public static void main(String[]a){Scanner sc=new Scanner(System.in);int[] x=new int[5];for(int i=0;i<5;i++)x[i]=sc.nextInt();int m=x[0];for(int v:x)if(v>m)m=v;System.out.print(m);} }"}
+    },
+
+    {
+      "id": "J516",
+      "title": "continue：跳過 3 的倍數",
+      "difficulty": "Medium",
+      "description": "輸出 1 到 n 的所有數字，但跳過 3 的倍數。",
+      "testCases":[
+        {"input":"10","expected":"1 2 4 5 7 8 10"}
+      ],
+      "answerCode":{
+        "java":"import java.util.*; public class Main{public static void main(String[]a){Scanner sc=new Scanner(System.in);int n=sc.nextInt();for(int i=1;i<=n;i++){if(i%3==0)continue;System.out.print(i + (i<n?\" \":\"\"));}} }"}
+    },
+
+    {
+      "id": "J517",
+      "title": "break：輸入時遇到 0 結束",
+      "difficulty": "Medium",
+      "description": "連續輸入整數，遇到 0 停止，輸出總和。",
+      "testCases":[
+        {"input":"3 5 2 0","expected":"10"}
+      ],
+      "answerCode":{
+        "java":"import java.util.*; public class Main{public static void main(String[]a){Scanner sc=new Scanner(System.in);int sum=0,x;while(true){x=sc.nextInt();if(x==0)break;sum+=x;}System.out.print(sum);} }"}
+    },
+
+    {
+      "id": "J518",
+      "title": "巢狀迴圈：矩形輸出",
+      "difficulty": "Medium",
+      "description": "輸入 r c，輸出 r 行 c 列的 *。",
+      "testCases":[
+        {"input":"2 3","expected":"***\n***"}
+      ],
+      "answerCode":{
+        "java":"import java.util.*; public class Main{public static void main(String[]a){Scanner sc=new Scanner(System.in);int r=sc.nextInt(),c=sc.nextInt();for(int i=0;i<r;i++){for(int j=0;j<c;j++)System.out.print(\"*\");System.out.println();}} }"}
+    },
+
+    {
+      "id": "J519",
+      "title": "while：直到總和 >= n",
+      "difficulty": "Medium",
+      "description": "累加 1、2、3...直到總和 >= n，輸出最後的總和。",
+      "testCases":[
+        {"input":"10","expected":"10"}
+      ],
+      "answerCode":{
+        "java":"import java.util.*; public class Main{public static void main(String[]a){Scanner sc=new Scanner(System.in);int n=sc.nextInt(),sum=0,i=1;while(sum<n){sum+=i;i++;}System.out.print(sum);} }"}
+    },
+
+    {
+      "id": "J520",
+      "title": "階乘表（1~n）",
+      "difficulty": "Medium",
+      "description": "輸入 n，輸出 1! 2! ... n!。",
+      "testCases":[
+        {"input":"3","expected":"1 2 6"}
+      ],
+      "answerCode":{
+        "java":"import java.util.*; public class Main{public static void main(String[]a){Scanner sc=new Scanner(System.in);int n=sc.nextInt();long f=1;for(int i=1;i<=n;i++){f*=i;System.out.print(f + (i<n?\" \":\"\"));}} }"}
+    },
+
+
+
+    {
+      "id": "J521",
+      "title": "判斷質數（√n 優化）",
+      "difficulty": "Hard",
+      "description": "輸入 n，若為質數輸出 YES，否則 NO。",
+      "testCases":[
+        {"input":"11","expected":"YES"}
+      ],
+      "answerCode":{
+        "java":"import java.util.*; public class Main{public static void main(String[]a){Scanner sc=new Scanner(System.in);int n=sc.nextInt();if(n<2){System.out.print(\"NO\");return;}for(int i=2;i*i<=n;i++){if(n%i==0){System.out.print(\"NO\");return;}}System.out.print(\"YES\");}}"}
+    },
+
+    {
+      "id": "J522",
+      "title": "輸出 1~n 所有質數",
+      "difficulty": "Hard",
+      "description": "輸入 n，輸出 1~n 間所有質數（空格分隔）。",
+      "testCases":[
+        {"input":"10","expected":"2 3 5 7"}
+      ],
+      "answerCode":{
+        "java":"import java.util.*; public class Main{static boolean p(int n){if(n<2)return false;for(int i=2;i*i<=n;i++)if(n%i==0)return false;return true;} public static void main(String[]a){Scanner sc=new Scanner(System.in);int n=sc.nextInt();boolean first=true;for(int i=2;i<=n;i++){if(p(i)){if(!first)System.out.print(\" \");System.out.print(i);first=false;}} }}"}
+    },
+
+    {
+      "id": "J523",
+      "title": "巢狀迴圈：星星金字塔",
+      "difficulty": "Hard",
+      "description": "輸入 n，輸出金字塔形狀。",
+      "testCases":[
+        {"input":"3","expected":"  *\n ***\n*****"}
+      ],
+      "answerCode":{
+        "java":"import java.util.*; public class Main{public static void main(String[]a){Scanner sc=new Scanner(System.in);int n=sc.nextInt();for(int i=1;i<=n;i++){for(int s=1;s<=n-i;s++)System.out.print(\" \");for(int k=1;k<=2*i-1;k++)System.out.print(\"*\");System.out.println();}} }"}
+    },
+
+    {
+      "id": "J524",
+      "title": "倒金字塔",
+      "difficulty": "Hard",
+      "description": "輸入 n，輸出倒金字塔。",
+      "testCases":[
+        {"input":"3","expected":"*****\n ***\n  *"}
+      ],
+      "answerCode":{
+        "java":"import java.util.*; public class Main{public static void main(String[]a){Scanner sc=new Scanner(System.in);int n=sc.nextInt();for(int i=n;i>=1;i--){for(int s=1;s<=n-i;s++)System.out.print(\" \");for(int k=1;k<=2*i-1;k++)System.out.print(\"*\");System.out.println();}} }"}
+    },
+
+    {
+      "id": "J525",
+      "title": "階乘（大數 long）",
+      "difficulty": "Hard",
+      "description": "輸入 n，輸出 n!（n<=20）。",
+      "testCases":[
+        {"input":"10","expected":"3628800"}
+      ],
+      "answerCode":{
+        "java":"import java.util.*; public class Main{public static void main(String[]a){Scanner sc=new Scanner(System.in);int n=sc.nextInt();long f=1;for(int i=1;i<=n;i++)f*=i;System.out.print(f);} }"}
+    },
+
+    {
+      "id": "J526",
+      "title": "跳號列印（使用 continue）",
+      "difficulty": "Hard",
+      "description": "輸出 1~n，但跳過能被 2 或 5 整除的數字。",
+      "testCases":[
+        {"input":"10","expected":"1 3 7 9"}
+      ],
+      "answerCode":{
+        "java":"import java.util.*; public class Main{public static void main(String[]a){Scanner sc=new Scanner(System.in);int n=sc.nextInt();boolean first=true;for(int i=1;i<=n;i++){if(i%2==0 || i%5==0)continue;if(!first)System.out.print(\" \");System.out.print(i);first=false;}} }"}
+    },
+
+    {
+      "id": "J527",
+      "title": "多重 break（跳出兩層迴圈）",
+      "difficulty": "Hard",
+      "description": "找到第一個 i*j>50 的組合並輸出。",
+      "testCases":[
+        {"input":"0","expected":"8 7"}
+      ],
+      "answerCode":{
+        "java":"import java.util.*; public class Main{public static void main(String[]a){outer:for(int i=1;i<=10;i++){for(int j=1;j<=10;j++){if(i*j>50){System.out.print(i+\" \"+j);break outer;}}}} }"}
+    },
+
+    {
+      "id": "J528",
+      "title": "while：找出第一個平方大於 n 的數",
+      "difficulty": "Hard",
+      "description": "輸入 n，找出最小 k 使得 k*k > n。",
+      "testCases":[
+        {"input":"10","expected":"4"}
+      ],
+      "answerCode":{
+        "java":"import java.util.*; public class Main{public static void main(String[]a){Scanner sc=new Scanner(System.in);int n=sc.nextInt(),k=1;while(k*k<=n)k++;System.out.print(k);} }"}
+    },
+
+    {
+      "id": "J529",
+      "title": "數字倒序（while）",
+      "difficulty": "Hard",
+      "description": "輸入數字 x，輸出其倒序，如 123→321。",
+      "testCases":[
+        {"input":"123","expected":"321"}
+      ],
+      "answerCode":{
+        "java":"import java.util.*; public class Main{public static void main(String[]a){Scanner sc=new Scanner(System.in);int n=sc.nextInt(),r=0;while(n>0){r=r*10+n%10;n/=10;}System.out.print(r);} }"}
+    },
+
+    {
+      "id": "J530",
+      "title": "判斷完全平方數",
+      "difficulty": "Hard",
+      "description": "輸入 n，若 n 是某數字的平方輸出 YES，否則 NO。",
+      "testCases":[
+        {"input":"49","expected":"YES"}
+      ],
+      "answerCode":{
+        "java":"import java.util.*; public class Main{public static void main(String[]a){Scanner sc=new Scanner(System.in);int n=sc.nextInt();int k=(int)Math.sqrt(n);System.out.print(k*k==n?\"YES\":\"NO\");}}"}
+    },
+   {
+  "id": "J531",
+  "title": "費氏數列（Fibonacci Sequence, 逗號格式）",
+  "difficulty": "Medium",
+  "description": "輸入整數 n，輸出費氏數列前 n 項，以逗號分隔。費氏數列定義：f1=1, f2=1, f(n)=f(n-1)+f(n-2)。輸出格式如：1,1,2,3,5,8。",
+  "testCases": [
+    { "input": "5", "expected": "1,1,2,3,5" },
+    { "input": "7", "expected": "1,1,2,3,5,8,13" }
+  ],
+  "answerCode": {
+    "java": "import java.util.*; public class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(); int f1=1,f2=1; if(n>=1) System.out.print(1); if(n>=2) System.out.print(\",1\"); for(int i=3;i<=n;i++){ int f3=f1+f2; System.out.print(\",\"+f3); f1=f2; f2=f3; } } }"
+  }
+}
+
+  ]
+}

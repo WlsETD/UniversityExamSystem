@@ -1,0 +1,467 @@
+{
+    "category": "🍵Java 運算式",
+    "problems": [
+        {
+            "id": "J301",
+            "title": "整數運算：加法",
+            "difficulty": "Easy",
+            "description": "輸入兩整數，輸出其和。",
+            "testCases": [
+                {
+                    "input": "3 7",
+                    "expected": "10"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]args){ Scanner sc=new Scanner(System.in); int a=sc.nextInt(),b=sc.nextInt(); System.out.print(a+b);} }"
+            }
+        },
+        {
+            "id": "J302",
+            "title": "整數運算：餘數",
+            "difficulty": "Easy",
+            "description": "輸入 a, b，輸出 a % b。",
+            "testCases": [
+                {
+                    "input": "10 3",
+                    "expected": "1"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]args){ Scanner sc=new Scanner(System.in); int a=sc.nextInt(),b=sc.nextInt(); System.out.print(a%b);} }"
+            }
+        },
+        {
+            "id": "J303",
+            "title": "浮點數相加",
+            "difficulty": "Easy",
+            "description": "輸入兩浮點數，輸出其和。",
+            "testCases": [
+                {
+                    "input": "1.2 3.4",
+                    "expected": "4.6"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]args){ Scanner sc=new Scanner(System.in); double a=sc.nextDouble(),b=sc.nextDouble(); System.out.print(a+b);} }"
+            }
+        },
+        {
+            "id": "J304",
+            "title": "自增運算 ++",
+            "difficulty": "Easy",
+            "description": "輸入一整數 n，輸出 n+1。",
+            "testCases": [
+                {
+                    "input": "6",
+                    "expected": "7"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(); System.out.print(++n);} }"
+            }
+        },
+        {
+            "id": "J305",
+            "title": "自減運算 --",
+            "difficulty": "Easy",
+            "description": "輸入一整數 n，輸出 n-1。",
+            "testCases": [
+                {
+                    "input": "10",
+                    "expected": "9"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(); System.out.print(--n);} }"
+            }
+        },
+        {
+            "id": "J306",
+            "title": "計算三倍差",
+            "difficulty": "Easy",
+            "description": "輸入 a, b，輸出 3*(a-b)。",
+            "testCases": [
+                {
+                    "input": "9 4",
+                    "expected": "15"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int x=sc.nextInt(),y=sc.nextInt(); System.out.print(3*(x-y)); } }"
+            }
+        },
+        {
+            "id": "J307",
+            "title": "字串＋數值附加",
+            "difficulty": "Easy",
+            "description": "輸入字串與整數，輸出字串後接整數。",
+            "testCases": [
+                {
+                    "input": "Hi 77",
+                    "expected": "Hi77"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); String s=sc.next(); int n=sc.nextInt(); System.out.print(s+n); } }"
+            }
+        },
+        {
+            "id": "J308",
+            "title": "比較運算：大於",
+            "difficulty": "Easy",
+            "description": "輸入 a, b，若 a>b 印 true。",
+            "testCases": [
+                {
+                    "input": "9 3",
+                    "expected": "true"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int x=sc.nextInt(),y=sc.nextInt(); System.out.print(x>y); } }"
+            }
+        },
+        {
+            "id": "J309",
+            "title": "比較運算：不等於",
+            "difficulty": "Easy",
+            "description": "輸入 a, b，輸出 a!=b。",
+            "testCases": [
+                {
+                    "input": "7 7",
+                    "expected": "false"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int x=sc.nextInt(),y=sc.nextInt(); System.out.print(x!=y); } }"
+            }
+        },
+        {
+            "id": "J310",
+            "title": "邏輯否定",
+            "difficulty": "Easy",
+            "description": "輸入一布林值，輸出其相反。",
+            "testCases": [
+                {
+                    "input": "false",
+                    "expected": "true"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); boolean v=sc.nextBoolean(); System.out.print(!v);} }"
+            }
+        },
+        {
+            "id": "J311",
+            "title": "混合運算：整數與浮點",
+            "difficulty": "Medium",
+            "description": "輸入 a(int), b(double)，輸出 a*b + b。",
+            "testCases": [
+                {
+                    "input": "3 2.5",
+                    "expected": "9.5"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int x=sc.nextInt(); double y=sc.nextDouble(); System.out.print(x*y + y);} }"
+            }
+        },
+        {
+            "id": "J312",
+            "title": "指派運算子 +=",
+            "difficulty": "Medium",
+            "description": "輸入 n, x，計算 n+=x 的結果。",
+            "testCases": [
+                {
+                    "input": "10 6",
+                    "expected": "16"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(),x=sc.nextInt(); n+=x; System.out.print(n);} }"
+            }
+        },
+        {
+            "id": "J313",
+            "title": "指派運算子 *=",
+            "difficulty": "Medium",
+            "description": "輸入 n, k，輸出 n*=k 的結果。",
+            "testCases": [
+                {
+                    "input": "4 7",
+                    "expected": "28"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(),k=sc.nextInt(); n*=k; System.out.print(n);} }"
+            }
+        },
+        {
+            "id": "J314",
+            "title": "比較＋邏輯組合",
+            "difficulty": "Medium",
+            "description": "輸入 x, y，輸出 (x>0 && y>0)。",
+            "testCases": [
+                {
+                    "input": "3 5",
+                    "expected": "true"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int x=sc.nextInt(),y=sc.nextInt(); System.out.print(x>0 && y>0);} }"
+            }
+        },
+        {
+            "id": "J315",
+            "title": "邏輯或運算",
+            "difficulty": "Medium",
+            "description": "輸入 a, b，若 a==0 或 b==0 則輸出 true。",
+            "testCases": [
+                {
+                    "input": "3 0",
+                    "expected": "true"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int x=sc.nextInt(),y=sc.nextInt(); System.out.print(x==0 || y==0);} }"
+            }
+        },
+        {
+            "id": "J316",
+            "title": "位元運算：AND",
+            "difficulty": "Medium",
+            "description": "輸入兩整數，輸出 a & b。",
+            "testCases": [
+                {
+                    "input": "6 3",
+                    "expected": "2"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int x=sc.nextInt(),y=sc.nextInt(); System.out.print(x & y);} }"
+            }
+        },
+        {
+            "id": "J317",
+            "title": "位元運算：OR",
+            "difficulty": "Medium",
+            "description": "輸入兩整數，輸出 a | b。",
+            "testCases": [
+                {
+                    "input": "6 3",
+                    "expected": "7"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int x=sc.nextInt(),y=sc.nextInt(); System.out.print(x | y);} }"
+            }
+        },
+        {
+            "id": "J318",
+            "title": "位元運算：XOR",
+            "difficulty": "Medium",
+            "description": "輸入兩整數，輸出 a ^ b。",
+            "testCases": [
+                {
+                    "input": "6 3",
+                    "expected": "5"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int x=sc.nextInt(),y=sc.nextInt(); System.out.print(x ^ y);} }"
+            }
+        },
+        {
+            "id": "J319",
+            "title": "位移運算：左位移",
+            "difficulty": "Medium",
+            "description": "輸入 n, k，輸出 n << k。",
+            "testCases": [
+                {
+                    "input": "3 2",
+                    "expected": "12"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(),k=sc.nextInt(); System.out.print(n<<k);} }"
+            }
+        },
+        {
+            "id": "J320",
+            "title": "位移運算：右位移",
+            "difficulty": "Medium",
+            "description": "輸入 n, k，輸出 n >> k。",
+            "testCases": [
+                {
+                    "input": "16 2",
+                    "expected": "4"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(),k=sc.nextInt(); System.out.print(n>>k);} }"
+            }
+        },
+        {
+            "id": "J321",
+            "title": "綜合運算：數值評估",
+            "difficulty": "Hard",
+            "description": "輸入 x, y，輸出 (x*x - y*y + x*y)。",
+            "testCases": [
+                {
+                    "input": "3 2",
+                    "expected": "7"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int x=sc.nextInt(),y=sc.nextInt(); System.out.print(x*x - y*y + x*y);} }"
+            }
+        },
+        {
+            "id": "J322",
+            "title": "判斷兩數符號是否相同",
+            "difficulty": "Hard",
+            "description": "輸入 a, b，若同號輸出 true。",
+            "testCases": [
+                {
+                    "input": "-3 -7",
+                    "expected": "true"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int x=sc.nextInt(),y=sc.nextInt(); System.out.print((x>=0 && y>=0)||(x<0 && y<0)); } }"
+            }
+        },
+        {
+            "id": "J323",
+            "title": "零除判斷（不能使用 if）",
+            "difficulty": "Hard",
+            "description": "輸入 a, b，若 b=0 印出 0，否則輸出 a/b。（用三元運算）",
+            "testCases": [
+                {
+                    "input": "8 0",
+                    "expected": "0"
+                },
+                {
+                    "input": "9 3",
+                    "expected": "3"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int x=sc.nextInt(),y=sc.nextInt(); System.out.print(y==0?0:x/y);} }"
+            }
+        },
+        {
+            "id": "J324",
+            "title": "數字轉符號",
+            "difficulty": "Hard",
+            "description": "輸入 n，輸出 1(-正),0(-零),-1(-負)。不得使用 if。",
+            "testCases": [
+                {
+                    "input": "7",
+                    "expected": "1"
+                },
+                {
+                    "input": "0",
+                    "expected": "0"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(); System.out.print(n>0?1:n<0?-1:0);} }"
+            }
+        },
+        {
+            "id": "J325",
+            "title": "位元運算：判斷奇偶 (不用 %)",
+            "difficulty": "Hard",
+            "description": "輸入 n，若 n&1==0 → Even。",
+            "testCases": [
+                {
+                    "input": "6",
+                    "expected": "Even"
+                },
+                {
+                    "input": "7",
+                    "expected": "Odd"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(); System.out.print((n&1)==0?\"Even\":\"Odd\"); } }"
+            }
+        },
+        {
+            "id": "J326",
+            "title": "二進位位移重建值",
+            "difficulty": "Hard",
+            "description": "輸入 n，計算 (n<<1) + (n>>1)。",
+            "testCases": [
+                {
+                    "input": "8",
+                    "expected": "12"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(); System.out.print((n<<1)+(n>>1)); } }"
+            }
+        },
+        {
+            "id": "J327",
+            "title": "運算式優先序挑戰",
+            "difficulty": "Hard",
+            "description": "輸入 a, b, c，輸出 a+b*c - (a%b)。",
+            "testCases": [
+                {
+                    "input": "3 4 5",
+                    "expected": "19"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int x=sc.nextInt(),y=sc.nextInt(),z=sc.nextInt(); System.out.print(x+y*z-(x%y)); } }"
+            }
+        },
+        {
+            "id": "J328",
+            "title": "綜合邏輯與位元運算",
+            "difficulty": "Hard",
+            "description": "輸入 a, b，輸出 ((a&b)!=0) || (a>b)。",
+            "testCases": [
+                {
+                    "input": "6 3",
+                    "expected": "true"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int x=sc.nextInt(),y=sc.nextInt(); System.out.print(((x&y)!=0) || (x>y)); } }"
+            }
+        },
+        {
+            "id": "J329",
+            "title": "反轉符號（位元 NOT）",
+            "difficulty": "Hard",
+            "description": "輸入一整數 n，輸出 ~n。",
+            "testCases": [
+                {
+                    "input": "5",
+                    "expected": "-6"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]a){ Scanner sc=new Scanner(System.in); int n=sc.nextInt(); System.out.print(~n);} }"
+            }
+        },
+        {
+            "id": "J330",
+            "title": "三數綜合運算挑戰題",
+            "difficulty": "Hard",
+            "description": "輸入 a,b,c，輸出 (a<<1)+(b>>1)+(a^c)-(b%a)。",
+            "testCases": [
+                {
+                    "input": "4 8 3",
+                    "expected": "13"
+                }
+            ],
+            "answerCode": {
+                "java": "import java.util.*; public class Main{ public static void main(String[]x){ Scanner sc=new Scanner(System.in); int a=sc.nextInt(),b=sc.nextInt(),c=sc.nextInt(); System.out.print((a<<1)+(b>>1)+(a^c)-(b%a)); } }"
+            }
+        }
+    ]
+}

@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>段考練習系統</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+  <!-- index.html 位於 Guide/ -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .cat-block {
+      margin-top: 26px;
+    }
+
+    .cat-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .cat-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: .2px;
+      color: var(--text);
+      margin: 0;
+      font-size: 2rem;
+      opacity: .95;
+      padding: 10px;
+      background: linear-gradient(90deg, rgba(169, 85, 247, 0.652), rgba(236, 72, 154, 0.624));
+      border-radius: 10px;
+    }
+
+    .cat-sub {
+      color: var(--muted);
+      font-size: .92rem;
+      margin: 0;
+      white-space: nowrap;
+      opacity: .9;
+    }
+
+    .bank-search {
+      border-radius: 999px !important;
+      padding: 12px 16px !important;
+      border: 1px solid var(--border) !important;
+      background: var(--glass) !important;
+      color: var(--text) !important;
+    }
+
+    .bank-search::placeholder {
+      color: var(--muted);
+      opacity: .85;
+    }
+
+    .bank-search:focus {
+      box-shadow: 0 0 0 .25rem rgba(168, 85, 247, .16) !important;
+      border-color: rgba(168, 85, 247, .32) !important;
+      outline: none !important;
+    }
+
+    .load-error {
+      margin-top: 16px;
+      border-radius: 18px;
+      padding: 14px 16px;
+      border: 1px solid rgba(255, 90, 130, .25);
+      background: rgba(255, 90, 130, .08);
+      color: rgba(255, 230, 236, .92);
+      font-weight: 700;
+    }
+
+    /* Hero badge row：左 badge + 右側 toggle */
+    .hero-badge-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .theme-toggle-btn {
+      border: 1px solid var(--border);
+      background: var(--glass);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 8px 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: .2px;
+      cursor: pointer;
+      user-select: none;
+      transition: transform .15s ease, background .15s ease, border-color .15s ease, opacity .15s ease;
+    }
+
+    .theme-toggle-btn:hover {
+      transform: translateY(-1px);
+      border-color: rgba(168, 85, 247, .38);
+    }
+
+    .theme-toggle-btn:active {
+      transform: translateY(0px);
+      opacity: .9;
+    }
+
+    .theme-toggle-btn i {
+      font-size: .95rem;
+      opacity: .95;
+    }
+
+    /* ===========================
+       LOGIN GATE
+       - 未登入：顯示遮罩、鎖住底下內容
+       - 已登入：隱藏遮罩、顯示 index 內容
+    ============================ */
+    #loginOverlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      background:
+        radial-gradient(1200px 600px at 30% 20%, rgba(27, 42, 107, .95) 0%, rgba(27, 42, 107, 0) 60%),
+        radial-gradient(900px 500px at 70% 70%, rgba(107, 27, 77, .95) 0%, rgba(107, 27, 77, 0) 55%),
+        rgba(7, 9, 20, .92);
+      backdrop-filter: blur(6px);
+    }
+
+    html.needs-login #loginOverlay {
+      display: flex;
+    }
+
+    html.needs-login main.page {
+      pointer-events: none;
+      user-select: none;
+      filter: blur(100px);
+      opacity: .35;
+    }
+
+    html.needs-login .splash {
+      display: none !important;
+    }
+
+    /* Login overlay UI */
+    #loginOverlay .card {
+      width: min(420px, calc(100vw - 32px));
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 16px;
+      padding: 22px 20px;
+      box-shadow: 0 18px 60px rgba(0, 0, 0, .55);
+      backdrop-filter: blur(10px);
+      color: rgba(255, 255, 255, .92);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans TC", Arial;
+    }
+
+    #loginOverlay h1 {
+      margin: 0 0 12px;
+      font-size: 20px;
+      letter-spacing: .5px;
+    }
+
+    #loginOverlay .muted {
+      margin: 0 0 18px;
+      color: rgba(255, 255, 255, .65);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    #loginOverlay label {
+      display: block;
+      font-size: 13px;
+      color: rgba(255, 255, 255, .78);
+      margin: 0 0 8px;
+    }
+
+    #loginOverlay input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 12px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, .14);
+      background: rgba(0, 0, 0, .25);
+      color: rgba(255, 255, 255, .92);
+      outline: none;
+    }
+
+    #loginOverlay input:focus {
+      border-color: rgba(130, 170, 255, .55);
+      box-shadow: 0 0 0 3px rgba(80, 120, 255, .18);
+    }
+
+    #loginOverlay .row {
+      display: flex;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    #loginOverlay button {
+      flex: 1;
+      padding: 11px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, .14);
+      background: rgba(120, 140, 255, .18);
+      color: rgba(255, 255, 255, .92);
+      cursor: pointer;
+    }
+
+    #loginOverlay button:hover {
+      background: rgba(120, 140, 255, .26);
+    }
+
+    #loginOverlay button:disabled {
+      opacity: .55;
+      cursor: not-allowed;
+    }
+
+    #loginOverlay .ghost {
+      background: rgba(255, 255, 255, .06);
+    }
+
+    #loginOverlay .ghost:hover {
+      background: rgba(255, 255, 255, .10);
+    }
+
+    #loginOverlay .err {
+      margin-top: 12px;
+      color: rgba(255, 140, 140, .95);
+      font-size: 13px;
+      min-height: 18px;
+      line-height: 1.4;
+      white-space: pre-line;
+    }
+
+    #loginOverlay .info {
+      margin-top: 10px;
+      color: rgba(255, 255, 255, .70);
+      font-size: 12px;
+      line-height: 1.4;
+      white-space: pre-line;
+      min-height: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Splash -->
+  <div class="splash" aria-hidden="true" style="display:grid">
+    <div class="splash-card">
+      <div class="splash-icon">
+        <i class="fa-solid fa-layer-group"></i>
+      </div>
+      <div class="splash-bar" role="presentation"></div>
+      <div class="splash-text">Loading…</div>
+    </div>
+  </div>
+
+  <!-- Background -->
+  <div class="bg" aria-hidden="true"></div>
+  <div class="bg-overlay" aria-hidden="true"></div>
+
+  <!-- LOGIN OVERLAY -->
+  <div id="loginOverlay" aria-label="登入遮罩">
+    <div class="card">
+      <h1>登入</h1>
+      <p class="muted">請輸入密碼，通過後解鎖首頁</p>
+
+      <form id="loginForm" autocomplete="off">
+        <label for="pwd">密碼</label>
+        <input id="pwd" type="password" placeholder="Enter password" required />
+        <div class="row">
+          <button type="submit" id="submitBtn">登入</button>
+          <button type="button" class="ghost" id="clearBtn">清除</button>
+        </div>
+        <div class="err" id="msg"></div>
+        <div class="info" id="hint"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Gate：依 sessionStorage 控制遮罩顯示 -->
+  <script>
+    (function () {
+      const AUTH_KEY = "site_auth_ok";
+      if (sessionStorage.getItem(AUTH_KEY) !== "1") {
+        document.documentElement.classList.add("needs-login");
+      }
+    })();
+  </script>
+
+  <!-- Refresh 必須重新登入（保留登入成功後的那一次 redirect reload） -->
+  <script>
+    (function () {
+      const AUTH_KEY = "site_auth_ok";
+      const SKIP_KEY = "auth_skip_logout_once";
+
+      document.addEventListener("submit", (e) => {
+        const form = e.target;
+        if (form && form.id === "loginForm") {
+          try { sessionStorage.setItem(SKIP_KEY, "1"); } catch (_) { }
+        }
+      }, true);
+
+      window.addEventListener("beforeunload", () => {
+        try {
+          const skip = sessionStorage.getItem(SKIP_KEY);
+          if (skip === "1") {
+            sessionStorage.removeItem(SKIP_KEY);
+            return;
+          }
+          sessionStorage.removeItem(AUTH_KEY);
+        } catch (_) { }
+      });
+    })();
+  </script>
+
+  <main class="page">
+    <section class="container py-5">
+      <!-- Hero -->
+      <header class="hero mx-auto mb-4">
+        <div class="hero-badge-row">
+          <div class="hero-badge">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>Exam Banks</span>
+          </div>
+
+          <!-- 日/夜間切換 -->
+          <button id="theme-toggle" class="theme-toggle-btn" type="button" aria-label="切換日夜模式">
+            <i class="fa-solid fa-moon"></i>
+            <span id="theme-label">夜間</span>
+          </button>
+        </div>
+
+        <h1 class="hero-title">段考練習系統</h1>
+        <p class="hero-subtitle">選擇分類與題庫開始練習</p>
+
+        <div class="mt-4">
+          <input id="search" class="form-control bank-search" type="text" placeholder="搜尋題庫（分類 / 題庫名稱 / bank id）">
+        </div>
+
+        <div id="status" class="mt-3" style="color:var(--muted);font-weight:800;">
+          讀取題庫索引中…
+        </div>
+      </header>
+
+      <!-- Dynamic banks -->
+      <div id="banks-root"></div>
+
+      <section class="cat-block">
+        <div class="cat-head">
+          <h3 class="cat-title">
+            <i class="fa-solid fa-x"></i>
+            <span>錯誤題目</span>
+          </h3>
+          <p class="cat-sub">1 份題庫</p>
+        </div>
+
+        <div class="row g-4 justify-content-start pp">
+
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="tile">
+              <div class="tile-top">
+                <div class="tile-icon">
+                  <i class="fa-solid fa-x"></i>
+                </div>
+                <div class="tile-meta">
+                  <h2 class="tile-title">錯題練習</h2>
+                  
+                </div>
+              </div>
+
+              <a class="tile-action" href="wr.html" aria-label="前往 經濟期中題庫">
+                <span>開始</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </article>
+          </div>
+
+        </div>
+      </section>
+
+      <footer class="foot mt-5">
+        <div class="foot-inner">
+          <span class="foot-dot"></span>
+          <span>Exam Banks</span>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- =======================
+       INDEX JS（原樣保留）
+  ======================== -->
+  <script>
+    "use strict";
+
+    /* ===========================
+       THEME (index 也支援日/夜)
+    ============================ */
+    const THEME_KEY = "theme"; // 與 system.html 共用同一把 key
+    const elThemeToggle = document.getElementById("theme-toggle");
+    const elThemeLabel = document.getElementById("theme-label");
+
+    function getPreferredTheme() {
+      const saved = localStorage.getItem(THEME_KEY);
+      if (saved === "dark" || saved === "light") return saved;
+      return window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+    }
+
+    function applyTheme(theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+      const isDark = theme === "dark";
+
+      if (elThemeLabel) elThemeLabel.textContent = isDark ? "夜間" : "日間";
+      if (elThemeToggle) {
+        const icon = elThemeToggle.querySelector("i");
+        if (icon) {
+          icon.className = isDark ? "fa-solid fa-moon" : "fa-solid fa-sun";
+        }
+        elThemeToggle.setAttribute("aria-label", isDark ? "切換到日間模式" : "切換到夜間模式");
+      }
+    }
+
+    function toggleTheme() {
+      const cur = document.documentElement.getAttribute("data-theme") || "dark";
+      const next = cur === "dark" ? "light" : "dark";
+      localStorage.setItem(THEME_KEY, next);
+      applyTheme(next);
+    }
+
+    // init theme
+    applyTheme(getPreferredTheme());
+    elThemeToggle?.addEventListener("click", toggleTheme);
+
+    /* ========= CONFIG =========
+       index.html 位於 Guide/
+    */
+    const INDEX_URL = "./banks.index.json";
+    const SYSTEM_PAGE = "./system.html";
+
+    // Splash 最短總時間（含淡出）約 2 秒
+    const SPLASH_TOTAL_MS = 2000;
+    const SPLASH_FADE_MS = 450;
+    const splashT0 = performance.now();
+
+    const elRoot = document.getElementById("banks-root");
+    const elStatus = document.getElementById("status");
+    const elSearch = document.getElementById("search");
+
+    let cats = []; // [{id,name,manifest,banks:[{id,name,file}]}]
+
+    function iconForCat(catId) {
+      const id = String(catId || "").toLowerCase();
+      if (id.includes("computer")) return "fa-computer";
+      if (id.includes("economy")) return "fa-chart-line";
+      if (id.includes("english")) return "fa-earth-americas";
+      return "fa-folder-open";
+    }
+
+    function escapeHtml(s) {
+      return String(s)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    async function fetchJson(url) {
+      const res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) throw new Error(`HTTP ${res.status}：${url}`);
+      return await res.json();
+    }
+
+    function normalizeIndex(raw) {
+      if (!Array.isArray(raw)) throw new Error("banks.index.json 必須是陣列");
+      return raw.map((c) => ({
+        id: String(c.id),
+        name: String(c.name || c.id),
+        manifest: String(c.manifest),
+      }));
+    }
+
+    function normalizeBanks(raw) {
+      const arr = Array.isArray(raw) ? raw : raw?.banks;
+      if (!Array.isArray(arr)) throw new Error("banks.json 格式錯誤：需為陣列或 {banks:[...]}");
+      return arr.map((b) => ({
+        id: String(b.id),
+        name: String(b.name || b.title || b.id),
+        file: String(b.file || ""),
+      }));
+    }
+
+    function hideSplash() {
+      const s = document.querySelector(".splash");
+      if (!s) return;
+
+      const elapsed = performance.now() - splashT0;
+      const fadeStartDelay = Math.max(0, SPLASH_TOTAL_MS - SPLASH_FADE_MS - elapsed);
+
+      setTimeout(() => {
+        s.style.opacity = "0";
+        s.style.pointerEvents = "none";
+        setTimeout(() => s.remove(), SPLASH_FADE_MS);
+      }, fadeStartDelay);
+    }
+
+    function makeTile({ catId, catName, bankId, bankName }) {
+      const icon = iconForCat(catId);
+      const href = `${SYSTEM_PAGE}?cat=${encodeURIComponent(catId)}&bank=${encodeURIComponent(bankId)}`;
+
+      // 每行 3 張（lg），平板 2 張（md），手機 1 張（xs）
+      return `
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="tile">
+            <div class="tile-top">
+              <div class="tile-icon">
+                <i class="fa-solid ${escapeHtml(icon)}"></i>
+              </div>
+              <div class="tile-meta">
+                <h2 class="tile-title">${escapeHtml(bankName)}</h2>
+                <p class="tile-desc">${escapeHtml(catName)} ・ 題庫練習</p>
+              </div>
+            </div>
+
+            <a class="tile-action" href="${escapeHtml(href)}" aria-label="前往 ${escapeHtml(bankName)}">
+              <span>開始</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+        </div>
+      `;
+    }
+
+    function makeBackTile() {
+      return `
+        <div class="col-12 col-md-6 col-lg-4">
+        </div>
+      `;
+    }
+
+    function render(filterText) {
+      const k = String(filterText || "").trim().toLowerCase();
+
+      let html = "";
+      let totalShown = 0;
+
+      cats.forEach((cat) => {
+        const banks = cat.banks.filter((b) => {
+          if (!k) return true;
+          const hay = `${cat.name} ${b.id} ${b.name}`.toLowerCase();
+          return hay.includes(k);
+        });
+
+        if (banks.length === 0) return;
+
+        const icon = iconForCat(cat.id);
+
+        // 分類標題
+        html += `
+          <section class="cat-block">
+            <div class="cat-head">
+              <h3 class="cat-title">
+                <i class="fa-solid ${escapeHtml(icon)}"></i>
+                <span>${escapeHtml(cat.name)}</span>
+              </h3>
+              <p class="cat-sub">${banks.length} 份題庫</p>
+            </div>
+
+            <div class="row g-4 justify-content-start pp">
+              ${banks.map((b) => {
+          totalShown++;
+          return makeTile({
+            catId: cat.id,
+            catName: cat.name,
+            bankId: b.id,
+            bankName: b.name,
+          });
+        }).join("")}
+            </div>
+          </section>
+        `;
+      });
+
+      if (!k) {
+        html += `
+          <section class="cat-block">
+            <div class="row g-4 justify-content-start pp">
+              ${makeBackTile()}
+            </div>
+          </section>
+        `;
+      }
+
+      if (!html) {
+        html = `
+          <div class="load-error">
+            <i class="fa-solid fa-magnifying-glass me-2"></i>
+            找不到符合的題庫。
+          </div>
+        `;
+      }
+
+      elRoot.innerHTML = html;
+
+      if (elStatus) {
+        const totalBanks = cats.reduce((s, c) => s + c.banks.length, 0);
+        elStatus.textContent = k
+          ? `搜尋中：顯示 ${totalShown} / ${totalBanks} 份題庫`
+          : `已載入 ${cats.length} 個分類、${totalBanks} 份題庫`;
+      }
+    }
+
+    function debounce(fn, wait = 160) {
+      let t = null;
+      return (...args) => {
+        clearTimeout(t);
+        t = setTimeout(() => fn(...args), wait);
+      };
+    }
+
+    async function boot() {
+      try {
+        if (elStatus) elStatus.textContent = "讀取題庫索引中…";
+
+        // indexAbs 指向：/Guide/banks.index.json
+        const indexAbs = new URL(INDEX_URL, location.href).toString();
+        const indexRaw = await fetchJson(indexAbs);
+        const index = normalizeIndex(indexRaw);
+
+        // manifestAbs 用 banks.index.json 的位置做基底解析，避免 /Guide/Guide/ 錯誤
+        const catPromises = index.map(async (c) => {
+          const manifestAbs = new URL(c.manifest, indexAbs).toString();
+          const banksRaw = await fetchJson(manifestAbs);
+          const banks = normalizeBanks(banksRaw);
+          return { ...c, banks };
+        });
+
+        cats = await Promise.all(catPromises);
+
+        render("");
+        hideSplash();
+      } catch (err) {
+        console.error(err);
+        if (elStatus) elStatus.textContent = "載入失敗";
+
+        elRoot.innerHTML = `
+          <div class="load-error">
+            <i class="fa-solid fa-triangle-exclamation me-2"></i>
+            題庫索引載入失敗：${escapeHtml(err.message || String(err))}
+            <div style="opacity:.85;margin-top:6px;">
+              請確認：<code>./banks.index.json</code> 存在於 Guide/，
+              且各分類的 <code>banks.json</code> 路徑正確（例如 <code>./english/banks.json</code>）。
+            </div>
+          </div>
+        `;
+        hideSplash();
+      }
+    }
+
+    elSearch?.addEventListener("input", debounce((e) => render(e.target.value), 160));
+    boot();
+  </script>
+
+  <!-- =======================
+       LOGIN JS SOURCE（不直接執行）
+       - 只有「未登入」時才會注入執行
+       - 錯 5 次鎖定：30 / 60 / 120 / 240 ... 直到成功登入重置
+  ======================== -->
+  <script type="text/plain" id="login-js-source">
+/* ============================================================
+   設定區（後台只看到亂碼）
+   - 正確密碼：
+   ============================================================ */
+const SECRET_TOKEN = "AQRNmSdl0g1OVFVCfDAxMjNhYmNksMiWkA";
+
+const REDIRECT_TO = "./index.html";
+const AUTH_KEY = "site_auth_ok";
+
+/* ====== 錯誤 5 次鎖定（指數倍增） ====== */
+const MAX_FAILS = 5;
+const BASE_LOCK_SECONDS = 30; // 30 → 60 → 120 → 240 ...
+const FAIL_KEY = "login_fail_count";
+const LOCK_KEY = "login_lock_until";
+const STAGE_KEY = "login_lock_stage";
+
+/* ===== Base64URL decode ===== */
+function b64urlDecodeToBytes(s) {
+  const b64 = s.replace(/-/g, "+").replace(/_/g, "/") + "===".slice((s.length + 3) % 4);
+  const bin = atob(b64);
+  const out = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i) & 0xff;
+  return out;
+}
+
+/* ===== 公式：ASCII/byte 運算 ===== */
+function encodeWithParams(input, params) {
+  const { pepperBytes, k1, k2, k3, k4, k5 } = params;
+  const out = new Uint8Array(input.length);
+  for (let i = 0; i < input.length; i++) {
+    const c = input.charCodeAt(i) & 0xff;
+    let v = (c + k1 + (i * k2)) & 0xff;
+    v = (v ^ ((k3 + i * 17) & 0xff)) & 0xff;
+    v = ((v * k4) + k5) & 0xff;
+    const p = pepperBytes[i % pepperBytes.length] & 0xff;
+    out[i] = (v ^ p) & 0xff;
+  }
+  return out;
+}
+
+function constantTimeEqualBytes(a, b) {
+  if (!(a instanceof Uint8Array) || !(b instanceof Uint8Array)) return false;
+  if (a.length !== b.length) return false;
+  let diff = 0;
+  for (let i = 0; i < a.length; i++) diff |= (a[i] ^ b[i]);
+  return diff === 0;
+}
+
+function parseSecretToken(token) {
+  const bytes = b64urlDecodeToBytes(token);
+  let idx = 0;
+  const ver = bytes[idx++];
+  if (ver !== 1) throw new Error("Unsupported token version");
+
+  const len = bytes[idx++];
+  const k1 = bytes[idx++], k2 = bytes[idx++], k3 = bytes[idx++], k4 = bytes[idx++], k5 = bytes[idx++];
+  const pepperLen = bytes[idx++];
+
+  const pepperBytes = bytes.slice(idx, idx + pepperLen);
+  idx += pepperLen;
+
+  const expected = bytes.slice(idx, idx + len);
+  return { len, k1, k2, k3, k4, k5, pepperBytes, expected };
+}
+
+function verifyPassword(inputPassword) {
+  const params = parseSecretToken(SECRET_TOKEN);
+  if (typeof inputPassword !== "string") return false;
+  if (inputPassword.length !== params.len) return false;
+  const enc = encodeWithParams(inputPassword, params);
+  return constantTimeEqualBytes(enc, params.expected);
+}
+
+/* ===== 鎖定/次數工具（含倍增階段） ===== */
+function getFailCount() {
+  return parseInt(localStorage.getItem(FAIL_KEY) || "0", 10);
+}
+function setFailCount(n) {
+  localStorage.setItem(FAIL_KEY, String(n));
+}
+
+function getStage() {
+  return parseInt(localStorage.getItem(STAGE_KEY) || "0", 10);
+}
+function setStage(n) {
+  localStorage.setItem(STAGE_KEY, String(n));
+}
+
+function getLockUntil() {
+  return parseInt(localStorage.getItem(LOCK_KEY) || "0", 10);
+}
+function setLockUntil(ts) {
+  localStorage.setItem(LOCK_KEY, String(ts));
+}
+
+function isLocked() {
+  return Date.now() < getLockUntil();
+}
+
+function remainingTries() {
+  return Math.max(0, MAX_FAILS - getFailCount());
+}
+
+// 解鎖後：清 fail + lock（不清 stage，讓下一輪鎖定時間能倍增）
+function clearLockAndFails() {
+  localStorage.removeItem(FAIL_KEY);
+  localStorage.removeItem(LOCK_KEY);
+}
+
+// 成功登入：完全重置（回到 30 秒起算）
+function clearAllLockState() {
+  localStorage.removeItem(FAIL_KEY);
+  localStorage.removeItem(LOCK_KEY);
+  localStorage.removeItem(STAGE_KEY);
+}
+
+function resetIfExpired() {
+  const until = getLockUntil();
+  if (until && Date.now() >= until) clearLockAndFails();
+}
+
+function lockRemainingSeconds() {
+  const until = getLockUntil();
+  return Math.max(0, Math.ceil((until - Date.now()) / 1000));
+}
+
+(function init() {
+  const form = document.getElementById("loginForm");
+  const pwd = document.getElementById("pwd");
+  const msg = document.getElementById("msg");
+  const hint = document.getElementById("hint");
+  const clearBtn = document.getElementById("clearBtn");
+  const submitBtn = document.getElementById("submitBtn");
+
+  // 已登入就直進（若你想保留此行為）
+  if (sessionStorage.getItem(AUTH_KEY) === "1") {
+    location.replace(REDIRECT_TO);
+    return;
+  }
+
+  resetIfExpired();
+
+  let timer = null;
+
+  function renderTries() {
+    if (isLocked()) return;
+    const left = remainingTries();
+    hint.textContent = `剩餘輸入機會：${left} 次`;
+  }
+
+  function applyLockUI() {
+    const locked = isLocked();
+    pwd.disabled = locked;
+    submitBtn.disabled = locked;
+
+    if (locked) {
+      const s = lockRemainingSeconds();
+      msg.textContent = `請稍後再試（${s}s）`;
+      hint.textContent = "";
+    } else {
+      msg.textContent = "";
+      renderTries();
+    }
+  }
+
+  function startCountdown() {
+    if (timer) clearInterval(timer);
+    timer = setInterval(() => {
+      if (!isLocked()) {
+        clearInterval(timer);
+        timer = null;
+        clearLockAndFails(); // 解鎖同時清計數（保留 stage）
+        applyLockUI();
+      } else {
+        const s = lockRemainingSeconds();
+        msg.textContent = `請稍後再試（${s}s）`;
+      }
+    }, 250);
+  }
+
+  applyLockUI();
+  if (isLocked()) startCountdown();
+
+  clearBtn.addEventListener("click", () => {
+    pwd.value = "";
+    if (!isLocked()) {
+      msg.textContent = "";
+      renderTries();
+    }
+    pwd.focus();
+  });
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    if (isLocked()) {
+      applyLockUI();
+      startCountdown();
+      return;
+    }
+
+    const ok = verifyPassword(pwd.value);
+
+    if (ok) {
+      clearAllLockState(); // 成功登入：回到初始
+      sessionStorage.setItem(AUTH_KEY, "1");
+      location.replace(REDIRECT_TO);
+      return;
+    }
+
+    // 失敗計數（本輪 5 次）
+    const nextFail = getFailCount() + 1;
+    setFailCount(nextFail);
+
+    const left = Math.max(0, MAX_FAILS - nextFail);
+
+    if (nextFail >= MAX_FAILS) {
+      const stage = getStage(); // 0→30, 1→60, 2→120...
+      const lockSeconds = BASE_LOCK_SECONDS * Math.pow(2, stage);
+
+      setLockUntil(Date.now() + lockSeconds * 1000);
+      setStage(stage + 1); // 下一輪倍增
+      setFailCount(0);     // 下一輪重新算 5 次
+
+      applyLockUI();
+      startCountdown();
+      return;
+    }
+
+    msg.textContent = `密碼錯誤。\n剩餘輸入機會：${left} 次`;
+    hint.textContent = `剩餘輸入機會：${left} 次`;
+    pwd.select();
+  });
+})();
+  </script>
+
+  <!-- 只有未登入時才注入 login JS -->
+  <script>
+    (function () {
+      const AUTH_KEY = "site_auth_ok";
+      if (sessionStorage.getItem(AUTH_KEY) === "1") return;
+
+      const src = document.getElementById("login-js-source");
+      if (!src) return;
+
+      const s = document.createElement("script");
+      s.text = src.textContent;
+      document.body.appendChild(s);
+    })();
+  </script>
+</body>
+
+</html>

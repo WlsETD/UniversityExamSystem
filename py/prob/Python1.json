@@ -1,0 +1,579 @@
+{
+    "category": "🐍Python 基礎語法練習",
+    "problems": [
+        {
+            "id": "P101",
+            "title": "格式化輸出 - format()",
+            "difficulty": "Easy",
+            "description": "輸入姓名與年齡，使用 format() 輸出：名字：<name>, 年齡：<age>。",
+            "testCases": [
+                {
+                    "input": "小明\n18",
+                    "expected": "名字：小明, 年齡：18"
+                },
+                {
+                    "input": "Ann\n25",
+                    "expected": "名字：Ann, 年齡：25"
+                }
+            ],
+            "answerCode": {
+                "python": "name = input()\nage = input()\nprint(\"名字：{}, 年齡：{}\".format(name, age))"
+            }
+        },
+        {
+            "id": "P102",
+            "title": "小數格式化",
+            "difficulty": "Easy",
+            "description": "輸入一個浮點數，使用 format() 格式化為小數點後兩位。",
+            "testCases": [
+                {
+                    "input": "98.456",
+                    "expected": "98.46"
+                },
+                {
+                    "input": "3.1",
+                    "expected": "3.10"
+                }
+            ],
+            "answerCode": {
+                "python": "x = float(input())\nprint(\"{:.2f}\".format(x))"
+            }
+        },
+        {
+            "id": "P103",
+            "title": "% 格式化輸出",
+            "difficulty": "Easy",
+            "description": "輸入姓名與年齡，使用 % 格式輸出：名字：<name> 年齡：<age>",
+            "testCases": [
+                {
+                    "input": "小華\n20",
+                    "expected": "名字：小華 年齡：20"
+                }
+            ],
+            "answerCode": {
+                "python": "name = input()\nage = int(input())\nprint(\"名字：%s 年齡：%d\" % (name, age))"
+            }
+        },
+        {
+            "id": "P104",
+            "title": "加法運算",
+            "difficulty": "Easy",
+            "description": "輸入兩個整數，輸出兩數的和。",
+            "testCases": [
+                {
+                    "input": "3\n5",
+                    "expected": "8"
+                },
+                {
+                    "input": "10\n-4",
+                    "expected": "6"
+                }
+            ],
+            "answerCode": {
+                "python": "a = int(input())\nb = int(input())\nprint(a + b)"
+            }
+        },
+        {
+            "id": "P105",
+            "title": "整除運算 //",
+            "difficulty": "Easy",
+            "description": "輸入兩個整數，輸出 a // b 的結果。",
+            "testCases": [
+                {
+                    "input": "10\n3",
+                    "expected": "3"
+                },
+                {
+                    "input": "20\n5",
+                    "expected": "4"
+                }
+            ],
+            "answerCode": {
+                "python": "a = int(input())\nb = int(input())\nprint(a // b)"
+            }
+        },
+        {
+            "id": "P106",
+            "title": "取餘數 %",
+            "difficulty": "Easy",
+            "description": "輸入兩個整數，輸出 a % b。",
+            "testCases": [
+                {
+                    "input": "10\n3",
+                    "expected": "1"
+                },
+                {
+                    "input": "20\n6",
+                    "expected": "2"
+                }
+            ],
+            "answerCode": {
+                "python": "a = int(input())\nb = int(input())\nprint(a % b)"
+            }
+        },
+        {
+            "id": "P107",
+            "title": "次方運算 **",
+            "difficulty": "Easy",
+            "description": "輸入一個整數 n，輸出 n 的平方。",
+            "testCases": [
+                {
+                    "input": "5",
+                    "expected": "25"
+                },
+                {
+                    "input": "9",
+                    "expected": "81"
+                }
+            ],
+            "answerCode": {
+                "python": "n = int(input())\nprint(n ** 2)"
+            }
+        },
+        {
+            "id": "P108",
+            "title": "字串長度 len()",
+            "difficulty": "Easy",
+            "description": "輸入字串，輸出長度。",
+            "testCases": [
+                {
+                    "input": "hello",
+                    "expected": "5"
+                },
+                {
+                    "input": "abcde123",
+                    "expected": "8"
+                }
+            ],
+            "answerCode": {
+                "python": "s = input()\nprint(len(s))"
+            }
+        },
+        {
+            "id": "P109",
+            "title": "字串轉整數 int()",
+            "difficulty": "Easy",
+            "description": "輸入可轉換為整數的字串，輸出 int(s)。",
+            "testCases": [
+                {
+                    "input": "123",
+                    "expected": "123"
+                },
+                {
+                    "input": "50",
+                    "expected": "50"
+                }
+            ],
+            "answerCode": {
+                "python": "s = input()\nprint(int(s))"
+            }
+        },
+        {
+            "id": "P110",
+            "title": "絕對值 abs()",
+            "difficulty": "Easy",
+            "description": "輸出輸入數字的絕對值。",
+            "testCases": [
+                {
+                    "input": "-10",
+                    "expected": "10"
+                },
+                {
+                    "input": "5",
+                    "expected": "5"
+                }
+            ],
+            "answerCode": {
+                "python": "n = int(input())\nprint(abs(n))"
+            }
+        },
+        {
+            "id": "P111",
+            "title": "四捨五入 round()",
+            "difficulty": "Easy",
+            "description": "輸入浮點數，四捨五入至小數第一位。",
+            "testCases": [
+                {
+                    "input": "2.34",
+                    "expected": "2.3"
+                },
+                {
+                    "input": "2.36",
+                    "expected": "2.4"
+                }
+            ],
+            "answerCode": {
+                "python": "x = float(input())\nprint(round(x, 1))"
+            }
+        },
+        {
+            "id": "P112",
+            "title": "指定運算子 +=",
+            "difficulty": "Easy",
+            "description": "輸入 n 與 x，使 n += x 後輸出結果。",
+            "testCases": [
+                {
+                    "input": "5\n3",
+                    "expected": "8"
+                },
+                {
+                    "input": "10\n-4",
+                    "expected": "6"
+                }
+            ],
+            "answerCode": {
+                "python": "n = int(input())\nx = int(input())\nn += x\nprint(n)"
+            }
+        },
+        {
+            "id": "P113",
+            "title": "平方根 math.sqrt()",
+            "difficulty": "Medium",
+            "description": "輸入整數 n，輸出平方根。",
+            "testCases": [
+                {
+                    "input": "16",
+                    "expected": "4.0"
+                },
+                {
+                    "input": "81",
+                    "expected": "9.0"
+                }
+            ],
+            "answerCode": {
+                "python": "import math\nn = int(input())\nprint(math.sqrt(n))"
+            }
+        },
+        {
+            "id": "P114",
+            "title": "三次方 math.pow()",
+            "difficulty": "Medium",
+            "description": "輸入 n，輸出 n 的三次方。",
+            "testCases": [
+                {
+                    "input": "3",
+                    "expected": "27.0"
+                },
+                {
+                    "input": "5",
+                    "expected": "125.0"
+                }
+            ],
+            "answerCode": {
+                "python": "import math\nn = int(input())\nprint(math.pow(n, 3))"
+            }
+        },
+        {
+            "id": "P115",
+            "title": "無條件進位 math.ceil()",
+            "difficulty": "Medium",
+            "description": "輸入 x，輸出 math.ceil(x)。",
+            "testCases": [
+                {
+                    "input": "3.2",
+                    "expected": "4"
+                },
+                {
+                    "input": "7.01",
+                    "expected": "8"
+                }
+            ],
+            "answerCode": {
+                "python": "import math\nx = float(input())\nprint(math.ceil(x))"
+            }
+        },
+    {
+            "id": "P116",
+            "title": "無條件捨去 math.floor()",
+            "difficulty": "Medium",
+            "description": "輸入浮點數 x，輸出 math.floor(x)。",
+            "testCases": [
+                {
+                    "input": "3.9",
+                    "expected": "3"
+                },
+                {
+                    "input": "9.99",
+                    "expected": "9"
+                }
+            ],
+            "answerCode": {
+                "python": "import math\nx = float(input())\nprint(math.floor(x))"
+            }
+        },
+        {
+            "id": "P117",
+            "title": "圓面積計算",
+            "difficulty": "Medium",
+            "description": "輸入半徑 r，使用 math.pi 計算圓面積並輸出小數點後兩位。",
+            "testCases": [
+                {
+                    "input": "1",
+                    "expected": "3.14"
+                },
+                {
+                    "input": "2",
+                    "expected": "12.57"
+                }
+            ],
+            "answerCode": {
+                "python": "import math\nr = float(input())\narea = math.pi * r * r\nprint(\"{:.2f}\".format(area))"
+            }
+        },
+        {
+            "id": "P118",
+            "title": "輸入型別判斷 type()",
+            "difficulty": "Medium",
+            "description": "輸入字串 s。若可轉成 int 則輸出 int；可轉成 float 則輸出 float；否則輸出 str。",
+            "testCases": [
+                {
+                    "input": "123",
+                    "expected": "int"
+                },
+                {
+                    "input": "3.14",
+                    "expected": "float"
+                },
+                {
+                    "input": "hello",
+                    "expected": "str"
+                }
+            ],
+            "answerCode": {
+                "python": "s = input()\ntry:\n    int(s)\n    print(\"int\")\nexcept:\n    try:\n        float(s)\n        print(\"float\")\n    except:\n        print(\"str\")"
+            }
+        },
+        {
+            "id": "P119",
+            "title": "多數加總 sum()",
+            "difficulty": "Medium",
+            "description": "輸入以空白分隔的整數列表，輸出總和。",
+            "testCases": [
+                {
+                    "input": "1 2 3",
+                    "expected": "6"
+                },
+                {
+                    "input": "10 20 30 40",
+                    "expected": "100"
+                }
+            ],
+            "answerCode": {
+                "python": "nums = list(map(int, input().split()))\nprint(sum(nums))"
+            }
+        },
+        {
+            "id": "P120",
+            "title": "提示訊息模擬",
+            "difficulty": "Medium",
+            "description": "輸入字串 msg，輸出：請輸入：<msg>。",
+            "testCases": [
+                {
+                    "input": "年齡",
+                    "expected": "請輸入：年齡"
+                },
+                {
+                    "input": "分數",
+                    "expected": "請輸入：分數"
+                }
+            ],
+            "answerCode": {
+                "python": "msg = input()\nprint(f\"請輸入：{msg}\")"
+            }
+        },
+        {
+            "id": "P121",
+            "title": "判斷字串是否為數字",
+            "difficulty": "Medium",
+            "description": "輸入字串 s，若 s 全由數字組成則輸出 True，否則輸出 False。",
+            "testCases": [
+                {
+                    "input": "12345",
+                    "expected": "True"
+                },
+                {
+                    "input": "12a34",
+                    "expected": "False"
+                }
+            ],
+            "answerCode": {
+                "python": "s = input()\nprint(s.isdigit())"
+            }
+        },
+        {
+            "id": "P122",
+            "title": "兩數較大值",
+            "difficulty": "Medium",
+            "description": "輸入兩個整數，輸出較大的那一個。",
+            "testCases": [
+                {
+                    "input": "3\n7",
+                    "expected": "7"
+                },
+                {
+                    "input": "10\n5",
+                    "expected": "10"
+                }
+            ],
+            "answerCode": {
+                "python": "a = int(input())\nb = int(input())\nprint(a if a > b else b)"
+            }
+        },
+        {
+            "id": "P123",
+            "title": "三數最大值",
+            "difficulty": "Hard",
+            "description": "輸入三個整數，輸出其中最大值。",
+            "testCases": [
+                {
+                    "input": "3\n7\n5",
+                    "expected": "7"
+                },
+                {
+                    "input": "10\n2\n8",
+                    "expected": "10"
+                }
+            ],
+            "answerCode": {
+                "python": "a = int(input())\nb = int(input())\nc = int(input())\nprint(max(a, b, c))"
+            }
+        },
+        {
+            "id": "P124",
+            "title": "BMI 計算",
+            "difficulty": "Hard",
+            "description": "輸入體重(kg)與身高(m)，輸出 BMI（小數點後兩位）。BMI = weight / (height**2)",
+            "testCases": [
+                {
+                    "input": "60\n1.70",
+                    "expected": "20.76"
+                },
+                {
+                    "input": "45\n1.50",
+                    "expected": "20.00"
+                }
+            ],
+            "answerCode": {
+                "python": "w = float(input())\nh = float(input())\nbmi = w / (h * h)\nprint(\"{:.2f}\".format(bmi))"
+            }
+        },
+        {
+            "id": "P125",
+            "title": "1 到 n 的總和",
+            "difficulty": "Hard",
+            "description": "輸入 n，輸出 1+2+...+n 的總和。",
+            "testCases": [
+                {
+                    "input": "5",
+                    "expected": "15"
+                },
+                {
+                    "input": "10",
+                    "expected": "55"
+                }
+            ],
+            "answerCode": {
+                "python": "n = int(input())\nprint(sum(range(1, n+1)))"
+            }
+        },
+        {
+            "id": "P126",
+            "title": "格式化輸出（姓名＋分數）",
+            "difficulty": "Hard",
+            "description": "輸入姓名與浮點數，輸出：姓名：<name>，分數：<四捨五入一位>。",
+            "testCases": [
+                {
+                    "input": "小美\n88.678",
+                    "expected": "姓名：小美，分數：88.7"
+                },
+                {
+                    "input": "Tom\n91.234",
+                    "expected": "姓名：Tom，分數：91.2"
+                }
+            ],
+            "answerCode": {
+                "python": "name = input()\nscore = float(input())\nprint(f\"姓名：{name}，分數：{round(score,1)}\")"
+            }
+        },
+        {
+            "id": "P127",
+            "title": "手動四捨五入（不可使用 round）",
+            "difficulty": "Hard",
+            "description": "輸入浮點數 x，不使用 round()，自行實作四捨五入為整數。",
+            "testCases": [
+                {
+                    "input": "3.6",
+                    "expected": "4"
+                },
+                {
+                    "input": "3.4",
+                    "expected": "3"
+                }
+            ],
+            "answerCode": {
+                "python": "x = float(input())\nint_part = int(x)\nfraction = x - int_part\nprint(int_part + 1 if fraction >= 0.5 else int_part)"
+            }
+        },
+        {
+            "id": "P128",
+            "title": "字串自動識別資料型態",
+            "difficulty": "Hard",
+            "description": "輸入字串 s：若為整數格式 → int；浮點數格式 → float；否則輸出原字串。",
+            "testCases": [
+                {
+                    "input": "123",
+                    "expected": "123"
+                },
+                {
+                    "input": "3.14",
+                    "expected": "3.14"
+                },
+                {
+                    "input": "hello",
+                    "expected": "hello"
+                }
+            ],
+            "answerCode": {
+                "python": "s = input()\ntry:\n    print(int(s))\nexcept:\n    try:\n        print(float(s))\n    except:\n        print(s)"
+            }
+        },
+        {
+            "id": "P129",
+            "title": "最小公倍數 LCM",
+            "difficulty": "Hard",
+            "description": "輸入兩數 a, b，輸出兩者的最小公倍數（使用 GCD）。",
+            "testCases": [
+                {
+                    "input": "4\n6",
+                    "expected": "12"
+                },
+                {
+                    "input": "10\n15",
+                    "expected": "30"
+                }
+            ],
+            "answerCode": {
+                "python": "import math\na = int(input())\nb = int(input())\nlcm = abs(a*b) // math.gcd(a,b)\nprint(lcm)"
+            }
+        },
+        {
+            "id": "P130",
+            "title": "平均數格式化輸出",
+            "difficulty": "Hard",
+            "description": "輸入一串數字，計算平均值並以小數兩位輸出：平均：xx.xx",
+            "testCases": [
+                {
+                    "input": "1 2 3 4",
+                    "expected": "平均：2.50"
+                },
+                {
+                    "input": "10 20 30",
+                    "expected": "平均：20.00"
+                }
+            ],
+            "answerCode": {
+                "python": "nums = list(map(int, input().split()))\navg = sum(nums) / len(nums)\nprint(\"平均：{:.2f}\".format(avg))"
+            }
+        }
+    ]
+}

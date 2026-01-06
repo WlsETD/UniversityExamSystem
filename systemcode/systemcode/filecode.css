@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Microsoft JhengHei', '微軟正黑體', Arial, sans-serif;
+    font-weight: bolder;
+  }
+
+  body {
+    margin: 0;
+    background-image: url(https://rare-gallery.com/uploads/posts/4546635-thefatrat-jordan-grimmer-mountains-planet-fantasy-art.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    animation: sc 1s forwards;
+    animation-delay: 2s;
+    overflow: hidden;
+  }
+
+  section {
+    padding: 60px 20px;
+  }
+
+  .card {
+    box-shadow: 10px 10px 0 #75809c;
+    border-radius: 30px;
+    border: solid 8px #75809c;
+    transition: 0.5s;
+    color: #75809c;
+    background-color: white;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .card:hover {
+    box-shadow: 15px 8px 0 #d78f8f;
+    border-color: #d78f8f;
+    transform: translateY(5%);
+    color: #d78f8f;
+  }
+
+  .card:hover .btn-b {
+    background: #d78f8f;
+    color: white;
+    text-shadow: 0 0 10px #FFF;
+  }
+
+  .btn-b {
+    background-color: #75809c;
+    color: white;
+    border-radius: 25px;
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    font-weight: bolder;
+  }
+
+  .p {
+    font-size: 6rem;
+  }
+
+  /* 載入動畫 */
+  .start {
+    color: white;
+    width: 100%;
+    height: 100vh;
+    animation: start 0.5s ease-in-out forwards;
+    animation-delay: 1.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6rem;
+    position: absolute;
+    z-index: 10000;
+  }
+
+  .start-center {
+    animation: start-c 1s ease-out forwards;
+  }
+
+  i.fa-home {
+    animation: ii 1s ease-out forwards;
+  }
+
+  @keyframes start {
+    to {
+      scale: 1.05;
+      opacity: 0;
+      display: none;
+    }
+  }
+
+  @keyframes sc {
+    0% {
+      overflow-y: hidden;
+    }
+
+    100% {
+      overflow-y: auto;
+    }
+  }
+
+  @keyframes ii {
+    0% {
+      opacity: 0;
+      filter: blur(5px);
+      scale: 0;
+    }
+
+    100% {
+      opacity: 1;
+      filter: blur(0);
+      scale: 1;
+    }
+  }
+
+  @keyframes start-c {
+    0% {
+      scale: 0;
+    }
+
+    100% {
+      scale: 2;
+      text-shadow: 0 0 10px white;
+    }
+  }
+
+  /* 手機版調整 */
+  @media (max-width: 768px) {
+    .p {
+      font-size: 3rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    section {
+      padding: 20px 10px;
+    }
+
+    .card {
+      margin: 10px 0;
+    }
+
+    .start {
+      font-size: 3.5rem;
+    }
+  }
+  .mti{
+    color: rgb(255, 255, 255);
+    text-shadow: 5px 5px 0 #0b292f;
+    font-size: 7rem;
+    margin-bottom: 50px;
+    background-color: #00000089;
+    padding: 20px;
+    backdrop-filter: BLUR(5PX);
+    border-radius: 20px;
+    
+  }

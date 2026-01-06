@@ -1,0 +1,496 @@
+/* =========================================================
+   Guide/style.css  (Index Page)
+   - Dark: deep purple neon glass
+   - Light: soft lilac glass (淺紫)
+   ※ 不改排版/功能，只調整顏色與背景
+========================================================= */
+
+/* ---------- Base Reset ---------- */
+* {
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  background: #060714;
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* ---------- Theme Tokens ---------- */
+:root {
+  /* 深紫基底 */
+  --bg0: #060014;
+  --bg1: #0a0522;
+
+  --text: rgba(255, 255, 255, .92);
+  --muted: rgba(236, 226, 255, .68);
+
+  /* 玻璃卡：深紫霧 */
+  --card: rgba(12, 6, 30, .66);
+  --glass: rgba(255, 255, 255, .06);
+  --glass2: rgba(255, 255, 255, .08);
+
+  /* 紫系邊框 */
+  --border: rgba(214, 185, 255, .14);
+
+  --shadow: 0 18px 60px rgba(0, 0, 0, .58);
+  --shadowSoft: 0 12px 40px rgba(0, 0, 0, .40);
+
+  /* 霓虹主色：紫 + 粉（取代青色） */
+  --accent: rgba(168, 85, 247, .95);
+  /* violet */
+  --accent2: rgba(236, 72, 153, .88);
+  /* pink */
+  --danger: rgba(255, 90, 130, .95);
+
+  --radius-xl: 28px;
+  --radius-lg: 22px;
+  --radius-md: 18px;
+
+  --focus: 0 0 0 .25rem rgba(168, 85, 247, .18);
+}
+
+/* ---------- Dark ---------- */
+html[data-theme="dark"] {
+  --bg0: #060014;
+  --bg1: #0a0522;
+
+  --text: rgba(255, 255, 255, .92);
+  --muted: rgba(236, 226, 255, .68);
+
+  --card: rgba(12, 6, 30, .66);
+  --glass: rgba(255, 255, 255, .06);
+  --glass2: rgba(255, 255, 255, .08);
+  --border: rgba(214, 185, 255, .14);
+
+  --shadow: 0 18px 60px rgba(0, 0, 0, .58);
+  --shadowSoft: 0 12px 40px rgba(0, 0, 0, .40);
+
+  --accent: rgba(168, 85, 247, .95);
+  --accent2: rgba(236, 72, 153, .88);
+}
+
+/* ---------- Light (淺紫霧面玻璃，但仍是紫系霓虹) ---------- */
+html[data-theme="light"] {
+  --bg0: #f6f0ff;
+  --bg1: #eef0ff;
+
+  --text: rgba(18, 20, 33, .92);
+  --muted: rgba(52, 40, 86, .56);
+
+  --card: rgba(255, 255, 255, .82);
+  --glass: rgba(255, 255, 255, .72);
+  --glass2: rgba(255, 255, 255, .86);
+
+  --border: rgba(122, 92, 200, .16);
+
+  --shadow: 0 20px 55px rgba(40, 28, 80, .14);
+  --shadowSoft: 0 14px 40px rgba(40, 28, 80, .10);
+
+  --accent: rgba(139, 92, 246, .95);
+  --accent2: rgba(236, 72, 153, .85);
+  --focus: 0 0 0 .25rem rgba(139, 92, 246, .18);
+}
+
+/* ---------- Background Layers ---------- */
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(1200px 720px at 16% 26%, rgba(168, 85, 247, .22), transparent 58%),
+    radial-gradient(1050px 680px at 82% 40%, rgba(59, 130, 246, .12), transparent 60%),
+    radial-gradient(980px 620px at 68% 82%, rgba(236, 72, 153, .12), transparent 58%),
+    linear-gradient(180deg, var(--bg0), var(--bg1));
+  filter: saturate(1.06);
+}
+
+html[data-theme="light"] .bg {
+  /* 淺紫霧面：紫 + 藍紫 + 些許粉 */
+  background:
+    radial-gradient(1200px 720px at 16% 26%, rgba(167, 139, 250, .42), transparent 60%),
+    radial-gradient(1050px 680px at 82% 40%, rgba(196, 181, 253, .46), transparent 62%),
+    radial-gradient(980px 620px at 68% 82%, rgba(251, 207, 232, .30), transparent 60%),
+    linear-gradient(180deg, var(--bg0), var(--bg1));
+  filter: saturate(1.02);
+}
+
+.bg-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(820px 540px at 50% 18%, rgba(255, 255, 255, .07), transparent 62%),
+    radial-gradient(900px 520px at 22% 18%, rgba(168, 85, 247, .10), transparent 66%),
+    linear-gradient(180deg, rgba(0, 0, 0, .22), rgba(0, 0, 0, .68));
+  mix-blend-mode: normal;
+  opacity: .94;
+}
+
+html[data-theme="light"] .bg-overlay {
+  /* 日間：降低黑遮罩，改成白霧 */
+  background:
+    radial-gradient(900px 560px at 50% 18%, rgba(255, 255, 255, .62), transparent 66%),
+    radial-gradient(980px 620px at 24% 24%, rgba(139, 92, 246, .14), transparent 70%),
+    linear-gradient(180deg, rgba(255, 255, 255, .34), rgba(255, 255, 255, .76));
+  opacity: .94;
+}
+
+/* ---------- Page Layout ---------- */
+.page {
+  min-height: 100%;
+  padding: 6px 0;
+}
+
+.container {
+  max-width: 1120px;
+}
+
+/* ---------- Splash ---------- */
+.splash {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, .55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: opacity .45s ease;
+}
+
+html[data-theme="light"] .splash {
+  background: rgba(255, 255, 255, .65);
+}
+
+.splash-card {
+  width: min(380px, 86vw);
+  border-radius: 26px;
+  padding: 22px 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.splash-icon {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 12px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, rgba(168, 85, 247, .22), rgba(236, 72, 153, .16));
+  border: 1px solid rgba(214, 185, 255, .16);
+}
+
+html[data-theme="light"] .splash-icon {
+  background: linear-gradient(135deg, rgba(139, 92, 246, .22), rgba(236, 72, 153, .16));
+  border: 1px solid rgba(122, 92, 200, .18);
+}
+
+.splash-icon i {
+  font-size: 1.35rem;
+  color: var(--text);
+}
+
+.splash-text {
+  margin-top: 10px;
+  font-weight: 900;
+  color: var(--muted);
+  letter-spacing: .3px;
+}
+
+.splash-bar {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .08);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+html[data-theme="light"] .splash-bar {
+  background: rgba(122, 92, 200, .08);
+}
+
+.splash-bar::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 38%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(168, 85, 247, .95), rgba(236, 72, 153, .88));
+  animation: splashMove 1.05s ease-in-out infinite;
+}
+
+html[data-theme="light"] .splash-bar::after {
+  background: linear-gradient(90deg, rgba(139, 92, 246, .95), rgba(236, 72, 153, .85));
+}
+
+@keyframes splashMove {
+  0% {
+    transform: translateX(-120%);
+  }
+
+  50% {
+    transform: translateX(160%);
+  }
+
+  100% {
+    transform: translateX(-120%);
+  }
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  width: min(860px, 100%);
+  border-radius: var(--radius-xl);
+  padding: 28px 28px 24px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-weight: 900;
+  letter-spacing: .2px;
+  user-select: none;
+}
+
+.hero-badge i {
+  opacity: .95;
+}
+
+.hero-title {
+  margin: 10px 0 6px;
+  font-size: clamp(1.9rem, 2.8vw, 3.1rem);
+  font-weight: 1000;
+  letter-spacing: .6px;
+  color: var(--text);
+}
+
+.hero-subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+/* ---------- Tiles ---------- */
+.tile {
+  border-radius: var(--radius-lg);
+  padding: 18px 18px 16px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: 0 0 10px var(--shadowSoft);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: transform .15s ease, border-color .15s ease, box-shadow 0.3s ease, opacity .15s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tile:hover {
+  transform: translateY(-2px);
+  border-color: rgba(168, 85, 247, .34);
+  box-shadow: 0 0 20px rgba(138, 92, 246, 0.776);
+}
+
+html[data-theme="light"] .tile:hover {
+  border-color:0 0 5px rgba(139, 92, 246, .30);
+  
+}
+
+.tile-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.tile-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, rgba(168, 85, 247, .18), rgba(236, 72, 153, .12));
+  border: 1px solid var(--border);
+  flex: 0 0 auto;
+}
+
+html[data-theme="light"] .tile-icon {
+  background: linear-gradient(135deg, rgba(139, 92, 246, .18), rgba(236, 72, 153, .12));
+}
+
+.tile-icon i {
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.tile-meta {
+  min-width: 0;
+}
+
+.tile-title {
+  margin: 0;
+  font-size: 1.02rem;
+  font-weight: 950;
+  color: var(--text);
+  letter-spacing: .2px;
+}
+
+.tile-desc {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-weight: 800;
+  font-size: .92rem;
+}
+
+.tile-action {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(168, 85, 247, .14), rgba(236, 72, 153, .10));
+  border: 1px solid rgba(214, 185, 255, .12);
+  color: var(--text);
+  font-weight: 950;
+  letter-spacing: .2px;
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
+
+.tile-action i {
+  opacity: .95;
+}
+
+.tile-action:hover {
+  transform: translateY(-1px);
+  border-color: rgba(168, 85, 247, .34);
+  background: linear-gradient(90deg, rgba(168, 85, 247, .20), rgba(236, 72, 153, .12));
+}
+
+html[data-theme="light"] .tile-action {
+  background: linear-gradient(90deg, rgba(139, 92, 246, .14), rgba(236, 72, 153, .10));
+  border-color: rgba(122, 92, 200, .12);
+}
+
+html[data-theme="light"] .tile-action:hover {
+  border-color: rgba(139, 92, 246, .28);
+  background: linear-gradient(90deg, rgba(139, 92, 246, .20), rgba(236, 72, 153, .12));
+}
+
+/* Disabled tile */
+.tile-disabled {
+  opacity: .55;
+}
+
+.tile-disabled:hover {
+  transform: none;
+  border-color: var(--border);
+}
+
+.tile-action.is-disabled {
+  pointer-events: none;
+  opacity: .7;
+}
+
+/* Back tile accent */
+.tile-back .tile-icon {
+  background: linear-gradient(135deg, rgba(255, 255, 255, .10), rgba(255, 255, 255, .06));
+}
+
+/* ---------- Footer ---------- */
+.foot {
+  width: min(1120px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.foot-inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-weight: 900;
+}
+
+.foot-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+}
+
+/* ---------- Better breathing room ---------- */
+@media (max-width: 576px) {
+  .hero {
+    padding: 22px 18px 18px;
+    border-radius: 22px;
+  }
+
+  .tile {
+    border-radius: 20px;
+  }
+}
+
+/* ---------- Focus ---------- */
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus);
+  border-radius: 10px;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(214, 185, 255, .18);
+  border-radius: 999px;
+}
+
+html[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: rgba(122, 92, 200, .20);
+}

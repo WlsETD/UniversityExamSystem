@@ -1,0 +1,755 @@
+{
+  "category": "🍵Java 條件判斷練習",
+  "problems": [
+    {
+      "id": "J201",
+      "title": "運算式計算題 1",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=1 與 b=2，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "1\n2",
+          "expected": "3"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J202",
+      "title": "運算式計算題 2",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=2 與 b=4，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "2\n4",
+          "expected": "6"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J203",
+      "title": "運算式計算題 3",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=3 與 b=6，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "3\n6",
+          "expected": "9"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J204",
+      "title": "運算式計算題 4",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=4 與 b=8，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "4\n8",
+          "expected": "12"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J205",
+      "title": "運算式計算題 5",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=5 與 b=10，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "5\n10",
+          "expected": "15"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J206",
+      "title": "運算式計算題 6",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=6 與 b=12，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "6\n12",
+          "expected": "18"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J207",
+      "title": "運算式計算題 7",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=7 與 b=14，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "7\n14",
+          "expected": "21"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J208",
+      "title": "運算式計算題 8",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=8 與 b=16，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "8\n16",
+          "expected": "24"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J209",
+      "title": "運算式計算題 9",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=9 與 b=18，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "9\n18",
+          "expected": "27"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J210",
+      "title": "運算式計算題 10",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=10 與 b=20，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "10\n20",
+          "expected": "30"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J211",
+      "title": "運算式計算題 11",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=11 與 b=22，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "11\n22",
+          "expected": "33"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J212",
+      "title": "運算式計算題 12",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=12 與 b=24，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "12\n24",
+          "expected": "36"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J213",
+      "title": "運算式計算題 13",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=13 與 b=26，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "13\n26",
+          "expected": "39"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J214",
+      "title": "運算式計算題 14",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=14 與 b=28，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "14\n28",
+          "expected": "42"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J215",
+      "title": "運算式計算題 15",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=15 與 b=30，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "15\n30",
+          "expected": "45"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J216",
+      "title": "運算式計算題 16",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=16 與 b=32，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "16\n32",
+          "expected": "48"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J217",
+      "title": "運算式計算題 17",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=17 與 b=34，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "17\n34",
+          "expected": "51"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J218",
+      "title": "運算式計算題 18",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=18 與 b=36，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "18\n36",
+          "expected": "54"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J219",
+      "title": "運算式計算題 19",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=19 與 b=38，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "19\n38",
+          "expected": "57"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J220",
+      "title": "運算式計算題 20",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=20 與 b=40，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "20\n40",
+          "expected": "60"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J221",
+      "title": "運算式計算題 21",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=21 與 b=42，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "21\n42",
+          "expected": "63"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J222",
+      "title": "運算式計算題 22",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=22 與 b=44，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "22\n44",
+          "expected": "66"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J223",
+      "title": "運算式計算題 23",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=23 與 b=46，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "23\n46",
+          "expected": "69"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J224",
+      "title": "運算式計算題 24",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=24 與 b=48，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "24\n48",
+          "expected": "72"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J225",
+      "title": "運算式計算題 25",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=25 與 b=50，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "25\n50",
+          "expected": "75"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J226",
+      "title": "運算式計算題 26",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=26 與 b=52，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "26\n52",
+          "expected": "78"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J227",
+      "title": "運算式計算題 27",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=27 與 b=54，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "27\n54",
+          "expected": "81"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J228",
+      "title": "運算式計算題 28",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=28 與 b=56，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "28\n56",
+          "expected": "84"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J229",
+      "title": "運算式計算題 29",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=29 與 b=58，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "29\n58",
+          "expected": "87"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J230",
+      "title": "運算式計算題 30",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=30 與 b=60，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "30\n60",
+          "expected": "90"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J231",
+      "title": "運算式計算題 31",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=31 與 b=62，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "31\n62",
+          "expected": "93"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J232",
+      "title": "運算式計算題 32",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=32 與 b=64，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "32\n64",
+          "expected": "96"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J233",
+      "title": "運算式計算題 33",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=33 與 b=66，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "33\n66",
+          "expected": "99"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J234",
+      "title": "運算式計算題 34",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=34 與 b=68，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "34\n68",
+          "expected": "102"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J235",
+      "title": "運算式計算題 35",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=35 與 b=70，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "35\n70",
+          "expected": "105"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J236",
+      "title": "運算式計算題 36",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=36 與 b=72，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "36\n72",
+          "expected": "108"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J237",
+      "title": "運算式計算題 37",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=37 與 b=74，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "37\n74",
+          "expected": "111"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J238",
+      "title": "運算式計算題 38",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=38 與 b=76，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "38\n76",
+          "expected": "114"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J239",
+      "title": "運算式計算題 39",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=39 與 b=78，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "39\n78",
+          "expected": "117"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J240",
+      "title": "運算式計算題 40",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=40 與 b=80，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "40\n80",
+          "expected": "120"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J241",
+      "title": "運算式計算題 41",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=41 與 b=82，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "41\n82",
+          "expected": "123"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J242",
+      "title": "運算式計算題 42",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=42 與 b=84，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "42\n84",
+          "expected": "126"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J243",
+      "title": "運算式計算題 43",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=43 與 b=86，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "43\n86",
+          "expected": "129"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J244",
+      "title": "運算式計算題 44",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=44 與 b=88，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "44\n88",
+          "expected": "132"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J245",
+      "title": "運算式計算題 45",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=45 與 b=90，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "45\n90",
+          "expected": "135"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J246",
+      "title": "運算式計算題 46",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=46 與 b=92，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "46\n92",
+          "expected": "138"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J247",
+      "title": "運算式計算題 47",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=47 與 b=94，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "47\n94",
+          "expected": "141"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J248",
+      "title": "運算式計算題 48",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=48 與 b=96，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "48\n96",
+          "expected": "144"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J249",
+      "title": "運算式計算題 49",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=49 與 b=98，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "49\n98",
+          "expected": "147"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    },
+    {
+      "id": "J250",
+      "title": "運算式計算題 50",
+      "difficulty": "Easy",
+      "description": "輸入兩個整數 a=50 與 b=100，請輸出 a+b 的結果。",
+      "testCases": [
+        {
+          "input": "50\n100",
+          "expected": "150"
+        }
+      ],
+      "answerCode": {
+        "java": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(a+b);\n  }\n}"
+      }
+    }
+  ]
+}

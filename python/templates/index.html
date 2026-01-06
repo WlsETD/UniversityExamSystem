@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>題庫分類</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-10">
+
+<h1 class="text-3xl font-bold mb-6">📘 題庫分類列表</h1>
+
+<div class="space-y-4">
+    {% for cat in categories %}
+        <a href="/category/{{cat.filename}}"
+           class="block p-4 bg-white shadow rounded-lg hover:bg-blue-50 transition">
+            <div class="flex justify-between items-center">
+                <span class="text-xl font-semibold">📂 {{ cat.filename }}</span>
+                <span class="text-gray-500">題目數：{{ cat.count }} 題</span>
+            </div>
+        </a>
+    {% endfor %}
+</div>
+
+</body>
+</html>

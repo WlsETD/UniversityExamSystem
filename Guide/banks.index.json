@@ -1,0 +1,7 @@
+[
+  { "id": "english",  "name": "英文", "manifest": "./english/banks.json" },
+  { "id": "economy",  "name": "經濟", "manifest": "./economy/banks.json" },
+  { "id": "computer", "name": "計概", "manifest": "./computer/banks.json" },
+  { "id": "business", "name": "商導", "manifest": "./business/banks.json" },
+  { "id": "chinese", "name": "國文", "manifest": "./chinese/banks.json" }
+]
