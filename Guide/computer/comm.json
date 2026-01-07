@@ -291,7 +291,7 @@
     "type": "multiple-choice",
     "question": "8-1 IP 位址 11001100001110000000111100000110 可以表示成下列何者？",
     "options": ["204.104.30.6", "204.112.30.6", "204.112.15.12", "204.104.15.6"],
-    "correctAnswer": 1
+    "correctAnswer": 3
   },
   {
     "type": "multiple-choice",
